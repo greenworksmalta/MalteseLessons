@@ -461,19 +461,18 @@ const App = (() => {
   // ── Renderers ────────────────────────────────
   const STEP_RENDERERS = {};
 
-  // Generic flashcard
-  function flashcard(mt, en, hint, onNext){
+  // Generic flashcard — shows Maltese AND English up front (low-friction for dyslexia/ADHD).
+  // Tap anywhere on the card to replay the audio.
+  function flashcard(mt, en, hint){
     const card = el("div","flash");
     if(hint) card.appendChild(el("div","hint", hint));
-    card.appendChild(el("div","mtline",mt));
-    const enLine = el("div","enword","Tap 🔊 to hear, then tap to reveal");
-    let revealed = false;
-    card.addEventListener("click", ()=>{
-      if(!revealed){ revealed=true; enLine.textContent = en; play(mt); }
-    });
-    card.appendChild(enLine);
-    const ab = audioBtn(mt); ab.classList.add("audio-btn");
+    card.appendChild(el("div","mtline", mt));
+    card.appendChild(el("div","enword", en));
+    const ab = audioBtn(mt);
     card.appendChild(ab);
+    card.addEventListener("click", e=>{
+      if(e.target.tagName !== "BUTTON") play(mt);
+    });
     return card;
   }
 

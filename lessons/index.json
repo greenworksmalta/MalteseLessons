@@ -1,0 +1,10 @@
+{
+  "lessons": [
+    {"id": "lesson1", "module": 1, "n": 1, "title": "Lesson 1", "subtitle": "Phrases, alphabet, grammar, days", "icon": "🇲🇹"},
+    {"id": "lesson2", "module": 1, "n": 2, "title": "Lesson 2", "subtitle": "Robbery, colours, adjectives, numbers, months", "icon": "🎨"},
+    {"id": "lesson3", "module": 1, "n": 3, "title": "Lesson 3", "subtitle": "Pronouns, demonstratives & syllables", "icon": "👥"},
+    {"id": "lesson4", "module": 2, "n": 1, "title": "Lesson 4", "subtitle": "Family, hobbies, possessive, attached pronouns", "icon": "👨‍👩‍👧"},
+    {"id": "lesson5", "module": 2, "n": 2, "title": "Lesson 5", "subtitle": "Fruit, vegetables, imperative, present tense", "icon": "🍓"},
+    {"id": "lesson6", "module": 2, "n": 3, "title": "Lesson 6", "subtitle": "Dining, traditional food, Wh-questions, present (għ)", "icon": "🍽️"}
+  ]
+}

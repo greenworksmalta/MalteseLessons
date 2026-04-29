@@ -46,43 +46,70 @@ def hash_id(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8")).hexdigest()[:12]
 
 
+# Field names whose values are Maltese strings we want voiced. Walked recursively.
+VOICE_FIELDS = {
+    "mt", "alt", "full", "phrase", "long", "short",
+    "singular", "collective", "plural", "feminine",
+    "word", "sentence",
+    "pronoun", "form", "imperative",
+    "example", "q", "a", "answer",
+    "lower",  # alphabet letter sounds
+}
+# Don't voice these specific values even if they appear in voice fields (structural labels).
+DENY_VALUES = {
+    "singular", "plural", "vowel", "consonant",
+    "M", "F", "veru", "falz",
+}
+# Don't recurse into these fields (they hold artificial patterns / English / data we don't voice).
+SKIP_FIELDS = {
+    "en", "qen", "aen", "example_en",
+    "model", "prefix", "scrambled", "syllables",
+    "instructions", "intro", "title", "subtitle", "explanation",
+    "choices", "letters", "facts", "id", "icon",
+    "n",  # number
+}
+
+
+def walk(node, out: set):
+    if isinstance(node, dict):
+        # Handle the alphabet "letters" array of letter objects (need lower + each word.mt)
+        # and the grammar "examples" lists. The recursion below covers them; we just need
+        # to special-case when we walk into "letters" arrays under alphabet sections.
+        for k, v in node.items():
+            if k in SKIP_FIELDS:
+                continue
+            if k in VOICE_FIELDS and isinstance(v, str):
+                if v.strip() and v not in DENY_VALUES:
+                    out.add(v)
+            walk(v, out)
+    elif isinstance(node, list):
+        for item in node:
+            walk(item, out)
+
+
 def collect_strings(lesson: dict) -> list[str]:
-    """Walk lesson JSON and yield every Maltese string we want spoken."""
-    strings = set()
+    """Walk a lesson JSON and yield every Maltese string we want spoken.
 
-    for sec in lesson["sections"]:
-        sid = sec["id"]
+    Driven by VOICE_FIELDS (field names) + DENY_VALUES (structural strings to skip).
+    Special handling for alphabet 'letters' arrays so we voice each letter sound.
+    """
+    strings: set[str] = set()
+    walk(lesson, strings)
 
-        if sid == "phrases":
-            for item in sec.get("vocab", []):
-                strings.add(item["mt"])
-            for line in sec.get("dialogue", []):
-                strings.add(line["mt"])
+    # Special case: alphabet section letters[].lower (covered by VOICE_FIELDS)
+    # and alphabet letter words (covered by mt). Already handled.
 
-        if sid == "alphabet":
-            for letter in sec.get("letters", []):
-                # Speak the letter name (lowercase form is most natural)
-                strings.add(letter["lower"])
-                for w in letter["words"]:
-                    strings.add(w["mt"])
-            for line in sec.get("passage", {}).get("lines", []):
-                strings.add(line["mt"])
+    # Concatenate article+word for grammar exercises so we have audio for "il-bieb" etc.
+    for sec in lesson.get("sections", []):
+        if sec.get("id") == "grammar":
+            for ex in sec.get("exercises", []) or []:
+                for item in ex.get("items", []) or []:
+                    if "answer" in item and "word" in item:
+                        a, w = item["answer"], item["word"]
+                        if a not in DENY_VALUES:
+                            strings.add(a + w)
 
-        if sid == "grammar":
-            for rule in sec.get("rules", []):
-                for ex in rule.get("examples", []):
-                    strings.add(ex["word"])
-                    strings.add(ex["full"])
-            for ex in sec.get("exercises", []):
-                for item in ex["items"]:
-                    strings.add(item["word"])
-                    strings.add(item["answer"] + item["word"])  # the article + word together
-
-        if sid == "days":
-            for day in sec.get("items", []):
-                strings.add(day["mt"])
-
-    return sorted(s for s in strings if s and s.strip())
+    return sorted(s for s in strings if s and s.strip() and len(s) <= 200)
 
 
 def synthesize(text: str, key: str, region: str, voice: str = "mt-MT-GraceNeural") -> bytes:

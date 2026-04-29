@@ -195,11 +195,33 @@
   .player .speed button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
 
   .transcript{display:flex;flex-direction:column;gap:6px}
-  .transcript .seg{padding:10px 12px;border-radius:10px;background:var(--card);border:1px solid transparent;transition:background .2s, border-color .2s, transform .2s}
+  .transcript .seg{padding:10px 12px;border-radius:10px;background:var(--card);border:1px solid transparent;transition:background .2s, border-color .2s, transform .2s;position:relative}
   .transcript .seg.en{color:var(--ink)}
   .transcript .seg.mt{background:#eaf3f3;color:var(--primary-2);font-weight:600;letter-spacing:.005em}
   .transcript .seg.active{background:#fff5d9;border-color:var(--accent);box-shadow:0 1px 0 rgba(0,0,0,.04), 0 4px 14px rgba(224,123,0,.18)}
   .transcript .seg.played{opacity:.6}
+
+  /* Coloured callout kinds */
+  .transcript .seg.header{font-size:1.35rem;font-weight:800;text-align:center;padding:18px 12px 6px;color:var(--primary-2);background:transparent;letter-spacing:.005em;line-height:1.25}
+  .transcript .seg.rule{background:#e8f5e9;border:none;border-left:5px solid var(--good);padding-left:14px;font-weight:600;color:#1f4d2a}
+  .transcript .seg.rule::before{content:"📌  "}
+  .transcript .seg.key{background:#fff3d6;border:none;border-left:5px solid var(--accent);padding-left:14px;font-weight:700;color:#5b3b00}
+  .transcript .seg.key::before{content:"⭐  "}
+  .transcript .seg.tip{background:#f0e6f7;border:none;border-left:5px solid #824aa9;padding-left:14px;color:#3e1c5a}
+  .transcript .seg.tip::before{content:"💡  "}
+  .transcript .seg.warn{background:#ffe9e0;border:none;border-left:5px solid #c14545;padding-left:14px;color:#5e1a1a}
+  .transcript .seg.warn::before{content:"⚠️  "}
+  .transcript .seg.win{background:var(--good-bg);color:var(--good);font-weight:800;text-align:center;padding:14px;font-size:1.05rem}
+  .transcript .seg.fact{background:#e0effa;border:none;border-left:5px solid #1f6fb2;padding-left:14px;color:#103552;font-weight:600}
+  .transcript .seg.fact::before{content:"🎯  "}
+
+  /* Inline highlight: **word** -> .hl */
+  .transcript .hl{background:linear-gradient(transparent 55%, #ffe98e 55%);padding:0 3px;font-weight:700;color:var(--ink)}
+  .transcript .seg.en .hl,
+  .transcript .seg.rule .hl,
+  .transcript .seg.key .hl,
+  .transcript .seg.tip .hl,
+  .transcript .seg.fact .hl{color:inherit}
 
   .done-screen{text-align:center;padding:40px 18px}
   .done-screen .emoji{font-size:4rem;margin-bottom:8px}

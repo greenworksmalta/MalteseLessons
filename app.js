@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260429e";
+const VERSION = "20260429f";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -241,6 +241,17 @@ function renderLessonHome(lid){
   root.appendChild(list);
 }
 
+// ── Overview helpers ──────────────────────────
+// Convert inline markdown-ish **word** to highlighted span. Escapes everything else.
+function renderInline(text){
+  if(!text) return "";
+  // Escape HTML
+  const esc = String(text)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  // Replace **word** with <span class="hl">word</span>
+  return esc.replace(/\*\*([^*]+?)\*\*/g, '<span class="hl">$1</span>');
+}
+
 // ── Overview / podcast player ─────────────────
 async function renderOverview(lid){
   const root = $app();
@@ -316,11 +327,14 @@ async function renderOverview(lid){
   pl.appendChild(speedRow);
   root.appendChild(pl);
 
-  // Transcript
+  // Transcript — support kind classes (header, rule, key, tip, warn, fact, win)
+  // and inline **word** → highlighted span.
   const tr = el("div","transcript");
   const segEls = segs.map(s => {
-    const e = el("div","seg "+(s.en?"en":"mt"));
-    e.textContent = s.en || s.mt;
+    const lang = s.en ? "en" : "mt";
+    const kind = s.kind ? " "+s.kind : "";
+    const e = el("div","seg "+lang+kind);
+    e.innerHTML = renderInline(s.en || s.mt);
     tr.appendChild(e);
     return e;
   });

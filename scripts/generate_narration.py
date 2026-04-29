@@ -27,7 +27,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 AUDIO_DIR = ROOT / "audio"
 OVERVIEWS_DIR = ROOT / "lessons" / "overviews"
 
-EN_VOICE = "en-GB-SoniaNeural"   # Supports expression styles ("cheerful")
+EN_VOICE = "en-GB-RyanNeural"     # UK male, supports expression styles ("cheerful")
 MT_VOICE = "mt-MT-GraceNeural"
 EN_STYLE = "cheerful"
 EN_STYLE_DEGREE = "1.4"           # Range 0.01 - 2.0; 1.4 = noticeably upbeat without cartoon
@@ -60,6 +60,14 @@ def strip_emojis(s: str) -> str:
     return _EMOJI_RE.sub("", s).replace("  ", " ").strip()
 
 
+def strip_for_tts(s: str) -> str:
+    """Strip emojis and inline highlight markers (**...**) from text for TTS."""
+    s = strip_emojis(s)
+    # Remove **word** markdown emphasis markers but keep the word
+    s = _re.sub(r"\*\*(.+?)\*\*", r"\1", s)
+    return s
+
+
 def build_ssml(transcript: list) -> str:
     """Convert a transcript list of {en} and {mt} segments into SSML with two voices.
 
@@ -70,14 +78,17 @@ def build_ssml(transcript: list) -> str:
              "xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-GB'>"]
     last_voice = None
     for seg in transcript:
+        # Skip visual-only segments (no spoken content)
+        if seg.get("kind") == "header" and not seg.get("en") and not seg.get("mt"):
+            continue
         if "en" in seg:
             voice = EN_VOICE
-            text = strip_emojis(seg["en"])  # don't make TTS read the visual emojis
+            text = strip_for_tts(seg["en"])
             if not text:
                 continue
         elif "mt" in seg:
             voice = MT_VOICE
-            text = strip_emojis(seg["mt"])
+            text = strip_for_tts(seg["mt"])
             if not text:
                 continue
         else:

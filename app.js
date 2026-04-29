@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260429f";
+const VERSION = "20260429g";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -306,12 +306,32 @@ async function renderOverview(lid){
   const bar = el("div","bar");
   const range = document.createElement("input");
   range.type = "range"; range.min = 0; range.max = 1000; range.value = 0; range.step = 1;
+  range.setAttribute("aria-label","Seek");
   const tEl = el("div","time","0:00");
   bar.appendChild(tEl);
   bar.appendChild(range);
   const dEl = el("div","time","--:--");
   bar.appendChild(dEl);
   pl.appendChild(bar);
+
+  // Track whether the user is actively dragging the slider, so timeupdate
+  // doesn't snap the thumb back while they're moving it.
+  let isSeeking = false;
+  const startSeek = ()=>{ isSeeking = true; };
+  const commitSeek = ()=>{
+    if(audio.duration>0) audio.currentTime = (range.value/1000) * audio.duration;
+    isSeeking = false;
+  };
+  range.addEventListener("pointerdown", startSeek);
+  range.addEventListener("touchstart", startSeek, {passive:true});
+  range.addEventListener("input", ()=>{
+    // Live-preview the time label while dragging
+    if(audio.duration>0) tEl.textContent = fmt((range.value/1000) * audio.duration);
+  });
+  range.addEventListener("change", commitSeek);
+  range.addEventListener("pointerup", commitSeek);
+  range.addEventListener("touchend", commitSeek);
+  range.addEventListener("pointercancel", ()=>{ isSeeking = false; });
 
   const speedRow = el("div","speed");
   [0.85, 1.0, 1.15, 1.3].forEach(rate=>{
@@ -326,6 +346,36 @@ async function renderOverview(lid){
   });
   pl.appendChild(speedRow);
   root.appendChild(pl);
+
+  // Chapter jump bar — derived from "header" segments. Sits below the player so
+  // Luis can leap straight to a section without dragging the scrubber.
+  const headerIdxs = [];
+  segs.forEach((s, i) => { if (s.kind === "header") headerIdxs.push(i); });
+  const chWrap = el("div","chapters");
+  const chButtons = [];
+  if(headerIdxs.length > 1){
+    chWrap.appendChild(el("div","label","Jump to a section"));
+    headerIdxs.forEach(i=>{
+      const text = (segs[i].en || segs[i].mt || "").replace(/[^\p{L}\p{N} —&-]/gu," ").replace(/\s+/g," ").trim();
+      const b = el("button","ch");
+      const tt = el("span","tt", text.length>32 ? text.slice(0,32)+"…" : text);
+      b.appendChild(tt);
+      const tspan = el("span","t","");
+      b.appendChild(tspan);
+      b.addEventListener("click", ()=>{
+        if(!segTimes[i]) return;
+        audio.currentTime = segTimes[i].start;
+        audio.play().catch(()=>{});
+        // scroll the active segment into view
+        if(segEls[i]){
+          setTimeout(()=>segEls[i].scrollIntoView({behavior:"smooth", block:"center"}), 80);
+        }
+      });
+      chWrap.appendChild(b);
+      chButtons.push({segIdx: i, btn: b, timeEl: tspan});
+    });
+    root.appendChild(chWrap);
+  }
 
   // Transcript — support kind classes (header, rule, key, tip, warn, fact, win)
   // and inline **word** → highlighted span.
@@ -366,13 +416,29 @@ async function renderOverview(lid){
     recomputeTimes();
     dEl.textContent = fmt(audio.duration);
     subTime.textContent = "Duration "+fmt(audio.duration);
+    // Fill in chapter time stamps now that we know durations
+    chButtons.forEach(c=>{
+      if(segTimes[c.segIdx]) c.timeEl.textContent = " · "+fmt(segTimes[c.segIdx].start);
+    });
   });
+
+  function updateChapterActive(idx){
+    if(!chButtons.length) return;
+    // Find the most recent header at or before idx
+    let activeChapter = -1;
+    chButtons.forEach((c, ci) => { if(c.segIdx <= idx) activeChapter = ci; });
+    chButtons.forEach((c, ci)=>{
+      c.btn.classList.toggle("active", ci===activeChapter);
+    });
+  }
 
   let lastIdx = -1;
   audio.addEventListener("timeupdate", ()=>{
-    if(audio.duration>0) range.value = Math.round((audio.currentTime/audio.duration)*1000);
-    tEl.textContent = fmt(audio.currentTime);
-    // find current segment
+    // While the user is dragging the scrubber, don't fight them by overwriting it
+    if(!isSeeking && audio.duration>0){
+      range.value = Math.round((audio.currentTime/audio.duration)*1000);
+      tEl.textContent = fmt(audio.currentTime);
+    }
     if(!segTimes.length) return;
     const t = audio.currentTime;
     let idx = segTimes.findIndex(r => t >= r.start && t < r.end);
@@ -380,15 +446,28 @@ async function renderOverview(lid){
     if(idx !== lastIdx && idx>=0){
       if(lastIdx>=0) segEls[lastIdx].classList.remove("active");
       segEls[idx].classList.add("active");
-      // mark earlier as played
       for(let i=0;i<idx;i++) segEls[i].classList.add("played");
-      // scroll into view
+      // mark later segments as un-played in case the user scrubbed backwards
+      for(let i=idx+1;i<segEls.length;i++) segEls[i].classList.remove("played");
       const rect = segEls[idx].getBoundingClientRect();
       if(rect.top < 200 || rect.bottom > window.innerHeight - 80){
         segEls[idx].scrollIntoView({behavior:"smooth", block:"center"});
       }
+      updateChapterActive(idx);
       lastIdx = idx;
     }
+  });
+  // Also update on seeked (when the user drops the scrubber) so the highlight follows immediately
+  audio.addEventListener("seeked", ()=>{
+    if(!segTimes.length) return;
+    const t = audio.currentTime;
+    let idx = segTimes.findIndex(r => t >= r.start && t < r.end);
+    if(idx === -1) idx = 0;
+    if(lastIdx>=0) segEls[lastIdx].classList.remove("active");
+    segEls[idx].classList.add("active");
+    for(let i=0;i<segEls.length;i++) segEls[i].classList.toggle("played", i<idx);
+    updateChapterActive(idx);
+    lastIdx = idx;
   });
 
   audio.addEventListener("play", ()=>{ playB.textContent = "❚❚"; });
@@ -406,10 +485,6 @@ async function renderOverview(lid){
   });
   back15.addEventListener("click", ()=>{ audio.currentTime = Math.max(0, audio.currentTime - 15); });
   fwd15.addEventListener("click", ()=>{ audio.currentTime = Math.min(audio.duration||0, audio.currentTime + 15); });
-
-  range.addEventListener("input", ()=>{
-    if(audio.duration>0) audio.currentTime = (range.value/1000) * audio.duration;
-  });
 
   segEls.forEach((e, i)=>{
     e.addEventListener("click", ()=>{

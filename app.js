@@ -11,6 +11,7 @@
 const State = {
   index: null,           // {lessons:[...]}
   lessons: {},           // {lesson1: {...}, ...} cached
+  overviews: {},         // {lesson1: {transcript:[...]}, ...}
   manifest: null,        // {mt: filename}
   progress: load("progress") || {},   // {lessonId: {sectionId: pct}}
   xp: load("xp") || 0,
@@ -86,6 +87,7 @@ function route(){
     const lid = parts[1];
     if(!lid) return renderHome();
     return loadLesson(lid).then(()=>{
+      if(parts[2]==="overview") return renderOverview(lid);
       if(parts[2]==="section") return renderSection(lid, parts[3], parts[4]||"intro", parseInt(parts[5]||"0",10));
       return renderLessonHome(lid);
     }).catch(e=>{
@@ -101,6 +103,14 @@ async function loadLesson(lid){
   if(!r.ok) throw new Error("Missing lesson: "+lid);
   const data = await r.json();
   State.lessons[lid] = data;
+  return data;
+}
+async function loadOverview(lid){
+  if(State.overviews[lid]) return State.overviews[lid];
+  const r = await fetch("lessons/overviews/"+lid+".json");
+  if(!r.ok) throw new Error("Missing overview: "+lid);
+  const data = await r.json();
+  State.overviews[lid] = data;
   return data;
 }
 
@@ -195,6 +205,17 @@ function renderLessonHome(lid){
 
   root.appendChild(progressBar(lessonProgress(lid)));
 
+  // Overview card — always shown first
+  const oc = el("button","overview-card");
+  const oi = el("div","icon"); oi.textContent = "🎧";
+  const om = el("div","meta");
+  om.appendChild(el("strong","","Overview"));
+  om.appendChild(el("span","","Listen to the lesson explained in English"));
+  const ochev = el("div","chev","›");
+  oc.appendChild(oi); oc.appendChild(om); oc.appendChild(ochev);
+  oc.addEventListener("click", ()=>go("/lesson/"+lid+"/overview"));
+  root.appendChild(oc);
+
   const list = el("div","section-list");
   for(const sec of lesson.sections){
     const card = el("button","section-card");
@@ -213,6 +234,178 @@ function renderLessonHome(lid){
     list.appendChild(card);
   }
   root.appendChild(list);
+}
+
+// ── Overview / podcast player ─────────────────
+async function renderOverview(lid){
+  const root = $app();
+  root.innerHTML = "";
+  root.appendChild(topbar("Overview", "/lesson/"+lid));
+
+  let ov;
+  try { ov = await loadOverview(lid); }
+  catch(e){
+    root.appendChild(el("p","muted","Could not load this overview. Refresh and try again."));
+    return;
+  }
+  const lesson = State.lessons[lid];
+
+  // Stop other audio
+  if(currentBtn){ currentBtn.classList.remove("playing"); currentBtn=null; }
+  player.pause();
+
+  // Hero
+  const hero = el("div","hero");
+  hero.appendChild(el("div","sub","Listen as you go"));
+  hero.appendChild(el("h1","",ov.title || (lesson.title+" — Overview")));
+  hero.appendChild(el("p","",ov.subtitle || "An English-narrated walk-through with Maltese examples."));
+  root.appendChild(hero);
+
+  // Build segment timing estimates from char counts
+  const segs = ov.transcript.filter(s => s && (s.en || s.mt));
+  const totalChars = segs.reduce((a,s) => a + (s.en||s.mt||"").length + 6, 0);
+  // We'll set real durations once metadata loads.
+
+  // Audio element (separate from the small mt clip player)
+  const audio = new Audio("audio/narration_"+lid+".mp3");
+  audio.preload = "metadata";
+  audio.playbackRate = parseFloat(load("speed_"+lid) || "1") || 1;
+
+  // Player widget
+  const pl = el("div","player");
+  const ctrls = el("div","controls");
+  const back15 = el("button","skip","-15");
+  back15.setAttribute("aria-label","Back 15 seconds");
+  const playB = el("button","play-big","▶");
+  playB.setAttribute("aria-label","Play / Pause");
+  const fwd15 = el("button","skip","+15");
+  fwd15.setAttribute("aria-label","Forward 15 seconds");
+  const meta = el("div","meta");
+  meta.appendChild(el("div","t", ov.title || (lesson.title+" — Overview")));
+  const subTime = el("div","s","loading…");
+  meta.appendChild(subTime);
+  ctrls.appendChild(back15); ctrls.appendChild(playB); ctrls.appendChild(fwd15); ctrls.appendChild(meta);
+  pl.appendChild(ctrls);
+
+  const bar = el("div","bar");
+  const range = document.createElement("input");
+  range.type = "range"; range.min = 0; range.max = 1000; range.value = 0; range.step = 1;
+  const tEl = el("div","time","0:00");
+  bar.appendChild(tEl);
+  bar.appendChild(range);
+  const dEl = el("div","time","--:--");
+  bar.appendChild(dEl);
+  pl.appendChild(bar);
+
+  const speedRow = el("div","speed");
+  [0.85, 1.0, 1.15, 1.3].forEach(rate=>{
+    const b = el("button","", rate.toFixed(2).replace(/\.?0+$/,"")+"×");
+    if(Math.abs(audio.playbackRate - rate) < 0.01) b.classList.add("active");
+    b.addEventListener("click", ()=>{
+      audio.playbackRate = rate; save("speed_"+lid, String(rate));
+      [...speedRow.children].forEach(x=>x.classList.remove("active"));
+      b.classList.add("active");
+    });
+    speedRow.appendChild(b);
+  });
+  pl.appendChild(speedRow);
+  root.appendChild(pl);
+
+  // Transcript
+  const tr = el("div","transcript");
+  const segEls = segs.map(s => {
+    const e = el("div","seg "+(s.en?"en":"mt"));
+    e.textContent = s.en || s.mt;
+    tr.appendChild(e);
+    return e;
+  });
+  root.appendChild(tr);
+
+  // Click any segment to seek to its estimated time
+  let segTimes = []; // [{start, end}] per segment, set on metadata load
+
+  function recomputeTimes(){
+    const dur = audio.duration;
+    if(!dur || !isFinite(dur) || dur<=0) return;
+    let t = 0;
+    segTimes = segs.map(s=>{
+      const len = (s.en||s.mt||"").length + 6;
+      const slice = (len / totalChars) * dur;
+      const start = t; const end = t + slice;
+      t = end;
+      return {start, end};
+    });
+  }
+
+  function fmt(sec){
+    if(!isFinite(sec) || sec<0) sec = 0;
+    const m = Math.floor(sec/60), s = Math.floor(sec%60);
+    return m+":"+(s<10?"0"+s:s);
+  }
+
+  audio.addEventListener("loadedmetadata", ()=>{
+    recomputeTimes();
+    dEl.textContent = fmt(audio.duration);
+    subTime.textContent = "Duration "+fmt(audio.duration);
+  });
+
+  let lastIdx = -1;
+  audio.addEventListener("timeupdate", ()=>{
+    if(audio.duration>0) range.value = Math.round((audio.currentTime/audio.duration)*1000);
+    tEl.textContent = fmt(audio.currentTime);
+    // find current segment
+    if(!segTimes.length) return;
+    const t = audio.currentTime;
+    let idx = segTimes.findIndex(r => t >= r.start && t < r.end);
+    if(idx === -1 && t >= segTimes[segTimes.length-1].end) idx = segTimes.length-1;
+    if(idx !== lastIdx && idx>=0){
+      if(lastIdx>=0) segEls[lastIdx].classList.remove("active");
+      segEls[idx].classList.add("active");
+      // mark earlier as played
+      for(let i=0;i<idx;i++) segEls[i].classList.add("played");
+      // scroll into view
+      const rect = segEls[idx].getBoundingClientRect();
+      if(rect.top < 200 || rect.bottom > window.innerHeight - 80){
+        segEls[idx].scrollIntoView({behavior:"smooth", block:"center"});
+      }
+      lastIdx = idx;
+    }
+  });
+
+  audio.addEventListener("play", ()=>{ playB.textContent = "❚❚"; });
+  audio.addEventListener("pause", ()=>{ playB.textContent = "▶"; });
+  audio.addEventListener("ended", ()=>{
+    playB.textContent = "▶";
+    setSectionProgress(lid, "_overview", 100);
+    addXp(15);
+    showFeedback(true,"Done!", "Overview finished. +15 XP", ()=>{});
+  });
+
+  playB.addEventListener("click", ()=>{
+    if(audio.paused) audio.play().catch(e=>console.warn(e));
+    else audio.pause();
+  });
+  back15.addEventListener("click", ()=>{ audio.currentTime = Math.max(0, audio.currentTime - 15); });
+  fwd15.addEventListener("click", ()=>{ audio.currentTime = Math.min(audio.duration||0, audio.currentTime + 15); });
+
+  range.addEventListener("input", ()=>{
+    if(audio.duration>0) audio.currentTime = (range.value/1000) * audio.duration;
+  });
+
+  segEls.forEach((e, i)=>{
+    e.addEventListener("click", ()=>{
+      if(!segTimes[i]) return;
+      audio.currentTime = segTimes[i].start;
+      audio.play().catch(()=>{});
+    });
+  });
+
+  // Pause this player and free it when leaving the page
+  window.addEventListener("hashchange", function once(){
+    audio.pause();
+    audio.src = "";
+    window.removeEventListener("hashchange", once);
+  });
 }
 
 // ── Section dispatcher ────────────────────────

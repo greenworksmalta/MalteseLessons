@@ -7,6 +7,11 @@
 (function(){
 "use strict";
 
+// Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
+// invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
+const VERSION = "20260429d";
+function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
+
 // ── State ─────────────────────────────────────
 const State = {
   index: null,           // {lessons:[...]}
@@ -53,7 +58,7 @@ function play(mt){
   if(currentBtn){ currentBtn.classList.remove("playing"); currentBtn=null; }
   try{
     player.pause();
-    player.src = "audio/"+file;
+    player.src = v("audio/"+file);
     player.currentTime = 0;
     const p = player.play();
     if(p && p.catch) p.catch(e=>console.warn("play failed", e));
@@ -99,7 +104,7 @@ function route(){
 
 async function loadLesson(lid){
   if(State.lessons[lid]) return State.lessons[lid];
-  const r = await fetch("lessons/"+lid+".json");
+  const r = await fetch(v("lessons/"+lid+".json"));
   if(!r.ok) throw new Error("Missing lesson: "+lid);
   const data = await r.json();
   State.lessons[lid] = data;
@@ -107,7 +112,7 @@ async function loadLesson(lid){
 }
 async function loadOverview(lid){
   if(State.overviews[lid]) return State.overviews[lid];
-  const r = await fetch("lessons/overviews/"+lid+".json");
+  const r = await fetch(v("lessons/overviews/"+lid+".json"));
   if(!r.ok) throw new Error("Missing overview: "+lid);
   const data = await r.json();
   State.overviews[lid] = data;
@@ -267,7 +272,7 @@ async function renderOverview(lid){
   // We'll set real durations once metadata loads.
 
   // Audio element (separate from the small mt clip player)
-  const audio = new Audio("audio/narration_"+lid+".mp3");
+  const audio = new Audio(v("audio/narration_"+lid+".mp3"));
   audio.preload = "metadata";
   audio.playbackRate = parseFloat(load("speed_"+lid) || "1") || 1;
 
@@ -1602,8 +1607,8 @@ STEP_RENDERERS["ghpresent:ex6"] = (root, sec, idx, onNext) => {
 async function boot(){
   try{
     const [index, manifest] = await Promise.all([
-      fetch("lessons/index.json").then(r=>r.json()),
-      fetch("audio/manifest.json").then(r=>r.json()),
+      fetch(v("lessons/index.json")).then(r=>r.json()),
+      fetch(v("audio/manifest.json")).then(r=>r.json()),
     ]);
     State.index = index;
     State.manifest = manifest;

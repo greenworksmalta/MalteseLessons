@@ -27,8 +27,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 AUDIO_DIR = ROOT / "audio"
 OVERVIEWS_DIR = ROOT / "lessons" / "overviews"
 
-EN_VOICE = "en-GB-LibbyNeural"
+EN_VOICE = "en-GB-SoniaNeural"   # Supports expression styles ("cheerful")
 MT_VOICE = "mt-MT-GraceNeural"
+EN_STYLE = "cheerful"
+EN_STYLE_DEGREE = "1.4"           # Range 0.01 - 2.0; 1.4 = noticeably upbeat without cartoon
 
 
 def load_env() -> dict:
@@ -45,31 +47,62 @@ def escape_xml(s: str) -> str:
              .replace('"', "&quot;").replace("'", "&apos;"))
 
 
+# Strip pictographic emojis from spoken text (they're decorative on screen).
+import re as _re
+_EMOJI_RE = _re.compile(
+    "[\U0001F300-\U0001FAFF"   # symbols & pictographs, transport, supplemental
+    "\U00002600-\U000027BF"    # misc symbols, dingbats
+    "\U0001F1E6-\U0001F1FF"    # regional indicator (flags)
+    "\U0001F900-\U0001F9FF"    # supplemental symbols and pictographs
+    "‍️]+"          # ZWJ, variation selector
+)
+def strip_emojis(s: str) -> str:
+    return _EMOJI_RE.sub("", s).replace("  ", " ").strip()
+
+
 def build_ssml(transcript: list) -> str:
     """Convert a transcript list of {en} and {mt} segments into SSML with two voices.
 
-    Closes both <prosody> and <voice> when switching, otherwise Azure rejects with 400.
+    English is wrapped in <mstts:express-as style='cheerful'> for energetic delivery.
+    Closes inner tags before switching voices, otherwise Azure rejects with 400.
     """
-    parts = ["<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-GB'>"]
+    parts = ["<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' "
+             "xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-GB'>"]
     last_voice = None
     for seg in transcript:
         if "en" in seg:
-            voice, text = EN_VOICE, seg["en"]
+            voice = EN_VOICE
+            text = strip_emojis(seg["en"])  # don't make TTS read the visual emojis
+            if not text:
+                continue
         elif "mt" in seg:
-            voice, text = MT_VOICE, seg["mt"]
+            voice = MT_VOICE
+            text = strip_emojis(seg["mt"])
+            if not text:
+                continue
         else:
             continue
         if voice != last_voice:
             if last_voice is not None:
-                parts.append("</prosody></voice>")
-            rate = "-4%" if voice == EN_VOICE else "-8%"
-            parts.append(f"<voice name='{voice}'><prosody rate='{rate}'>")
+                parts.append("</prosody>")
+                if last_voice == EN_VOICE:
+                    parts.append("</mstts:express-as>")
+                parts.append("</voice>")
+            if voice == EN_VOICE:
+                # Cheerful style + slight pace bump for energy. styledegree dialed up.
+                parts.append(f"<voice name='{voice}'>"
+                             f"<mstts:express-as style='{EN_STYLE}' styledegree='{EN_STYLE_DEGREE}'>"
+                             f"<prosody rate='+2%' pitch='+1st'>")
+            else:
+                parts.append(f"<voice name='{voice}'><prosody rate='-6%'>")
             last_voice = voice
         parts.append(escape_xml(text))
-        # Small pause between segments so it doesn't feel rushed.
-        parts.append("<break time='250ms'/>" if voice == EN_VOICE else "<break time='400ms'/>")
+        parts.append("<break time='220ms'/>" if voice == EN_VOICE else "<break time='350ms'/>")
     if last_voice is not None:
-        parts.append("</prosody></voice>")
+        parts.append("</prosody>")
+        if last_voice == EN_VOICE:
+            parts.append("</mstts:express-as>")
+        parts.append("</voice>")
     parts.append("</speak>")
     return "".join(parts)
 

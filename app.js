@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260429h";
+const VERSION = "20260430a";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -606,6 +606,20 @@ const SECTION_FLOWS = {
   food:           ["flash"],
   questions:      ["flash","passage"],
   ghpresent:      ["rules","ex5","ex6"],
+  // Lesson 7
+  transport:      ["card"],
+  weekend:        ["flash","dialogue"],
+  seasons:        ["card"],
+  particles:      ["flash","examples","ex7"],
+  // Lesson 8
+  datetime:       ["flash"],
+  partarticle:    ["flash","ex3"],
+  map:            ["facts","vocab","regions"],
+  places:         ["flash"],
+  // Lesson 9
+  directions:     ["flash","dialogue","winds"],
+  timeexp:        ["flash"],
+  time:           ["hours","patterns","ex8"],
 };
 
 const STEP_COUNTS = {
@@ -665,6 +679,30 @@ const STEP_COUNTS = {
   "ghpresent:rules": s => s.rules.length,
   "ghpresent:ex5": s => s.exercises.find(e=>e.id==="ex5").items.length,
   "ghpresent:ex6": s => s.exercises.find(e=>e.id==="ex6").items.length,
+  // Lesson 7
+  "transport:card": s => s.items.length,
+  "weekend:flash": s => s.vocab.length,
+  "weekend:dialogue": s => 1,
+  "seasons:card": s => s.items.length,
+  "particles:flash": s => s.items.length,
+  "particles:examples": s => 1,
+  "particles:ex7": s => s.exercises[0].items.length,
+  // Lesson 8
+  "datetime:flash": s => s.vocab.length,
+  "partarticle:flash": s => s.items.length,
+  "partarticle:ex3": s => s.exercises[0].items.length,
+  "map:facts": s => 1,
+  "map:vocab": s => s.vocab.length,
+  "map:regions": s => s.regions.length,
+  "places:flash": s => s.items.length,
+  // Lesson 9
+  "directions:flash": s => s.vocab.length,
+  "directions:dialogue": s => 1,
+  "directions:winds": s => s.winds.length,
+  "timeexp:flash": s => s.vocab.length,
+  "time:hours": s => s.hours.length,
+  "time:patterns": s => s.patterns.length,
+  "time:ex8": s => s.exercises[0].items.length,
 };
 
 /* ============================================================
@@ -1689,6 +1727,292 @@ STEP_RENDERERS["ghpresent:ex6"] = (root, sec, idx, onNext) => {
   });
   card.appendChild(ch);
 };
+
+/* ============================================================
+   Lesson 7 renderers
+   ============================================================ */
+
+// transport:card — singular/plural pair (reuses lesson 6 pattern)
+STEP_RENDERERS["transport:card"] = STEP_RENDERERS["table:card"];
+
+STEP_RENDERERS["weekend:flash"] = (root, sec, idx, onNext) => {
+  const item = sec.vocab[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `Phrase ${idx+1} of ${sec.vocab.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+STEP_RENDERERS["weekend:dialogue"] = (root, sec, idx, onNext) => {
+  const card = el("div","card");
+  card.appendChild(el("h3","","Mini-dialogue"));
+  card.appendChild(el("p","muted","Tap each line to hear it spoken."));
+  root.appendChild(card);
+  sec.dialogue.forEach(line=>{
+    const r = el("div","passage-line");
+    r.appendChild(audioBtn(line.mt));
+    const t = el("div","txt");
+    t.appendChild(el("span","mt", line.mt));
+    t.appendChild(el("span","en", line.en));
+    r.appendChild(t);
+    r.addEventListener("click", e=>{ if(e.target.tagName!=="BUTTON") play(line.mt); });
+    root.appendChild(r);
+  });
+  root.appendChild(nextBtn("Done →", onNext));
+};
+
+// seasons:card — one season + its vocab list per page
+STEP_RENDERERS["seasons:card"] = (root, sec, idx, onNext) => {
+  const item = sec.items[idx];
+  const card = el("div","card");
+  const head = el("div","row");
+  head.appendChild(audioBtn(item.mt, {size:"lg"}));
+  const w = el("div","grow");
+  const title = el("div","mtline", (item.icon ? item.icon+" " : "") + item.mt);
+  w.appendChild(title);
+  w.appendChild(el("div","muted", item.en));
+  head.appendChild(w);
+  card.appendChild(head);
+  if(item.vocab && item.vocab.length){
+    const forms = el("div","forms");
+    forms.style.marginTop = "10px";
+    item.vocab.forEach(v=>{
+      const r = el("div","form-row");
+      r.appendChild(audioBtn(v.mt));
+      r.appendChild(el("div","mtform", v.mt));
+      r.appendChild(el("div","en", v.en));
+      forms.appendChild(r);
+    });
+    card.appendChild(forms);
+  }
+  root.appendChild(card);
+  root.appendChild(el("p","muted center", (idx+1)+" / "+sec.items.length));
+  root.appendChild(nextBtn(idx+1===sec.items.length ? "Done →" : "Next season →", onNext));
+  setTimeout(()=>play(item.mt), 250);
+};
+
+// particles:flash — small word + meaning
+STEP_RENDERERS["particles:flash"] = (root, sec, idx, onNext) => {
+  const item = sec.items[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `Particle ${idx+1} of ${sec.items.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+STEP_RENDERERS["particles:examples"] = (root, sec, idx, onNext) => {
+  const card = el("div","card");
+  card.appendChild(el("h3","","Examples in real sentences"));
+  card.appendChild(el("p","muted","Tap each line to hear it."));
+  root.appendChild(card);
+  sec.examples.forEach(e=>{
+    const r = el("div","passage-line");
+    r.appendChild(audioBtn(e.phrase));
+    const t = el("div","txt");
+    t.appendChild(el("span","mt", e.phrase));
+    t.appendChild(el("span","en", e.en));
+    r.appendChild(t);
+    r.addEventListener("click", evt=>{ if(evt.target.tagName!=="BUTTON") play(e.phrase); });
+    root.appendChild(r);
+  });
+  root.appendChild(nextBtn("Try the exercise →", onNext));
+};
+// Generic sentence multiple-choice — used by particles:ex7, partarticle:ex3, time:ex8
+function makeSentenceMcStep(exId){
+  return (root, sec, idx, onNext) => {
+    const ex = sec.exercises.find(e=>e.id===exId) || sec.exercises[0];
+    const item = ex.items[idx % ex.items.length];
+    const card = el("div","card");
+    card.appendChild(el("h3","",ex.title));
+    if(ex.instructions) card.appendChild(el("p","muted",ex.instructions));
+    const row = el("div","row");
+    row.appendChild(audioBtn(item.sentence, {size:"lg"}));
+    const w = el("div","grow");
+    w.appendChild(el("div","mtline", item.sentence));
+    if(item.en) w.appendChild(el("div","muted", item.en));
+    row.appendChild(w);
+    card.appendChild(row);
+    root.appendChild(card);
+    const ch = el("div","chips");
+    ex.choices.forEach(c=>{
+      const b = el("button","chip", c);
+      b.addEventListener("click", ()=>{
+        if(c===item.answer){
+          b.classList.add("right"); addXp(5); play(item.answer);
+          showFeedback(true,"Sewwa!", item.answer, onNext);
+        } else {
+          b.classList.add("wrong");
+          [...ch.children].forEach(x=>{ if(x.textContent===item.answer) x.classList.add("right"); });
+          showFeedback(false,"Not quite.","Correct: "+item.answer, onNext);
+        }
+        [...ch.children].forEach(x=>x.disabled=true);
+      });
+      ch.appendChild(b);
+    });
+    card.appendChild(ch);
+    setTimeout(()=>play(item.sentence), 350);
+  };
+}
+STEP_RENDERERS["particles:ex7"] = makeSentenceMcStep("ex7");
+
+/* ============================================================
+   Lesson 8 renderers
+   ============================================================ */
+STEP_RENDERERS["datetime:flash"] = (root, sec, idx, onNext) => {
+  const item = sec.vocab[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `${idx+1} of ${sec.vocab.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+// partarticle:flash — show long form → short fused form
+STEP_RENDERERS["partarticle:flash"] = (root, sec, idx, onNext) => {
+  const item = sec.items[idx];
+  const card = el("div","card");
+  const head = el("div","row");
+  head.appendChild(audioBtn(item.short, {size:"lg"}));
+  const w = el("div","grow");
+  w.appendChild(el("div","mtline", item.long+" → "+item.short));
+  w.appendChild(el("div","muted", item.en));
+  head.appendChild(w);
+  card.appendChild(head);
+  root.appendChild(card);
+  root.appendChild(el("p","muted center", (idx+1)+" / "+sec.items.length));
+  root.appendChild(nextBtn("Next →", onNext));
+  setTimeout(()=>play(item.short), 250);
+};
+STEP_RENDERERS["partarticle:ex3"] = makeSentenceMcStep("ex3");
+
+STEP_RENDERERS["map:facts"] = (root, sec, idx, onNext) => {
+  const card = el("div","card");
+  card.appendChild(el("h2","","About Malta"));
+  (sec.facts||[]).forEach(f=>{
+    const p = el("p","",f);
+    card.appendChild(p);
+  });
+  root.appendChild(card);
+  root.appendChild(nextBtn("Continue →", onNext));
+};
+STEP_RENDERERS["map:vocab"] = (root, sec, idx, onNext) => {
+  const item = sec.vocab[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `${idx+1} of ${sec.vocab.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+// map:regions — show region name + list of localities (no audio per locality, just region)
+STEP_RENDERERS["map:regions"] = (root, sec, idx, onNext) => {
+  const region = sec.regions[idx];
+  const card = el("div","card");
+  card.appendChild(el("h2","",region.name));
+  card.appendChild(el("p","muted","Localities in this area:"));
+  const grid = el("div","");
+  grid.style.display = "flex";
+  grid.style.flexWrap = "wrap";
+  grid.style.gap = "8px";
+  region.places.forEach(p=>{
+    const chip = el("div","");
+    chip.style.padding = "8px 12px";
+    chip.style.borderRadius = "99px";
+    chip.style.background = "var(--bg)";
+    chip.style.border = "1px solid var(--line)";
+    chip.style.color = "var(--primary-2)";
+    chip.style.fontWeight = "600";
+    chip.style.fontSize = ".95rem";
+    chip.textContent = p;
+    grid.appendChild(chip);
+  });
+  card.appendChild(grid);
+  root.appendChild(card);
+  root.appendChild(el("p","muted center", (idx+1)+" / "+sec.regions.length));
+  root.appendChild(nextBtn(idx+1===sec.regions.length ? "Done →" : "Next region →", onNext));
+};
+
+// places:flash — name + kind + descriptive note
+STEP_RENDERERS["places:flash"] = (root, sec, idx, onNext) => {
+  const item = sec.items[idx];
+  const card = el("div","card");
+  const head = el("div","row");
+  head.appendChild(audioBtn(item.mt, {size:"lg"}));
+  const w = el("div","grow");
+  w.appendChild(el("div","mtline", item.mt));
+  w.appendChild(el("div","muted", item.en));
+  head.appendChild(w);
+  card.appendChild(head);
+  if(item.kind){
+    const k = el("div","");
+    k.style.marginTop = "10px";
+    k.style.fontSize = ".82rem";
+    k.style.fontWeight = "700";
+    k.style.color = "var(--accent)";
+    k.style.letterSpacing = ".04em";
+    k.textContent = item.kind;
+    card.appendChild(k);
+  }
+  if(item.note){
+    const n = el("p","",item.note);
+    n.style.marginTop = "6px";
+    card.appendChild(n);
+  }
+  root.appendChild(card);
+  root.appendChild(el("p","muted center", (idx+1)+" / "+sec.items.length));
+  root.appendChild(nextBtn(idx+1===sec.items.length ? "Done →" : "Next →", onNext));
+  setTimeout(()=>play(item.mt), 250);
+};
+
+/* ============================================================
+   Lesson 9 renderers
+   ============================================================ */
+STEP_RENDERERS["directions:flash"] = (root, sec, idx, onNext) => {
+  const item = sec.vocab[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `${idx+1} of ${sec.vocab.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+STEP_RENDERERS["directions:dialogue"] = (root, sec, idx, onNext) => {
+  const card = el("div","card");
+  card.appendChild(el("h3","","Asking for directions"));
+  card.appendChild(el("p","muted","Tap each line to hear it."));
+  root.appendChild(card);
+  sec.dialogue.forEach(line=>{
+    const r = el("div","passage-line");
+    r.appendChild(audioBtn(line.mt));
+    const t = el("div","txt");
+    t.appendChild(el("span","mt", line.mt));
+    t.appendChild(el("span","en", line.en));
+    r.appendChild(t);
+    r.addEventListener("click", e=>{ if(e.target.tagName!=="BUTTON") play(line.mt); });
+    root.appendChild(r);
+  });
+  root.appendChild(nextBtn("Continue →", onNext));
+};
+STEP_RENDERERS["directions:winds"] = (root, sec, idx, onNext) => {
+  const item = sec.winds[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `Wind ${idx+1} of ${sec.winds.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+
+STEP_RENDERERS["timeexp:flash"] = (root, sec, idx, onNext) => {
+  const item = sec.vocab[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `${idx+1} of ${sec.vocab.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+STEP_RENDERERS["time:hours"] = (root, sec, idx, onNext) => {
+  const item = sec.hours[idx];
+  const card = el("div","card number-card");
+  card.appendChild(el("div","num", item.n===0 ? "12" : String(item.n)));
+  card.appendChild(el("div","mtword", item.mt));
+  card.appendChild(el("div","enword", item.en));
+  card.appendChild(audioBtn(item.mt, {size:"lg"}));
+  card.addEventListener("click", e=>{ if(e.target.tagName!=="BUTTON") play(item.mt); });
+  root.appendChild(card);
+  root.appendChild(el("p","muted center", (idx+1)+" / "+sec.hours.length));
+  root.appendChild(nextBtn("Next →", onNext));
+  setTimeout(()=>play(item.mt), 250);
+};
+STEP_RENDERERS["time:patterns"] = (root, sec, idx, onNext) => {
+  const item = sec.patterns[idx];
+  root.appendChild(renderFlash(item.mt, item.en, `Pattern ${idx+1} of ${sec.patterns.length}`));
+  setTimeout(()=>play(item.mt), 250);
+  root.appendChild(nextBtn("Next →", onNext));
+};
+STEP_RENDERERS["time:ex8"] = makeSentenceMcStep("ex8");
 
 /* ============================================================
    Boot

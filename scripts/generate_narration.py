@@ -27,10 +27,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 AUDIO_DIR = ROOT / "audio"
 OVERVIEWS_DIR = ROOT / "lessons" / "overviews"
 
-EN_VOICE = "en-GB-RyanNeural"     # UK male, supports expression styles ("cheerful")
+EN_VOICE = "en-US-AndrewMultilingualNeural"   # Newer HD voice, far more natural-sounding
 MT_VOICE = "mt-MT-GraceNeural"
-EN_STYLE = "cheerful"
-EN_STYLE_DEGREE = "1.4"           # Range 0.01 - 2.0; 1.4 = noticeably upbeat without cartoon
+EN_STYLE = "friendly"             # Andrew Multilingual supports: chat, friendly, hopeful, etc.
+EN_STYLE_DEGREE = "1.5"
 
 
 def load_env() -> dict:
@@ -100,10 +100,10 @@ def build_ssml(transcript: list) -> str:
                     parts.append("</mstts:express-as>")
                 parts.append("</voice>")
             if voice == EN_VOICE:
-                # Cheerful style + slight pace bump for energy. styledegree dialed up.
+                # Andrew Multilingual is natural at default pace — light prosody nudge only.
                 parts.append(f"<voice name='{voice}'>"
                              f"<mstts:express-as style='{EN_STYLE}' styledegree='{EN_STYLE_DEGREE}'>"
-                             f"<prosody rate='+2%' pitch='+1st'>")
+                             f"<prosody rate='+0%'>")
             else:
                 parts.append(f"<voice name='{voice}'><prosody rate='-6%'>")
             last_voice = voice

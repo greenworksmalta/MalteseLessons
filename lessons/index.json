@@ -5,6 +5,9 @@
     {"id": "lesson3", "module": 1, "n": 3, "title": "Lesson 3", "subtitle": "Pronouns, demonstratives & syllables", "icon": "👥"},
     {"id": "lesson4", "module": 2, "n": 1, "title": "Lesson 4", "subtitle": "Family, hobbies, possessive, attached pronouns", "icon": "👨‍👩‍👧"},
     {"id": "lesson5", "module": 2, "n": 2, "title": "Lesson 5", "subtitle": "Fruit, vegetables, imperative, present tense", "icon": "🍓"},
-    {"id": "lesson6", "module": 2, "n": 3, "title": "Lesson 6", "subtitle": "Dining, traditional food, Wh-questions, present (għ)", "icon": "🍽️"}
+    {"id": "lesson6", "module": 2, "n": 3, "title": "Lesson 6", "subtitle": "Dining, traditional food, Wh-questions, present (għ)", "icon": "🍽️"},
+    {"id": "lesson7", "module": 3, "n": 1, "title": "Lesson 7", "subtitle": "Transport, weekend plans, seasons & particles", "icon": "🚌"},
+    {"id": "lesson8", "module": 3, "n": 2, "title": "Lesson 8", "subtitle": "Date words, particle+article, the map, interesting places", "icon": "🗺️"},
+    {"id": "lesson9", "module": 3, "n": 3, "title": "Lesson 9", "subtitle": "Directions, time expressions & telling the time", "icon": "🕐"}
   ]
 }

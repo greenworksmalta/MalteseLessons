@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502f";
+const VERSION = "20260502h";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -175,11 +175,13 @@ function renderHome(){
   heroSplash.appendChild(img);
   root.appendChild(heroSplash);
 
-  // Welcome card under the splash
-  const hero = el("div","hero");
-  hero.appendChild(el("div","sub","Merħba 👋"));
-  hero.appendChild(el("h1","","Maltese for everyday life"));
-  hero.appendChild(el("p","","Bite-sized lessons with native audio. Tap a lesson to start — each one is broken into sections so you can drill what you need."));
+  // Welcome card under the splash — calm cream gradient with navy headline
+  // and a red accent. Pulls from the logo's full palette without dominating.
+  const hero = el("div","hero-welcome");
+  hero.appendChild(el("span","eyebrow","Merħba 👋  Welcome"));
+  hero.appendChild(el("h1","","Settle in faster."));
+  hero.appendChild(el("p","","Real Maltese for the café, the bus, the office, and your new neighbours. Three minutes a lesson, native audio, no fluff. Start with the free Welcome Lesson below 👇"));
+  hero.appendChild(el("span","accent-bar"));
   root.appendChild(hero);
 
   // Group by module — numeric modules ("1", "2", "3") render as "Module N",
@@ -188,8 +190,12 @@ function renderHome(){
   for(const L of State.index.lessons){
     (byMod[L.module] = byMod[L.module] || []).push(L);
   }
-  // Sort numeric modules first, then non-numeric alphabetically.
+  // Sort: free / starter group first (so newcomers see it on top), then numeric
+  // modules in order, then any other non-numeric groups alphabetically.
+  const isStarter = (k) => /free|start here/i.test(String(k));
   const modKeys = Object.keys(byMod).sort((a, b) => {
+    if(isStarter(a) && !isStarter(b)) return -1;
+    if(!isStarter(a) && isStarter(b)) return 1;
     const an = parseInt(a), bn = parseInt(b);
     const aNum = !isNaN(an), bNum = !isNaN(bn);
     if(aNum && bNum) return an - bn;
@@ -203,10 +209,17 @@ function renderHome(){
     root.appendChild(el("div","module-label",label));
     const list = el("div","section-list");
     for(const L of byMod[mod]){
-      const card = el("button","section-card");
+      const card = el("button","section-card" + (L.free ? " is-free" : ""));
       const ic = el("div","icon"); ic.textContent = L.icon || "📘";
       const meta = el("div","meta");
-      meta.appendChild(el("strong","", L.title));
+      // Title row carries an optional FREE pill so the free starter is visually marked.
+      const titleRow = el("div","title-row");
+      titleRow.appendChild(el("strong","", L.title));
+      if(L.free){
+        const badge = el("span","badge-free","FREE");
+        titleRow.appendChild(badge);
+      }
+      meta.appendChild(titleRow);
       meta.appendChild(el("span","", L.subtitle));
       // progress (cached if lesson loaded; otherwise unknown)
       const pct = lessonProgress(L.id);

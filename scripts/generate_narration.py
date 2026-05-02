@@ -29,8 +29,24 @@ OVERVIEWS_DIR = ROOT / "lessons" / "overviews"
 
 EN_VOICE = "en-US-AndrewMultilingualNeural"   # Newer HD voice, far more natural-sounding
 MT_VOICE = "mt-MT-GraceNeural"
+ES_VOICE = "es-MX-JorgeNeural"                # Mexican male, warm prosody — Spanish parallel to Andrew
 EN_STYLE = "friendly"             # Andrew Multilingual supports: chat, friendly, hopeful, etc.
 EN_STYLE_DEGREE = "1.5"
+
+# Per-overview narrator voice is selected by the file's "lang" field.
+NARRATOR_VOICES = {
+    "en": EN_VOICE,
+    "es": ES_VOICE,
+}
+NARRATOR_LANGS = {
+    "en": "en-GB",
+    "es": "es-MX",
+}
+# Some voices don't support mstts:express-as. Andrew does (friendly); Jorge doesn't reliably.
+NARRATOR_HAS_STYLE = {
+    "en": True,
+    "es": False,
+}
 
 
 def load_env() -> dict:
@@ -68,21 +84,29 @@ def strip_for_tts(s: str) -> str:
     return s
 
 
-def build_ssml(transcript: list) -> str:
+def build_ssml(transcript: list, lang: str = "en") -> str:
     """Convert a transcript list of {en} and {mt} segments into SSML with two voices.
 
-    English is wrapped in <mstts:express-as style='cheerful'> for energetic delivery.
-    Closes inner tags before switching voices, otherwise Azure rejects with 400.
+    The 'en' field carries narrator text (regardless of language — the file-level
+    'lang' picks the actual narrator voice). The 'mt' field always uses Maltese.
+
+    English is wrapped in <mstts:express-as style='friendly'>; Spanish runs plain
+    prosody since Jorge doesn't support expression styles reliably.
     """
-    parts = ["<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' "
-             "xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-GB'>"]
+    narrator_voice = NARRATOR_VOICES.get(lang, EN_VOICE)
+    narrator_lang = NARRATOR_LANGS.get(lang, "en-GB")
+    has_style = NARRATOR_HAS_STYLE.get(lang, False)
+
+    parts = [f"<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' "
+             f"xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='{narrator_lang}'>"]
     last_voice = None
     for seg in transcript:
         # Skip visual-only segments (no spoken content)
         if seg.get("kind") == "header" and not seg.get("en") and not seg.get("mt"):
             continue
         if "en" in seg:
-            voice = EN_VOICE
+            # 'en' is the narrator field, regardless of the file's actual language.
+            voice = narrator_voice
             text = strip_for_tts(seg["en"])
             if not text:
                 continue
@@ -96,22 +120,24 @@ def build_ssml(transcript: list) -> str:
         if voice != last_voice:
             if last_voice is not None:
                 parts.append("</prosody>")
-                if last_voice == EN_VOICE:
+                if last_voice == narrator_voice and has_style:
                     parts.append("</mstts:express-as>")
                 parts.append("</voice>")
-            if voice == EN_VOICE:
-                # Andrew Multilingual is natural at default pace — light prosody nudge only.
-                parts.append(f"<voice name='{voice}'>"
-                             f"<mstts:express-as style='{EN_STYLE}' styledegree='{EN_STYLE_DEGREE}'>"
-                             f"<prosody rate='+0%'>")
+            if voice == narrator_voice:
+                if has_style:
+                    parts.append(f"<voice name='{voice}'>"
+                                 f"<mstts:express-as style='{EN_STYLE}' styledegree='{EN_STYLE_DEGREE}'>"
+                                 f"<prosody rate='+0%'>")
+                else:
+                    parts.append(f"<voice name='{voice}'><prosody rate='+0%'>")
             else:
                 parts.append(f"<voice name='{voice}'><prosody rate='-6%'>")
             last_voice = voice
         parts.append(escape_xml(text))
-        parts.append("<break time='220ms'/>" if voice == EN_VOICE else "<break time='350ms'/>")
+        parts.append("<break time='220ms'/>" if voice == narrator_voice else "<break time='350ms'/>")
     if last_voice is not None:
         parts.append("</prosody>")
-        if last_voice == EN_VOICE:
+        if last_voice == narrator_voice and has_style:
             parts.append("</mstts:express-as>")
         parts.append("</voice>")
     parts.append("</speak>")
@@ -181,8 +207,13 @@ def main():
 
     targets = sys.argv[1:] if len(sys.argv) > 1 else None
     files = sorted(OVERVIEWS_DIR.glob("*.json"))
+
+    def stem_matches_target(stem: str, target: str) -> bool:
+        # 'lesson1' should match both 'lesson1' and 'lesson1.es'
+        return stem == target or stem.startswith(target + ".")
+
     if targets:
-        files = [f for f in files if f.stem in targets]
+        files = [f for f in files if any(stem_matches_target(f.stem, t) for t in targets)]
 
     if not files:
         sys.exit("No overview JSONs to process.")
@@ -191,16 +222,22 @@ def main():
     for f in files:
         data = json.loads(f.read_text(encoding="utf-8"))
         lid = data["lessonId"]
+        # Lang inferred from filename suffix (e.g. extra1.es.json -> 'es') or the JSON's 'lang' field
+        if "." in f.stem:
+            lang = f.stem.split(".", 1)[1]
+        else:
+            lang = data.get("lang", "en")
         transcript = data["transcript"]
-        out = AUDIO_DIR / f"narration_{lid}.mp3"
+        suffix = "" if lang == "en" else f"_{lang}"
+        out = AUDIO_DIR / f"narration_{lid}{suffix}.mp3"
         n = char_count(transcript)
         total_chars += n
         chunks = split_for_voice_limit(transcript, max_voices=40)
-        print(f"[{lid}] {len(transcript)} segments, ~{n} chars, {len(chunks)} batch(es) -> {out.name}")
+        print(f"[{lid} ({lang})] {len(transcript)} segments, ~{n} chars, {len(chunks)} batch(es) -> {out.name}")
         try:
             buf = bytearray()
             for i, chunk in enumerate(chunks, 1):
-                ssml = build_ssml(chunk)
+                ssml = build_ssml(chunk, lang=lang)
                 audio = synthesize(ssml, key, region)
                 buf.extend(audio)
                 print(f"  batch {i}/{len(chunks)}: {len(audio)//1024} KB")

@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502c";
+const VERSION = "20260502d";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -92,7 +92,7 @@ function route(){
     const lid = parts[1];
     if(!lid) return renderHome();
     return loadLesson(lid).then(()=>{
-      if(parts[2]==="overview") return renderOverview(lid);
+      if(parts[2]==="overview") return renderOverview(lid, parts[3] || "en");
       if(parts[2]==="section") return renderSection(lid, parts[3], parts[4]||"intro", parseInt(parts[5]||"0",10));
       return renderLessonHome(lid);
     }).catch(e=>{
@@ -110,12 +110,16 @@ async function loadLesson(lid){
   State.lessons[lid] = data;
   return data;
 }
-async function loadOverview(lid){
-  if(State.overviews[lid]) return State.overviews[lid];
-  const r = await fetch(v("lessons/overviews/"+lid+".json"));
-  if(!r.ok) throw new Error("Missing overview: "+lid);
+async function loadOverview(lid, lang){
+  lang = lang || "en";
+  const cacheKey = lid + ":" + lang;
+  if(State.overviews[cacheKey]) return State.overviews[cacheKey];
+  // English uses the bare filename; other languages use lid.<lang>.json
+  const filename = lang === "en" ? lid + ".json" : lid + "." + lang + ".json";
+  const r = await fetch(v("lessons/overviews/" + filename));
+  if(!r.ok) throw new Error("Missing overview: " + lid + " (" + lang + ")");
   const data = await r.json();
-  State.overviews[lid] = data;
+  State.overviews[cacheKey] = data;
   return data;
 }
 
@@ -265,18 +269,31 @@ function renderInline(text){
 }
 
 // ── Overview / podcast player ─────────────────
-async function renderOverview(lid){
+async function renderOverview(lid, lang){
+  lang = lang || "en";
   const root = $app();
   root.innerHTML = "";
   root.appendChild(topbar("Overview", "/lesson/"+lid));
 
   let ov;
-  try { ov = await loadOverview(lid); }
+  try { ov = await loadOverview(lid, lang); }
   catch(e){
-    root.appendChild(el("p","muted","Could not load this overview. Refresh and try again."));
-    return;
+    // Fall back to English if the requested language doesn't exist
+    if(lang !== "en"){
+      try { ov = await loadOverview(lid, "en"); lang = "en"; }
+      catch(e2){
+        root.appendChild(el("p","muted","Could not load this overview. Refresh and try again."));
+        return;
+      }
+    } else {
+      root.appendChild(el("p","muted","Could not load this overview. Refresh and try again."));
+      return;
+    }
   }
   const lesson = State.lessons[lid];
+  // Discover available languages from the index entry; default to ["en"]
+  const lessonMeta = (State.index.lessons || []).find(l => l.id === lid) || {};
+  const availableLangs = lessonMeta.languages || ["en"];
 
   // Stop other audio
   if(currentBtn){ currentBtn.classList.remove("playing"); currentBtn=null; }
@@ -289,13 +306,31 @@ async function renderOverview(lid){
   hero.appendChild(el("p","",ov.subtitle || "An English-narrated walk-through with Maltese examples."));
   root.appendChild(hero);
 
+  // Language toggle (only shown when the lesson has more than one language)
+  if(availableLangs.length > 1){
+    const langWrap = el("div","lang-toggle");
+    const labels = {en: "🇬🇧 English", es: "🇪🇸 Español"};
+    availableLangs.forEach(L=>{
+      const b = el("button","lang-btn"+(L===lang?" active":""), labels[L] || L.toUpperCase());
+      b.addEventListener("click", ()=>{
+        if(L === lang) return;
+        // Save preference and re-render at the requested language
+        save("preferred_lang", L);
+        go("/lesson/"+lid+"/overview/"+L);
+      });
+      langWrap.appendChild(b);
+    });
+    root.appendChild(langWrap);
+  }
+
   // Build segment timing estimates from char counts
   const segs = ov.transcript.filter(s => s && (s.en || s.mt));
   const totalChars = segs.reduce((a,s) => a + (s.en||s.mt||"").length + 6, 0);
   // We'll set real durations once metadata loads.
 
   // Audio element (separate from the small mt clip player)
-  const audio = new Audio(v("audio/narration_"+lid+".mp3"));
+  const audioFile = lang === "en" ? "narration_"+lid+".mp3" : "narration_"+lid+"_"+lang+".mp3";
+  const audio = new Audio(v("audio/"+audioFile));
   audio.preload = "metadata";
   audio.playbackRate = parseFloat(load("speed_"+lid) || "1") || 1;
 

@@ -9,6 +9,6 @@
     {"id": "lesson7", "module": 3, "n": 1, "title": "Lesson 7", "subtitle": "Transport, weekend plans, seasons & particles", "icon": "🚌"},
     {"id": "lesson8", "module": 3, "n": 2, "title": "Lesson 8", "subtitle": "Date words, particle+article, the map, interesting places", "icon": "🗺️"},
     {"id": "lesson9", "module": 3, "n": 3, "title": "Lesson 9", "subtitle": "Directions, time expressions & telling the time", "icon": "🕐"},
-    {"id": "extra1", "module": "Extras", "n": 1, "title": "Extra Lesson", "subtitle": "Survival Maltese for working expats", "icon": "🛟"}
+    {"id": "extra1", "module": "Extras", "n": 1, "title": "Extra Lesson", "subtitle": "Survival Maltese for working expats", "icon": "🛟", "languages": ["en", "es"]}
   ]
 }

@@ -10,7 +10,7 @@
  * Bump CACHE_NAME whenever any cached file's contents change so old caches are
  * dropped on activation.
  */
-const CACHE_NAME = "maltiongthego-v4";
+const CACHE_NAME = "maltiongthego-v5";
 const APP_SHELL = [
   "./",
   "./index.html",

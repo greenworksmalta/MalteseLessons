@@ -112,6 +112,11 @@
   .choice.wrong{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
   .choice.dim{opacity:.45}
 
+  /* Skip button — appears under exercise choices so the learner can move on without answering. */
+  .btn-skip{display:block;margin:18px auto 0;padding:10px 22px;border-radius:99px;background:transparent;border:1px solid var(--line);color:var(--ink-2);font-size:.92rem;font-weight:600;cursor:pointer;letter-spacing:.005em}
+  .btn-skip:active{transform:scale(.98);background:var(--bg)}
+  .btn-skip:hover{background:var(--bg);border-color:var(--ink-2)}
+
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center}
   .chip{min-height:54px;min-width:64px;padding:0 16px;border-radius:14px;background:var(--card);border:2px solid var(--line);font-weight:700;font-size:1.1rem;color:var(--primary-2);transition:transform .1s ease, background .15s ease, border-color .15s ease}
   .chip:active{transform:scale(.96)}

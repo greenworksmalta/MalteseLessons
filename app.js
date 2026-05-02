@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502l";
+const VERSION = "20260502m";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -22,6 +22,7 @@ const I18N = {
     xpEarned: "XP earned",
     totalXp: "Total XP",
     backToLesson: "Back to lesson",
+    skip: "Skip →",
   },
   es: {
     done: "¡Listo!",
@@ -30,6 +31,7 @@ const I18N = {
     xpEarned: "XP ganados",
     totalXp: "XP total",
     backToLesson: "Volver a la lección",
+    skip: "Saltar →",
   },
 };
 
@@ -870,6 +872,15 @@ function nextBtn(label, onNext){
   return b;
 }
 
+// Skip → small button that lets the learner advance to the next exercise without
+// answering. Used by every interactive question renderer.
+function skipBtn(onNext){
+  const t = I18N[State.lang] || I18N.en;
+  const b = el("button","btn-skip", t.skip);
+  b.addEventListener("click", onNext);
+  return b;
+}
+
 // Listen-and-pick with given items array (each having mt/en)
 function makeListenStep(field){
   return (root, sec, idx, onNext) => {
@@ -900,6 +911,7 @@ function makeListenStep(field){
       choices.appendChild(b);
     });
     card.appendChild(choices);
+    root.appendChild(skipBtn(onNext));
     setTimeout(()=>play(correct.mt), 300);
   };
 }
@@ -947,6 +959,7 @@ function makeBuildStep(field){
       }
     });
     root.appendChild(check);
+    root.appendChild(skipBtn(onNext));
   };
 }
 
@@ -989,6 +1002,8 @@ function makeMcStep(exId, opts){
       chips.appendChild(b);
     });
     card.appendChild(chips);
+  root.appendChild(skipBtn(onNext));
+    root.appendChild(skipBtn(onNext));
   };
 }
 
@@ -1169,6 +1184,7 @@ STEP_RENDERERS["days:scramble"] = (root, sec, idx, onNext) => {
     }
   });
   root.appendChild(check);
+  root.appendChild(skipBtn(onNext));
 };
 
 // Generic match-pairs step
@@ -1224,6 +1240,7 @@ function makeMatchStep(itemsField, leftField, rightField, headline, getXp){
     });
     wrapper.appendChild(lc); wrapper.appendChild(rc);
     card.appendChild(wrapper);
+    root.appendChild(skipBtn(onNext));
   };
 }
 
@@ -1397,6 +1414,7 @@ STEP_RENDERERS["pronouns:ex1"] = (root, sec, idx, onNext) => {
     chips.appendChild(b);
   });
   card.appendChild(chips);
+  root.appendChild(skipBtn(onNext));
   setTimeout(()=>play(item.sentence), 350);
 };
 
@@ -1492,6 +1510,7 @@ STEP_RENDERERS["family:plurals"] = (root, sec, idx, onNext) => {
     ch.appendChild(b);
   });
   card.appendChild(ch);
+  root.appendChild(skipBtn(onNext));
   setTimeout(()=>play(item.singular), 350);
 };
 
@@ -1670,6 +1689,7 @@ STEP_RENDERERS["imperative:ex8"] = (root, sec, idx, onNext) => {
     ch.appendChild(b);
   });
   card.appendChild(ch);
+  root.appendChild(skipBtn(onNext));
   setTimeout(()=>play(item.imperative), 300);
 };
 
@@ -1715,6 +1735,7 @@ STEP_RENDERERS["present:ex9"] = (root, sec, idx, onNext) => {
     ch.appendChild(b);
   });
   card.appendChild(ch);
+  root.appendChild(skipBtn(onNext));
 };
 
 /* ============================================================
@@ -1842,6 +1863,7 @@ STEP_RENDERERS["ghpresent:ex5"] = (root, sec, idx, onNext) => {
     ch.appendChild(b);
   });
   card.appendChild(ch);
+  root.appendChild(skipBtn(onNext));
 };
 STEP_RENDERERS["ghpresent:ex6"] = (root, sec, idx, onNext) => {
   const ex = sec.exercises.find(e=>e.id==="ex6");
@@ -1869,6 +1891,7 @@ STEP_RENDERERS["ghpresent:ex6"] = (root, sec, idx, onNext) => {
     ch.appendChild(b);
   });
   card.appendChild(ch);
+  root.appendChild(skipBtn(onNext));
 };
 
 /* ============================================================
@@ -1989,6 +2012,8 @@ function makeSentenceMcStep(exId){
       ch.appendChild(b);
     });
     card.appendChild(ch);
+    root.appendChild(skipBtn(onNext));
+  root.appendChild(skipBtn(onNext));
     setTimeout(()=>play(item.sentence), 350);
   };
 }

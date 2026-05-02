@@ -3,94 +3,264 @@
   "title": "Lesson 2 Overview",
   "subtitle": "Listen to the lesson explained in English",
   "transcript": [
-    {"en": "Right Luis! 👋 Lesson 2. This one's packed but practical.", "kind": "header"},
-    {"en": "Five things today: a robbery scene, **colours**, **adjectives**, **numbers** up to 30, and the **months**. Three minutes. Let's go!"},
-
-    {"en": "🚨  PART 1 — THE ROBBERY  🚨", "kind": "header"},
-    {"en": "Imagine: you're walking through Valletta. An older lady shouts:"},
-    {"mt": "Ajjut!"},
-    {"en": "That means **help**. Someone has stolen her bag. 👜"},
-    {"en": "She'd say:"},
-    {"mt": "Xi ħadd seraqli l-basket"},
-    {"en": "Someone stole my bag."},
-    {"en": "Now you need to describe the thief. Was he tall? Short? Fat? Slim?"},
-    {"en": "Here's where Maltese gets **gendered**. A man who is tall is:"},
-    {"mt": "twil"},
-    {"en": "A woman who is tall is:"},
-    {"mt": "twila"},
-    {"en": "**The -a ending makes the adjective feminine.**", "kind": "rule"},
-    {"en": "Same pattern for short:"},
-    {"mt": "qasir, qasira"},
-    {"en": "And if she'd dialled the police, the emergency number in Malta is **one-one-two**:"},
-    {"mt": "wieħed wieħed tnejn"},
-
-    {"en": "🎨  PART 2 — COLOURS  🎨", "kind": "header"},
-    {"en": "12 colours. **Most have three forms** — masculine, feminine, plural — to match what you're describing.", "kind": "key"},
-    {"en": "White:"},
-    {"mt": "abjad, bajda, bojod"},
-    {"en": "**abjad** for masc, **bajda** for fem, **bojod** for plural."},
-    {"en": "Red:"},
-    {"mt": "aħmar, ħamra, ħomor"},
-    {"en": "So a **red van** is:"},
-    {"mt": "vann aħmar"},
-    {"en": "**Red sauce**:"},
-    {"mt": "zalza ħamra"},
-    {"en": "**Red birds**:"},
-    {"mt": "għasafar ħomor"},
-    {"en": "🤝 The colour **matches** the noun's gender and number."},
-    {"en": "But — some colours **don't change**. They're loaners, often from Italian:", "kind": "tip"},
-    {"mt": "blu, roża, oranġjo, ċelesti, vjola, kannella"},
-    {"en": "Same in all three forms. ✋"},
-
-    {"en": "✨  PART 3 — ADJECTIVES  ✨", "kind": "header"},
-    {"en": "Same pattern as colours. **Three forms — match the noun.**", "kind": "rule"},
-    {"en": "Big:"},
-    {"mt": "kbir, kbira, kbar"},
-    {"en": "Small:"},
-    {"mt": "żgħir, żgħira, żgħar"},
-    {"en": "Beautiful — ugly:"},
-    {"mt": "sabiħ — ikrah"},
-    {"en": "Good — bad:"},
-    {"mt": "tajjeb — ħażin"},
-    {"en": "Happy — sad:"},
-    {"mt": "ferħan — imdejjaq"},
-    {"en": "There are **11 opposite pairs** in this lesson. Tap a pair, listen, your brain catches the rhythm. 🎵"},
-
-    {"en": "🔢  PART 4 — NUMBERS 1 to 30  🔢", "kind": "header"},
-    {"en": "Quick run through 1 to 10:"},
-    {"mt": "wieħed, tnejn, tlieta, erbgħa, ħamsa"},
-    {"mt": "sitta, sebgħa, tmienja, disgħa, għaxra"},
-    {"en": "11 to 20:"},
-    {"mt": "ħdax, tnax, tlettax, erbatax, ħmistax"},
-    {"mt": "sittax, sbatax, tmintax, dsatax, għoxrin"},
-    {"en": "From 21, you say the unit, then **u** (and), then 20."},
-    {"en": "21:"},
-    {"mt": "wieħed u għoxrin"},
-    {"en": "25:"},
-    {"mt": "ħamsa u għoxrin"},
-    {"en": "30:"},
-    {"mt": "tletin"},
-
-    {"en": "Tiny but **really useful** rule.", "kind": "rule"},
-    {"en": "Numbers **2 to 10** → the noun that follows goes **plural**."},
-    {"en": "'Three years' is:"},
-    {"mt": "tliet snin"},
-    {"en": "Plural form."},
-    {"en": "But **11 and up** → the noun stays **singular**."},
-    {"en": "'Twenty-three years' is:"},
-    {"mt": "tlieta u għoxrin sena"},
-    {"en": "Singular **sena** — not snin."},
-    {"en": "Counter-intuitive but it's a real Maltese feature. 🎯", "kind": "fact"},
-
-    {"en": "📆  PART 5 — MONTHS  📆", "kind": "header"},
-    {"en": "Good news — most are loaned from Italian, so they sound familiar."},
-    {"mt": "Jannar, Frar, Marzu, April, Mejju, Ġunju"},
-    {"mt": "Lulju, Awwissu, Settembru, Ottubru, Novembru, Diċembru"},
-    {"en": "These click fast because half of them are obvious. ✅"},
-
-    {"en": "✅ DONE!", "kind": "win"},
-    {"en": "Robbery vocab. 12 colours. 11 adjective pairs. Numbers 1 to 30. Months."},
-    {"en": "Pick a section. Tap. Listen. Drill. You're flying, Luis. 💪"},
-    {"en": "Saħħa! 🇲🇹"}
+    {
+      "en": "Right! 👋 Lesson 2. This one's packed but practical.",
+      "kind": "header"
+    },
+    {
+      "en": "Five things today: a robbery scene, **colours**, **adjectives**, **numbers** up to 30, and the **months**. Three minutes. Let's go!"
+    },
+    {
+      "en": "🚨 PART 1 — THE ROBBERY 🚨",
+      "kind": "header"
+    },
+    {
+      "en": "Imagine: you're walking through Valletta. An older lady shouts:"
+    },
+    {
+      "mt": "Ajjut!"
+    },
+    {
+      "en": "That means **help**. Someone has stolen her bag. 👜"
+    },
+    {
+      "en": "She'd say:"
+    },
+    {
+      "mt": "Xi ħadd seraqli l-basket"
+    },
+    {
+      "en": "Someone stole my bag."
+    },
+    {
+      "en": "Now you need to describe the thief. Was he tall? Short? Fat? Slim?"
+    },
+    {
+      "en": "Here's where Maltese gets **gendered**. A man who is tall is:"
+    },
+    {
+      "mt": "twil"
+    },
+    {
+      "en": "A woman who is tall is:"
+    },
+    {
+      "mt": "twila"
+    },
+    {
+      "en": "**The -a ending makes the adjective feminine.**",
+      "kind": "rule"
+    },
+    {
+      "en": "Same pattern for short:"
+    },
+    {
+      "mt": "qasir, qasira"
+    },
+    {
+      "en": "And if she'd dialled the police, the emergency number in Malta is **one-one-two**:"
+    },
+    {
+      "mt": "wieħed wieħed tnejn"
+    },
+    {
+      "en": "🎨 PART 2 — COLOURS 🎨",
+      "kind": "header"
+    },
+    {
+      "en": "12 colours. **Most have three forms** — masculine, feminine, plural — to match what you're describing.",
+      "kind": "key"
+    },
+    {
+      "en": "White:"
+    },
+    {
+      "mt": "abjad, bajda, bojod"
+    },
+    {
+      "en": "**abjad** for masc, **bajda** for fem, **bojod** for plural."
+    },
+    {
+      "en": "Red:"
+    },
+    {
+      "mt": "aħmar, ħamra, ħomor"
+    },
+    {
+      "en": "So a **red van** is:"
+    },
+    {
+      "mt": "vann aħmar"
+    },
+    {
+      "en": "**Red sauce**:"
+    },
+    {
+      "mt": "zalza ħamra"
+    },
+    {
+      "en": "**Red birds**:"
+    },
+    {
+      "mt": "għasafar ħomor"
+    },
+    {
+      "en": "🤝 The colour **matches** the noun's gender and number."
+    },
+    {
+      "en": "But — some colours **don't change**. They're loaners, often from Italian:",
+      "kind": "tip"
+    },
+    {
+      "mt": "blu, roża, oranġjo, ċelesti, vjola, kannella"
+    },
+    {
+      "en": "Same in all three forms. ✋"
+    },
+    {
+      "en": "✨ PART 3 — ADJECTIVES ✨",
+      "kind": "header"
+    },
+    {
+      "en": "Same pattern as colours. **Three forms — match the noun.**",
+      "kind": "rule"
+    },
+    {
+      "en": "Big:"
+    },
+    {
+      "mt": "kbir, kbira, kbar"
+    },
+    {
+      "en": "Small:"
+    },
+    {
+      "mt": "żgħir, żgħira, żgħar"
+    },
+    {
+      "en": "Beautiful — ugly:"
+    },
+    {
+      "mt": "sabiħ — ikrah"
+    },
+    {
+      "en": "Good — bad:"
+    },
+    {
+      "mt": "tajjeb — ħażin"
+    },
+    {
+      "en": "Happy — sad:"
+    },
+    {
+      "mt": "ferħan — imdejjaq"
+    },
+    {
+      "en": "There are **11 opposite pairs** in this lesson. Tap a pair, listen, your brain catches the rhythm. 🎵"
+    },
+    {
+      "en": "🔢 PART 4 — NUMBERS 1 to 30 🔢",
+      "kind": "header"
+    },
+    {
+      "en": "Quick run through 1 to 10:"
+    },
+    {
+      "mt": "wieħed, tnejn, tlieta, erbgħa, ħamsa"
+    },
+    {
+      "mt": "sitta, sebgħa, tmienja, disgħa, għaxra"
+    },
+    {
+      "en": "11 to 20:"
+    },
+    {
+      "mt": "ħdax, tnax, tlettax, erbatax, ħmistax"
+    },
+    {
+      "mt": "sittax, sbatax, tmintax, dsatax, għoxrin"
+    },
+    {
+      "en": "From 21, you say the unit, then **u** (and), then 20."
+    },
+    {
+      "en": "21:"
+    },
+    {
+      "mt": "wieħed u għoxrin"
+    },
+    {
+      "en": "25:"
+    },
+    {
+      "mt": "ħamsa u għoxrin"
+    },
+    {
+      "en": "30:"
+    },
+    {
+      "mt": "tletin"
+    },
+    {
+      "en": "Tiny but **really useful** rule.",
+      "kind": "rule"
+    },
+    {
+      "en": "Numbers **2 to 10** → the noun that follows goes **plural**."
+    },
+    {
+      "en": "'Three years' is:"
+    },
+    {
+      "mt": "tliet snin"
+    },
+    {
+      "en": "Plural form."
+    },
+    {
+      "en": "But **11 and up** → the noun stays **singular**."
+    },
+    {
+      "en": "'Twenty-three years' is:"
+    },
+    {
+      "mt": "tlieta u għoxrin sena"
+    },
+    {
+      "en": "Singular **sena** — not snin."
+    },
+    {
+      "en": "Counter-intuitive but it's a real Maltese feature. 🎯",
+      "kind": "fact"
+    },
+    {
+      "en": "📆 PART 5 — MONTHS 📆",
+      "kind": "header"
+    },
+    {
+      "en": "Good news — most are loaned from Italian, so they sound familiar."
+    },
+    {
+      "mt": "Jannar, Frar, Marzu, April, Mejju, Ġunju"
+    },
+    {
+      "mt": "Lulju, Awwissu, Settembru, Ottubru, Novembru, Diċembru"
+    },
+    {
+      "en": "These click fast because half of them are obvious. ✅"
+    },
+    {
+      "en": "✅ DONE!",
+      "kind": "win"
+    },
+    {
+      "en": "Robbery vocab. 12 colours. 11 adjective pairs. Numbers 1 to 30. Months."
+    },
+    {
+      "en": "Pick a section. Tap. Listen. Drill. You're flying. 💪"
+    },
+    {
+      "en": "Saħħa! 🇲🇹"
+    }
   ]
 }

@@ -3,96 +3,264 @@
   "title": "Lesson 3 Overview",
   "subtitle": "Listen to the lesson explained in English",
   "transcript": [
-    {"en": "Hey Luis! 👋 Lesson 3.", "kind": "header"},
-    {"en": "Three little ideas — but **all super useful**. Pronouns, the words for **this** and **that**, and a spelling trick that'll make Maltese way easier. Three minutes. Let's go!"},
-
-    {"en": "👥  PART 1 — PRONOUNS  👥", "kind": "header"},
-    {"en": "Pronouns are the small words: I, you, he, she, we, they."},
-    {"en": "Quick win: **most Maltese pronouns have a long form and a short form**. Same meaning. Pick whichever feels good. 🤝", "kind": "key"},
-    {"en": "I am:"},
-    {"mt": "Jien"},
-    {"en": "Or:"},
-    {"mt": "Jiena"},
-    {"en": "You — talking to one person:"},
-    {"mt": "Int"},
-    {"en": "Or:"},
-    {"mt": "Inti"},
-    {"en": "He:"},
-    {"mt": "Hu, Huwa"},
-    {"en": "She:"},
-    {"mt": "Hi, Hija"},
-    {"en": "We:"},
-    {"mt": "Aħna"},
-    {"en": "You — talking to a group:"},
-    {"mt": "Intom"},
-    {"en": "They:"},
-    {"mt": "Huma"},
-
-    {"en": "These replace nouns. Instead of 'Jack is going to football':"},
-    {"mt": "Hu jmur il-futbol"},
-    {"en": "**He** goes to football. Jack becomes Hu."},
-    {"en": "Instead of 'The children slept':"},
-    {"mt": "Huma raqdu"},
-    {"en": "**They** slept."},
-    {"en": "Feminine noun → **hi**. Masculine → **hu**. Any plural → **huma**.", "kind": "rule"},
-    {"en": "That's it. The whole pronoun system. Easier than English honestly. 😎"},
-
-    {"en": "👉  PART 2 — THIS vs THAT  👈", "kind": "header"},
-    {"en": "Two sets of three words. **This/these** for things close to you, **that/those** for things further away.", "kind": "key"},
-
-    {"en": "👉 CLOSE — for what you can touch:"},
-    {"mt": "Dan"},
-    {"en": "**this** — masculine. As in:"},
-    {"mt": "Dan il-bieb"},
-    {"en": "this door."},
-    {"mt": "Din"},
-    {"en": "**this** — feminine. As in:"},
-    {"mt": "Din iċ-ċavetta"},
-    {"en": "this key."},
-    {"mt": "Dawn"},
-    {"en": "**these** — plural. As in:"},
-    {"mt": "Dawn it-tfal"},
-    {"en": "these children."},
-
-    {"en": "👈 FAR — for what's over there:"},
-    {"mt": "Dak"},
-    {"en": "**that** — masculine."},
-    {"mt": "Dak ir-raġel"},
-    {"en": "that man."},
-    {"mt": "Dik"},
-    {"en": "**that** — feminine."},
-    {"mt": "Dik il-mara"},
-    {"en": "that woman."},
-    {"mt": "Dawk"},
-    {"en": "**those** — plural."},
-    {"mt": "Dawk il-fjuri"},
-    {"en": "those flowers."},
-
-    {"en": "Memory hook: dan, din, dawn = touch. dak, dik, dawk = far. Dn = close. Dk = far. ✋", "kind": "tip"},
-
-    {"en": "🔡  PART 3 — SYLLABLE SPLITTING  🔡", "kind": "header"},
-    {"en": "OK here's a real **superpower** for spelling. Maltese is mostly phonetic — words sound like they're spelled. So if you can chop a word into syllables, you can spell it. 🎯", "kind": "key"},
-    {"en": "Three rules. That's all."},
-    {"en": "1️⃣ Each syllable has only **one vowel**.", "kind": "rule"},
-    {"en": "2️⃣ The second syllable starts with a **consonant**.", "kind": "rule"},
-    {"en": "3️⃣ Two consonants in the middle? **Split between them**.", "kind": "rule"},
-
-    {"en": "Watch:"},
-    {"mt": "mara"},
-    {"en": "becomes:"},
-    {"mt": "ma-ra"},
-    {"en": "Two syllables. Easy."},
-    {"mt": "raġel"},
-    {"en": "becomes:"},
-    {"mt": "ra-ġel"},
-    {"en": "And the longer one — umbrella:"},
-    {"mt": "um-brel-la"},
-    {"en": "Three syllables. Boom! 💥"},
-    {"en": "Once a word is chopped, you can hear every sound — and spell it confidently. 🎵"},
-
-    {"en": "✅ DONE!", "kind": "win"},
-    {"en": "Pronouns. Demonstratives. Syllables. Three small ideas — that unlock loads of conversation."},
-    {"en": "Tap a section, drill it, repeat. You're getting fast, Luis. 💪"},
-    {"en": "Saħħa! 🇲🇹"}
+    {
+      "en": "Hey! 👋 Lesson 3.",
+      "kind": "header"
+    },
+    {
+      "en": "Three little ideas — but **all super useful**. Pronouns, the words for **this** and **that**, and a spelling trick that'll make Maltese way easier. Three minutes. Let's go!"
+    },
+    {
+      "en": "👥 PART 1 — PRONOUNS 👥",
+      "kind": "header"
+    },
+    {
+      "en": "Pronouns are the small words: I, you, he, she, we, they."
+    },
+    {
+      "en": "Quick win: **most Maltese pronouns have a long form and a short form**. Same meaning. Pick whichever feels good. 🤝",
+      "kind": "key"
+    },
+    {
+      "en": "I am:"
+    },
+    {
+      "mt": "Jien"
+    },
+    {
+      "en": "Or:"
+    },
+    {
+      "mt": "Jiena"
+    },
+    {
+      "en": "You — talking to one person:"
+    },
+    {
+      "mt": "Int"
+    },
+    {
+      "en": "Or:"
+    },
+    {
+      "mt": "Inti"
+    },
+    {
+      "en": "He:"
+    },
+    {
+      "mt": "Hu, Huwa"
+    },
+    {
+      "en": "She:"
+    },
+    {
+      "mt": "Hi, Hija"
+    },
+    {
+      "en": "We:"
+    },
+    {
+      "mt": "Aħna"
+    },
+    {
+      "en": "You — talking to a group:"
+    },
+    {
+      "mt": "Intom"
+    },
+    {
+      "en": "They:"
+    },
+    {
+      "mt": "Huma"
+    },
+    {
+      "en": "These replace nouns. Instead of 'Jack is going to football':"
+    },
+    {
+      "mt": "Hu jmur il-futbol"
+    },
+    {
+      "en": "**He** goes to football. Jack becomes Hu."
+    },
+    {
+      "en": "Instead of 'The children slept':"
+    },
+    {
+      "mt": "Huma raqdu"
+    },
+    {
+      "en": "**They** slept."
+    },
+    {
+      "en": "Feminine noun → **hi**. Masculine → **hu**. Any plural → **huma**.",
+      "kind": "rule"
+    },
+    {
+      "en": "That's it. The whole pronoun system. Easier than English honestly. 😎"
+    },
+    {
+      "en": "👉 PART 2 — THIS vs THAT 👈",
+      "kind": "header"
+    },
+    {
+      "en": "Two sets of three words. **This/these** for things close to you, **that/those** for things further away.",
+      "kind": "key"
+    },
+    {
+      "en": "👉 CLOSE — for what you can touch:"
+    },
+    {
+      "mt": "Dan"
+    },
+    {
+      "en": "**this** — masculine. As in:"
+    },
+    {
+      "mt": "Dan il-bieb"
+    },
+    {
+      "en": "this door."
+    },
+    {
+      "mt": "Din"
+    },
+    {
+      "en": "**this** — feminine. As in:"
+    },
+    {
+      "mt": "Din iċ-ċavetta"
+    },
+    {
+      "en": "this key."
+    },
+    {
+      "mt": "Dawn"
+    },
+    {
+      "en": "**these** — plural. As in:"
+    },
+    {
+      "mt": "Dawn it-tfal"
+    },
+    {
+      "en": "these children."
+    },
+    {
+      "en": "👈 FAR — for what's over there:"
+    },
+    {
+      "mt": "Dak"
+    },
+    {
+      "en": "**that** — masculine."
+    },
+    {
+      "mt": "Dak ir-raġel"
+    },
+    {
+      "en": "that man."
+    },
+    {
+      "mt": "Dik"
+    },
+    {
+      "en": "**that** — feminine."
+    },
+    {
+      "mt": "Dik il-mara"
+    },
+    {
+      "en": "that woman."
+    },
+    {
+      "mt": "Dawk"
+    },
+    {
+      "en": "**those** — plural."
+    },
+    {
+      "mt": "Dawk il-fjuri"
+    },
+    {
+      "en": "those flowers."
+    },
+    {
+      "en": "Memory hook: dan, din, dawn = touch. dak, dik, dawk = far. Dn = close. Dk = far. ✋",
+      "kind": "tip"
+    },
+    {
+      "en": "🔡 PART 3 — SYLLABLE SPLITTING 🔡",
+      "kind": "header"
+    },
+    {
+      "en": "OK here's a real **superpower** for spelling. Maltese is mostly phonetic — words sound like they're spelled. So if you can chop a word into syllables, you can spell it. 🎯",
+      "kind": "key"
+    },
+    {
+      "en": "Three rules. That's all."
+    },
+    {
+      "en": "1️⃣ Each syllable has only **one vowel**.",
+      "kind": "rule"
+    },
+    {
+      "en": "2️⃣ The second syllable starts with a **consonant**.",
+      "kind": "rule"
+    },
+    {
+      "en": "3️⃣ Two consonants in the middle? **Split between them**.",
+      "kind": "rule"
+    },
+    {
+      "en": "Watch:"
+    },
+    {
+      "mt": "mara"
+    },
+    {
+      "en": "becomes:"
+    },
+    {
+      "mt": "ma-ra"
+    },
+    {
+      "en": "Two syllables. Easy."
+    },
+    {
+      "mt": "raġel"
+    },
+    {
+      "en": "becomes:"
+    },
+    {
+      "mt": "ra-ġel"
+    },
+    {
+      "en": "And the longer one — umbrella:"
+    },
+    {
+      "mt": "um-brel-la"
+    },
+    {
+      "en": "Three syllables. Boom! 💥"
+    },
+    {
+      "en": "Once a word is chopped, you can hear every sound — and spell it confidently. 🎵"
+    },
+    {
+      "en": "✅ DONE!",
+      "kind": "win"
+    },
+    {
+      "en": "Pronouns. Demonstratives. Syllables. Three small ideas — that unlock loads of conversation."
+    },
+    {
+      "en": "Tap a section, drill it, repeat. You're getting fast. 💪"
+    },
+    {
+      "en": "Saħħa! 🇲🇹"
+    }
   ]
 }

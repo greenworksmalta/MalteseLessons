@@ -3,118 +3,329 @@
   "title": "Lesson 9 Overview",
   "subtitle": "Listen to the lesson explained in English",
   "transcript": [
-    {"en": "Hey Luis! 👋 Lesson 9 — last one of Module 3!", "kind": "header"},
-    {"en": "Three things, all about **moving through time and space**: directions, time expressions, and how to tell the time. Let's go!"},
-
-    {"en": "🧭  PART 1 — DIRECTIONS  🧭", "kind": "header"},
-    {"en": "First — how to ask. The magic phrase to start with:"},
-    {"mt": "Skużi. Tista' tgħidli fejn hi ___, jekk jogħġbok?"},
-    {"en": "Excuse me. Could you tell me where ___ is, please? 🙋", "kind": "key"},
-    {"en": "Just slot the place in the gap. Then follow up with **Grazzi** — thanks. ☕"},
-
-    {"en": "Now to understand the answer, you need a few keywords. Right:"},
-    {"mt": "Lemin"},
-    {"en": "Left:"},
-    {"mt": "Xellug"},
-    {"en": "Straight ahead:"},
-    {"mt": "Kompli bi dritt"},
-    {"en": "Turn right:"},
-    {"mt": "Dur fuq il-lemin"},
-    {"en": "Turn left:"},
-    {"mt": "Dur fuq ix-xellug"},
-    {"en": "In front of:"},
-    {"mt": "Faċċata ta'"},
-    {"en": "Next to:"},
-    {"mt": "Ħdejn"},
-    {"en": "Between:"},
-    {"mt": "Bejn"},
-
-    {"en": "🌬️ Bonus pack — wind directions! Important if you sail or watch weather forecasts.", "kind": "tip"},
-    {"mt": "Tramuntana"},
-    {"en": "North."},
-    {"mt": "Lvant"},
-    {"en": "East."},
-    {"mt": "Nofsinhar"},
-    {"en": "South."},
-    {"mt": "Punent"},
-    {"en": "West."},
-    {"mt": "Grigal, Xlokk, Lbiċ, Majjistral"},
-    {"en": "And the four diagonals — North-East, South-East, South-West, North-West. Always written in **capital letters**.", "kind": "fact"},
-
-    {"en": "⏳  PART 2 — TIME EXPRESSIONS  ⏳", "kind": "header"},
-    {"en": "Tiny words that totally change a sentence. Yesterday:"},
-    {"mt": "Ilbieraħ"},
-    {"en": "Today:"},
-    {"mt": "Illum"},
-    {"en": "Tomorrow:"},
-    {"mt": "Għada"},
-    {"en": "Now:"},
-    {"mt": "Issa"},
-    {"en": "Soon:"},
-    {"mt": "Dalwaqt"},
-    {"en": "Always:"},
-    {"mt": "Dejjem"},
-    {"en": "Never:"},
-    {"mt": "Qatt"},
-    {"en": "Often:"},
-    {"mt": "Ta' spiss"},
-    {"en": "Sometimes:"},
-    {"mt": "Xi kultant"},
-    {"en": "Once a week:"},
-    {"mt": "Darba fil-ġimgħa"},
-    {"en": "Every day:"},
-    {"mt": "Kuljum"},
-    {"en": "Sprinkle these into sentences and your Maltese instantly sounds **way more natural**. 🎯"},
-
-    {"en": "🕐  PART 3 — TELLING TIME  🕐", "kind": "header"},
-    {"en": "Big tip first. **Maltese has no word for 'o'clock'.** You just say the number with its article.", "kind": "rule"},
-    {"en": "BUT — 1 o'clock and 2 o'clock are **special**. They get unique forms.", "kind": "key"},
-    {"en": "1 o'clock:"},
-    {"mt": "is-siegħa"},
-    {"en": "2 o'clock:"},
-    {"mt": "is-sagħtejn"},
-    {"en": "From 3 onwards, just the regular number with 'the':"},
-    {"mt": "it-tlieta"},
-    {"en": "Three o'clock."},
-    {"mt": "is-sebgħa"},
-    {"en": "Seven o'clock."},
-    {"mt": "il-ħamsa"},
-    {"en": "Five o'clock."},
-
-    {"en": "12 o'clock has two flavours. Noon:"},
-    {"mt": "nofsinhar"},
-    {"en": "Midnight:"},
-    {"mt": "nofsillejl"},
-
-    {"en": "For half past, quarter past, minutes past — same as English. Add **u** for 'past', **nieqes** for 'to'.", "kind": "rule"},
-    {"en": "Quarter past 5:"},
-    {"mt": "il-ħamsa u kwart"},
-    {"en": "Half past 5:"},
-    {"mt": "il-ħamsa u nofs"},
-    {"en": "20 past 5:"},
-    {"mt": "il-ħamsa u għoxrin"},
-    {"en": "Quarter to 6:"},
-    {"mt": "is-sitta nieqes kwart"},
-    {"en": "10 to 6:"},
-    {"mt": "is-sitta nieqes għaxra"},
-
-    {"en": "AM or PM? You add a phrase at the end:", "kind": "tip"},
-    {"en": "AM (morning):"},
-    {"mt": "ta' filgħodu"},
-    {"en": "PM (afternoon):"},
-    {"mt": "ta' wara nofsinhar"},
-    {"en": "Evening (6pm-10pm):"},
-    {"mt": "ta' filgħaxija"},
-    {"en": "Night (after 10pm):"},
-    {"mt": "ta' billejl"},
-    {"en": "So 8:05 AM is:"},
-    {"mt": "It-tmienja u ħamsa ta' filgħodu"},
-    {"en": "And 7:30 PM is:"},
-    {"mt": "Is-sebgħa u nofs ta' filgħaxija"},
-
-    {"en": "✅ DONE!", "kind": "win"},
-    {"en": "Directions. Time expressions. Telling time. **Module 3 — complete.** 🏆"},
-    {"en": "9 lessons in. Three modules wrapped. You've come a really long way, Luis. 💪"},
-    {"en": "Saħħa! Prosit! 🇲🇹"}
+    {
+      "en": "Hey! 👋 Lesson 9 — last one of Module 3!",
+      "kind": "header"
+    },
+    {
+      "en": "Three things, all about **moving through time and space**: directions, time expressions, and how to tell the time. Let's go!"
+    },
+    {
+      "en": "🧭 PART 1 — DIRECTIONS 🧭",
+      "kind": "header"
+    },
+    {
+      "en": "First — how to ask. The magic phrase to start with:"
+    },
+    {
+      "mt": "Skużi. Tista' tgħidli fejn hi ___, jekk jogħġbok?"
+    },
+    {
+      "en": "Excuse me. Could you tell me where ___ is, please? 🙋",
+      "kind": "key"
+    },
+    {
+      "en": "Just slot the place in the gap. Then follow up with **Grazzi** — thanks. ☕"
+    },
+    {
+      "en": "Now to understand the answer, you need a few keywords. Right:"
+    },
+    {
+      "mt": "Lemin"
+    },
+    {
+      "en": "Left:"
+    },
+    {
+      "mt": "Xellug"
+    },
+    {
+      "en": "Straight ahead:"
+    },
+    {
+      "mt": "Kompli bi dritt"
+    },
+    {
+      "en": "Turn right:"
+    },
+    {
+      "mt": "Dur fuq il-lemin"
+    },
+    {
+      "en": "Turn left:"
+    },
+    {
+      "mt": "Dur fuq ix-xellug"
+    },
+    {
+      "en": "In front of:"
+    },
+    {
+      "mt": "Faċċata ta'"
+    },
+    {
+      "en": "Next to:"
+    },
+    {
+      "mt": "Ħdejn"
+    },
+    {
+      "en": "Between:"
+    },
+    {
+      "mt": "Bejn"
+    },
+    {
+      "en": "🌬️ Bonus pack — wind directions! Important if you sail or watch weather forecasts.",
+      "kind": "tip"
+    },
+    {
+      "mt": "Tramuntana"
+    },
+    {
+      "en": "North."
+    },
+    {
+      "mt": "Lvant"
+    },
+    {
+      "en": "East."
+    },
+    {
+      "mt": "Nofsinhar"
+    },
+    {
+      "en": "South."
+    },
+    {
+      "mt": "Punent"
+    },
+    {
+      "en": "West."
+    },
+    {
+      "mt": "Grigal, Xlokk, Lbiċ, Majjistral"
+    },
+    {
+      "en": "And the four diagonals — North-East, South-East, South-West, North-West. Always written in **capital letters**.",
+      "kind": "fact"
+    },
+    {
+      "en": "⏳ PART 2 — TIME EXPRESSIONS ⏳",
+      "kind": "header"
+    },
+    {
+      "en": "Tiny words that totally change a sentence. Yesterday:"
+    },
+    {
+      "mt": "Ilbieraħ"
+    },
+    {
+      "en": "Today:"
+    },
+    {
+      "mt": "Illum"
+    },
+    {
+      "en": "Tomorrow:"
+    },
+    {
+      "mt": "Għada"
+    },
+    {
+      "en": "Now:"
+    },
+    {
+      "mt": "Issa"
+    },
+    {
+      "en": "Soon:"
+    },
+    {
+      "mt": "Dalwaqt"
+    },
+    {
+      "en": "Always:"
+    },
+    {
+      "mt": "Dejjem"
+    },
+    {
+      "en": "Never:"
+    },
+    {
+      "mt": "Qatt"
+    },
+    {
+      "en": "Often:"
+    },
+    {
+      "mt": "Ta' spiss"
+    },
+    {
+      "en": "Sometimes:"
+    },
+    {
+      "mt": "Xi kultant"
+    },
+    {
+      "en": "Once a week:"
+    },
+    {
+      "mt": "Darba fil-ġimgħa"
+    },
+    {
+      "en": "Every day:"
+    },
+    {
+      "mt": "Kuljum"
+    },
+    {
+      "en": "Sprinkle these into sentences and your Maltese instantly sounds **way more natural**. 🎯"
+    },
+    {
+      "en": "🕐 PART 3 — TELLING TIME 🕐",
+      "kind": "header"
+    },
+    {
+      "en": "Big tip first. **Maltese has no word for 'o'clock'.** You just say the number with its article.",
+      "kind": "rule"
+    },
+    {
+      "en": "BUT — 1 o'clock and 2 o'clock are **special**. They get unique forms.",
+      "kind": "key"
+    },
+    {
+      "en": "1 o'clock:"
+    },
+    {
+      "mt": "is-siegħa"
+    },
+    {
+      "en": "2 o'clock:"
+    },
+    {
+      "mt": "is-sagħtejn"
+    },
+    {
+      "en": "From 3 onwards, just the regular number with 'the':"
+    },
+    {
+      "mt": "it-tlieta"
+    },
+    {
+      "en": "Three o'clock."
+    },
+    {
+      "mt": "is-sebgħa"
+    },
+    {
+      "en": "Seven o'clock."
+    },
+    {
+      "mt": "il-ħamsa"
+    },
+    {
+      "en": "Five o'clock."
+    },
+    {
+      "en": "12 o'clock has two flavours. Noon:"
+    },
+    {
+      "mt": "nofsinhar"
+    },
+    {
+      "en": "Midnight:"
+    },
+    {
+      "mt": "nofsillejl"
+    },
+    {
+      "en": "For half past, quarter past, minutes past — same as English. Add **u** for 'past', **nieqes** for 'to'.",
+      "kind": "rule"
+    },
+    {
+      "en": "Quarter past 5:"
+    },
+    {
+      "mt": "il-ħamsa u kwart"
+    },
+    {
+      "en": "Half past 5:"
+    },
+    {
+      "mt": "il-ħamsa u nofs"
+    },
+    {
+      "en": "20 past 5:"
+    },
+    {
+      "mt": "il-ħamsa u għoxrin"
+    },
+    {
+      "en": "Quarter to 6:"
+    },
+    {
+      "mt": "is-sitta nieqes kwart"
+    },
+    {
+      "en": "10 to 6:"
+    },
+    {
+      "mt": "is-sitta nieqes għaxra"
+    },
+    {
+      "en": "AM or PM? You add a phrase at the end:",
+      "kind": "tip"
+    },
+    {
+      "en": "AM (morning):"
+    },
+    {
+      "mt": "ta' filgħodu"
+    },
+    {
+      "en": "PM (afternoon):"
+    },
+    {
+      "mt": "ta' wara nofsinhar"
+    },
+    {
+      "en": "Evening (6pm-10pm):"
+    },
+    {
+      "mt": "ta' filgħaxija"
+    },
+    {
+      "en": "Night (after 10pm):"
+    },
+    {
+      "mt": "ta' billejl"
+    },
+    {
+      "en": "So 8:05 AM is:"
+    },
+    {
+      "mt": "It-tmienja u ħamsa ta' filgħodu"
+    },
+    {
+      "en": "And 7:30 PM is:"
+    },
+    {
+      "mt": "Is-sebgħa u nofs ta' filgħaxija"
+    },
+    {
+      "en": "✅ DONE!",
+      "kind": "win"
+    },
+    {
+      "en": "Directions. Time expressions. Telling time. **Module 3 — complete.** 🏆"
+    },
+    {
+      "en": "9 lessons in. Three modules wrapped. You've come a really long way. 💪"
+    },
+    {
+      "en": "Saħħa! Prosit! 🇲🇹"
+    }
   ]
 }

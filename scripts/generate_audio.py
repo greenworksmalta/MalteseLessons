@@ -112,39 +112,57 @@ def collect_strings(lesson: dict) -> list[str]:
     return sorted(s for s in strings if s and s.strip() and len(s) <= 200)
 
 
-# Pronunciation overrides — keyed Maltese substrings get rewritten with SSML
-# <phoneme> tags using IPA so Azure's voice doesn't fall back to Italian/Spanish
-# defaults for loanwords with grave-accent vowels.
+# Pronunciation overrides — Azure's neural Maltese voices accept SSML <phoneme>
+# tags but ignore the IPA, so we substitute via <sub alias="..."> instead.
+# The alias is what Azure will actually pronounce; the original text (kafè etc.)
+# stays unchanged in the displayed transcript.
 #
-# Maltese 'è' is a stressed open-e, similar to /ɛ/ in 'bet'. The Azure voice was
-# treating words like "kafè" with an Italian/Spanish lean; this forces the right
-# vowel.
+# Italian-style respellings ("kaffè", "tè" with double letters or alt vowels)
+# coax Azure away from the Spanish-flavoured /e/ it falls into for grave-accent
+# loanwords, and toward the open /ɛ/ + final stress that Maltese speakers use.
 PRONUNCIATION_OVERRIDES = {
-    "kafè": "<phoneme alphabet='ipa' ph='kafˈfɛ'>kafè</phoneme>",
-    "tè":   "<phoneme alphabet='ipa' ph='ˈtɛ'>tè</phoneme>",
+    "kafè": "kaffè",
+    "tè":   "teh",
+}
+
+# Some loanwords with grave-accent vowels still come out Spanish-leaning even
+# after respelling. For these, switch to mt-MT-JosephNeural — the male voice
+# handles them noticeably more Maltese-ly than Grace does.
+JOSEPH_VOICE_PHRASES = {
+    "kafè",
+    "tè",
+    "kafè bil-ħalib",
+    "tè bil-lumi",
+    "kikkra kafè",
 }
 
 
 def apply_pronunciation_hints(text: str) -> str:
-    """Insert SSML phoneme tags for known mispronounced words.
-
-    `text` is XML-escaped first, then the literal word is substituted with the
-    SSML fragment. We replace the escaped form to avoid stomping on inner XML.
-    """
+    """Wrap known mispronounced tokens in <sub alias='...'> so the TTS hears a
+    different (better-pronounced) string while displays/transcripts keep the
+    correct Maltese spelling. Input/output are SSML-escaped."""
     out = escape_xml(text)
-    for word, ssml_fragment in PRONUNCIATION_OVERRIDES.items():
-        # Word-boundary-ish replace: only swap when the literal word appears as a
-        # whole token (preceded/followed by space, punctuation, or start/end).
-        # Simple substring replace is fine here because these tokens are rare.
-        out = out.replace(escape_xml(word), ssml_fragment)
+    for word, alias in PRONUNCIATION_OVERRIDES.items():
+        out = out.replace(escape_xml(word), f"<sub alias='{escape_xml(alias)}'>{escape_xml(word)}</sub>")
     return out
+
+
+_JOSEPH_LOWER = {p.lower() for p in JOSEPH_VOICE_PHRASES}
+
+
+def pick_voice(text: str, default: str) -> str:
+    """Use Joseph for loanwords that Grace handles poorly. Case-insensitive."""
+    if text.strip().lower() in _JOSEPH_LOWER:
+        return "mt-MT-JosephNeural"
+    return default
 
 
 def synthesize(text: str, key: str, region: str, voice: str = "mt-MT-GraceNeural") -> bytes:
     """One TTS call. Retries on transient errors."""
+    chosen_voice = pick_voice(text, voice)
     ssml = (
         "<speak version='1.0' xml:lang='mt-MT'>"
-        f"<voice name='{voice}'>"
+        f"<voice name='{chosen_voice}'>"
         "<prosody rate='-8%'>"
         f"{apply_pronunciation_hints(text)}"
         "</prosody>"

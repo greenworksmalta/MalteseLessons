@@ -50,6 +50,10 @@
   .hero p{margin:4px 0 0;opacity:.9}
   .hero .sub{font-size:.9rem;opacity:.85;margin-top:6px;letter-spacing:.04em;text-transform:uppercase}
 
+  /* Branded hero — uses the real MaltiOnTheGoLogo at full bleed on near-white. */
+  .hero-branded{position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:18px;background:#fefefe;aspect-ratio:3/2;max-height:280px}
+  .hero-branded img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+
   .section-list{display:flex;flex-direction:column;gap:12px}
   .section-card{display:grid;grid-template-columns:56px 1fr 24px;gap:14px;align-items:center;padding:18px;background:var(--card);border:none;border-radius:var(--radius);box-shadow:var(--shadow);text-align:left;width:100%;color:var(--ink);transition:transform .12s ease}
   .section-card:active{transform:scale(.985)}

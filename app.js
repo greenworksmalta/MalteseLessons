@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502d";
+const VERSION = "20260502f";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -166,10 +166,20 @@ function renderHome(){
   root.innerHTML = "";
   root.appendChild(topbar("MaltiOnTheGo", null));
 
+  // Branded splash hero — uses the generated splash.png so the wordmark + balcony
+  // illustration hits Luis the moment he opens the app.
+  const heroSplash = el("div","hero-branded");
+  const img = document.createElement("img");
+  img.src = v("splash.png");
+  img.alt = "MaltiOnTheGo — Maltese for life and work in Malta";
+  heroSplash.appendChild(img);
+  root.appendChild(heroSplash);
+
+  // Welcome card under the splash
   const hero = el("div","hero");
-  hero.appendChild(el("div","sub","Maltese for life in Malta"));
-  hero.appendChild(el("h1","","Merħba 👋"));
-  hero.appendChild(el("p","","Bite-sized Maltese for everyday life. Tap a lesson to start — each one is broken into sections so you can drill what you need."));
+  hero.appendChild(el("div","sub","Merħba 👋"));
+  hero.appendChild(el("h1","","Maltese for everyday life"));
+  hero.appendChild(el("p","","Bite-sized lessons with native audio. Tap a lesson to start — each one is broken into sections so you can drill what you need."));
   root.appendChild(hero);
 
   // Group by module — numeric modules ("1", "2", "3") render as "Module N",

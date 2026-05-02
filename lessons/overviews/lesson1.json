@@ -3,291 +3,105 @@
   "title": "Lesson 1 Overview",
   "subtitle": "Listen to the lesson explained in English",
   "transcript": [
-    {
-      "en": "Welcome! 👋 Lesson 1. Your first dive into Maltese.",
-      "kind": "header"
-    },
-    {
-      "en": "Four things today. Saying hello. The alphabet. A tiny but important word — **the**. And the days of the week. Three minutes. Let's go!"
-    },
-    {
-      "en": "💬 PART 1 — SAY HELLO 💬",
-      "kind": "header"
-    },
-    {
-      "en": "Start simple. To say 'hi' you say:"
-    },
-    {
-      "mt": "Ħelow"
-    },
-    {
-      "en": "Or in the morning:"
-    },
-    {
-      "mt": "Bonġu"
-    },
-    {
-      "en": "To tell someone your name:"
-    },
-    {
-      "mt": "Jisimni"
-    },
-    {
-      "en": "**Jisimni** literally means 'my name is'. Easy. 🙋"
-    },
-    {
-      "en": "To ask someone their name:"
-    },
-    {
-      "mt": "Int x'jismek?"
-    },
-    {
-      "en": "And 'I'm from somewhere':"
-    },
-    {
-      "mt": "Jien minn..."
-    },
-    {
-      "en": "Five phrases. That's all you need to start a conversation in Malta. ☕",
-      "kind": "key"
-    },
-    {
-      "en": "🔤 PART 2 — THE ALPHABET 🔤",
-      "kind": "header"
-    },
-    {
-      "en": "OK quick fact: Maltese has **30 letters**. Most are familiar — same as English. But **five are unique** to Maltese.",
-      "kind": "fact"
-    },
-    {
-      "en": "Here's the special crew. 🌟"
-    },
-    {
-      "en": "First — c with a dot:"
-    },
-    {
-      "mt": "ċ"
-    },
-    {
-      "en": "Sounds like the **'ch'** in 'chair'. As in:"
-    },
-    {
-      "mt": "ċavetta"
-    },
-    {
-      "en": "key. 🔑"
-    },
-    {
-      "en": "Then — g with a dot:"
-    },
-    {
-      "mt": "ġ"
-    },
-    {
-      "en": "Sounds like the **'j'** in 'judge'. As in:"
-    },
-    {
-      "mt": "ġelat"
-    },
-    {
-      "en": "ice cream. 🍦"
-    },
-    {
-      "en": "Then — h with a stroke:"
-    },
-    {
-      "mt": "ħ"
-    },
-    {
-      "en": "A strong English **'h'** — really push the air. As in:"
-    },
-    {
-      "mt": "ħobż"
-    },
-    {
-      "en": "bread. 🍞"
-    },
-    {
-      "en": "Then — z with a dot:"
-    },
-    {
-      "mt": "ż"
-    },
-    {
-      "en": "Voiced like the **'z'** in 'zoo'. As in:"
-    },
-    {
-      "mt": "żarbun"
-    },
-    {
-      "en": "shoe. 👟"
-    },
-    {
-      "en": "And finally — a digraph. Two letters, one sound:"
-    },
-    {
-      "mt": "għ"
-    },
-    {
-      "en": "Mostly silent — but it stretches the vowel next to it. ✨"
-    },
-    {
-      "en": "Maltese is **mostly phonetic** — words are written close to how they sound. Spelling is way easier than English. 🎯",
-      "kind": "key"
-    },
-    {
-      "en": "📖 PART 3 — THE WORD FOR \"THE\" 📖",
-      "kind": "header"
-    },
-    {
-      "en": "Here's where it gets fun. Maltese has **three forms** of the word 'the'. Which one? Depends on the next letter.",
-      "kind": "rule"
-    },
-    {
-      "en": "RULE 1: most consonants — use:"
-    },
-    {
-      "mt": "il-"
-    },
-    {
-      "en": "So 'the door' is:"
-    },
-    {
-      "mt": "il-bieb"
-    },
-    {
-      "en": "'The bread':"
-    },
-    {
-      "mt": "il-ħobż"
-    },
-    {
-      "en": "'The cake':"
-    },
-    {
-      "mt": "il-kejk"
-    },
-    {
-      "en": "RULE 2: vowels, h, or għ — use:"
-    },
-    {
-      "mt": "l-"
-    },
-    {
-      "en": "'The clock':"
-    },
-    {
-      "mt": "l-arloġġ"
-    },
-    {
-      "en": "'The bird':"
-    },
-    {
-      "mt": "l-għasfur"
-    },
-    {
-      "en": "RULE 3: nine special letters — the **sun consonants** — make 'the' **assimilate**. The L copies the next letter.",
-      "kind": "rule"
-    },
-    {
-      "en": "The nine sun consonants: **ċ, d, n, r, s, t, x, ż, z**. 🌞"
-    },
-    {
-      "en": "So 'the key':"
-    },
-    {
-      "mt": "iċ-ċavetta"
-    },
-    {
-      "en": "'The bicycle':"
-    },
-    {
-      "mt": "ir-rota"
-    },
-    {
-      "en": "'The sun':"
-    },
-    {
-      "mt": "ix-xemx"
-    },
-    {
-      "en": "'The children':"
-    },
-    {
-      "mt": "it-tfal"
-    },
-    {
-      "en": "Doubles up. Boom! 💥"
-    },
-    {
-      "en": "Don't memorise the rules right now. The exercises drill it into you the easy way. Your **ears** learn faster than your brain. 👂",
-      "kind": "tip"
-    },
-    {
-      "en": "📅 PART 4 — DAYS OF THE WEEK 📅",
-      "kind": "header"
-    },
-    {
-      "en": "Listen and notice the article changing each time. 🎧"
-    },
-    {
-      "mt": "It-Tnejn"
-    },
-    {
-      "en": "Monday."
-    },
-    {
-      "mt": "It-Tlieta"
-    },
-    {
-      "en": "Tuesday."
-    },
-    {
-      "mt": "L-Erbgħa"
-    },
-    {
-      "en": "Wednesday."
-    },
-    {
-      "mt": "Il-Ħamis"
-    },
-    {
-      "en": "Thursday."
-    },
-    {
-      "mt": "Il-Ġimgħa"
-    },
-    {
-      "en": "Friday."
-    },
-    {
-      "mt": "Is-Sibt"
-    },
-    {
-      "en": "Saturday."
-    },
-    {
-      "mt": "Il-Ħadd"
-    },
-    {
-      "en": "Sunday. 🌅"
-    },
-    {
-      "en": "Notice — **It-, L-, Il-, Is-** — every rule from Part 3 in action!",
-      "kind": "fact"
-    },
-    {
-      "en": "✅ DONE!",
-      "kind": "win"
-    },
-    {
-      "en": "Five phrases. 30 letters. Three forms of 'the'. Seven days. That's lesson 1."
-    },
-    {
-      "en": "Tap the section that interests you most and the cards do the rest. You've got this. 💪"
-    },
-    {
-      "en": "Saħħa! 🇲🇹"
-    }
+    {"en": "Welcome! 👋 Lesson 1. Your first dive into Maltese.", "kind": "header"},
+    {"en": "Four things today. **Saying hello**. The **alphabet**. A tiny but important word — **the**. And the **days of the week**. Three minutes. Let's go!"},
+
+    {"en": "💬 PART 1 — SAY HELLO 💬", "kind": "header"},
+    {"en": "Start simple. To say 'hi' you can say:"},
+    {"mt": "Ħelow"},
+    {"en": "Or — first thing in the morning:"},
+    {"mt": "Bonġu"},
+    {"en": "To tell someone your name, you say:"},
+    {"mt": "Jisimni"},
+    {"en": "**Jisimni** literally means 'my name is'. Easy. 🙋"},
+    {"en": "To ask someone their name:"},
+    {"mt": "Int x'jismek?"},
+    {"en": "And to say 'I'm from somewhere':"},
+    {"mt": "Jien minn..."},
+    {"en": "Five phrases. That's all you need to start a conversation in Malta. ☕", "kind": "key"},
+
+    {"en": "🔤 PART 2 — THE ALPHABET 🔤", "kind": "header"},
+    {"en": "Quick fact: Maltese has **30 letters**. Most are familiar — same as English. But **five are unique** to Maltese.", "kind": "fact"},
+    {"en": "Here's the special crew. 🌟"},
+    {"en": "First — c with a dot:"},
+    {"mt": "ċ"},
+    {"en": "Sounds like the **'ch'** in 'chair'. As in:"},
+    {"mt": "ċajt"},
+    {"en": "joke. 😄"},
+    {"en": "Then — g with a dot:"},
+    {"mt": "ġ"},
+    {"en": "Sounds like the **'j'** in 'judge'. As in:"},
+    {"mt": "ġnien"},
+    {"en": "garden. 🌳"},
+    {"en": "Then — h with a stroke:"},
+    {"mt": "ħ"},
+    {"en": "A strong English **'h'** — really push the air. As in:"},
+    {"mt": "ħabib"},
+    {"en": "friend. 🤝"},
+    {"en": "Then — z with a dot:"},
+    {"mt": "ż"},
+    {"en": "Voiced like the **'z'** in 'zoo'. As in:"},
+    {"mt": "żmien"},
+    {"en": "time. ⏰"},
+    {"en": "And finally — a digraph. Two letters, one sound:"},
+    {"mt": "għ"},
+    {"en": "Mostly silent — but it stretches the vowel next to it. ✨"},
+    {"en": "Maltese is **mostly phonetic** — words are written close to how they sound. Spelling is way easier than English. 🎯", "kind": "key"},
+
+    {"en": "📖 PART 3 — THE WORD FOR \"THE\" 📖", "kind": "header"},
+    {"en": "Here's where it gets fun. Maltese has **three forms** of the word 'the'. Which one? Depends on the next letter.", "kind": "rule"},
+    {"en": "RULE 1: most consonants — use:"},
+    {"mt": "il-"},
+    {"en": "So 'the book' is:"},
+    {"mt": "il-ktieb"},
+    {"en": "'The garden':"},
+    {"mt": "il-ġnien"},
+    {"en": "'The heart':"},
+    {"mt": "il-qalb"},
+
+    {"en": "RULE 2: vowels, h, or għ — use:"},
+    {"mt": "l-"},
+    {"en": "'The land':"},
+    {"mt": "l-art"},
+    {"en": "'The food':"},
+    {"mt": "l-ikel"},
+    {"en": "'The eye':"},
+    {"mt": "l-għajn"},
+
+    {"en": "RULE 3: nine special letters — the **sun consonants** — make 'the' **assimilate**. The L copies the next letter.", "kind": "rule"},
+    {"en": "The nine sun consonants: **ċ, d, n, r, s, t, x, ż, z**. 🌞"},
+    {"en": "So 'the house':"},
+    {"mt": "id-dar"},
+    {"en": "'The man':"},
+    {"mt": "ir-raġel"},
+    {"en": "'The street':"},
+    {"mt": "it-triq"},
+    {"en": "'The month':"},
+    {"mt": "ix-xahar"},
+    {"en": "Doubles up. Boom! 💥"},
+    {"en": "Don't memorise the rules right now. The exercises drill it into you the easy way. Your **ears** learn faster than your brain. 👂", "kind": "tip"},
+
+    {"en": "📅 PART 4 — DAYS OF THE WEEK 📅", "kind": "header"},
+    {"en": "Listen and notice the article changing each time. 🎧"},
+    {"mt": "It-Tnejn"},
+    {"en": "Monday."},
+    {"mt": "It-Tlieta"},
+    {"en": "Tuesday."},
+    {"mt": "L-Erbgħa"},
+    {"en": "Wednesday."},
+    {"mt": "Il-Ħamis"},
+    {"en": "Thursday."},
+    {"mt": "Il-Ġimgħa"},
+    {"en": "Friday."},
+    {"mt": "Is-Sibt"},
+    {"en": "Saturday."},
+    {"mt": "Il-Ħadd"},
+    {"en": "Sunday. 🌅"},
+    {"en": "Notice — **It-, L-, Il-, Is-** — every rule from Part 3 in action!", "kind": "fact"},
+
+    {"en": "✅ DONE!", "kind": "win"},
+    {"en": "Five phrases. 30 letters. Three forms of 'the'. Seven days. That's lesson 1."},
+    {"en": "Tap the section that interests you most and the cards do the rest. You've got this. 💪"},
+    {"en": "Saħħa! 🇲🇹"}
   ]
 }

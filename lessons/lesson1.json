@@ -7,130 +7,37 @@
       "id": "phrases",
       "icon": "💬",
       "title": "Phrases",
-      "subtitle": "Nintroduċi lili nnifsi — Self introduction",
+      "subtitle": "Bonġu — meeting and introducing yourself",
       "vocab": [
-        {
-          "mt": "Ħelow",
-          "en": "Hello"
-        },
-        {
-          "mt": "Jiena",
-          "en": "I am"
-        },
-        {
-          "mt": "Jisimni",
-          "en": "My name is"
-        },
-        {
-          "mt": "X'jismek?",
-          "en": "What is your name?"
-        },
-        {
-          "mt": "Kunjomi",
-          "en": "My surname is"
-        },
-        {
-          "mt": "X'kunjomok?",
-          "en": "What is your surname?"
-        },
-        {
-          "mt": "Minn fejn int?",
-          "en": "Where are you from?"
-        },
-        {
-          "mt": "Jien minn",
-          "en": "I am from"
-        },
-        {
-          "mt": "Fejn toqgħod?",
-          "en": "Where do you live?"
-        },
-        {
-          "mt": "Jien noqgħod",
-          "en": "I live"
-        },
-        {
-          "mt": "Fejn taħdem?",
-          "en": "Where do you work?"
-        },
-        {
-          "mt": "Jien naħdem",
-          "en": "I work"
-        },
-        {
-          "mt": "X'taħdem?",
-          "en": "What is your work?"
-        },
-        {
-          "mt": "Xi tħobb tagħmel?",
-          "en": "What do you like to do?"
-        },
-        {
-          "mt": "Jien inħobb",
-          "en": "I like"
-        },
-        {
-          "mt": "Kif int?",
-          "en": "How are you?"
-        },
-        {
-          "mt": "Jien inħossni tajba",
-          "en": "I am feeling well"
-        },
-        {
-          "mt": "Jien Maltija",
-          "en": "I am Maltese (female)"
-        },
-        {
-          "mt": "Jien Malti",
-          "en": "I am Maltese (male)"
-        },
-        {
-          "mt": "Jiena twelidt Malta",
-          "en": "I was born in Malta"
-        },
-        {
-          "mt": "Jiena għalliema",
-          "en": "I am a teacher"
-        },
-        {
-          "mt": "naqra",
-          "en": "to read"
-        },
-        {
-          "mt": "nsiefer",
-          "en": "to travel abroad"
-        }
+        {"mt": "Bonġu", "en": "Good morning"},
+        {"mt": "Ħelow", "en": "Hello"},
+        {"mt": "Saħħa", "en": "Cheers / Bye"},
+        {"mt": "Pjaċir", "en": "Pleasure (nice to meet you)"},
+        {"mt": "Jiena", "en": "I am"},
+        {"mt": "Jisimni", "en": "My name is"},
+        {"mt": "X'jismek?", "en": "What is your name?"},
+        {"mt": "Minn fejn int?", "en": "Where are you from?"},
+        {"mt": "Jien minn", "en": "I am from"},
+        {"mt": "Fejn toqgħod?", "en": "Where do you live?"},
+        {"mt": "Jien noqgħod", "en": "I live"},
+        {"mt": "X'taħdem?", "en": "What is your work?"},
+        {"mt": "Jien naħdem", "en": "I work"},
+        {"mt": "Kemm ilek hawn?", "en": "How long have you been here?"},
+        {"mt": "Kif int?", "en": "How are you?"},
+        {"mt": "Tajjeb, grazzi", "en": "Well, thanks"},
+        {"mt": "U int?", "en": "And you?"},
+        {"mt": "Jien Malti", "en": "I am Maltese (male)"},
+        {"mt": "Jien Maltija", "en": "I am Maltese (female)"},
+        {"mt": "Jien barrani", "en": "I am foreign (male)"}
       ],
       "dialogue": [
-        {
-          "mt": "Ħelow. Jiena Francesca.",
-          "en": "Hello. My name is Francesca."
-        },
-        {
-          "mt": "Int x'jismek?",
-          "en": "What is your name?"
-        },
-        {
-          "mt": "Jien inħossni tajba. Int kif int?",
-          "en": "I am feeling well. How are you?"
-        },
-        {
-          "mt": "Jiena għalliema u naħdem ġo skola primarja.",
-          "en": "I am a teacher and I work in a primary school."
-        },
-        {
-          "mt": "Jiena twelidt Malta u jien Maltija.",
-          "en": "I was born in Malta and I am Maltese."
-        },
-        {
-          "mt": "Jiena nħobb naqra u nsiefer.",
-          "en": "I like to read and to travel abroad."
-        },
-        {
-          "mt": "Int xi tħobb tagħmel?",
-          "en": "What do you like to do?"
-        }
+        {"mt": "Bonġu! Jiena Sara. Int x'jismek?", "en": "Good morning! I'm Sara. What's your name?"},
+        {"mt": "Ħelow Sara — jisimni Tom. Pjaċir.", "en": "Hello Sara — my name's Tom. Pleased to meet you."},
+        {"mt": "Pjaċir tiegħek. Minn fejn int, Tom?", "en": "Pleased to meet you. Where are you from, Tom?"},
+        {"mt": "Jien minn Brighton, fl-Ingilterra. U int?", "en": "I'm from Brighton, in England. And you?"},
+        {"mt": "Jien Maltija. Noqgħod il-Mosta. X'taħdem?", "en": "I'm Maltese. I live in Mosta. What do you do?"},
+        {"mt": "Naħdem mal-kompjuters. U int?", "en": "I work with computers. And you?"},
+        {"mt": "Jien għalliema. Saħħa, Tom!", "en": "I'm a teacher. Cheers, Tom!"}
       ]
     },
     {
@@ -141,583 +48,52 @@
       "facts": [
         "The Maltese alphabet has 30 letters: 24 consonants and 6 vowels (a, e, i, o, u, ie).",
         "Although ie is two symbols, it counts as one vowel.",
-        "Unique Maltese letters: ċ, ġ, ħ, ż, and għ (għ counts as one consonant).",
-        "Each letter has a specific sound, and most Maltese words are pronounced just as they are written.",
-        "Maltese has a Semitic base with strong influences from Arabic, Italian, and English."
+        "Five letters are unique to Maltese: ċ, ġ, ħ, ż, and għ (għ counts as one consonant).",
+        "Each letter has a specific sound — Maltese is mostly phonetic, so most words are pronounced as they're written.",
+        "Maltese has a Semitic base from Arabic, with strong influence from Italian and English."
       ],
       "letters": [
-        {
-          "upper": "A",
-          "lower": "a",
-          "words": [
-            {
-              "mt": "arloġġ",
-              "en": "clock"
-            },
-            {
-              "mt": "ajruplan",
-              "en": "airplane"
-            },
-            {
-              "mt": "ambulanza",
-              "en": "ambulance"
-            }
-          ]
-        },
-        {
-          "upper": "B",
-          "lower": "b",
-          "words": [
-            {
-              "mt": "bieb",
-              "en": "door"
-            },
-            {
-              "mt": "basket",
-              "en": "basket"
-            },
-            {
-              "mt": "ballun",
-              "en": "ball"
-            }
-          ]
-        },
-        {
-          "upper": "Ċ",
-          "lower": "ċ",
-          "words": [
-            {
-              "mt": "ċavetta",
-              "en": "key"
-            },
-            {
-              "mt": "ċurkett",
-              "en": "ring"
-            },
-            {
-              "mt": "ċintorin",
-              "en": "belt"
-            }
-          ]
-        },
-        {
-          "upper": "D",
-          "lower": "d",
-          "words": [
-            {
-              "mt": "dar",
-              "en": "house"
-            },
-            {
-              "mt": "dublett",
-              "en": "skirt"
-            },
-            {
-              "mt": "dinja",
-              "en": "world"
-            }
-          ]
-        },
-        {
-          "upper": "E",
-          "lower": "e",
-          "words": [
-            {
-              "mt": "envelop",
-              "en": "envelope"
-            },
-            {
-              "mt": "elmu",
-              "en": "helmet"
-            },
-            {
-              "mt": "erbgħa",
-              "en": "four"
-            }
-          ]
-        },
-        {
-          "upper": "F",
-          "lower": "f",
-          "words": [
-            {
-              "mt": "flokk",
-              "en": "T-shirt"
-            },
-            {
-              "mt": "forn",
-              "en": "oven"
-            },
-            {
-              "mt": "fjura",
-              "en": "flower"
-            }
-          ]
-        },
-        {
-          "upper": "Ġ",
-          "lower": "ġ",
-          "words": [
-            {
-              "mt": "ġurnata",
-              "en": "day"
-            },
-            {
-              "mt": "ġakketta",
-              "en": "jacket"
-            },
-            {
-              "mt": "ġelat",
-              "en": "ice cream"
-            }
-          ]
-        },
-        {
-          "upper": "G",
-          "lower": "g",
-          "words": [
-            {
-              "mt": "gaġġa",
-              "en": "cage"
-            },
-            {
-              "mt": "gomma",
-              "en": "rubber/eraser"
-            },
-            {
-              "mt": "gwardarobba",
-              "en": "wardrobe"
-            }
-          ]
-        },
-        {
-          "upper": "Għ",
-          "lower": "għ",
-          "words": [
-            {
-              "mt": "għasfur",
-              "en": "bird"
-            },
-            {
-              "mt": "għaġin",
-              "en": "pasta"
-            },
-            {
-              "mt": "għasel",
-              "en": "honey"
-            }
-          ]
-        },
-        {
-          "upper": "H",
-          "lower": "h",
-          "words": [
-            {
-              "mt": "hawn",
-              "en": "here"
-            },
-            {
-              "mt": "hemm",
-              "en": "there"
-            },
-            {
-              "mt": "hu",
-              "en": "he"
-            }
-          ]
-        },
-        {
-          "upper": "Ħ",
-          "lower": "ħ",
-          "words": [
-            {
-              "mt": "ħelu",
-              "en": "sweet"
-            },
-            {
-              "mt": "ħobż",
-              "en": "bread"
-            },
-            {
-              "mt": "ħuta",
-              "en": "fish"
-            }
-          ]
-        },
-        {
-          "upper": "I",
-          "lower": "i",
-          "words": [
-            {
-              "mt": "ittra",
-              "en": "letter"
-            },
-            {
-              "mt": "ilma",
-              "en": "water"
-            },
-            {
-              "mt": "ingravata",
-              "en": "necktie"
-            }
-          ]
-        },
-        {
-          "upper": "Ie",
-          "lower": "ie",
-          "words": [
-            {
-              "mt": "ieqaf",
-              "en": "stop"
-            },
-            {
-              "mt": "iebes",
-              "en": "hard"
-            }
-          ]
-        },
-        {
-          "upper": "J",
-          "lower": "j",
-          "words": [
-            {
-              "mt": "jott",
-              "en": "yacht"
-            },
-            {
-              "mt": "jien",
-              "en": "I"
-            },
-            {
-              "mt": "Jannar",
-              "en": "January"
-            }
-          ]
-        },
-        {
-          "upper": "K",
-          "lower": "k",
-          "words": [
-            {
-              "mt": "kejk",
-              "en": "cake"
-            },
-            {
-              "mt": "kikkra kafè",
-              "en": "cup of coffee"
-            },
-            {
-              "mt": "kuċċarina",
-              "en": "teaspoon"
-            }
-          ]
-        },
-        {
-          "upper": "L",
-          "lower": "l",
-          "words": [
-            {
-              "mt": "lapes",
-              "en": "pencil"
-            },
-            {
-              "mt": "libsa",
-              "en": "dress"
-            },
-            {
-              "mt": "lanġasa",
-              "en": "pear"
-            }
-          ]
-        },
-        {
-          "upper": "M",
-          "lower": "m",
-          "words": [
-            {
-              "mt": "mara",
-              "en": "woman"
-            },
-            {
-              "mt": "mera",
-              "en": "mirror"
-            },
-            {
-              "mt": "mejda",
-              "en": "table"
-            }
-          ]
-        },
-        {
-          "upper": "N",
-          "lower": "n",
-          "words": [
-            {
-              "mt": "nar",
-              "en": "fire"
-            },
-            {
-              "mt": "nuċċali",
-              "en": "glasses"
-            },
-            {
-              "mt": "nanna",
-              "en": "grandmother"
-            }
-          ]
-        },
-        {
-          "upper": "O",
-          "lower": "o",
-          "words": [
-            {
-              "mt": "ors",
-              "en": "bear"
-            },
-            {
-              "mt": "ovali",
-              "en": "oval"
-            },
-            {
-              "mt": "omm",
-              "en": "mother"
-            }
-          ]
-        },
-        {
-          "upper": "P",
-          "lower": "p",
-          "words": [
-            {
-              "mt": "pasta",
-              "en": "pastry"
-            },
-            {
-              "mt": "pala",
-              "en": "shovel"
-            },
-            {
-              "mt": "pupa",
-              "en": "doll"
-            }
-          ]
-        },
-        {
-          "upper": "Q",
-          "lower": "q",
-          "words": [
-            {
-              "mt": "qalziet",
-              "en": "trousers"
-            },
-            {
-              "mt": "qamar",
-              "en": "moon"
-            },
-            {
-              "mt": "qawsalla",
-              "en": "rainbow"
-            }
-          ]
-        },
-        {
-          "upper": "R",
-          "lower": "r",
-          "words": [
-            {
-              "mt": "raġel",
-              "en": "man"
-            },
-            {
-              "mt": "rota",
-              "en": "bicycle"
-            },
-            {
-              "mt": "riga",
-              "en": "ruler"
-            }
-          ]
-        },
-        {
-          "upper": "S",
-          "lower": "s",
-          "words": [
-            {
-              "mt": "sodda",
-              "en": "bed"
-            },
-            {
-              "mt": "sufan",
-              "en": "sofa"
-            },
-            {
-              "mt": "siġġu",
-              "en": "chair"
-            }
-          ]
-        },
-        {
-          "upper": "T",
-          "lower": "t",
-          "words": [
-            {
-              "mt": "tfal",
-              "en": "children"
-            },
-            {
-              "mt": "taraġ",
-              "en": "stairs"
-            },
-            {
-              "mt": "tnejn",
-              "en": "two"
-            }
-          ]
-        },
-        {
-          "upper": "U",
-          "lower": "u",
-          "words": [
-            {
-              "mt": "umbrella",
-              "en": "umbrella"
-            },
-            {
-              "mt": "uff",
-              "en": "uff (oh)"
-            },
-            {
-              "mt": "uniformi",
-              "en": "uniform"
-            }
-          ]
-        },
-        {
-          "upper": "V",
-          "lower": "v",
-          "words": [
-            {
-              "mt": "vann",
-              "en": "van"
-            },
-            {
-              "mt": "vit",
-              "en": "tap"
-            },
-            {
-              "mt": "vapur",
-              "en": "ship"
-            }
-          ]
-        },
-        {
-          "upper": "W",
-          "lower": "w",
-          "words": [
-            {
-              "mt": "wejter",
-              "en": "waiter"
-            },
-            {
-              "mt": "wajer",
-              "en": "wire"
-            },
-            {
-              "mt": "werqa",
-              "en": "leaf"
-            }
-          ]
-        },
-        {
-          "upper": "X",
-          "lower": "x",
-          "words": [
-            {
-              "mt": "xemx",
-              "en": "sun"
-            },
-            {
-              "mt": "xarabank",
-              "en": "bus"
-            },
-            {
-              "mt": "xita",
-              "en": "rain"
-            }
-          ]
-        },
-        {
-          "upper": "Ż",
-          "lower": "ż",
-          "words": [
-            {
-              "mt": "żarbun",
-              "en": "shoe"
-            },
-            {
-              "mt": "żebbuġ",
-              "en": "olive"
-            },
-            {
-              "mt": "żiemel",
-              "en": "horse"
-            }
-          ]
-        },
-        {
-          "upper": "Z",
-          "lower": "z",
-          "words": [
-            {
-              "mt": "zokk",
-              "en": "trunk"
-            },
-            {
-              "mt": "zalza",
-              "en": "sauce"
-            },
-            {
-              "mt": "zija",
-              "en": "aunt"
-            }
-          ]
-        }
+        {"upper": "A", "lower": "a", "words": [{"mt": "art", "en": "land"}, {"mt": "abjad", "en": "white"}, {"mt": "Awwissu", "en": "August"}]},
+        {"upper": "B", "lower": "b", "words": [{"mt": "baħar", "en": "sea"}, {"mt": "banana", "en": "banana"}, {"mt": "blu", "en": "blue"}]},
+        {"upper": "Ċ", "lower": "ċ", "words": [{"mt": "ċpar", "en": "fog"}, {"mt": "ċans", "en": "chance"}, {"mt": "ċajt", "en": "joke"}]},
+        {"upper": "D", "lower": "d", "words": [{"mt": "dar", "en": "house"}, {"mt": "dawl", "en": "light"}, {"mt": "deheb", "en": "gold"}]},
+        {"upper": "E", "lower": "e", "words": [{"mt": "ewwel", "en": "first"}, {"mt": "Ewropa", "en": "Europe"}, {"mt": "eżempju", "en": "example"}]},
+        {"upper": "F", "lower": "f", "words": [{"mt": "festa", "en": "festival"}, {"mt": "familja", "en": "family"}, {"mt": "frott", "en": "fruit"}]},
+        {"upper": "Ġ", "lower": "ġ", "words": [{"mt": "ġimgħa", "en": "Friday / week"}, {"mt": "ġid", "en": "wealth / good"}, {"mt": "ġnien", "en": "garden"}]},
+        {"upper": "G", "lower": "g", "words": [{"mt": "gallarija", "en": "balcony"}, {"mt": "gass", "en": "gas"}, {"mt": "gwerra", "en": "war"}]},
+        {"upper": "Għ", "lower": "għ", "words": [{"mt": "għada", "en": "tomorrow"}, {"mt": "għajn", "en": "eye / spring"}, {"mt": "għaqal", "en": "wisdom"}]},
+        {"upper": "H", "lower": "h", "words": [{"mt": "huma", "en": "they"}, {"mt": "hena", "en": "joy"}, {"mt": "hawn", "en": "here"}]},
+        {"upper": "Ħ", "lower": "ħ", "words": [{"mt": "ħabib", "en": "friend"}, {"mt": "ħajja", "en": "life"}, {"mt": "ħalq", "en": "mouth"}]},
+        {"upper": "I", "lower": "i", "words": [{"mt": "ilsien", "en": "tongue / language"}, {"mt": "ikel", "en": "food"}, {"mt": "Italja", "en": "Italy"}]},
+        {"upper": "Ie", "lower": "ie", "words": [{"mt": "ieħor", "en": "other / another"}, {"mt": "iebes", "en": "hard"}]},
+        {"upper": "J", "lower": "j", "words": [{"mt": "jum", "en": "day"}, {"mt": "jien", "en": "I"}, {"mt": "Jannar", "en": "January"}]},
+        {"upper": "K", "lower": "k", "words": [{"mt": "ktieb", "en": "book"}, {"mt": "kelb", "en": "dog"}, {"mt": "kelma", "en": "word"}]},
+        {"upper": "L", "lower": "l", "words": [{"mt": "lingwa", "en": "language"}, {"mt": "lemin", "en": "right"}, {"mt": "lokali", "en": "local"}]},
+        {"upper": "M", "lower": "m", "words": [{"mt": "mara", "en": "woman"}, {"mt": "Malta", "en": "Malta"}, {"mt": "mejda", "en": "table"}]},
+        {"upper": "N", "lower": "n", "words": [{"mt": "nies", "en": "people"}, {"mt": "nar", "en": "fire"}, {"mt": "nofs", "en": "half"}]},
+        {"upper": "O", "lower": "o", "words": [{"mt": "omm", "en": "mother"}, {"mt": "oħt", "en": "sister"}, {"mt": "ors", "en": "bear"}]},
+        {"upper": "P", "lower": "p", "words": [{"mt": "pajjiż", "en": "country"}, {"mt": "paċi", "en": "peace"}, {"mt": "poplu", "en": "people / nation"}]},
+        {"upper": "Q", "lower": "q", "words": [{"mt": "qattus", "en": "cat"}, {"mt": "qalb", "en": "heart"}, {"mt": "qari", "en": "reading"}]},
+        {"upper": "R", "lower": "r", "words": [{"mt": "raġel", "en": "man"}, {"mt": "riħ", "en": "wind"}, {"mt": "Rabat", "en": "Rabat"}]},
+        {"upper": "S", "lower": "s", "words": [{"mt": "skola", "en": "school"}, {"mt": "sema", "en": "sky"}, {"mt": "saħħa", "en": "health"}]},
+        {"upper": "T", "lower": "t", "words": [{"mt": "triq", "en": "street"}, {"mt": "tifel", "en": "boy"}, {"mt": "tieqa", "en": "window"}]},
+        {"upper": "U", "lower": "u", "words": [{"mt": "uffiċċju", "en": "office"}, {"mt": "uniformi", "en": "uniform"}, {"mt": "użu", "en": "use"}]},
+        {"upper": "V", "lower": "v", "words": [{"mt": "Valletta", "en": "Valletta"}, {"mt": "villaġġ", "en": "village"}, {"mt": "vjaġġ", "en": "journey"}]},
+        {"upper": "W", "lower": "w", "words": [{"mt": "waqt", "en": "while / moment"}, {"mt": "warda", "en": "rose"}, {"mt": "werqa", "en": "leaf"}]},
+        {"upper": "X", "lower": "x", "words": [{"mt": "xahar", "en": "month"}, {"mt": "xitwa", "en": "winter"}, {"mt": "Xlukk", "en": "South-East wind"}]},
+        {"upper": "Ż", "lower": "ż", "words": [{"mt": "żmien", "en": "time"}, {"mt": "żball", "en": "mistake"}, {"mt": "żraben", "en": "shoes"}]},
+        {"upper": "Z", "lower": "z", "words": [{"mt": "zalza", "en": "sauce"}, {"mt": "zija", "en": "aunt"}, {"mt": "zokk", "en": "trunk"}]}
       ],
       "passage": {
-        "title": "Reading practice",
+        "title": "Reading practice — A Mosta morning",
         "lines": [
-          {
-            "mt": "Sar il-ħin.",
-            "en": "It was time."
-          },
-          {
-            "mt": "Daqq l-arloġġ.",
-            "en": "The clock rang."
-          },
-          {
-            "mt": "Bdiet ġurnata oħra.",
-            "en": "A new day started."
-          },
-          {
-            "mt": "Qomt mis-sodda, ilbist il-flokk u l-qalziet.",
-            "en": "I got out of bed, put on my T-shirt and trousers."
-          },
-          {
-            "mt": "Mort nieħu l-kolazzjon.",
-            "en": "I went to have breakfast."
-          },
-          {
-            "mt": "Kilt biċċa ħobż u xrobt kikkra kafè.",
-            "en": "I ate a piece of bread and drank a cup of coffee."
-          },
-          {
-            "mt": "Ħriġt mid-dar u sakkart il-bieb biċ-ċavetta.",
-            "en": "I walked out of the house and locked the door with the key."
-          },
-          {
-            "mt": "Mort nistenna x-xarabank.",
-            "en": "I went to wait for the bus."
-          }
+          {"mt": "Bdiet ġurnata sabiħa fil-Mosta.", "en": "A nice day started in Mosta."},
+          {"mt": "Marija qamet kmieni u fetħet it-tieqa.", "en": "Marija got up early and opened the window."},
+          {"mt": "Hi rat ix-xemx u semgħet l-għasafar ikantaw.", "en": "She saw the sun and heard the birds singing."},
+          {"mt": "Daħlet ġo l-kċina u għamlet il-kafè.", "en": "She went into the kitchen and made coffee."},
+          {"mt": "Wara ħarġet biex tixtri l-ħobż mill-furnar.", "en": "Then she went out to buy bread from the baker."},
+          {"mt": "Fit-triq iltaqgħet ma' Tom u qaltlu Bonġu.", "en": "On the street she met Tom and said Bonġu to him."},
+          {"mt": "Kien ġurnata sabiħa biex titgħallem il-Malti.", "en": "It was a fine day to learn Maltese."}
         ]
       }
     },
@@ -732,500 +108,138 @@
           "id": "moon",
           "title": "Moon consonants → il-",
           "explanation": "When the word starts with one of these consonants, use il-.",
-          "letters": [
-            "b",
-            "f",
-            "ġ",
-            "g",
-            "ħ",
-            "j",
-            "k",
-            "l",
-            "m",
-            "p",
-            "q",
-            "v",
-            "w"
-          ],
+          "letters": ["b", "f", "ġ", "g", "ħ", "j", "k", "l", "m", "p", "q", "v", "w"],
           "examples": [
-            {
-              "word": "bieb",
-              "article": "il-",
-              "full": "il-bieb",
-              "en": "the door"
-            },
-            {
-              "word": "ġakketta",
-              "article": "il-",
-              "full": "il-ġakketta",
-              "en": "the jacket"
-            },
-            {
-              "word": "ħobż",
-              "article": "il-",
-              "full": "il-ħobż",
-              "en": "the bread"
-            },
-            {
-              "word": "kejk",
-              "article": "il-",
-              "full": "il-kejk",
-              "en": "the cake"
-            },
-            {
-              "word": "qamar",
-              "article": "il-",
-              "full": "il-qamar",
-              "en": "the moon"
-            }
+            {"word": "ktieb", "article": "il-", "full": "il-ktieb", "en": "the book"},
+            {"word": "baħar", "article": "il-", "full": "il-baħar", "en": "the sea"},
+            {"word": "ġnien", "article": "il-", "full": "il-ġnien", "en": "the garden"},
+            {"word": "qalb", "article": "il-", "full": "il-qalb", "en": "the heart"},
+            {"word": "warda", "article": "il-", "full": "il-warda", "en": "the rose"}
           ]
         },
         {
           "id": "vowels",
           "title": "Vowels, h, għ → l-",
           "explanation": "Before a vowel, h, or għ, just use l-.",
-          "letters": [
-            "a",
-            "e",
-            "i",
-            "o",
-            "u",
-            "ie",
-            "h",
-            "għ"
-          ],
+          "letters": ["a", "e", "i", "o", "u", "ie", "h", "għ"],
           "examples": [
-            {
-              "word": "ajruplan",
-              "article": "l-",
-              "full": "l-ajruplan",
-              "en": "the airplane"
-            },
-            {
-              "word": "elmu",
-              "article": "l-",
-              "full": "l-elmu",
-              "en": "the helmet"
-            },
-            {
-              "word": "ors",
-              "article": "l-",
-              "full": "l-ors",
-              "en": "the bear"
-            },
-            {
-              "word": "umbrella",
-              "article": "l-",
-              "full": "l-umbrella",
-              "en": "the umbrella"
-            },
-            {
-              "word": "għasfur",
-              "article": "l-",
-              "full": "l-għasfur",
-              "en": "the bird"
-            },
-            {
-              "word": "hena",
-              "article": "l-",
-              "full": "l-hena",
-              "en": "the joy"
-            }
+            {"word": "art", "article": "l-", "full": "l-art", "en": "the land"},
+            {"word": "ikel", "article": "l-", "full": "l-ikel", "en": "the food"},
+            {"word": "omm", "article": "l-", "full": "l-omm", "en": "the mother"},
+            {"word": "uffiċċju", "article": "l-", "full": "l-uffiċċju", "en": "the office"},
+            {"word": "għajn", "article": "l-", "full": "l-għajn", "en": "the eye / spring"},
+            {"word": "hena", "article": "l-", "full": "l-hena", "en": "the joy"}
           ]
         },
         {
           "id": "sun",
           "title": "Sun consonants → matches first letter",
-          "explanation": "When the word starts with a sun consonant, the l of the article changes to match that letter.",
-          "letters": [
-            "ċ",
-            "d",
-            "n",
-            "r",
-            "s",
-            "t",
-            "x",
-            "ż",
-            "z"
-          ],
+          "explanation": "When the word starts with a sun consonant, the L of the article changes to match that letter.",
+          "letters": ["ċ", "d", "n", "r", "s", "t", "x", "ż", "z"],
           "examples": [
-            {
-              "word": "ċavetta",
-              "article": "iċ-",
-              "full": "iċ-ċavetta",
-              "en": "the key"
-            },
-            {
-              "word": "dgħajsa",
-              "article": "id-",
-              "full": "id-dgħajsa",
-              "en": "the boat"
-            },
-            {
-              "word": "nemla",
-              "article": "in-",
-              "full": "in-nemla",
-              "en": "the ant"
-            },
-            {
-              "word": "rota",
-              "article": "ir-",
-              "full": "ir-rota",
-              "en": "the bicycle"
-            },
-            {
-              "word": "siġra",
-              "article": "is-",
-              "full": "is-siġra",
-              "en": "the tree"
-            },
-            {
-              "word": "tfal",
-              "article": "it-",
-              "full": "it-tfal",
-              "en": "the children"
-            },
-            {
-              "word": "xemx",
-              "article": "ix-",
-              "full": "ix-xemx",
-              "en": "the sun"
-            },
-            {
-              "word": "żarbun",
-              "article": "iż-",
-              "full": "iż-żarbun",
-              "en": "the shoe"
-            },
-            {
-              "word": "zalza",
-              "article": "iz-",
-              "full": "iz-zalza",
-              "en": "the sauce"
-            }
+            {"word": "ċans", "article": "iċ-", "full": "iċ-ċans", "en": "the chance"},
+            {"word": "dar", "article": "id-", "full": "id-dar", "en": "the house"},
+            {"word": "nies", "article": "in-", "full": "in-nies", "en": "the people"},
+            {"word": "raġel", "article": "ir-", "full": "ir-raġel", "en": "the man"},
+            {"word": "skola", "article": "is-", "full": "is-skola", "en": "the school"},
+            {"word": "triq", "article": "it-", "full": "it-triq", "en": "the street"},
+            {"word": "xahar", "article": "ix-", "full": "ix-xahar", "en": "the month"},
+            {"word": "żmien", "article": "iż-", "full": "iż-żmien", "en": "the time"},
+            {"word": "zija", "article": "iz-", "full": "iz-zija", "en": "the aunt"}
           ]
         }
       ],
       "exercises": [
         {
           "id": "ex3",
-          "title": "Exercise 3 — il- or l-?",
-          "instructions": "Tap the correct article for each word.",
-          "choices": [
-            "il-",
-            "l-"
-          ],
+          "title": "Choose il- or l-",
+          "instructions": "Tap the right form. il- before consonants, l- before vowels / h / għ.",
+          "choices": ["il-", "l-"],
           "items": [
-            {
-              "word": "arloġġ",
-              "answer": "l-"
-            },
-            {
-              "word": "bieb",
-              "answer": "il-"
-            },
-            {
-              "word": "elmu",
-              "answer": "l-"
-            },
-            {
-              "word": "flokk",
-              "answer": "il-"
-            },
-            {
-              "word": "ġakketta",
-              "answer": "il-"
-            },
-            {
-              "word": "gaġġa",
-              "answer": "il-"
-            },
-            {
-              "word": "għasfur",
-              "answer": "l-"
-            },
-            {
-              "word": "ħin",
-              "answer": "il-"
-            },
-            {
-              "word": "insett",
-              "answer": "l-"
-            },
-            {
-              "word": "hena",
-              "answer": "l-"
-            },
-            {
-              "word": "jott",
-              "answer": "il-"
-            },
-            {
-              "word": "kikkra",
-              "answer": "il-"
-            },
-            {
-              "word": "libsa",
-              "answer": "il-"
-            },
-            {
-              "word": "pasta",
-              "answer": "il-"
-            },
-            {
-              "word": "qalziet",
-              "answer": "il-"
-            },
-            {
-              "word": "għaġin",
-              "answer": "l-"
-            },
-            {
-              "word": "għasel",
-              "answer": "l-"
-            },
-            {
-              "word": "umbrella",
-              "answer": "l-"
-            },
-            {
-              "word": "vapur",
-              "answer": "il-"
-            },
-            {
-              "word": "mara",
-              "answer": "il-"
-            }
+            {"word": "ktieb", "answer": "il-"},
+            {"word": "art", "answer": "l-"},
+            {"word": "baħar", "answer": "il-"},
+            {"word": "omm", "answer": "l-"},
+            {"word": "qalb", "answer": "il-"},
+            {"word": "ikel", "answer": "l-"},
+            {"word": "ġnien", "answer": "il-"},
+            {"word": "warda", "answer": "il-"},
+            {"word": "uffiċċju", "answer": "l-"},
+            {"word": "kelb", "answer": "il-"},
+            {"word": "hena", "answer": "l-"},
+            {"word": "festa", "answer": "il-"},
+            {"word": "għajn", "answer": "l-"},
+            {"word": "mara", "answer": "il-"},
+            {"word": "Ewropa", "answer": "l-"},
+            {"word": "pajjiż", "answer": "il-"},
+            {"word": "ħajja", "answer": "il-"},
+            {"word": "Italja", "answer": "l-"},
+            {"word": "blu", "answer": "il-"},
+            {"word": "abjad", "answer": "l-"}
           ]
         },
         {
           "id": "ex4",
-          "title": "Exercise 4 — Sun consonants",
-          "instructions": "Pick the correct article (it changes to match the first letter).",
-          "choices": [
-            "iċ-",
-            "id-",
-            "in-",
-            "ir-",
-            "is-",
-            "it-",
-            "ix-",
-            "iż-",
-            "iz-"
-          ],
+          "title": "Sun consonants",
+          "instructions": "Pick the correct article — the L matches the first letter of the word.",
+          "choices": ["iċ-", "id-", "in-", "ir-", "is-", "it-", "ix-", "iż-", "iz-"],
           "items": [
-            {
-              "word": "ċurkett",
-              "answer": "iċ-"
-            },
-            {
-              "word": "denfil",
-              "answer": "id-"
-            },
-            {
-              "word": "nemla",
-              "answer": "in-"
-            },
-            {
-              "word": "rota",
-              "answer": "ir-"
-            },
-            {
-              "word": "sodda",
-              "answer": "is-"
-            },
-            {
-              "word": "tfal",
-              "answer": "it-"
-            },
-            {
-              "word": "xarabank",
-              "answer": "ix-"
-            },
-            {
-              "word": "żarbun",
-              "answer": "iż-"
-            },
-            {
-              "word": "zalza",
-              "answer": "iz-"
-            },
-            {
-              "word": "nemusa",
-              "answer": "in-"
-            },
-            {
-              "word": "ross",
-              "answer": "ir-"
-            },
-            {
-              "word": "tieqa",
-              "answer": "it-"
-            },
-            {
-              "word": "siġġu",
-              "answer": "is-"
-            },
-            {
-              "word": "raġel",
-              "answer": "ir-"
-            },
-            {
-              "word": "zija",
-              "answer": "iz-"
-            },
-            {
-              "word": "rigal",
-              "answer": "ir-"
-            },
-            {
-              "word": "dublett",
-              "answer": "id-"
-            },
-            {
-              "word": "ċirasa",
-              "answer": "iċ-"
-            },
-            {
-              "word": "xemx",
-              "answer": "ix-"
-            },
-            {
-              "word": "tieġ",
-              "answer": "it-"
-            }
+            {"word": "dar", "answer": "id-"},
+            {"word": "raġel", "answer": "ir-"},
+            {"word": "skola", "answer": "is-"},
+            {"word": "triq", "answer": "it-"},
+            {"word": "xahar", "answer": "ix-"},
+            {"word": "ċans", "answer": "iċ-"},
+            {"word": "żmien", "answer": "iż-"},
+            {"word": "nies", "answer": "in-"},
+            {"word": "zija", "answer": "iz-"},
+            {"word": "tifel", "answer": "it-"},
+            {"word": "raħal", "answer": "ir-"},
+            {"word": "sema", "answer": "is-"},
+            {"word": "deheb", "answer": "id-"},
+            {"word": "ċpar", "answer": "iċ-"},
+            {"word": "nar", "answer": "in-"},
+            {"word": "tieqa", "answer": "it-"},
+            {"word": "xitwa", "answer": "ix-"},
+            {"word": "żraben", "answer": "iż-"},
+            {"word": "zalza", "answer": "iz-"},
+            {"word": "saħħa", "answer": "is-"}
           ]
         },
         {
           "id": "ex5",
-          "title": "Exercise 5 — Mixed",
+          "title": "Mixed",
           "instructions": "All three rules together. Pick the right article.",
-          "choices": [
-            "il-",
-            "l-",
-            "iċ-",
-            "id-",
-            "in-",
-            "ir-",
-            "is-",
-            "it-",
-            "ix-",
-            "iż-",
-            "iz-"
-          ],
+          "choices": ["il-", "l-", "iċ-", "id-", "in-", "ir-", "is-", "it-", "ix-", "iż-", "iz-"],
           "items": [
-            {
-              "word": "art",
-              "answer": "l-"
-            },
-            {
-              "word": "barmil",
-              "answer": "il-"
-            },
-            {
-              "word": "ċintorin",
-              "answer": "iċ-"
-            },
-            {
-              "word": "dubbiena",
-              "answer": "id-"
-            },
-            {
-              "word": "flixkun",
-              "answer": "il-"
-            },
-            {
-              "word": "ġelat",
-              "answer": "il-"
-            },
-            {
-              "word": "għajnejn",
-              "answer": "l-"
-            },
-            {
-              "word": "ħalq",
-              "answer": "il-"
-            },
-            {
-              "word": "ilma",
-              "answer": "l-"
-            },
-            {
-              "word": "kitla",
-              "answer": "il-"
-            },
-            {
-              "word": "lapes",
-              "answer": "il-"
-            },
-            {
-              "word": "mejda",
-              "answer": "il-"
-            },
-            {
-              "word": "nuċċali",
-              "answer": "in-"
-            },
-            {
-              "word": "platt",
-              "answer": "il-"
-            },
-            {
-              "word": "qamar",
-              "answer": "il-"
-            },
-            {
-              "word": "ross",
-              "answer": "ir-"
-            },
-            {
-              "word": "sikkina",
-              "answer": "is-"
-            },
-            {
-              "word": "tuffieħa",
-              "answer": "it-"
-            },
-            {
-              "word": "wajer",
-              "answer": "il-"
-            },
-            {
-              "word": "envelop",
-              "answer": "l-"
-            },
-            {
-              "word": "gomma",
-              "answer": "il-"
-            },
-            {
-              "word": "vit",
-              "answer": "il-"
-            },
-            {
-              "word": "xemx",
-              "answer": "ix-"
-            },
-            {
-              "word": "nar",
-              "answer": "in-"
-            },
-            {
-              "word": "zokk",
-              "answer": "iz-"
-            },
-            {
-              "word": "għalliema",
-              "answer": "l-"
-            },
-            {
-              "word": "melħ",
-              "answer": "il-"
-            },
-            {
-              "word": "tazza",
-              "answer": "it-"
-            }
+            {"word": "dawl", "answer": "id-"},
+            {"word": "art", "answer": "l-"},
+            {"word": "ktieb", "answer": "il-"},
+            {"word": "Mosta", "answer": "il-"},
+            {"word": "ċajt", "answer": "iċ-"},
+            {"word": "ħajja", "answer": "il-"},
+            {"word": "Ewropa", "answer": "l-"},
+            {"word": "qalb", "answer": "il-"},
+            {"word": "raġel", "answer": "ir-"},
+            {"word": "tieqa", "answer": "it-"},
+            {"word": "skola", "answer": "is-"},
+            {"word": "ikel", "answer": "l-"},
+            {"word": "warda", "answer": "il-"},
+            {"word": "nar", "answer": "in-"},
+            {"word": "xemx", "answer": "ix-"},
+            {"word": "omm", "answer": "l-"},
+            {"word": "kelb", "answer": "il-"},
+            {"word": "żball", "answer": "iż-"},
+            {"word": "uffiċċju", "answer": "l-"},
+            {"word": "ġnien", "answer": "il-"},
+            {"word": "hena", "answer": "l-"},
+            {"word": "zija", "answer": "iz-"},
+            {"word": "festa", "answer": "il-"},
+            {"word": "deheb", "answer": "id-"},
+            {"word": "lingwa", "answer": "il-"},
+            {"word": "saħħa", "answer": "is-"},
+            {"word": "għajn", "answer": "l-"},
+            {"word": "mejda", "answer": "il-"}
           ]
         }
       ]
@@ -1236,41 +250,13 @@
       "title": "Days",
       "subtitle": "Il-ġranet tal-ġimgħa — Days of the week",
       "items": [
-        {
-          "mt": "It-Tnejn",
-          "en": "Monday",
-          "scrambled": "Tjnen"
-        },
-        {
-          "mt": "It-Tlieta",
-          "en": "Tuesday",
-          "scrambled": "tTielta"
-        },
-        {
-          "mt": "L-Erbgħa",
-          "en": "Wednesday",
-          "scrambled": "rEbagħ"
-        },
-        {
-          "mt": "Il-Ħamis",
-          "en": "Thursday",
-          "scrambled": "isaĦm"
-        },
-        {
-          "mt": "Il-Ġimgħa",
-          "en": "Friday",
-          "scrambled": "għaiĠm"
-        },
-        {
-          "mt": "Is-Sibt",
-          "en": "Saturday",
-          "scrambled": "tbiS"
-        },
-        {
-          "mt": "Il-Ħadd",
-          "en": "Sunday",
-          "scrambled": "addĦ"
-        }
+        {"mt": "Il-Ħadd", "en": "Sunday", "scrambled": "ddĦa"},
+        {"mt": "It-Tnejn", "en": "Monday", "scrambled": "Tnnje"},
+        {"mt": "It-Tlieta", "en": "Tuesday", "scrambled": "tlaiTe"},
+        {"mt": "L-Erbgħa", "en": "Wednesday", "scrambled": "abĦgr"},
+        {"mt": "Il-Ħamis", "en": "Thursday", "scrambled": "miĦsa"},
+        {"mt": "Il-Ġimgħa", "en": "Friday", "scrambled": "ġmaiĦ"},
+        {"mt": "Is-Sibt", "en": "Saturday", "scrambled": "tbiS"}
       ]
     }
   ]

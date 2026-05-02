@@ -1,8 +1,7 @@
 {
   "id": "lesson6",
-  "module": 2,
-  "title": "Lesson 6",
-  "subtitle": "At the dining table, traditional food, Wh-questions & verbs with għ",
+  "title": "Lesson 6 — Dining & Asking",
+  "subtitle": "At the table, Maltese food, Wh-questions, verbs with għ",
   "sections": [
     {
       "id": "table",
@@ -10,23 +9,91 @@
       "title": "At the table",
       "subtitle": "Mal-mejda tal-ikel — utensils & containers",
       "items": [
-        {"singular": "Borma", "plural": "Borom", "en": "Cooking pot/s"},
-        {"singular": "Taġen", "plural": "Twaġen", "en": "Pan/s"},
-        {"singular": "Flixkun", "plural": "Fliexken", "en": "Bottle/s"},
-        {"singular": "Furketta", "plural": "Frieket", "en": "Fork/s"},
-        {"singular": "Ħall", "plural": "Ħall", "en": "Vinegar"},
-        {"singular": "Imgħarfa", "plural": "Imgħaref", "en": "Spoon/s"},
-        {"singular": "Kikkra", "plural": "Kikkri", "en": "Cup/s"},
-        {"singular": "Kuċċarina", "plural": "Kuċċarini", "en": "Teaspoon/s"},
-        {"singular": "Melħ", "plural": "Melħ", "en": "Salt"},
-        {"singular": "Platt", "plural": "Platti", "en": "Plate/s"},
-        {"singular": "Plattina", "plural": "Plattini", "en": "Side plate/s"},
-        {"singular": "Sarvetta", "plural": "Srievet", "en": "Napkin/s"},
-        {"singular": "Sikkina", "plural": "Skieken", "en": "Knife / Knives"},
-        {"singular": "Tazza", "plural": "Tazzi", "en": "Glass/es"},
-        {"singular": "Zokkor", "plural": "Zokkor", "en": "Sugar"},
-        {"singular": "Inbid", "plural": "Inbejjed", "en": "Wine/s"},
-        {"singular": "Bżar", "plural": "Bżar", "en": "Black pepper"}
+        {
+          "singular": "Borma",
+          "plural": "Borom",
+          "en": "Cooking pot/s"
+        },
+        {
+          "singular": "Taġen",
+          "plural": "Twaġen",
+          "en": "Pan/s"
+        },
+        {
+          "singular": "Flixkun",
+          "plural": "Fliexken",
+          "en": "Bottle/s"
+        },
+        {
+          "singular": "Furketta",
+          "plural": "Frieket",
+          "en": "Fork/s"
+        },
+        {
+          "singular": "Ħall",
+          "plural": "Ħall",
+          "en": "Vinegar"
+        },
+        {
+          "singular": "Imgħarfa",
+          "plural": "Imgħaref",
+          "en": "Spoon/s"
+        },
+        {
+          "singular": "Kikkra",
+          "plural": "Kikkri",
+          "en": "Cup/s"
+        },
+        {
+          "singular": "Kuċċarina",
+          "plural": "Kuċċarini",
+          "en": "Teaspoon/s"
+        },
+        {
+          "singular": "Melħ",
+          "plural": "Melħ",
+          "en": "Salt"
+        },
+        {
+          "singular": "Platt",
+          "plural": "Platti",
+          "en": "Plate/s"
+        },
+        {
+          "singular": "Plattina",
+          "plural": "Plattini",
+          "en": "Side plate/s"
+        },
+        {
+          "singular": "Sarvetta",
+          "plural": "Srievet",
+          "en": "Napkin/s"
+        },
+        {
+          "singular": "Sikkina",
+          "plural": "Skieken",
+          "en": "Knife / Knives"
+        },
+        {
+          "singular": "Tazza",
+          "plural": "Tazzi",
+          "en": "Glass/es"
+        },
+        {
+          "singular": "Zokkor",
+          "plural": "Zokkor",
+          "en": "Sugar"
+        },
+        {
+          "singular": "Inbid",
+          "plural": "Inbejjed",
+          "en": "Wine/s"
+        },
+        {
+          "singular": "Bżar",
+          "plural": "Bżar",
+          "en": "Black pepper"
+        }
       ]
     },
     {
@@ -35,18 +102,54 @@
       "title": "Traditional food",
       "subtitle": "Ikel tradizzjonali — Maltese classics",
       "vocab": [
-        {"mt": "Minestra", "en": "Soup / Minestrone"},
-        {"mt": "Ħobż biż-Żejt", "en": "Bread with oil"},
-        {"mt": "Fenek moqli", "en": "Fried rabbit"},
-        {"mt": "Zalzett Malti", "en": "Maltese sausage"},
-        {"mt": "Timpana", "en": "Macaroni pie"},
-        {"mt": "Soppa tal-armla", "en": "Maltese widow's soup"},
-        {"mt": "Bebbux", "en": "Snails"},
-        {"mt": "Pastizzi", "en": "Cheese / pea pastries"},
-        {"mt": "Ġbejniet", "en": "Cheeselets"},
-        {"mt": "Tadam imqadded", "en": "Sun-dried tomatoes"},
-        {"mt": "Imqaret", "en": "Deep-fried date slices"},
-        {"mt": "Qagħaq tal-għasel", "en": "Honey rings"}
+        {
+          "mt": "Minestra",
+          "en": "Soup / Minestrone"
+        },
+        {
+          "mt": "Ħobż biż-Żejt",
+          "en": "Bread with oil"
+        },
+        {
+          "mt": "Fenek moqli",
+          "en": "Fried rabbit"
+        },
+        {
+          "mt": "Zalzett Malti",
+          "en": "Maltese sausage"
+        },
+        {
+          "mt": "Timpana",
+          "en": "Macaroni pie"
+        },
+        {
+          "mt": "Soppa tal-armla",
+          "en": "Maltese widow's soup"
+        },
+        {
+          "mt": "Bebbux",
+          "en": "Snails"
+        },
+        {
+          "mt": "Pastizzi",
+          "en": "Cheese / pea pastries"
+        },
+        {
+          "mt": "Ġbejniet",
+          "en": "Cheeselets"
+        },
+        {
+          "mt": "Tadam imqadded",
+          "en": "Sun-dried tomatoes"
+        },
+        {
+          "mt": "Imqaret",
+          "en": "Deep-fried date slices"
+        },
+        {
+          "mt": "Qagħaq tal-għasel",
+          "en": "Honey rings"
+        }
       ]
     },
     {
@@ -55,28 +158,102 @@
       "title": "Wh-questions",
       "subtitle": "Mistoqsijiet — asking who, what, when, where, why",
       "items": [
-        {"mt": "Min?", "en": "Who?", "example": "Min hu l-President ta' Malta?", "example_en": "Who is the President of Malta?"},
-        {"mt": "Fejn?", "en": "Where?", "example": "Fejn mort?", "example_en": "Where did you go?"},
-        {"mt": "Xi?", "alt": "Xiex?", "en": "What?", "example": "Xi tfisser din il-kelma?", "example_en": "What does this word mean?"},
-        {"mt": "Għaliex?", "alt": "Għala?", "en": "Why?", "example": "Għaliex kissirt it-tazza?", "example_en": "Why did you break the glass?"},
-        {"mt": "Meta?", "en": "When?", "example": "Meta sejrin nixtru?", "example_en": "When are we going shopping?"},
-        {"mt": "Liema?", "en": "Which?", "example": "Liema hi l-isbaħ libsa?", "example_en": "Which dress is the nicest?"},
-        {"mt": "Ta' min?", "en": "Whose?", "example": "Ta' min hu dan il-lapes?", "example_en": "Whose pencil is this?"},
-        {"mt": "Kif?", "en": "How?", "example": "Kif se naslu fil-ħin?", "example_en": "How will we arrive on time?"}
+        {
+          "mt": "Min?",
+          "en": "Who?",
+          "example": "Min hu l-President ta' Malta?",
+          "example_en": "Who is the President of Malta?"
+        },
+        {
+          "mt": "Fejn?",
+          "en": "Where?",
+          "example": "Fejn mort?",
+          "example_en": "Where did you go?"
+        },
+        {
+          "mt": "Xi?",
+          "alt": "Xiex?",
+          "en": "What?",
+          "example": "Xi tfisser din il-kelma?",
+          "example_en": "What does this word mean?"
+        },
+        {
+          "mt": "Għaliex?",
+          "alt": "Għala?",
+          "en": "Why?",
+          "example": "Għaliex kissirt it-tazza?",
+          "example_en": "Why did you break the glass?"
+        },
+        {
+          "mt": "Meta?",
+          "en": "When?",
+          "example": "Meta sejrin nixtru?",
+          "example_en": "When are we going shopping?"
+        },
+        {
+          "mt": "Liema?",
+          "en": "Which?",
+          "example": "Liema hi l-isbaħ libsa?",
+          "example_en": "Which dress is the nicest?"
+        },
+        {
+          "mt": "Ta' min?",
+          "en": "Whose?",
+          "example": "Ta' min hu dan il-lapes?",
+          "example_en": "Whose pencil is this?"
+        },
+        {
+          "mt": "Kif?",
+          "en": "How?",
+          "example": "Kif se naslu fil-ħin?",
+          "example_en": "How will we arrive on time?"
+        }
       ],
       "passage": {
         "title": "Read and answer",
         "lines": [
-          {"mt": "It-Tnejn filgħaxija, Mark u Maria marru jilagħbu ġol-ġnien.", "en": "On Monday evening, Mark and Maria went to play in the garden."},
-          {"mt": "Huma bdew jilagħbu futbol bil-ballun ta' Mark.", "en": "They started playing football with Mark's ball."},
-          {"mt": "F'daqqa waħda, Mark ixxuttja l-ballun bis-saħħa u kisser bozza.", "en": "All of a sudden, Mark kicked the ball hard and broke a light bulb."},
-          {"mt": "It-tfal beżgħu u telqu jiġru minn fuq il-post.", "en": "The children got scared and ran away from the place."}
+          {
+            "mt": "It-Tnejn filgħaxija, Mark u Maria marru jilagħbu ġol-ġnien.",
+            "en": "On Monday evening, Mark and Maria went to play in the garden."
+          },
+          {
+            "mt": "Huma bdew jilagħbu futbol bil-ballun ta' Mark.",
+            "en": "They started playing football with Mark's ball."
+          },
+          {
+            "mt": "F'daqqa waħda, Mark ixxuttja l-ballun bis-saħħa u kisser bozza.",
+            "en": "All of a sudden, Mark kicked the ball hard and broke a light bulb."
+          },
+          {
+            "mt": "It-tfal beżgħu u telqu jiġru minn fuq il-post.",
+            "en": "The children got scared and ran away from the place."
+          }
         ],
         "questions": [
-          {"q": "Fejn marru jilagħbu t-tfal?", "qen": "Where did the children go to play?", "a": "It-tfal marru jilagħbu fil-ġnien.", "aen": "The children went to play in the garden."},
-          {"q": "Min mar jilgħab fil-ġnien?", "qen": "Who went to play in the garden?", "a": "Mark u Maria.", "aen": "Mark and Maria."},
-          {"q": "Meta marru jilagħbu fil-ġnien?", "qen": "When did they go to play?", "a": "It-Tnejn filgħaxija.", "aen": "On Monday evening."},
-          {"q": "Ta' min hu l-ballun?", "qen": "Whose ball is it?", "a": "Il-ballun hu ta' Mark.", "aen": "The ball is Mark's."}
+          {
+            "q": "Fejn marru jilagħbu t-tfal?",
+            "qen": "Where did the children go to play?",
+            "a": "It-tfal marru jilagħbu fil-ġnien.",
+            "aen": "The children went to play in the garden."
+          },
+          {
+            "q": "Min mar jilgħab fil-ġnien?",
+            "qen": "Who went to play in the garden?",
+            "a": "Mark u Maria.",
+            "aen": "Mark and Maria."
+          },
+          {
+            "q": "Meta marru jilagħbu fil-ġnien?",
+            "qen": "When did they go to play?",
+            "a": "It-Tnejn filgħaxija.",
+            "aen": "On Monday evening."
+          },
+          {
+            "q": "Ta' min hu l-ballun?",
+            "qen": "Whose ball is it?",
+            "a": "Il-ballun hu ta' Mark.",
+            "aen": "The ball is Mark's."
+          }
         ]
       }
     },
@@ -87,53 +264,198 @@
       "subtitle": "Verbi bl-għ fil-preżent — special model verbs",
       "intro": "Verbs containing the letter 'għ' follow special patterns. If 'għ' is at the beginning, follow the model 'Rifes'. If 'għ' is in the middle, follow the model 'seRaq'.",
       "rules": [
-        {"id": "ghbeg", "title": "Għ at the beginning — model Rifes (għamel)", "rows": [
-          {"pronoun": "Jiena", "model": "niRfes", "form": "nagħmel", "en": "I do"},
-          {"pronoun": "Inti", "model": "tiRfes", "form": "tagħmel", "en": "you do"},
-          {"pronoun": "Huwa", "model": "jiRfes", "form": "jagħmel", "en": "he does"},
-          {"pronoun": "Hija", "model": "tiRfes", "form": "tagħmel", "en": "she does"},
-          {"pronoun": "Aħna", "model": "niRfsu", "form": "nagħmlu", "en": "we do"},
-          {"pronoun": "Intom", "model": "tiRfsu", "form": "tagħmlu", "en": "you (pl) do"},
-          {"pronoun": "Huma", "model": "jiRfsu", "form": "jagħmlu", "en": "they do"}
-        ]},
-        {"id": "ghmid", "title": "Għ in the middle — model seRaq (lagħab)", "rows": [
-          {"pronoun": "Jiena", "model": "nisRaq", "form": "nilgħab", "en": "I play"},
-          {"pronoun": "Inti", "model": "tisRaq", "form": "tilgħab", "en": "you play"},
-          {"pronoun": "Huwa", "model": "jisRaq", "form": "jilgħab", "en": "he plays"},
-          {"pronoun": "Hija", "model": "tisRaq", "form": "tilgħab", "en": "she plays"},
-          {"pronoun": "Aħna", "model": "nisiRqu", "form": "nilagħbu", "en": "we play"},
-          {"pronoun": "Intom", "model": "tisiRqu", "form": "tilagħbu", "en": "you (pl) play"},
-          {"pronoun": "Huma", "model": "jisiRqu", "form": "jilagħbu", "en": "they play"}
-        ]}
+        {
+          "id": "ghbeg",
+          "title": "Għ at the beginning — model Rifes (għamel)",
+          "rows": [
+            {
+              "pronoun": "Jiena",
+              "model": "niRfes",
+              "form": "nagħmel",
+              "en": "I do"
+            },
+            {
+              "pronoun": "Inti",
+              "model": "tiRfes",
+              "form": "tagħmel",
+              "en": "you do"
+            },
+            {
+              "pronoun": "Huwa",
+              "model": "jiRfes",
+              "form": "jagħmel",
+              "en": "he does"
+            },
+            {
+              "pronoun": "Hija",
+              "model": "tiRfes",
+              "form": "tagħmel",
+              "en": "she does"
+            },
+            {
+              "pronoun": "Aħna",
+              "model": "niRfsu",
+              "form": "nagħmlu",
+              "en": "we do"
+            },
+            {
+              "pronoun": "Intom",
+              "model": "tiRfsu",
+              "form": "tagħmlu",
+              "en": "you (pl) do"
+            },
+            {
+              "pronoun": "Huma",
+              "model": "jiRfsu",
+              "form": "jagħmlu",
+              "en": "they do"
+            }
+          ]
+        },
+        {
+          "id": "ghmid",
+          "title": "Għ in the middle — model seRaq (lagħab)",
+          "rows": [
+            {
+              "pronoun": "Jiena",
+              "model": "nisRaq",
+              "form": "nilgħab",
+              "en": "I play"
+            },
+            {
+              "pronoun": "Inti",
+              "model": "tisRaq",
+              "form": "tilgħab",
+              "en": "you play"
+            },
+            {
+              "pronoun": "Huwa",
+              "model": "jisRaq",
+              "form": "jilgħab",
+              "en": "he plays"
+            },
+            {
+              "pronoun": "Hija",
+              "model": "tisRaq",
+              "form": "tilgħab",
+              "en": "she plays"
+            },
+            {
+              "pronoun": "Aħna",
+              "model": "nisiRqu",
+              "form": "nilagħbu",
+              "en": "we play"
+            },
+            {
+              "pronoun": "Intom",
+              "model": "tisiRqu",
+              "form": "tilagħbu",
+              "en": "you (pl) play"
+            },
+            {
+              "pronoun": "Huma",
+              "model": "jisiRqu",
+              "form": "jilagħbu",
+              "en": "they play"
+            }
+          ]
+        }
       ],
       "exercises": [
         {
           "id": "ex5",
           "title": "Exercise 5 — Conjugate għażel (to choose)",
           "instructions": "Pick the correct present-tense form for each pronoun.",
-          "choices": ["nagħżel", "tagħżel", "jagħżel", "tagħżel", "nagħżlu", "tagħżlu", "jagħżlu"],
+          "choices": [
+            "nagħżel",
+            "tagħżel",
+            "jagħżel",
+            "tagħżel",
+            "nagħżlu",
+            "tagħżlu",
+            "jagħżlu"
+          ],
           "items": [
-            {"pronoun": "Huwa", "en": "He chooses", "answer": "jagħżel"},
-            {"pronoun": "Jiena", "en": "I choose", "answer": "nagħżel"},
-            {"pronoun": "Inti", "en": "You choose", "answer": "tagħżel"},
-            {"pronoun": "Hija", "en": "She chooses", "answer": "tagħżel"},
-            {"pronoun": "Intom", "en": "You (pl) choose", "answer": "tagħżlu"},
-            {"pronoun": "Aħna", "en": "We choose", "answer": "nagħżlu"},
-            {"pronoun": "Huma", "en": "They choose", "answer": "jagħżlu"}
+            {
+              "pronoun": "Huwa",
+              "en": "He chooses",
+              "answer": "jagħżel"
+            },
+            {
+              "pronoun": "Jiena",
+              "en": "I choose",
+              "answer": "nagħżel"
+            },
+            {
+              "pronoun": "Inti",
+              "en": "You choose",
+              "answer": "tagħżel"
+            },
+            {
+              "pronoun": "Hija",
+              "en": "She chooses",
+              "answer": "tagħżel"
+            },
+            {
+              "pronoun": "Intom",
+              "en": "You (pl) choose",
+              "answer": "tagħżlu"
+            },
+            {
+              "pronoun": "Aħna",
+              "en": "We choose",
+              "answer": "nagħżlu"
+            },
+            {
+              "pronoun": "Huma",
+              "en": "They choose",
+              "answer": "jagħżlu"
+            }
           ]
         },
         {
           "id": "ex6",
           "title": "Exercise 6 — Fill in the present tense",
           "instructions": "Choose the right form to complete each sentence.",
-          "choices": ["jagħlaq", "tagħġen", "nagħmlu", "nixgħel", "tilgħab", "jagħmlu"],
+          "choices": [
+            "jagħlaq",
+            "tagħġen",
+            "nagħmlu",
+            "nixgħel",
+            "tilgħab",
+            "jagħmlu"
+          ],
           "items": [
-            {"sentence": "Huwa ___ il-bieb.", "en": "He closes the door. (għalaq)", "answer": "jagħlaq"},
-            {"sentence": "Hija ___ l-għaġina.", "en": "She kneads the dough. (għaġen)", "answer": "tagħġen"},
-            {"sentence": "Aħna ___ pasti tajbin.", "en": "We make good cakes. (għamel)", "answer": "nagħmlu"},
-            {"sentence": "Jiena ___ id-dawl.", "en": "I switch on the light. (xegħel)", "answer": "nixgħel"},
-            {"sentence": "Inti ___ il-Playstation.", "en": "You play the Playstation. (lagħab)", "answer": "tilgħab"},
-            {"sentence": "Huma ___ ikel tajjeb.", "en": "They make good food. (għamel)", "answer": "jagħmlu"}
+            {
+              "sentence": "Huwa ___ il-bieb.",
+              "en": "He closes the door. (għalaq)",
+              "answer": "jagħlaq"
+            },
+            {
+              "sentence": "Hija ___ l-għaġina.",
+              "en": "She kneads the dough. (għaġen)",
+              "answer": "tagħġen"
+            },
+            {
+              "sentence": "Aħna ___ pasti tajbin.",
+              "en": "We make good cakes. (għamel)",
+              "answer": "nagħmlu"
+            },
+            {
+              "sentence": "Jiena ___ id-dawl.",
+              "en": "I switch on the light. (xegħel)",
+              "answer": "nixgħel"
+            },
+            {
+              "sentence": "Inti ___ il-Playstation.",
+              "en": "You play the Playstation. (lagħab)",
+              "answer": "tilgħab"
+            },
+            {
+              "sentence": "Huma ___ ikel tajjeb.",
+              "en": "They make good food. (għamel)",
+              "answer": "jagħmlu"
+            }
           ]
         }
       ]

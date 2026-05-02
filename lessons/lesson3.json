@@ -1,8 +1,7 @@
 {
   "id": "lesson3",
-  "module": 1,
-  "title": "Lesson 3",
-  "subtitle": "Pronouns, demonstratives & syllables",
+  "title": "Lesson 3 — Pronouns & Pointing",
+  "subtitle": "Personal pronouns, this vs that, syllable splitting",
   "sections": [
     {
       "id": "pronouns",
@@ -11,39 +10,131 @@
       "subtitle": "Pronomi Personali — I, you, he, she, we…",
       "intro": "Pronouns replace nouns. Most have a long form and a short form (e.g. Jien / Jiena both mean 'I').",
       "items": [
-        {"mt": "Jien", "alt": "Jiena", "en": "I"},
-        {"mt": "Int", "alt": "Inti", "en": "You (singular)"},
-        {"mt": "Hu", "alt": "Huwa", "en": "He"},
-        {"mt": "Hi", "alt": "Hija", "en": "She"},
-        {"mt": "Aħna", "alt": "Aħna", "en": "We"},
-        {"mt": "Intom", "alt": "Intom", "en": "You (plural)"},
-        {"mt": "Huma", "alt": "Huma", "en": "They"}
+        {
+          "mt": "Jien",
+          "alt": "Jiena",
+          "en": "I"
+        },
+        {
+          "mt": "Int",
+          "alt": "Inti",
+          "en": "You (singular)"
+        },
+        {
+          "mt": "Hu",
+          "alt": "Huwa",
+          "en": "He"
+        },
+        {
+          "mt": "Hi",
+          "alt": "Hija",
+          "en": "She"
+        },
+        {
+          "mt": "Aħna",
+          "alt": "Aħna",
+          "en": "We"
+        },
+        {
+          "mt": "Intom",
+          "alt": "Intom",
+          "en": "You (plural)"
+        },
+        {
+          "mt": "Huma",
+          "alt": "Huma",
+          "en": "They"
+        }
       ],
       "dialogue": [
-        {"mt": "Jien nilgħab il-futbol.", "en": "I play football."},
-        {"mt": "Hu jaf jilgħab futbol.", "en": "He knows how to play football."},
-        {"mt": "Hi taf tilgħab futbol.", "en": "She knows how to play football."},
-        {"mt": "Aħna nafu nilagħbu futbol.", "en": "We know how to play football."},
-        {"mt": "Intom tafu tilgħabu futbol?", "en": "Do you (pl) know how to play football?"},
-        {"mt": "Huma jafu jilagħbu futbol.", "en": "They know how to play football."}
+        {
+          "mt": "Jien nilgħab il-futbol.",
+          "en": "I play football."
+        },
+        {
+          "mt": "Hu jaf jilgħab futbol.",
+          "en": "He knows how to play football."
+        },
+        {
+          "mt": "Hi taf tilgħab futbol.",
+          "en": "She knows how to play football."
+        },
+        {
+          "mt": "Aħna nafu nilagħbu futbol.",
+          "en": "We know how to play football."
+        },
+        {
+          "mt": "Intom tafu tilgħabu futbol?",
+          "en": "Do you (pl) know how to play football?"
+        },
+        {
+          "mt": "Huma jafu jilagħbu futbol.",
+          "en": "They know how to play football."
+        }
       ],
       "exercises": [
         {
           "id": "ex1",
           "title": "Replace the noun with the right pronoun",
           "instructions": "Tap which pronoun replaces the underlined noun.",
-          "choices": ["Hu", "Hi", "Huma", "Aħna", "Int"],
+          "choices": [
+            "Hu",
+            "Hi",
+            "Huma",
+            "Aħna",
+            "Int"
+          ],
           "items": [
-            {"sentence": "Jack imur il-futbol.", "en": "Jack goes to football.", "answer": "Hu"},
-            {"sentence": "Julia għandha pupa.", "en": "Julia has a doll.", "answer": "Hi"},
-            {"sentence": "It-tfal raqdu.", "en": "The children slept.", "answer": "Huma"},
-            {"sentence": "Il-fjura safra.", "en": "The flower is yellow.", "answer": "Hi"},
-            {"sentence": "Ir-raġel qasir.", "en": "The man is short.", "answer": "Hu"},
-            {"sentence": "Il-karozzi sbieħ.", "en": "The cars are beautiful.", "answer": "Huma"},
-            {"sentence": "L-ors kbir wisq.", "en": "The bear is too big.", "answer": "Hu"},
-            {"sentence": "Il-mara u r-raġel kielu.", "en": "The woman and man ate.", "answer": "Huma"},
-            {"sentence": "Jien u t-tifla pinġejna.", "en": "The girl and I painted.", "answer": "Aħna"},
-            {"sentence": "Thomas, kif mort fl-eżami?", "en": "Thomas, how did your exam go?", "answer": "Int"}
+            {
+              "sentence": "Jack imur il-futbol.",
+              "en": "Jack goes to football.",
+              "answer": "Hu"
+            },
+            {
+              "sentence": "Julia għandha pupa.",
+              "en": "Julia has a doll.",
+              "answer": "Hi"
+            },
+            {
+              "sentence": "It-tfal raqdu.",
+              "en": "The children slept.",
+              "answer": "Huma"
+            },
+            {
+              "sentence": "Il-fjura safra.",
+              "en": "The flower is yellow.",
+              "answer": "Hi"
+            },
+            {
+              "sentence": "Ir-raġel qasir.",
+              "en": "The man is short.",
+              "answer": "Hu"
+            },
+            {
+              "sentence": "Il-karozzi sbieħ.",
+              "en": "The cars are beautiful.",
+              "answer": "Huma"
+            },
+            {
+              "sentence": "L-ors kbir wisq.",
+              "en": "The bear is too big.",
+              "answer": "Hu"
+            },
+            {
+              "sentence": "Il-mara u r-raġel kielu.",
+              "en": "The woman and man ate.",
+              "answer": "Huma"
+            },
+            {
+              "sentence": "Jien u t-tifla pinġejna.",
+              "en": "The girl and I painted.",
+              "answer": "Aħna"
+            },
+            {
+              "sentence": "Thomas, kif mort fl-eżami?",
+              "en": "Thomas, how did your exam go?",
+              "answer": "Int"
+            }
           ]
         }
       ]
@@ -55,71 +146,231 @@
       "subtitle": "Pronomi Demonstrattivi — this, that, these, those",
       "intro": "Maltese demonstratives change with gender and number. Use 'dan/din/dawn' for things close to you, 'dak/dik/dawk' for things further away.",
       "rules": [
-        {"id": "this", "title": "This / These (close)", "explanation": "Things near to you.",
-         "items": [
-           {"mt": "Dan", "en": "This (masculine)"},
-           {"mt": "Din", "en": "This (feminine)"},
-           {"mt": "Dawn", "en": "These (plural)"}
-         ],
-         "examples": [
-           {"phrase": "Dan il-bieb", "en": "This door (m)"},
-           {"phrase": "Din iċ-ċavetta", "en": "This key (f)"},
-           {"phrase": "Dawn it-tfal", "en": "These children (pl)"}
-         ]},
-        {"id": "that", "title": "That / Those (further)", "explanation": "Things further from you.",
-         "items": [
-           {"mt": "Dak", "en": "That (masculine)"},
-           {"mt": "Dik", "en": "That (feminine)"},
-           {"mt": "Dawk", "en": "Those (plural)"}
-         ],
-         "examples": [
-           {"phrase": "Dak ir-raġel", "en": "That man (m)"},
-           {"phrase": "Dik il-mara", "en": "That woman (f)"},
-           {"phrase": "Dawk il-fjuri", "en": "Those flowers (pl)"}
-         ]}
+        {
+          "id": "this",
+          "title": "This / These (close)",
+          "explanation": "Things near to you.",
+          "items": [
+            {
+              "mt": "Dan",
+              "en": "This (masculine)"
+            },
+            {
+              "mt": "Din",
+              "en": "This (feminine)"
+            },
+            {
+              "mt": "Dawn",
+              "en": "These (plural)"
+            }
+          ],
+          "examples": [
+            {
+              "phrase": "Dan il-bieb",
+              "en": "This door (m)"
+            },
+            {
+              "phrase": "Din iċ-ċavetta",
+              "en": "This key (f)"
+            },
+            {
+              "phrase": "Dawn it-tfal",
+              "en": "These children (pl)"
+            }
+          ]
+        },
+        {
+          "id": "that",
+          "title": "That / Those (further)",
+          "explanation": "Things further from you.",
+          "items": [
+            {
+              "mt": "Dak",
+              "en": "That (masculine)"
+            },
+            {
+              "mt": "Dik",
+              "en": "That (feminine)"
+            },
+            {
+              "mt": "Dawk",
+              "en": "Those (plural)"
+            }
+          ],
+          "examples": [
+            {
+              "phrase": "Dak ir-raġel",
+              "en": "That man (m)"
+            },
+            {
+              "phrase": "Dik il-mara",
+              "en": "That woman (f)"
+            },
+            {
+              "phrase": "Dawk il-fjuri",
+              "en": "Those flowers (pl)"
+            }
+          ]
+        }
       ],
       "exercises": [
         {
           "id": "ex2",
           "title": "Exercise 2 — dan, din, dawn?",
           "instructions": "Pick the right form for each word.",
-          "choices": ["dan", "din", "dawn"],
+          "choices": [
+            "dan",
+            "din",
+            "dawn"
+          ],
           "items": [
-            {"word": "werqa", "en": "leaf (f)", "answer": "din"},
-            {"word": "kikkra", "en": "cup (f)", "answer": "din"},
-            {"word": "qalziet", "en": "trousers (m)", "answer": "dan"},
-            {"word": "kelb", "en": "dog (m)", "answer": "dan"},
-            {"word": "qattusa", "en": "cat (f)", "answer": "din"},
-            {"word": "farfett", "en": "butterfly (m)", "answer": "dan"},
-            {"word": "barmil", "en": "bucket (m)", "answer": "dan"},
-            {"word": "sodda", "en": "bed (f)", "answer": "din"},
-            {"word": "flokkijiet", "en": "t-shirts (pl)", "answer": "dawn"},
-            {"word": "umbrella", "en": "umbrella (f)", "answer": "din"},
-            {"word": "umbrelli", "en": "umbrellas (pl)", "answer": "dawn"},
-            {"word": "raġel", "en": "man (m)", "answer": "dan"},
-            {"word": "mara", "en": "woman (f)", "answer": "din"},
-            {"word": "insetti", "en": "insects (pl)", "answer": "dawn"}
+            {
+              "word": "werqa",
+              "en": "leaf (f)",
+              "answer": "din"
+            },
+            {
+              "word": "kikkra",
+              "en": "cup (f)",
+              "answer": "din"
+            },
+            {
+              "word": "qalziet",
+              "en": "trousers (m)",
+              "answer": "dan"
+            },
+            {
+              "word": "kelb",
+              "en": "dog (m)",
+              "answer": "dan"
+            },
+            {
+              "word": "qattusa",
+              "en": "cat (f)",
+              "answer": "din"
+            },
+            {
+              "word": "farfett",
+              "en": "butterfly (m)",
+              "answer": "dan"
+            },
+            {
+              "word": "barmil",
+              "en": "bucket (m)",
+              "answer": "dan"
+            },
+            {
+              "word": "sodda",
+              "en": "bed (f)",
+              "answer": "din"
+            },
+            {
+              "word": "flokkijiet",
+              "en": "t-shirts (pl)",
+              "answer": "dawn"
+            },
+            {
+              "word": "umbrella",
+              "en": "umbrella (f)",
+              "answer": "din"
+            },
+            {
+              "word": "umbrelli",
+              "en": "umbrellas (pl)",
+              "answer": "dawn"
+            },
+            {
+              "word": "raġel",
+              "en": "man (m)",
+              "answer": "dan"
+            },
+            {
+              "word": "mara",
+              "en": "woman (f)",
+              "answer": "din"
+            },
+            {
+              "word": "insetti",
+              "en": "insects (pl)",
+              "answer": "dawn"
+            }
           ]
         },
         {
           "id": "ex3",
           "title": "Exercise 3 — dak, dik, dawk?",
           "instructions": "Pick the right form for things further away.",
-          "choices": ["dak", "dik", "dawk"],
+          "choices": [
+            "dak",
+            "dik",
+            "dawk"
+          ],
           "items": [
-            {"word": "dubbiena", "en": "fly (f)", "answer": "dik"},
-            {"word": "sikkina", "en": "knife (f)", "answer": "dik"},
-            {"word": "platti", "en": "plates (pl)", "answer": "dawk"},
-            {"word": "flixkun", "en": "bottle (m)", "answer": "dak"},
-            {"word": "siġra", "en": "tree (f)", "answer": "dik"},
-            {"word": "larinġa", "en": "orange (f)", "answer": "dik"},
-            {"word": "mejda", "en": "table (f)", "answer": "dik"},
-            {"word": "pastizzi", "en": "pastries (pl)", "answer": "dawk"},
-            {"word": "fjuri", "en": "flowers (pl)", "answer": "dawk"},
-            {"word": "kelb", "en": "dog (m)", "answer": "dak"},
-            {"word": "qattusa", "en": "cat (f)", "answer": "dik"},
-            {"word": "kitla", "en": "kettle (f)", "answer": "dik"},
-            {"word": "siġġu", "en": "chair (m)", "answer": "dak"}
+            {
+              "word": "dubbiena",
+              "en": "fly (f)",
+              "answer": "dik"
+            },
+            {
+              "word": "sikkina",
+              "en": "knife (f)",
+              "answer": "dik"
+            },
+            {
+              "word": "platti",
+              "en": "plates (pl)",
+              "answer": "dawk"
+            },
+            {
+              "word": "flixkun",
+              "en": "bottle (m)",
+              "answer": "dak"
+            },
+            {
+              "word": "siġra",
+              "en": "tree (f)",
+              "answer": "dik"
+            },
+            {
+              "word": "larinġa",
+              "en": "orange (f)",
+              "answer": "dik"
+            },
+            {
+              "word": "mejda",
+              "en": "table (f)",
+              "answer": "dik"
+            },
+            {
+              "word": "pastizzi",
+              "en": "pastries (pl)",
+              "answer": "dawk"
+            },
+            {
+              "word": "fjuri",
+              "en": "flowers (pl)",
+              "answer": "dawk"
+            },
+            {
+              "word": "kelb",
+              "en": "dog (m)",
+              "answer": "dak"
+            },
+            {
+              "word": "qattusa",
+              "en": "cat (f)",
+              "answer": "dik"
+            },
+            {
+              "word": "kitla",
+              "en": "kettle (f)",
+              "answer": "dik"
+            },
+            {
+              "word": "siġġu",
+              "en": "chair (m)",
+              "answer": "dak"
+            }
           ]
         }
       ]
@@ -137,28 +388,94 @@
         "Examples: ors → ors; mara → ma-ra; raġel → ra-ġel; mejda → mej-da."
       ],
       "items": [
-        {"word": "rota", "syllables": "ro-ta"},
-        {"word": "insett", "syllables": "in-sett"},
-        {"word": "libsa", "syllables": "lib-sa"},
-        {"word": "furketta", "syllables": "fur-ket-ta"},
-        {"word": "tfal", "syllables": "tfal"},
-        {"word": "sodda", "syllables": "sod-da"},
-        {"word": "qalziet", "syllables": "qal-ziet"},
-        {"word": "qamar", "syllables": "qa-mar"},
-        {"word": "banana", "syllables": "ba-na-na"},
-        {"word": "tifla", "syllables": "tif-la"},
-        {"word": "farfett", "syllables": "far-fett"},
-        {"word": "ġelat", "syllables": "ġe-lat"},
-        {"word": "larinġa", "syllables": "la-rin-ġa"},
-        {"word": "siġġu", "syllables": "siġ-ġu"},
-        {"word": "tifel", "syllables": "ti-fel"},
-        {"word": "umbrella", "syllables": "um-brel-la"},
-        {"word": "werqa", "syllables": "wer-qa"},
-        {"word": "ħanin", "syllables": "ħa-nin"},
-        {"word": "qadima", "syllables": "qa-di-ma"},
-        {"word": "aħdar", "syllables": "aħ-dar"},
-        {"word": "kannella", "syllables": "kan-nel-la"},
-        {"word": "karozza", "syllables": "ka-roz-za"}
+        {
+          "word": "rota",
+          "syllables": "ro-ta"
+        },
+        {
+          "word": "insett",
+          "syllables": "in-sett"
+        },
+        {
+          "word": "libsa",
+          "syllables": "lib-sa"
+        },
+        {
+          "word": "furketta",
+          "syllables": "fur-ket-ta"
+        },
+        {
+          "word": "tfal",
+          "syllables": "tfal"
+        },
+        {
+          "word": "sodda",
+          "syllables": "sod-da"
+        },
+        {
+          "word": "qalziet",
+          "syllables": "qal-ziet"
+        },
+        {
+          "word": "qamar",
+          "syllables": "qa-mar"
+        },
+        {
+          "word": "banana",
+          "syllables": "ba-na-na"
+        },
+        {
+          "word": "tifla",
+          "syllables": "tif-la"
+        },
+        {
+          "word": "farfett",
+          "syllables": "far-fett"
+        },
+        {
+          "word": "ġelat",
+          "syllables": "ġe-lat"
+        },
+        {
+          "word": "larinġa",
+          "syllables": "la-rin-ġa"
+        },
+        {
+          "word": "siġġu",
+          "syllables": "siġ-ġu"
+        },
+        {
+          "word": "tifel",
+          "syllables": "ti-fel"
+        },
+        {
+          "word": "umbrella",
+          "syllables": "um-brel-la"
+        },
+        {
+          "word": "werqa",
+          "syllables": "wer-qa"
+        },
+        {
+          "word": "ħanin",
+          "syllables": "ħa-nin"
+        },
+        {
+          "word": "qadima",
+          "syllables": "qa-di-ma"
+        },
+        {
+          "word": "aħdar",
+          "syllables": "aħ-dar"
+        },
+        {
+          "word": "kannella",
+          "syllables": "kan-nel-la"
+        },
+        {
+          "word": "karozza",
+          "syllables": "ka-roz-za"
+        }
       ]
     }
   ]

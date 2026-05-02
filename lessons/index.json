@@ -1,14 +1,14 @@
 {
   "lessons": [
-    {"id": "lesson1", "module": 1, "n": 1, "title": "Lesson 1", "subtitle": "Phrases, alphabet, grammar, days", "icon": "🇲🇹"},
-    {"id": "lesson2", "module": 1, "n": 2, "title": "Lesson 2", "subtitle": "Robbery, colours, adjectives, numbers, months", "icon": "🎨"},
-    {"id": "lesson3", "module": 1, "n": 3, "title": "Lesson 3", "subtitle": "Pronouns, demonstratives & syllables", "icon": "👥"},
-    {"id": "lesson4", "module": 2, "n": 1, "title": "Lesson 4", "subtitle": "Family, hobbies, possessive, attached pronouns", "icon": "👨‍👩‍👧"},
-    {"id": "lesson5", "module": 2, "n": 2, "title": "Lesson 5", "subtitle": "Fruit, vegetables, imperative, present tense", "icon": "🍓"},
-    {"id": "lesson6", "module": 2, "n": 3, "title": "Lesson 6", "subtitle": "Dining, traditional food, Wh-questions, present (għ)", "icon": "🍽️"},
-    {"id": "lesson7", "module": 3, "n": 1, "title": "Lesson 7", "subtitle": "Transport, weekend plans, seasons & particles", "icon": "🚌"},
-    {"id": "lesson8", "module": 3, "n": 2, "title": "Lesson 8", "subtitle": "Date words, particle+article, the map, interesting places", "icon": "🗺️"},
-    {"id": "lesson9", "module": 3, "n": 3, "title": "Lesson 9", "subtitle": "Directions, time expressions & telling the time", "icon": "🕐"},
+    {"id": "lesson1", "module": "The Course", "n": 1, "title": "Lesson 1 — Hello & the Alphabet", "subtitle": "Greetings, the 30 Maltese letters, the article, days of the week", "icon": "🇲🇹"},
+    {"id": "lesson2", "module": "The Course", "n": 2, "title": "Lesson 2 — Describing Things", "subtitle": "Colours, adjectives, numbers 1–30, months", "icon": "🎨"},
+    {"id": "lesson3", "module": "The Course", "n": 3, "title": "Lesson 3 — Pronouns & Pointing", "subtitle": "Personal pronouns, this vs that, syllable splitting", "icon": "👥"},
+    {"id": "lesson4", "module": "The Course", "n": 4, "title": "Lesson 4 — Family & Possession", "subtitle": "Family members, hobbies, ta', attached pronouns", "icon": "👨‍👩‍👧"},
+    {"id": "lesson5", "module": "The Course", "n": 5, "title": "Lesson 5 — Food & Verbs", "subtitle": "Fruit, vegetables, the imperative, present tense", "icon": "🍓"},
+    {"id": "lesson6", "module": "The Course", "n": 6, "title": "Lesson 6 — Dining & Asking", "subtitle": "At the table, Maltese food, Wh-questions, verbs with għ", "icon": "🍽️"},
+    {"id": "lesson7", "module": "The Course", "n": 7, "title": "Lesson 7 — Getting Around", "subtitle": "Transport, weekend plans, seasons, particles", "icon": "🚌"},
+    {"id": "lesson8", "module": "The Course", "n": 8, "title": "Lesson 8 — Particles & the Map", "subtitle": "Date words, particle + article fusion, the map of Malta, places", "icon": "🗺️"},
+    {"id": "lesson9", "module": "The Course", "n": 9, "title": "Lesson 9 — Time & Directions", "subtitle": "Asking directions, time expressions, telling the time", "icon": "🕐"},
     {"id": "extra1", "module": "Start Here · Free", "n": 1, "title": "Welcome Lesson", "subtitle": "Your free starter — survival Maltese for everyday life", "icon": "🛟", "free": true, "languages": ["en", "es"]}
   ]
 }

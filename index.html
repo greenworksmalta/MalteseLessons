@@ -52,6 +52,13 @@
   .hero p{margin:4px 0 0;opacity:.9}
   .hero .sub{font-size:.9rem;opacity:.85;margin-top:6px;letter-spacing:.04em;text-transform:uppercase}
 
+  /* Footer with update + version info */
+  .app-footer{margin:32px 0 12px;padding:16px;text-align:center;font-size:.78rem;color:var(--ink-2);letter-spacing:.02em}
+  .app-footer .update{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink-2);font-weight:600;font-size:.82rem;cursor:pointer;transition:all .15s ease}
+  .app-footer .update:active{transform:scale(.97);background:var(--bg)}
+  .app-footer .update:hover{background:var(--bg);color:var(--ink)}
+  .app-footer .ver{display:block;margin-top:8px;opacity:.6;font-size:.7rem;font-variant-numeric:tabular-nums}
+
   /* Install prompt — bottom sheet that explains how to add the app to the home screen */
   .install-prompt{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(20,30,40,.08);padding:18px 20px calc(18px + env(safe-area-inset-bottom));max-width:var(--maxw);margin:0 auto;border-radius:18px 18px 0 0;z-index:30;transform:translateY(120%);transition:transform .3s ease}
   .install-prompt.show{transform:translateY(0)}

@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502p";
+const VERSION = "20260502q";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -28,6 +28,10 @@ const I18N = {
     correct: "Sewwa!",
     notQuite: "Not quite.",
     correctIs: "Correct: ",
+    checkForUpdates: "↻ Check for updates",
+    updating: "Updating…",
+    upToDate: "You're up to date",
+    version: "Version",
     install: {
       title: "Add MaltiOnTheGo to your home screen",
       sub: "Faster to open, works offline, feels like a real app.",
@@ -52,6 +56,10 @@ const I18N = {
     correct: "¡Sewwa!",
     notQuite: "No del todo.",
     correctIs: "Correcto: ",
+    checkForUpdates: "↻ Buscar actualizaciones",
+    updating: "Actualizando…",
+    upToDate: "Estás al día",
+    version: "Versión",
     install: {
       title: "Añade MaltiOnTheGo a tu pantalla de inicio",
       sub: "Se abre más rápido, funciona sin conexión y parece una app de verdad.",
@@ -135,6 +143,28 @@ function audioBtn(mt, opts){
   b.setAttribute("aria-label","Play "+mt);
   b.addEventListener("click", e=>{ e.stopPropagation(); playBtn(b, mt); });
   return b;
+}
+
+// ── Force update (clears SW + caches and reloads) ────
+// Critical for PWAs saved to the home screen, where Safari/Chrome aggressively
+// cache the bundle and the user has no easy way to refresh.
+async function forceUpdate(button){
+  const t = I18N[State.lang] || I18N.en;
+  if(button){ button.textContent = t.updating; button.disabled = true; }
+  try {
+    if("serviceWorker" in navigator){
+      const regs = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map(r => r.unregister()));
+    }
+    if("caches" in window){
+      const keys = await caches.keys();
+      await Promise.all(keys.map(k => caches.delete(k)));
+    }
+  } catch(e){ console.warn("Update failed", e); }
+  // Hard reload — bypass http cache. The query param ensures the HTML itself
+  // is fetched fresh; the SW registration above means the next load builds
+  // the cache from scratch with the new content.
+  location.replace(location.pathname + "?u=" + Date.now() + location.hash);
 }
 
 // ── Install prompt ────────────────────────────
@@ -402,6 +432,15 @@ function renderHome(){
     }
     root.appendChild(list);
   });
+
+  // Footer with manual update + version display.
+  const t = I18N[State.lang] || I18N.en;
+  const footer = el("div","app-footer");
+  const updBtn = el("button","update", t.checkForUpdates);
+  updBtn.addEventListener("click", () => forceUpdate(updBtn));
+  footer.appendChild(updBtn);
+  footer.appendChild(el("span","ver", t.version + " " + VERSION));
+  root.appendChild(footer);
 }
 
 // ── Lesson home (sections) ────────────────────

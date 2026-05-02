@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260430b";
+const VERSION = "20260502a";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -168,13 +168,25 @@ function renderHome(){
   hero.appendChild(el("p","","Tap a lesson to start. Each one is broken into sections so you can drill what you want."));
   root.appendChild(hero);
 
-  // Group by module
+  // Group by module — numeric modules ("1", "2", "3") render as "Module N",
+  // non-numeric ones ("Extras") render under their own label.
   const byMod = {};
   for(const L of State.index.lessons){
     (byMod[L.module] = byMod[L.module] || []).push(L);
   }
-  Object.keys(byMod).sort().forEach(mod=>{
-    root.appendChild(el("div","module-label","Module "+mod));
+  // Sort numeric modules first, then non-numeric alphabetically.
+  const modKeys = Object.keys(byMod).sort((a, b) => {
+    const an = parseInt(a), bn = parseInt(b);
+    const aNum = !isNaN(an), bNum = !isNaN(bn);
+    if(aNum && bNum) return an - bn;
+    if(aNum && !bNum) return -1;
+    if(!aNum && bNum) return 1;
+    return String(a).localeCompare(String(b));
+  });
+  modKeys.forEach(mod=>{
+    const isNumeric = !isNaN(parseInt(mod));
+    const label = isNumeric ? "Module "+mod : String(mod);
+    root.appendChild(el("div","module-label",label));
     const list = el("div","section-list");
     for(const L of byMod[mod]){
       const card = el("button","section-card");
@@ -620,6 +632,11 @@ const SECTION_FLOWS = {
   directions:     ["flash","dialogue","winds"],
   timeexp:        ["flash"],
   time:           ["hours","patterns","ex8"],
+  // Extras
+  polite:         ["flash","dialogue"],
+  cafe:           ["flash","dialogue"],
+  work:           ["flash","dialogue"],
+  shopping:       ["flash","dialogue"],
 };
 
 const STEP_COUNTS = {
@@ -703,6 +720,11 @@ const STEP_COUNTS = {
   "time:hours": s => s.hours.length,
   "time:patterns": s => s.patterns.length,
   "time:ex8": s => s.exercises[0].items.length,
+  // Extras — all four sections use the same vocab+dialogue pattern as 'weekend'
+  "polite:flash": s => s.vocab.length, "polite:dialogue": s => 1,
+  "cafe:flash": s => s.vocab.length, "cafe:dialogue": s => 1,
+  "work:flash": s => s.vocab.length, "work:dialogue": s => 1,
+  "shopping:flash": s => s.vocab.length, "shopping:dialogue": s => 1,
 };
 
 /* ============================================================
@@ -2013,6 +2035,15 @@ STEP_RENDERERS["time:patterns"] = (root, sec, idx, onNext) => {
   root.appendChild(nextBtn("Next →", onNext));
 };
 STEP_RENDERERS["time:ex8"] = makeSentenceMcStep("ex8");
+
+/* ============================================================
+   Extras — survival Maltese
+   ============================================================ */
+// All four sections reuse the same flash + dialogue pattern as 'weekend'.
+["polite", "cafe", "work", "shopping"].forEach(sid => {
+  STEP_RENDERERS[sid+":flash"] = STEP_RENDERERS["weekend:flash"];
+  STEP_RENDERERS[sid+":dialogue"] = STEP_RENDERERS["weekend:dialogue"];
+});
 
 /* ============================================================
    Boot

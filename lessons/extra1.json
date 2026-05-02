@@ -1,0 +1,133 @@
+{
+  "id": "extra1",
+  "module": "Extras",
+  "title": "Extra Lesson",
+  "subtitle": "Survival Maltese for everyday life in Malta",
+  "sections": [
+    {
+      "id": "polite",
+      "icon": "🤝",
+      "title": "Polite essentials",
+      "subtitle": "Greetings, please, thanks, sorry — the basics",
+      "vocab": [
+        {"mt": "Bonġu", "en": "Good morning"},
+        {"mt": "Bonswa", "en": "Good evening"},
+        {"mt": "Saħħa", "en": "Cheers / Bye"},
+        {"mt": "Ċaw", "en": "Bye (casual)"},
+        {"mt": "Grazzi", "en": "Thank you"},
+        {"mt": "Grazzi ħafna", "en": "Thank you very much"},
+        {"mt": "Jekk jogħġbok", "en": "Please"},
+        {"mt": "Skużani", "en": "Excuse me / Sorry"},
+        {"mt": "Mhux problema", "en": "No problem"},
+        {"mt": "Ġurnata tajba", "en": "Have a good day"},
+        {"mt": "Prosit", "en": "Cheers / Well done"},
+        {"mt": "Iva", "en": "Yes"},
+        {"mt": "Le", "en": "No"},
+        {"mt": "Tajba", "en": "Good (feminine)"},
+        {"mt": "Ferm", "en": "Very"}
+      ],
+      "dialogue": [
+        {"mt": "Bonġu! Kif int?", "en": "Good morning! How are you?"},
+        {"mt": "Tajba ħafna, grazzi. U int?", "en": "Very well, thank you. And you?"},
+        {"mt": "Ferm tajba, grazzi.", "en": "Very well, thanks."},
+        {"mt": "Ġurnata tajba!", "en": "Have a good day!"}
+      ]
+    },
+    {
+      "id": "cafe",
+      "icon": "☕",
+      "title": "At the café",
+      "subtitle": "Ordering coffee, paying, leaving",
+      "vocab": [
+        {"mt": "Nixtieq", "en": "I would like"},
+        {"mt": "Kafè", "en": "Coffee"},
+        {"mt": "Kafè bil-ħalib", "en": "Coffee with milk"},
+        {"mt": "Tè", "en": "Tea"},
+        {"mt": "Tè bil-lumi", "en": "Tea with lemon"},
+        {"mt": "Ilma", "en": "Water"},
+        {"mt": "Birra", "en": "Beer"},
+        {"mt": "Ilma frizzanti", "en": "Sparkling water"},
+        {"mt": "Cappuccino", "en": "Cappuccino"},
+        {"mt": "Pastizz", "en": "Pastizzi (savoury pastry)"},
+        {"mt": "Kemm jiswa?", "en": "How much does it cost?"},
+        {"mt": "Tnejn ewro", "en": "Two euros"},
+        {"mt": "Bil-flus", "en": "With cash"},
+        {"mt": "Bil-karta", "en": "With card"},
+        {"mt": "Trid xi ħaġa oħra?", "en": "Would you like anything else?"},
+        {"mt": "Le grazzi, basta", "en": "No thanks, that's all"},
+        {"mt": "Iva, jekk jogħġbok", "en": "Yes, please"}
+      ],
+      "dialogue": [
+        {"mt": "Bonġu! X'tieħu?", "en": "Good morning! What will you have?"},
+        {"mt": "Nixtieq kafè bil-ħalib, jekk jogħġbok.", "en": "I would like a coffee with milk, please."},
+        {"mt": "Trid xi ħaġa oħra?", "en": "Would you like anything else?"},
+        {"mt": "Iva, pastizz wieħed jekk jogħġbok.", "en": "Yes, one pastizzi please."},
+        {"mt": "Kemm jiswa?", "en": "How much is it?"},
+        {"mt": "Tnejn ewro u sebgħin.", "en": "Two euros seventy."},
+        {"mt": "Hekk hu. Saħħa!", "en": "There you go. Cheers!"}
+      ]
+    },
+    {
+      "id": "work",
+      "icon": "💼",
+      "title": "At work",
+      "subtitle": "Asking for help, slowing the conversation down",
+      "vocab": [
+        {"mt": "Ma nitkellimx Malti", "en": "I don't speak Maltese"},
+        {"mt": "Nitkellem ftit Malti", "en": "I speak a little Maltese"},
+        {"mt": "Qed nitgħallem Malti", "en": "I am learning Maltese"},
+        {"mt": "Ma nifhimx", "en": "I don't understand"},
+        {"mt": "Tista' tirrepeti?", "en": "Could you repeat that?"},
+        {"mt": "Bil-mod, jekk jogħġbok", "en": "Slowly, please"},
+        {"mt": "Skużi, ma fhimtx", "en": "Sorry, I didn't understand"},
+        {"mt": "Tista' tikteb?", "en": "Could you write it down?"},
+        {"mt": "Tista' tgħinni?", "en": "Could you help me?"},
+        {"mt": "Kif tgħid bil-Malti?", "en": "How do you say it in Maltese?"},
+        {"mt": "X'jiġifieri?", "en": "What does it mean?"},
+        {"mt": "Naħdem hawn", "en": "I work here"},
+        {"mt": "Jien minn barra", "en": "I'm from abroad"},
+        {"mt": "Tkellem bl-Ingliż?", "en": "Do you speak English?"}
+      ],
+      "dialogue": [
+        {"mt": "Skużani — ma nitkellimx Malti tajjeb. Tkellem bl-Ingliż?", "en": "Sorry — I don't speak Maltese well. Do you speak English?"},
+        {"mt": "Iva, ftit. Kif nista' ngħinek?", "en": "Yes, a little. How can I help you?"},
+        {"mt": "Tista' tirrepeti, bil-mod jekk jogħġbok?", "en": "Could you repeat, slowly please?"},
+        {"mt": "Bla problema. Hekk hu...", "en": "No problem. Like this..."}
+      ]
+    },
+    {
+      "id": "shopping",
+      "icon": "🛒",
+      "title": "Shopping",
+      "subtitle": "Asking prices, paying, finding things",
+      "vocab": [
+        {"mt": "Kemm jiswa dan?", "en": "How much is this?"},
+        {"mt": "Kemm jiswew dawn?", "en": "How much are these?"},
+        {"mt": "Għandkom?", "en": "Do you have any?"},
+        {"mt": "Fejn nista' nsib?", "en": "Where can I find...?"},
+        {"mt": "Irħis", "en": "Cheap"},
+        {"mt": "Għali", "en": "Expensive"},
+        {"mt": "Skont", "en": "Discount"},
+        {"mt": "Saldi", "en": "Sales"},
+        {"mt": "Wieħed", "en": "One"},
+        {"mt": "Tnejn", "en": "Two"},
+        {"mt": "Ewro", "en": "Euro"},
+        {"mt": "Ċenteżmu", "en": "Cent"},
+        {"mt": "Bagalja", "en": "Bag"},
+        {"mt": "Riċevuta", "en": "Receipt"},
+        {"mt": "Ħanut", "en": "Shop"},
+        {"mt": "Supermarket", "en": "Supermarket"},
+        {"mt": "Ġib", "en": "Bring (please give me)"}
+      ],
+      "dialogue": [
+        {"mt": "Skużani, kemm jiswa dan?", "en": "Excuse me, how much is this?"},
+        {"mt": "Erbgħa ewro u disgħin.", "en": "Four euros ninety."},
+        {"mt": "Għandkom skont?", "en": "Do you have a discount?"},
+        {"mt": "Le, mhux illum.", "en": "No, not today."},
+        {"mt": "OK. Nieħu wieħed jekk jogħġbok.", "en": "OK. I'll take one please."},
+        {"mt": "Tridu bagalja?", "en": "Do you want a bag?"},
+        {"mt": "Le grazzi.", "en": "No thanks."}
+      ]
+    }
+  ]
+}

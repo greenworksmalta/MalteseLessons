@@ -52,6 +52,19 @@
   .hero p{margin:4px 0 0;opacity:.9}
   .hero .sub{font-size:.9rem;opacity:.85;margin-top:6px;letter-spacing:.04em;text-transform:uppercase}
 
+  /* Install prompt — bottom sheet that explains how to add the app to the home screen */
+  .install-prompt{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(20,30,40,.08);padding:18px 20px calc(18px + env(safe-area-inset-bottom));max-width:var(--maxw);margin:0 auto;border-radius:18px 18px 0 0;z-index:30;transform:translateY(120%);transition:transform .3s ease}
+  .install-prompt.show{transform:translateY(0)}
+  .install-prompt h3{margin:0 0 4px;font-size:1.05rem;color:var(--brand-navy)}
+  .install-prompt p{margin:0 0 12px;font-size:.92rem;color:var(--ink-2);line-height:1.5}
+  .install-prompt .row{display:flex;align-items:center;gap:10px;margin-top:10px}
+  .install-prompt .icon-step{flex:0 0 auto;width:32px;height:32px;border-radius:8px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .install-prompt .step-text{flex:1;font-size:.9rem;color:var(--ink)}
+  .install-prompt .actions{display:flex;gap:8px;margin-top:14px}
+  .install-prompt button{flex:1;min-height:44px;padding:0 14px;border-radius:99px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:.92rem;color:var(--ink-2);cursor:pointer}
+  .install-prompt button.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+  .install-prompt .close{position:absolute;top:10px;right:14px;background:transparent;border:none;font-size:1.2rem;color:var(--ink-2);cursor:pointer;padding:4px 8px;min-height:auto}
+
   /* Welcome hero — calm cream gradient with navy headline and a red accent.
      Pulls from the logo's three colours (cream / navy / red) without shouting. */
   .hero-welcome{position:relative;overflow:hidden;background:linear-gradient(135deg,#fffdf6 0%,#f5efe0 100%);color:var(--ink);border-radius:var(--radius);padding:24px 24px 26px;margin-bottom:18px;box-shadow:0 1px 0 rgba(0,0,0,.04), 0 6px 18px rgba(20,30,40,.06);border:1px solid var(--line)}
@@ -294,7 +307,17 @@
 <body>
 <main id="app" aria-live="polite"></main>
 <div id="feedback" class="feedback" role="status"></div>
+<div id="install-prompt" class="install-prompt" role="dialog" aria-hidden="true"></div>
 <audio id="player" preload="auto"></audio>
 <script src="app.js"></script>
+<script>
+  // Register service worker for offline use. Scoped to the app's path on
+  // GitHub Pages (/MalteseLessons/) so it doesn't affect anything else.
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js").catch((e) => console.warn("SW register failed", e));
+    });
+  }
+</script>
 </body>
 </html>

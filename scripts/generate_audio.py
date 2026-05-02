@@ -112,14 +112,41 @@ def collect_strings(lesson: dict) -> list[str]:
     return sorted(s for s in strings if s and s.strip() and len(s) <= 200)
 
 
+# Pronunciation overrides — keyed Maltese substrings get rewritten with SSML
+# <phoneme> tags using IPA so Azure's voice doesn't fall back to Italian/Spanish
+# defaults for loanwords with grave-accent vowels.
+#
+# Maltese 'è' is a stressed open-e, similar to /ɛ/ in 'bet'. The Azure voice was
+# treating words like "kafè" with an Italian/Spanish lean; this forces the right
+# vowel.
+PRONUNCIATION_OVERRIDES = {
+    "kafè": "<phoneme alphabet='ipa' ph='kafˈfɛ'>kafè</phoneme>",
+    "tè":   "<phoneme alphabet='ipa' ph='ˈtɛ'>tè</phoneme>",
+}
+
+
+def apply_pronunciation_hints(text: str) -> str:
+    """Insert SSML phoneme tags for known mispronounced words.
+
+    `text` is XML-escaped first, then the literal word is substituted with the
+    SSML fragment. We replace the escaped form to avoid stomping on inner XML.
+    """
+    out = escape_xml(text)
+    for word, ssml_fragment in PRONUNCIATION_OVERRIDES.items():
+        # Word-boundary-ish replace: only swap when the literal word appears as a
+        # whole token (preceded/followed by space, punctuation, or start/end).
+        # Simple substring replace is fine here because these tokens are rare.
+        out = out.replace(escape_xml(word), ssml_fragment)
+    return out
+
+
 def synthesize(text: str, key: str, region: str, voice: str = "mt-MT-GraceNeural") -> bytes:
-    """One TTS call. Retries 3x on transient errors."""
+    """One TTS call. Retries on transient errors."""
     ssml = (
         "<speak version='1.0' xml:lang='mt-MT'>"
         f"<voice name='{voice}'>"
-        # Slight prosody slow-down helps learners; not too slow.
         "<prosody rate='-8%'>"
-        f"{escape_xml(text)}"
+        f"{apply_pronunciation_hints(text)}"
         "</prosody>"
         "</voice>"
         "</speak>"

@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502m";
+const VERSION = "20260502n";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -23,6 +23,21 @@ const I18N = {
     totalXp: "Total XP",
     backToLesson: "Back to lesson",
     skip: "Skip →",
+    next: "Next",
+    nextArrow: "Next →",
+    correct: "Sewwa!",
+    notQuite: "Not quite.",
+    correctIs: "Correct: ",
+    install: {
+      title: "Add MaltiOnTheGo to your home screen",
+      sub: "Faster to open, works offline, feels like a real app.",
+      iosStep1: "Tap the Share button below ⬆️",
+      iosStep2: "Choose 'Add to Home Screen'",
+      androidStep1: "Tap the menu (⋮) above",
+      androidStep2: "Choose 'Install app' or 'Add to Home screen'",
+      maybeLater: "Maybe later",
+      gotIt: "Got it",
+    },
   },
   es: {
     done: "¡Listo!",
@@ -32,6 +47,21 @@ const I18N = {
     totalXp: "XP total",
     backToLesson: "Volver a la lección",
     skip: "Saltar →",
+    next: "Siguiente",
+    nextArrow: "Siguiente →",
+    correct: "¡Sewwa!",
+    notQuite: "No del todo.",
+    correctIs: "Correcto: ",
+    install: {
+      title: "Añade MaltiOnTheGo a tu pantalla de inicio",
+      sub: "Se abre más rápido, funciona sin conexión y parece una app de verdad.",
+      iosStep1: "Toca el botón Compartir abajo ⬆️",
+      iosStep2: "Elige 'Añadir a la pantalla de inicio'",
+      androidStep1: "Toca el menú (⋮) arriba",
+      androidStep2: "Elige 'Instalar app' o 'Añadir a la pantalla de inicio'",
+      maybeLater: "Quizás más tarde",
+      gotIt: "Entendido",
+    },
   },
 };
 
@@ -105,6 +135,103 @@ function audioBtn(mt, opts){
   b.setAttribute("aria-label","Play "+mt);
   b.addEventListener("click", e=>{ e.stopPropagation(); playBtn(b, mt); });
   return b;
+}
+
+// ── Install prompt ────────────────────────────
+// Shown once per browser (until dismissed) to explain how to add the PWA to
+// the home screen. iOS Safari needs manual instructions; Android Chrome can
+// use beforeinstallprompt for a native dialog.
+let deferredInstallPrompt = null;
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  // Don't show immediately on first load — wait for user engagement.
+  setTimeout(() => maybeShowInstallPrompt(), 4000);
+});
+
+function isStandalone(){
+  return window.matchMedia && window.matchMedia("(display-mode: standalone)").matches
+    || window.navigator.standalone === true;
+}
+function isIOS(){
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+function isAndroid(){
+  return /Android/.test(navigator.userAgent);
+}
+
+function maybeShowInstallPrompt(){
+  if(isStandalone()) return;                         // already installed
+  if(load("install_dismissed_at")) {
+    // Suppress for 14 days after dismissal
+    const since = Date.now() - load("install_dismissed_at");
+    if(since < 14 * 24 * 60 * 60 * 1000) return;
+  }
+  showInstallPrompt();
+}
+
+function showInstallPrompt(){
+  const t = (I18N[State.lang] || I18N.en).install;
+  const el2 = document.getElementById("install-prompt");
+  el2.innerHTML = "";
+
+  const closeB = el("button","close","×");
+  closeB.setAttribute("aria-label","Close");
+  closeB.addEventListener("click", dismissInstallPrompt);
+  el2.appendChild(closeB);
+
+  el2.appendChild(el("h3","",t.title));
+  el2.appendChild(el("p","",t.sub));
+
+  const steps = [];
+  if(isIOS()){
+    steps.push([" 📤", t.iosStep1]);
+    steps.push(["➕", t.iosStep2]);
+  } else if(isAndroid() && deferredInstallPrompt){
+    // Native install will be triggered by the primary button
+  } else {
+    steps.push(["⋮", t.androidStep1]);
+    steps.push(["➕", t.androidStep2]);
+  }
+  steps.forEach(([ic, txt])=>{
+    const r = el("div","row");
+    const ico = el("div","icon-step", ic);
+    const tx = el("div","step-text", txt);
+    r.appendChild(ico); r.appendChild(tx);
+    el2.appendChild(r);
+  });
+
+  const actions = el("div","actions");
+  const later = el("button","",t.maybeLater);
+  later.addEventListener("click", dismissInstallPrompt);
+  actions.appendChild(later);
+
+  if(deferredInstallPrompt){
+    const installB = el("button","primary",t.gotIt);
+    installB.addEventListener("click", async ()=>{
+      try {
+        deferredInstallPrompt.prompt();
+        await deferredInstallPrompt.userChoice;
+      } catch(e){}
+      deferredInstallPrompt = null;
+      dismissInstallPrompt();
+    });
+    actions.appendChild(installB);
+  } else {
+    const okB = el("button","primary",t.gotIt);
+    okB.addEventListener("click", dismissInstallPrompt);
+    actions.appendChild(okB);
+  }
+  el2.appendChild(actions);
+  el2.classList.add("show");
+  el2.setAttribute("aria-hidden","false");
+}
+
+function dismissInstallPrompt(){
+  const el2 = document.getElementById("install-prompt");
+  el2.classList.remove("show");
+  el2.setAttribute("aria-hidden","true");
+  save("install_dismissed_at", Date.now());
 }
 
 // ── Routing ───────────────────────────────────
@@ -2205,6 +2332,11 @@ async function boot(){
     // preload all lessons so home page shows accurate progress
     await Promise.all(index.lessons.map(L => loadLesson(L.id).catch(e=>console.warn(e))));
     route();
+    // iOS Safari doesn't fire beforeinstallprompt — trigger the manual instructions
+    // a few seconds after first load so it isn't immediately in the user's face.
+    if(isIOS() && !isStandalone()){
+      setTimeout(maybeShowInstallPrompt, 6000);
+    }
   }catch(e){
     document.getElementById("app").innerHTML = "<p>Could not load. Check your connection and refresh.</p><p class='muted'>"+(e.message||e)+"</p>";
     console.error(e);

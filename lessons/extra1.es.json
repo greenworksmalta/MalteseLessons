@@ -1,0 +1,134 @@
+{
+  "id": "extra1",
+  "lang": "es",
+  "module": "Empieza Aquí · Gratis",
+  "title": "Lección de Bienvenida",
+  "subtitle": "Tu lección gratis — maltés de supervivencia para la vida diaria",
+  "sections": [
+    {
+      "id": "polite",
+      "icon": "🤝",
+      "title": "Lo esencial de la cortesía",
+      "subtitle": "Saludos, por favor, gracias, perdón — lo básico",
+      "vocab": [
+        {"mt": "Bonġu", "en": "Buenos días"},
+        {"mt": "Bonswa", "en": "Buenas tardes"},
+        {"mt": "Saħħa", "en": "Salud / Adiós"},
+        {"mt": "Ċaw", "en": "Chao (informal)"},
+        {"mt": "Grazzi", "en": "Gracias"},
+        {"mt": "Grazzi ħafna", "en": "Muchas gracias"},
+        {"mt": "Jekk jogħġbok", "en": "Por favor"},
+        {"mt": "Skużani", "en": "Disculpa / Perdón"},
+        {"mt": "Mhux problema", "en": "No hay problema"},
+        {"mt": "Ġurnata tajba", "en": "Que tengas un buen día"},
+        {"mt": "Prosit", "en": "¡Salud! / ¡Bien hecho!"},
+        {"mt": "Iva", "en": "Sí"},
+        {"mt": "Le", "en": "No"},
+        {"mt": "Tajba", "en": "Bien (femenino)"},
+        {"mt": "Ferm", "en": "Muy"}
+      ],
+      "dialogue": [
+        {"mt": "Bonġu! Kif int?", "en": "¡Buenos días! ¿Cómo estás?"},
+        {"mt": "Tajba ħafna, grazzi. U int?", "en": "Muy bien, gracias. ¿Y tú?"},
+        {"mt": "Ferm tajba, grazzi.", "en": "Muy bien, gracias."},
+        {"mt": "Ġurnata tajba!", "en": "¡Que tengas buen día!"}
+      ]
+    },
+    {
+      "id": "cafe",
+      "icon": "☕",
+      "title": "En la cafetería",
+      "subtitle": "Pedir café, pagar, despedirse",
+      "vocab": [
+        {"mt": "Nixtieq", "en": "Quisiera"},
+        {"mt": "Kafè", "en": "Café"},
+        {"mt": "Kafè bil-ħalib", "en": "Café con leche"},
+        {"mt": "Tè", "en": "Té"},
+        {"mt": "Tè bil-lumi", "en": "Té con limón"},
+        {"mt": "Ilma", "en": "Agua"},
+        {"mt": "Birra", "en": "Cerveza"},
+        {"mt": "Ilma frizzanti", "en": "Agua con gas"},
+        {"mt": "Cappuccino", "en": "Capuchino"},
+        {"mt": "Pastizz", "en": "Pastizz (hojaldre maltés salado)"},
+        {"mt": "Kemm jiswa?", "en": "¿Cuánto cuesta?"},
+        {"mt": "Tnejn ewro", "en": "Dos euros"},
+        {"mt": "Bil-flus", "en": "En efectivo"},
+        {"mt": "Bil-karta", "en": "Con tarjeta"},
+        {"mt": "Trid xi ħaġa oħra?", "en": "¿Quieres algo más?"},
+        {"mt": "Le grazzi, basta", "en": "No gracias, eso es todo"},
+        {"mt": "Iva, jekk jogħġbok", "en": "Sí, por favor"}
+      ],
+      "dialogue": [
+        {"mt": "Bonġu! X'tieħu?", "en": "¡Buenos días! ¿Qué vas a tomar?"},
+        {"mt": "Nixtieq kafè bil-ħalib, jekk jogħġbok.", "en": "Quisiera un café con leche, por favor."},
+        {"mt": "Trid xi ħaġa oħra?", "en": "¿Quieres algo más?"},
+        {"mt": "Iva, pastizz wieħed jekk jogħġbok.", "en": "Sí, un pastizz por favor."},
+        {"mt": "Kemm jiswa?", "en": "¿Cuánto cuesta?"},
+        {"mt": "Tnejn ewro u sebgħin.", "en": "Dos euros con setenta."},
+        {"mt": "Hekk hu. Saħħa!", "en": "Aquí tienes. ¡Hasta luego!"}
+      ]
+    },
+    {
+      "id": "work",
+      "icon": "💼",
+      "title": "En el trabajo",
+      "subtitle": "Pedir ayuda y bajar el ritmo de la conversación",
+      "vocab": [
+        {"mt": "Ma nitkellimx Malti", "en": "No hablo maltés"},
+        {"mt": "Nitkellem ftit Malti", "en": "Hablo un poco de maltés"},
+        {"mt": "Qed nitgħallem Malti", "en": "Estoy aprendiendo maltés"},
+        {"mt": "Ma nifhimx", "en": "No entiendo"},
+        {"mt": "Tista' tirrepeti?", "en": "¿Puedes repetir?"},
+        {"mt": "Bil-mod, jekk jogħġbok", "en": "Despacio, por favor"},
+        {"mt": "Skużi, ma fhimtx", "en": "Perdón, no entendí"},
+        {"mt": "Tista' tikteb?", "en": "¿Puedes escribirlo?"},
+        {"mt": "Tista' tgħinni?", "en": "¿Puedes ayudarme?"},
+        {"mt": "Kif tgħid bil-Malti?", "en": "¿Cómo se dice en maltés?"},
+        {"mt": "X'jiġifieri?", "en": "¿Qué significa?"},
+        {"mt": "Naħdem hawn", "en": "Trabajo aquí"},
+        {"mt": "Jien minn barra", "en": "Soy del extranjero"},
+        {"mt": "Tkellem bl-Ingliż?", "en": "¿Hablas inglés?"}
+      ],
+      "dialogue": [
+        {"mt": "Skużani — ma nitkellimx Malti tajjeb. Tkellem bl-Ingliż?", "en": "Disculpa — no hablo bien el maltés. ¿Hablas inglés?"},
+        {"mt": "Iva, ftit. Kif nista' ngħinek?", "en": "Sí, un poco. ¿En qué te puedo ayudar?"},
+        {"mt": "Tista' tirrepeti, bil-mod jekk jogħġbok?", "en": "¿Puedes repetir, despacio por favor?"},
+        {"mt": "Bla problema. Hekk hu...", "en": "Sin problema. Así..."}
+      ]
+    },
+    {
+      "id": "shopping",
+      "icon": "🛒",
+      "title": "De compras",
+      "subtitle": "Preguntar precios, pagar, encontrar cosas",
+      "vocab": [
+        {"mt": "Kemm jiswa dan?", "en": "¿Cuánto cuesta esto?"},
+        {"mt": "Kemm jiswew dawn?", "en": "¿Cuánto cuestan estos?"},
+        {"mt": "Għandkom?", "en": "¿Tienen?"},
+        {"mt": "Fejn nista' nsib?", "en": "¿Dónde puedo encontrar...?"},
+        {"mt": "Irħis", "en": "Barato"},
+        {"mt": "Għali", "en": "Caro"},
+        {"mt": "Skont", "en": "Descuento"},
+        {"mt": "Saldi", "en": "Rebajas"},
+        {"mt": "Wieħed", "en": "Uno"},
+        {"mt": "Tnejn", "en": "Dos"},
+        {"mt": "Ewro", "en": "Euro"},
+        {"mt": "Ċenteżmu", "en": "Céntimo"},
+        {"mt": "Bagalja", "en": "Bolsa"},
+        {"mt": "Riċevuta", "en": "Recibo"},
+        {"mt": "Ħanut", "en": "Tienda"},
+        {"mt": "Supermarket", "en": "Supermercado"},
+        {"mt": "Ġib", "en": "Dame (por favor)"}
+      ],
+      "dialogue": [
+        {"mt": "Skużani, kemm jiswa dan?", "en": "Disculpa, ¿cuánto cuesta esto?"},
+        {"mt": "Erbgħa ewro u disgħin.", "en": "Cuatro euros con noventa."},
+        {"mt": "Għandkom skont?", "en": "¿Tienen descuento?"},
+        {"mt": "Le, mhux illum.", "en": "No, hoy no."},
+        {"mt": "OK. Nieħu wieħed jekk jogħġbok.", "en": "Vale. Tomo uno por favor."},
+        {"mt": "Tridu bagalja?", "en": "¿Quieres una bolsa?"},
+        {"mt": "Le grazzi.", "en": "No gracias."}
+      ]
+    }
+  ]
+}

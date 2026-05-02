@@ -9,23 +9,28 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502i";
+const VERSION = "20260502j";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
 const State = {
   index: null,           // {lessons:[...]}
-  lessons: {},           // {lesson1: {...}, ...} cached
-  overviews: {},         // {lesson1: {transcript:[...]}, ...}
+  lessons: {},           // {<lid>:<lang>: {...}} keyed by lesson id + language
+  overviews: {},         // {<lid>:<lang>: {transcript:[...]}}
   manifest: null,        // {mt: filename}
   progress: load("progress") || {},   // {lessonId: {sectionId: pct}}
   xp: load("xp") || 0,
+  lang: load("preferred_lang") || "en",  // global language preference
 };
 function save(k,v){ try{localStorage.setItem("malti."+k, JSON.stringify(v));}catch(e){} }
 function load(k){ try{const v=localStorage.getItem("malti."+k);return v?JSON.parse(v):null;}catch(e){return null;} }
+// Resolve the cached lesson in the current language, falling back to English.
+function currentLesson(lid){
+  return State.lessons[lid + ":" + State.lang] || State.lessons[lid + ":en"] || State.lessons[lid];
+}
 function lessonProgress(lid){
   const p = State.progress[lid] || {};
-  const lesson = State.lessons[lid];
+  const lesson = currentLesson(lid);
   if(!lesson) return 0;
   const ids = lesson.sections.map(s=>s.id);
   if(!ids.length) return 0;
@@ -102,12 +107,26 @@ function route(){
   return renderHome();
 }
 
-async function loadLesson(lid){
-  if(State.lessons[lid]) return State.lessons[lid];
-  const r = await fetch(v("lessons/"+lid+".json"));
-  if(!r.ok) throw new Error("Missing lesson: "+lid);
+async function loadLesson(lid, lang){
+  lang = lang || State.lang || "en";
+  const cacheKey = lid + ":" + lang;
+  if(State.lessons[cacheKey]) return State.lessons[cacheKey];
+  // For non-English, try the language-specific file first; fall back to English silently.
+  if(lang !== "en"){
+    try {
+      const r = await fetch(v("lessons/" + lid + "." + lang + ".json"));
+      if(r.ok){
+        const data = await r.json();
+        State.lessons[cacheKey] = data;
+        return data;
+      }
+    } catch(e){ /* fall through to English */ }
+  }
+  const r = await fetch(v("lessons/" + lid + ".json"));
+  if(!r.ok) throw new Error("Missing lesson: " + lid);
   const data = await r.json();
-  State.lessons[lid] = data;
+  State.lessons[lid + ":en"] = data;
+  if(lang !== "en") State.lessons[cacheKey] = data; // mark Spanish lookup as fallback to English so we don't refetch
   return data;
 }
 async function loadOverview(lid, lang){
@@ -237,7 +256,7 @@ function renderHome(){
 
 // ── Lesson home (sections) ────────────────────
 function renderLessonHome(lid){
-  const lesson = State.lessons[lid];
+  const lesson = currentLesson(lid);
   const root = $app();
   root.innerHTML = "";
   root.appendChild(topbar(lesson.title, "/home"));
@@ -246,6 +265,27 @@ function renderLessonHome(lid){
   hero.appendChild(el("h1","",lesson.title));
   hero.appendChild(el("p","",lesson.subtitle));
   root.appendChild(hero);
+
+  // Language toggle — appears whenever the lesson supports more than one language.
+  const lessonMeta = (State.index.lessons || []).find(l => l.id === lid) || {};
+  const availableLangs = lessonMeta.languages || ["en"];
+  if(availableLangs.length > 1){
+    const labels = {en: "🇬🇧 English", es: "🇪🇸 Español"};
+    const langWrap = el("div","lang-toggle");
+    availableLangs.forEach(L => {
+      const b = el("button","lang-btn"+(L === State.lang ? " active" : ""), labels[L] || L.toUpperCase());
+      b.addEventListener("click", async ()=>{
+        if(L === State.lang) return;
+        State.lang = L;
+        save("preferred_lang", L);
+        // Pre-load the lesson in the new language so re-render reads from cache
+        try { await loadLesson(lid, L); } catch(e){}
+        renderLessonHome(lid);
+      });
+      langWrap.appendChild(b);
+    });
+    root.appendChild(langWrap);
+  }
 
   root.appendChild(progressBar(lessonProgress(lid)));
 
@@ -313,7 +353,7 @@ async function renderOverview(lid, lang){
       return;
     }
   }
-  const lesson = State.lessons[lid];
+  const lesson = currentLesson(lid);
   // Discover available languages from the index entry; default to ["en"]
   const lessonMeta = (State.index.lessons || []).find(l => l.id === lid) || {};
   const availableLangs = lessonMeta.languages || ["en"];
@@ -337,7 +377,8 @@ async function renderOverview(lid, lang){
       const b = el("button","lang-btn"+(L===lang?" active":""), labels[L] || L.toUpperCase());
       b.addEventListener("click", ()=>{
         if(L === lang) return;
-        // Save preference and re-render at the requested language
+        // Save preference globally + re-render at the requested language
+        State.lang = L;
         save("preferred_lang", L);
         go("/lesson/"+lid+"/overview/"+L);
       });
@@ -574,7 +615,7 @@ async function renderOverview(lid, lang){
 
 // ── Section dispatcher ────────────────────────
 function renderSection(lid, sid, step, idx){
-  const lesson = State.lessons[lid];
+  const lesson = currentLesson(lid);
   const sec = lesson.sections.find(s=>s.id===sid);
   if(!sec) return go("/lesson/"+lid);
 

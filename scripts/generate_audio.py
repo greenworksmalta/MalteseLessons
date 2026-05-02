@@ -118,11 +118,17 @@ def collect_strings(lesson: dict) -> list[str]:
 # directly before sending to Azure. The hash key (and therefore the audio
 # filename + the display text in the app) still uses the original spelling.
 SUBSTRING_REWRITES = [
-    # Order matters — apply longer matches first.
-    ("Kafè", "Kafeh"),
-    ("kafè", "kafeh"),
-    ("Tè",   "Teh"),
-    ("tè",   "teh"),
+    # Final-e treatment by mt-MT voices is finicky:
+    #   è  → silent (dropped)
+    #   eh → drawn-out 'ehhh'
+    #   e  → still aspirated with a soft 'h' tail
+    # Acute é forces the short closed /e/ Azure uses for Spanish/Italian
+    # loanwords, which is the cleanest fit for the Maltese pronunciation
+    # without the silent-vowel or aspiration artifacts.
+    ("Kafè", "Kafé"),
+    ("kafè", "kafé"),
+    ("Tè",   "Té"),
+    ("tè",   "té"),
 ]
 
 

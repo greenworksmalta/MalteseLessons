@@ -9,8 +9,29 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502k";
+const VERSION = "20260502l";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
+
+// Lightweight UI strings table for the parts of the app that aren't data-driven.
+// Keys are accessed via (I18N[State.lang] || I18N.en).<key>.
+const I18N = {
+  en: {
+    done: "Done",
+    sectionComplete: "Mela! Section complete.",
+    brilliantWork: "Brilliant work!",
+    xpEarned: "XP earned",
+    totalXp: "Total XP",
+    backToLesson: "Back to lesson",
+  },
+  es: {
+    done: "¡Listo!",
+    sectionComplete: "¡Mela! Sección completa.",
+    brilliantWork: "¡Buen trabajo!",
+    xpEarned: "XP ganados",
+    totalXp: "XP total",
+    backToLesson: "Volver a la lección",
+  },
+};
 
 // ── State ─────────────────────────────────────
 const State = {
@@ -186,7 +207,7 @@ function renderHome(){
   root.appendChild(topbar("MaltiOnTheGo", null));
 
   // Branded splash hero — uses the generated splash.png so the wordmark + balcony
-  // illustration hits Luis the moment he opens the app.
+  // illustration hits the user the moment they open the app.
   const heroSplash = el("div","hero-branded");
   const img = document.createElement("img");
   img.src = v("splash.png");
@@ -459,7 +480,7 @@ async function renderOverview(lid, lang){
   root.appendChild(pl);
 
   // Chapter jump bar — derived from "header" segments. Sits below the player so
-  // Luis can leap straight to a section without dragging the scrubber.
+  // the listener can leap straight to a section without dragging the scrubber.
   const headerIdxs = [];
   segs.forEach((s, i) => { if (s.kind === "header") headerIdxs.push(i); });
   const chWrap = el("div","chapters");
@@ -665,19 +686,20 @@ function nextStep(lid, sid, step, idx, sec, flow){
 }
 
 function showSectionDone(lid){
+  const t = I18N[State.lang] || I18N.en;
   const root = $app();
   root.innerHTML = "";
-  root.appendChild(topbar("Done", "/lesson/"+lid));
+  root.appendChild(topbar(t.done, "/lesson/"+lid));
   const ds = el("div","done-screen");
   ds.appendChild(el("div","emoji","🎉"));
-  ds.appendChild(el("h1","","Mela! Section complete."));
-  ds.appendChild(el("p","","Brilliant work, Luis."));
+  ds.appendChild(el("h1","",t.sectionComplete));
+  ds.appendChild(el("p","",t.brilliantWork));
   const stats = el("div","stats");
-  const s1 = el("div","stat"); s1.appendChild(el("strong","","+20")); s1.appendChild(el("span","","XP earned"));
-  const s2 = el("div","stat"); s2.appendChild(el("strong","",String(State.xp))); s2.appendChild(el("span","","Total XP"));
+  const s1 = el("div","stat"); s1.appendChild(el("strong","","+20")); s1.appendChild(el("span","",t.xpEarned));
+  const s2 = el("div","stat"); s2.appendChild(el("strong","",String(State.xp))); s2.appendChild(el("span","",t.totalXp));
   stats.appendChild(s1); stats.appendChild(s2);
   ds.appendChild(stats);
-  const back = el("button","btn","Back to lesson");
+  const back = el("button","btn",t.backToLesson);
   back.addEventListener("click", ()=>go("/lesson/"+lid));
   ds.appendChild(back);
   root.appendChild(ds);

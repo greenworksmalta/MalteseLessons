@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502r";
+const VERSION = "20260502s";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -119,12 +119,20 @@ const player = document.getElementById("player");
 let currentBtn = null;
 function play(mt){
   if(!mt) return;
-  const file = State.manifest && State.manifest[mt];
-  if(!file){ console.warn("No audio for:", mt); return; }
+  // Human-recorded clip wins over the Azure-generated one if mapped.
+  const recorded = State.recorded && State.recorded[mt];
+  let src;
+  if(recorded){
+    src = "audio/recorded/" + recorded;
+  } else {
+    const file = State.manifest && State.manifest[mt];
+    if(!file){ console.warn("No audio for:", mt); return; }
+    src = "audio/" + file;
+  }
   if(currentBtn){ currentBtn.classList.remove("playing"); currentBtn=null; }
   try{
     player.pause();
-    player.src = v("audio/"+file);
+    player.src = v(src);
     player.currentTime = 0;
     const p = player.play();
     if(p && p.catch) p.catch(e=>console.warn("play failed", e));
@@ -2362,12 +2370,14 @@ STEP_RENDERERS["time:ex8"] = makeSentenceMcStep("ex8");
    ============================================================ */
 async function boot(){
   try{
-    const [index, manifest] = await Promise.all([
+    const [index, manifest, recorded] = await Promise.all([
       fetch(v("lessons/index.json")).then(r=>r.json()),
       fetch(v("audio/manifest.json")).then(r=>r.json()),
+      fetch(v("audio/recorded.json")).then(r=>r.ok ? r.json() : {}).catch(()=>({})),
     ]);
     State.index = index;
     State.manifest = manifest;
+    State.recorded = recorded;
     // preload all lessons so home page shows accurate progress
     await Promise.all(index.lessons.map(L => loadLesson(L.id).catch(e=>console.warn(e))));
     route();

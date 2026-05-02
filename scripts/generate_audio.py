@@ -112,59 +112,52 @@ def collect_strings(lesson: dict) -> list[str]:
     return sorted(s for s in strings if s and s.strip() and len(s) <= 200)
 
 
-# Pronunciation overrides — Azure's neural Maltese voices accept SSML <phoneme>
-# tags but ignore the IPA, so we substitute via <sub alias="..."> instead.
-# The alias is what Azure will actually pronounce; the original text (kafè etc.)
-# stays unchanged in the displayed transcript.
-#
-# Italian-style respellings ("kaffè", "tè" with double letters or alt vowels)
-# coax Azure away from the Spanish-flavoured /e/ it falls into for grave-accent
-# loanwords, and toward the open /ɛ/ + final stress that Maltese speakers use.
-PRONUNCIATION_OVERRIDES = {
-    "kafè": "kaffè",
-    "tè":   "teh",
-}
-
-# Some loanwords with grave-accent vowels still come out Spanish-leaning even
-# after respelling. For these, switch to mt-MT-JosephNeural — the male voice
-# handles them noticeably more Maltese-ly than Grace does.
-JOSEPH_VOICE_PHRASES = {
-    "kafè",
-    "tè",
-    "kafè bil-ħalib",
-    "tè bil-lumi",
-    "kikkra kafè",
-}
+# Pronunciation rewrites — Azure's mt-MT neural voices treat final 'è' as a
+# silent French-style vowel and drop it (so "kafè" becomes "kaff", "tè" becomes
+# "t"). To force the open-/ɛ/ ending Maltese natives use, we rewrite the text
+# directly before sending to Azure. The hash key (and therefore the audio
+# filename + the display text in the app) still uses the original spelling.
+SUBSTRING_REWRITES = [
+    # Order matters — apply longer matches first.
+    ("Kafè", "Kafeh"),
+    ("kafè", "kafeh"),
+    ("Tè",   "Teh"),
+    ("tè",   "teh"),
+]
 
 
-def apply_pronunciation_hints(text: str) -> str:
-    """Wrap known mispronounced tokens in <sub alias='...'> so the TTS hears a
-    different (better-pronounced) string while displays/transcripts keep the
-    correct Maltese spelling. Input/output are SSML-escaped."""
-    out = escape_xml(text)
-    for word, alias in PRONUNCIATION_OVERRIDES.items():
-        out = out.replace(escape_xml(word), f"<sub alias='{escape_xml(alias)}'>{escape_xml(word)}</sub>")
+def rewrite_for_speech(text: str) -> str:
+    out = text
+    for src, dst in SUBSTRING_REWRITES:
+        out = out.replace(src, dst)
     return out
 
 
+# Joseph's male voice handles these loanwords noticeably more Maltese-ly than
+# Grace. Used when the entire token is one of these standalone words.
+JOSEPH_VOICE_PHRASES = {
+    "kafè", "tè", "kafè bil-ħalib", "tè bil-lumi", "kikkra kafè",
+}
 _JOSEPH_LOWER = {p.lower() for p in JOSEPH_VOICE_PHRASES}
 
 
 def pick_voice(text: str, default: str) -> str:
-    """Use Joseph for loanwords that Grace handles poorly. Case-insensitive."""
     if text.strip().lower() in _JOSEPH_LOWER:
         return "mt-MT-JosephNeural"
     return default
 
 
 def synthesize(text: str, key: str, region: str, voice: str = "mt-MT-GraceNeural") -> bytes:
-    """One TTS call. Retries on transient errors."""
+    """One TTS call. Retries on transient errors. The text passed to Azure may
+    differ from the input `text` (rewrites for tricky pronunciations) but the
+    hash key + audio filename remain tied to the original."""
     chosen_voice = pick_voice(text, voice)
+    spoken = rewrite_for_speech(text)
     ssml = (
         "<speak version='1.0' xml:lang='mt-MT'>"
         f"<voice name='{chosen_voice}'>"
         "<prosody rate='-8%'>"
-        f"{apply_pronunciation_hints(text)}"
+        f"{escape_xml(spoken)}"
         "</prosody>"
         "</voice>"
         "</speak>"

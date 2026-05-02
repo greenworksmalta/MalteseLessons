@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502a";
+const VERSION = "20260502b";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // ── State ─────────────────────────────────────
@@ -127,7 +127,7 @@ function topbar(title, backHash){
   if(backHash){ back.addEventListener("click", ()=>go(backHash)); }
   else { back.style.visibility="hidden"; }
   bar.appendChild(back);
-  bar.appendChild(el("div","title", title));
+  bar.appendChild(el("div","title", title || "MaltiOnTheGo"));
   bar.appendChild(el("div","xp", "⭐ "+State.xp));
   return bar;
 }
@@ -160,12 +160,12 @@ function hideFeedback(){ $fb().classList.remove("show","good","bad"); }
 function renderHome(){
   const root = $app();
   root.innerHTML = "";
-  root.appendChild(topbar("Malti", null));
+  root.appendChild(topbar("MaltiOnTheGo", null));
 
   const hero = el("div","hero");
-  hero.appendChild(el("div","sub","Your Maltese course"));
-  hero.appendChild(el("h1","","Merħba Luis 👋"));
-  hero.appendChild(el("p","","Tap a lesson to start. Each one is broken into sections so you can drill what you want."));
+  hero.appendChild(el("div","sub","Maltese for life in Malta"));
+  hero.appendChild(el("h1","","Merħba 👋"));
+  hero.appendChild(el("p","","Bite-sized Maltese for everyday life. Tap a lesson to start — each one is broken into sections so you can drill what you need."));
   root.appendChild(hero);
 
   // Group by module — numeric modules ("1", "2", "3") render as "Module N",

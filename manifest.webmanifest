@@ -1,15 +1,16 @@
 {
-  "name": "Malti — Maltese Lessons",
-  "short_name": "Malti",
-  "description": "Mobile-friendly Maltese language lessons",
+  "name": "MaltiOnTheGo",
+  "short_name": "MaltiOnTheGo",
+  "description": "Survival Maltese for life and work in Malta — bite-sized lessons with native audio.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#faf6ec",
   "theme_color": "#0d6b6a",
+  "categories": ["education", "lifestyle"],
   "icons": [
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
   ]
 }

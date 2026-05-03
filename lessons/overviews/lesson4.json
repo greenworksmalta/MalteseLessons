@@ -3,280 +3,88 @@
   "title": "Lesson 4 Overview",
   "subtitle": "Listen to the lesson explained in English",
   "transcript": [
-    {
-      "en": "Hey! 👋 Lesson 4 — first lesson of Module 2!",
-      "kind": "header"
-    },
-    {
-      "en": "Four things today: **family**, **hobbies**, how to say **someone's something**, and a Maltese trick called **attached pronouns**. Three minutes. Let's go!"
-    },
-    {
-      "en": "👨‍👩‍👧 PART 1 — FAMILY 👨‍👩‍👧",
-      "kind": "header"
-    },
-    {
-      "en": "First — quick pattern. The masculine and feminine often **only differ by the last vowel**. **U for him. A for her.**",
-      "kind": "key"
-    },
-    {
-      "en": "Grandfather, grandmother:"
-    },
-    {
-      "mt": "Nannu, Nanna"
-    },
-    {
-      "en": "Uncle, aunt:"
-    },
-    {
-      "mt": "Ziju, Zija"
-    },
-    {
-      "en": "Male cousin, female cousin:"
-    },
-    {
-      "mt": "Kuġin, Kuġina"
-    },
-    {
-      "en": "Same pattern. Easy. 😎"
-    },
-    {
-      "en": "Mum and dad:"
-    },
-    {
-      "mt": "Omm, Missier"
-    },
-    {
-      "en": "Brother, sister:"
-    },
-    {
-      "mt": "Ħu, Oħt"
-    },
-    {
-      "en": "Son, daughter:"
-    },
-    {
-      "mt": "Iben, Bint"
-    },
-    {
-      "en": "Heads up — **the plural for both 'sons' and 'daughters' is the same word**:"
-    },
-    {
-      "mt": "Ulied"
-    },
-    {
-      "en": "It just means 'children'. ✋"
-    },
-    {
-      "en": "Maltese plurals can be irregular — like 'fathers' is missirijiet, 'mothers' is ommijiet. Don't try to memorise them. The cards drill them in pairs. 🎯",
-      "kind": "tip"
-    },
-    {
-      "en": "🎯 PART 2 — HOBBIES 🎯",
-      "kind": "header"
-    },
-    {
-      "en": "To say what you like, start with:"
-    },
-    {
-      "mt": "Jien inħobb..."
-    },
-    {
-      "en": "I like... and add the activity."
-    },
-    {
-      "en": "Reading:"
-    },
-    {
-      "mt": "naqra"
-    },
-    {
-      "en": "Writing:"
-    },
-    {
-      "mt": "nikteb"
-    },
-    {
-      "en": "Running:"
-    },
-    {
-      "mt": "niġri"
-    },
-    {
-      "en": "Cooking:"
-    },
-    {
-      "mt": "insajjar"
-    },
-    {
-      "en": "Football:"
-    },
-    {
-      "mt": "nilgħab il-futbol"
-    },
-    {
-      "en": "Spot the **n** at the start? That's the prefix for 'I'. We'll see way more about that in Lesson 5. 🪄"
-    },
-    {
-      "en": "🏷️ PART 3 — \"SOMEONE'S SOMETHING\" 🏷️",
-      "kind": "header"
-    },
-    {
-      "en": "Quick one. To show **possession** in Maltese, use the little word:"
-    },
-    {
-      "mt": "ta'"
-    },
-    {
-      "en": "It means **'of'**.",
-      "kind": "rule"
-    },
-    {
-      "en": "So 'Matthew's dog' becomes **'the dog of Matthew'**:"
-    },
-    {
-      "mt": "Il-kelb ta' Matthew"
-    },
-    {
-      "en": "'Sarah's doll':"
-    },
-    {
-      "mt": "Il-pupa ta' Sarah"
-    },
-    {
-      "en": "Same word order as English '**the dog of Matthew**' — but in Maltese it's the **default** way."
-    },
-    {
-      "en": "Now for the pronouns — my, your, his, her, our, their. Full forms first. 📌"
-    },
-    {
-      "en": "My:"
-    },
-    {
-      "mt": "tiegħi"
-    },
-    {
-      "en": "Your:"
-    },
-    {
-      "mt": "tiegħek"
-    },
-    {
-      "en": "His:"
-    },
-    {
-      "mt": "tiegħu"
-    },
-    {
-      "en": "Her:"
-    },
-    {
-      "mt": "tagħha"
-    },
-    {
-      "en": "Our:"
-    },
-    {
-      "mt": "tagħna"
-    },
-    {
-      "en": "Their:"
-    },
-    {
-      "mt": "tagħhom"
-    },
-    {
-      "en": "So 'my dog':"
-    },
-    {
-      "mt": "il-kelb tiegħi"
-    },
-    {
-      "en": "➕ PART 4 — THE ATTACHED PRONOUN TRICK ➕",
-      "kind": "header"
-    },
-    {
-      "en": "**This is the powerful one.** Instead of saying 'the house of mine', Maltese **attaches the pronoun directly** to the noun as a suffix. Compressed. Smooth. Like Italian's mio/tuo/suo, but built into one word.",
-      "kind": "key"
-    },
-    {
-      "en": "Watch. The house:"
-    },
-    {
-      "mt": "id-dar"
-    },
-    {
-      "en": "becomes — my house:"
-    },
-    {
-      "mt": "dari"
-    },
-    {
-      "en": "Your house:"
-    },
-    {
-      "mt": "darek"
-    },
-    {
-      "en": "His house:"
-    },
-    {
-      "mt": "daru"
-    },
-    {
-      "en": "Her house:"
-    },
-    {
-      "mt": "darha"
-    },
-    {
-      "en": "Our house:"
-    },
-    {
-      "mt": "darna"
-    },
-    {
-      "en": "Their house:"
-    },
-    {
-      "mt": "darhom"
-    },
-    {
-      "en": "The suffixes: **-i, -ek, -u, -ha, -na, -kom, -hom**. Same set, every time.",
-      "kind": "rule"
-    },
-    {
-      "en": "Works on body parts too. My heart:"
-    },
-    {
-      "mt": "qalbi"
-    },
-    {
-      "en": "Your eye:"
-    },
-    {
-      "mt": "għajnek"
-    },
-    {
-      "en": "Her mother:"
-    },
-    {
-      "mt": "ommha"
-    },
-    {
-      "en": "Once it clicks — Maltese feels **way smoother**. ⚡"
-    },
-    {
-      "en": "✅ DONE!",
-      "kind": "win"
-    },
-    {
-      "en": "Family. Hobbies. Possessive ta'. The attached-pronoun trick. That's lesson 4."
-    },
-    {
-      "en": "Tap a section, drill, repeat. You're really moving now. 💪"
-    },
-    {
-      "en": "Saħħa! 🇲🇹"
-    }
+    {"en": "Hey! 👋 Lesson 4 — start of the second half of the course!", "kind": "header"},
+    {"en": "Four things today: **family**, **hobbies**, how to say **someone's something**, and a Maltese trick called **attached pronouns**. Three minutes. Let's go!"},
+
+    {"en": "👨‍👩‍👧 PART 1 — FAMILY 👨‍👩‍👧", "kind": "header"},
+    {"en": "First — quick pattern. The masculine and feminine often **only differ by the last vowel**. **U for him. A for her.**", "kind": "key"},
+    {"en": "Grandfather, grandmother:"},
+    {"mt": "Nannu, Nanna"},
+    {"en": "Uncle, aunt:"},
+    {"mt": "Ziju, Zija"},
+    {"en": "Male cousin, female cousin:"},
+    {"mt": "Kuġin, Kuġina"},
+    {"en": "Same pattern. Easy. 😎"},
+    {"en": "Mum and dad:"},
+    {"mt": "Omm, Missier"},
+    {"en": "Brother, sister:"},
+    {"mt": "Ħu, Oħt"},
+    {"en": "Son, daughter:"},
+    {"mt": "Iben, Bint"},
+    {"en": "Heads up — **the plural for both 'sons' and 'daughters' is the same word**:"},
+    {"mt": "Ulied"},
+    {"en": "It just means 'children'. ✋"},
+
+    {"en": "🎯 PART 2 — HOBBIES 🎯", "kind": "header"},
+    {"en": "To say what you like, start with:"},
+    {"mt": "Jien inħobb..."},
+    {"en": "I like... and add the activity."},
+    {"en": "Reading:"},
+    {"mt": "naqra"},
+    {"en": "Cooking:"},
+    {"mt": "insajjar"},
+    {"en": "Running:"},
+    {"mt": "niġri"},
+    {"en": "Swimming:"},
+    {"mt": "ngħum"},
+    {"en": "Spot the **n** at the start? That's the prefix for 'I'. We'll see way more about that in Lesson 5. 🪄"},
+
+    {"en": "🏷️ PART 3 — SOMEONE'S SOMETHING 🏷️", "kind": "header"},
+    {"en": "Quick one. To show **possession** in Maltese, use the little word:"},
+    {"mt": "ta'"},
+    {"en": "It means **'of'**.", "kind": "rule"},
+    {"en": "So 'Sara's dog' becomes **'the dog of Sara'**:"},
+    {"mt": "Il-kelb ta' Sara"},
+    {"en": "'Tom's house':"},
+    {"mt": "Id-dar ta' Tom"},
+    {"en": "Same word order as English '**the dog of Sara**' — but in Maltese it's the **default** way."},
+
+    {"en": "Now for the pronouns — my, your, his, her, our, their. Full forms first. 📌"},
+    {"en": "My:"},
+    {"mt": "tiegħi"},
+    {"en": "Your:"},
+    {"mt": "tiegħek"},
+    {"en": "His:"},
+    {"mt": "tiegħu"},
+    {"en": "Her:"},
+    {"mt": "tagħha"},
+    {"en": "Our:"},
+    {"mt": "tagħna"},
+    {"en": "Their:"},
+    {"mt": "tagħhom"},
+    {"en": "So 'my dog':"},
+    {"mt": "il-kelb tiegħi"},
+
+    {"en": "➕ PART 4 — THE ATTACHED PRONOUN TRICK ➕", "kind": "header"},
+    {"en": "**This is the powerful one.** Instead of saying 'the house of mine', Maltese **attaches the pronoun directly** to the noun as a suffix.", "kind": "key"},
+    {"en": "The house:"},
+    {"mt": "id-dar"},
+    {"en": "becomes — my house:"},
+    {"mt": "dari"},
+    {"en": "Your house:"},
+    {"mt": "darek"},
+    {"en": "His house:"},
+    {"mt": "daru"},
+    {"en": "Her house:"},
+    {"mt": "darha"},
+    {"en": "The suffixes: **-i, -ek, -u, -ha, -na, -kom, -hom**. Same set, every time.", "kind": "rule"},
+    {"en": "Works on body parts too. My heart:"},
+    {"mt": "qalbi"},
+    {"en": "Once it clicks — Maltese feels **way smoother**. ⚡"},
+
+    {"en": "✅ DONE!", "kind": "win"},
+    {"en": "Family. Hobbies. Possessive ta'. The attached-pronoun trick. That's lesson 4."},
+    {"en": "Tap a section, drill, repeat. You're really moving now. 💪"},
+    {"en": "Saħħa! 🇲🇹"}
   ]
 }

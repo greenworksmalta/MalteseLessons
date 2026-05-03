@@ -9,487 +9,146 @@
       "title": "Family",
       "subtitle": "Il-membri tal-familja — family members",
       "vocab": [
-        {
-          "mt": "Bużnannu",
-          "en": "Great grandfather"
-        },
-        {
-          "mt": "Bużnanna",
-          "en": "Great grandmother"
-        },
-        {
-          "mt": "Nannu",
-          "en": "Grandfather"
-        },
-        {
-          "mt": "Nanna",
-          "en": "Grandmother"
-        },
-        {
-          "mt": "Missier",
-          "en": "Father"
-        },
-        {
-          "mt": "Omm",
-          "en": "Mother"
-        },
-        {
-          "mt": "Iben",
-          "en": "Son"
-        },
-        {
-          "mt": "Bint",
-          "en": "Daughter"
-        },
-        {
-          "mt": "Raġel",
-          "en": "Husband"
-        },
-        {
-          "mt": "Mara",
-          "en": "Wife"
-        },
-        {
-          "mt": "Ħu",
-          "en": "Brother"
-        },
-        {
-          "mt": "Oħt",
-          "en": "Sister"
-        },
-        {
-          "mt": "Neputi",
-          "en": "Nephew / Grandson"
-        },
-        {
-          "mt": "Neputija",
-          "en": "Niece / Granddaughter"
-        },
-        {
-          "mt": "Ziju",
-          "en": "Uncle"
-        },
-        {
-          "mt": "Zija",
-          "en": "Auntie"
-        },
-        {
-          "mt": "Kuġin",
-          "en": "Cousin (male)"
-        },
-        {
-          "mt": "Kuġina",
-          "en": "Cousin (female)"
-        },
-        {
-          "mt": "Għarus",
-          "en": "Fiancé"
-        },
-        {
-          "mt": "Għarusa",
-          "en": "Fiancée"
-        }
+        {"mt": "Familja", "en": "Family"},
+        {"mt": "Omm", "en": "Mother"},
+        {"mt": "Missier", "en": "Father"},
+        {"mt": "Ġenituri", "en": "Parents"},
+        {"mt": "Ħu", "en": "Brother"},
+        {"mt": "Oħt", "en": "Sister"},
+        {"mt": "Iben", "en": "Son"},
+        {"mt": "Bint", "en": "Daughter"},
+        {"mt": "Ulied", "en": "Children"},
+        {"mt": "Nannu", "en": "Grandfather"},
+        {"mt": "Nanna", "en": "Grandmother"},
+        {"mt": "Nanniet", "en": "Grandparents"},
+        {"mt": "Ziju", "en": "Uncle"},
+        {"mt": "Zija", "en": "Aunt"},
+        {"mt": "Kuġin", "en": "Cousin (m)"},
+        {"mt": "Kuġina", "en": "Cousin (f)"},
+        {"mt": "Neputi", "en": "Nephew / grandson"},
+        {"mt": "Neputija", "en": "Niece / granddaughter"},
+        {"mt": "Raġel", "en": "Husband / man"},
+        {"mt": "Marti", "en": "My wife"}
       ],
       "plurals": [
-        {
-          "singular": "iben",
-          "plural": "ulied",
-          "en": "son/s"
-        },
-        {
-          "singular": "bint",
-          "plural": "ulied",
-          "en": "daughter/s"
-        },
-        {
-          "singular": "missier",
-          "plural": "missirijiet",
-          "en": "father/s"
-        },
-        {
-          "singular": "omm",
-          "plural": "ommijiet",
-          "en": "mother/s"
-        },
-        {
-          "singular": "nannu",
-          "plural": "nanniet",
-          "en": "grandfather/s"
-        },
-        {
-          "singular": "nanna",
-          "plural": "nanniet",
-          "en": "grandmother/s"
-        },
-        {
-          "singular": "neputi",
-          "plural": "neputijiet",
-          "en": "nephew/s"
-        },
-        {
-          "singular": "neputija",
-          "plural": "neputijiet",
-          "en": "niece/s"
-        },
-        {
-          "singular": "ziju",
-          "plural": "zijiet",
-          "en": "uncle/s"
-        },
-        {
-          "singular": "zija",
-          "plural": "zijiet",
-          "en": "aunt/s"
-        },
-        {
-          "singular": "kuġin",
-          "plural": "kuġini",
-          "en": "male cousin/s"
-        },
-        {
-          "singular": "kuġina",
-          "plural": "kuġini",
-          "en": "female cousin/s"
-        },
-        {
-          "singular": "għarus",
-          "plural": "għarajjes",
-          "en": "fiancé/s"
-        },
-        {
-          "singular": "għarusa",
-          "plural": "għarajjes",
-          "en": "fiancée/s"
-        }
+        {"singular": "Iben", "plural": "Ulied", "en": "Son / Children"},
+        {"singular": "Bint", "plural": "Bniet", "en": "Daughter / Daughters"},
+        {"singular": "Kuġin", "plural": "Kuġini", "en": "Cousin / Cousins"},
+        {"singular": "Missier", "plural": "Missirijiet", "en": "Father / Fathers"},
+        {"singular": "Omm", "plural": "Ommijiet", "en": "Mother / Mothers"},
+        {"singular": "Nannu", "plural": "Nanniet", "en": "Grandfather / Grandparents"},
+        {"singular": "Neputi", "plural": "Neputijiet", "en": "Nephew / Nephews"},
+        {"singular": "Ziju", "plural": "Zijiet", "en": "Uncle / Uncles"},
+        {"singular": "Zija", "plural": "Zijiet", "en": "Aunt / Aunts"},
+        {"singular": "Ħu", "plural": "Aħwa", "en": "Brother / Siblings"}
       ]
     },
     {
       "id": "hobbies",
       "icon": "🎯",
       "title": "Hobbies",
-      "subtitle": "Il-passatempi — my hobbies",
+      "subtitle": "Il-passatempi — what I like doing",
       "vocab": [
-        {
-          "mt": "Nilgħab il-futbol",
-          "en": "I play football"
-        },
-        {
-          "mt": "Nilgħab il-basketball",
-          "en": "I play basketball"
-        },
-        {
-          "mt": "Nilgħab it-tenis",
-          "en": "I play tennis"
-        },
-        {
-          "mt": "Insajjar",
-          "en": "I cook"
-        },
-        {
-          "mt": "Niġri",
-          "en": "I run"
-        },
-        {
-          "mt": "Nieħu r-ritratti",
-          "en": "I take photos"
-        },
-        {
-          "mt": "Inkanta",
-          "en": "I sing"
-        },
-        {
-          "mt": "Naħdem is-suf",
-          "en": "I knit"
-        },
-        {
-          "mt": "Inħit",
-          "en": "I sew"
-        },
-        {
-          "mt": "Nikteb",
-          "en": "I write"
-        },
-        {
-          "mt": "Nilgħab il-Playstation",
-          "en": "I play Playstation"
-        },
-        {
-          "mt": "Naqra",
-          "en": "I read"
-        }
+        {"mt": "Naqra", "en": "I read"},
+        {"mt": "Nikteb", "en": "I write"},
+        {"mt": "Niġri", "en": "I run"},
+        {"mt": "Nimxi", "en": "I walk"},
+        {"mt": "Insajjar", "en": "I cook"},
+        {"mt": "Inkanta", "en": "I sing"},
+        {"mt": "Niżfen", "en": "I dance"},
+        {"mt": "Indoqq il-kitarra", "en": "I play guitar"},
+        {"mt": "Nilgħab il-futbol", "en": "I play football"},
+        {"mt": "Nilgħab tenis", "en": "I play tennis"},
+        {"mt": "Ngħum", "en": "I swim"},
+        {"mt": "Nara films", "en": "I watch films"},
+        {"mt": "Nivvjaġġa", "en": "I travel"},
+        {"mt": "Nieħu r-ritratti", "en": "I take photos"},
+        {"mt": "Niġbed stampi", "en": "I draw pictures"}
       ],
       "dialogue": [
-        {
-          "mt": "Inti għandek xi passatemp?",
-          "en": "Do you have a hobby?"
-        },
-        {
-          "mt": "Iva. Jien inħobb naqra.",
-          "en": "Yes. I like to read."
-        },
-        {
-          "mt": "Kemm-il darba f'ġimgħa tipprattika dan il-passatemp?",
-          "en": "How many times a week do you practise this hobby?"
-        },
-        {
-          "mt": "Jien nipprattika dan il-passatemp tliet darbiet fil-ġimgħa.",
-          "en": "I practise this hobby three times a week."
-        }
+        {"mt": "Inti għandek xi passatemp?", "en": "Do you have a hobby?"},
+        {"mt": "Iva — jien inħobb naqra u niġri.", "en": "Yes — I love reading and running."},
+        {"mt": "Kemm-il darba taqra fil-ġimgħa?", "en": "How many times a week do you read?"},
+        {"mt": "Kważi kuljum, qabel norqod.", "en": "Almost every day, before I sleep."}
       ]
     },
     {
       "id": "possessive",
       "icon": "🏷️",
       "title": "Possessive",
-      "subtitle": "Il-Possessiv — using ta' to show ownership",
-      "intro": "We use 'ta'' (of) to show possession. The structure is: thing + ta' + person. Example: Il-kelb ta' Matthew = Matthew's dog.",
+      "subtitle": "Il-possessiv — using ta' and tiegħi/tiegħek/etc",
+      "intro": "To say 'someone's something' in Maltese, use the small word ta' (of). 'Sara's dog' becomes 'the dog of Sara'.",
       "examples": [
-        {
-          "phrase": "Il-kelb ta' Matthew",
-          "en": "Matthew's dog"
-        },
-        {
-          "phrase": "Il-pupa ta' Sarah",
-          "en": "Sarah's doll"
-        },
-        {
-          "phrase": "Il-ktieb ta' Sean",
-          "en": "Sean's book"
-        },
-        {
-          "phrase": "Il-basket ta' Maria",
-          "en": "Maria's bag"
-        },
-        {
-          "phrase": "Ir-rota ta' Jessica",
-          "en": "Jessica's bike"
-        },
-        {
-          "phrase": "Il-libsa ta' Maria",
-          "en": "Maria's dress"
-        },
-        {
-          "phrase": "L-arloġġ ta' Kevin",
-          "en": "Kevin's watch"
-        },
-        {
-          "phrase": "L-umbrella ta' Mike",
-          "en": "Mike's umbrella"
-        },
-        {
-          "phrase": "Il-flokk ta' Jake",
-          "en": "Jake's t-shirt"
-        },
-        {
-          "phrase": "It-tfal ta' Marika",
-          "en": "Marika's children"
-        }
+        {"phrase": "Il-kelb ta' Sara", "en": "Sara's dog"},
+        {"phrase": "Id-dar ta' Tom", "en": "Tom's house"},
+        {"phrase": "Il-karozza ta' missier", "en": "Father's car"},
+        {"phrase": "Il-ġuvni ta' Marta", "en": "Marta's boyfriend"},
+        {"phrase": "Il-villa ta' nanna", "en": "Grandmother's villa"},
+        {"phrase": "Il-pjanti ta' zija", "en": "Aunt's plants"}
       ],
       "possessives": [
-        {
-          "mt": "Tiegħi",
-          "en": "My / mine"
-        },
-        {
-          "mt": "Tiegħek",
-          "en": "Your / yours (sg)"
-        },
-        {
-          "mt": "Tiegħu",
-          "en": "His / its"
-        },
-        {
-          "mt": "Tagħha",
-          "en": "Her / hers"
-        },
-        {
-          "mt": "Tagħna",
-          "en": "Our / ours"
-        },
-        {
-          "mt": "Tagħkom",
-          "en": "Your / yours (pl)"
-        },
-        {
-          "mt": "Tagħhom",
-          "en": "Their / theirs"
-        }
+        {"mt": "tiegħi", "en": "my / mine"},
+        {"mt": "tiegħek", "en": "your / yours (sing)"},
+        {"mt": "tiegħu", "en": "his"},
+        {"mt": "tagħha", "en": "her / hers"},
+        {"mt": "tagħna", "en": "our / ours"},
+        {"mt": "tagħkom", "en": "your / yours (pl)"},
+        {"mt": "tagħhom", "en": "their / theirs"}
       ],
       "examples_pronouns": [
-        {
-          "phrase": "Il-kelb tiegħi",
-          "en": "My dog"
-        },
-        {
-          "phrase": "Il-kelb tiegħek",
-          "en": "Your dog"
-        },
-        {
-          "phrase": "Il-kelb tiegħu",
-          "en": "His dog"
-        },
-        {
-          "phrase": "Il-kelb tagħha",
-          "en": "Her dog"
-        },
-        {
-          "phrase": "Il-kelb tagħna",
-          "en": "Our dog"
-        },
-        {
-          "phrase": "Il-kelb tagħkom",
-          "en": "Your dog (pl)"
-        },
-        {
-          "phrase": "Il-kelb tagħhom",
-          "en": "Their dog"
-        }
+        {"phrase": "il-kelb tiegħi", "en": "my dog"},
+        {"phrase": "il-kelb tiegħek", "en": "your dog"},
+        {"phrase": "il-kelb tiegħu", "en": "his dog"},
+        {"phrase": "il-kelb tagħha", "en": "her dog"},
+        {"phrase": "il-kelb tagħna", "en": "our dog"},
+        {"phrase": "il-kelb tagħkom", "en": "your (pl) dog"},
+        {"phrase": "il-kelb tagħhom", "en": "their dog"}
       ]
     },
     {
       "id": "attached",
       "icon": "➕",
       "title": "Attached pronouns",
-      "subtitle": "Il-pronomi mehmużin — possessive suffixes",
-      "intro": "Instead of 'X tiegħi' (my X), Maltese often attaches the pronoun directly to the noun as a suffix. E.g. id-dar tiegħi → dari (my house).",
+      "subtitle": "Il-pronomi mehmużin — suffixes",
+      "intro": "Maltese has a powerful shortcut: the pronoun (my, your, his…) attaches to the noun as a suffix. So 'my house' is one word: dari.",
       "examples": [
-        {
-          "long": "id-dar tiegħi",
-          "short": "dari",
-          "en": "my house"
-        },
-        {
-          "long": "id-dar tiegħek",
-          "short": "darek",
-          "en": "your house"
-        },
-        {
-          "long": "id-dar tiegħu",
-          "short": "daru",
-          "en": "his house"
-        },
-        {
-          "long": "id-dar tagħha",
-          "short": "darha",
-          "en": "her house"
-        },
-        {
-          "long": "id-dar tagħna",
-          "short": "darna",
-          "en": "our house"
-        },
-        {
-          "long": "id-dar tagħkom",
-          "short": "darkom",
-          "en": "your house (pl)"
-        },
-        {
-          "long": "id-dar tagħhom",
-          "short": "darhom",
-          "en": "their house"
-        }
+        {"long": "missier tiegħi", "short": "missieri", "en": "my father"},
+        {"long": "missier tiegħek", "short": "missierek", "en": "your father"},
+        {"long": "missier tiegħu", "short": "missieru", "en": "his father"},
+        {"long": "missier tagħha", "short": "missierha", "en": "her father"},
+        {"long": "missier tagħna", "short": "missierna", "en": "our father"},
+        {"long": "missier tagħkom", "short": "missierkom", "en": "your (pl) father"},
+        {"long": "missier tagħhom", "short": "missierhom", "en": "their father"}
       ],
       "exercises": [
         {
           "id": "ex6",
-          "title": "Exercise 6 — missier (father)",
-          "instructions": "Pick the right attached form for each pronoun.",
-          "choices": [
-            "missieri",
-            "missierek",
-            "missieru",
-            "missierha",
-            "missierna",
-            "missierkom",
-            "missierhom"
-          ],
+          "title": "Form the attached pronoun (set 1)",
+          "instructions": "What's the attached form of each phrase?",
+          "choices": ["dari", "darek", "daru", "darha", "darna", "darkom", "darhom"],
           "items": [
-            {
-              "long": "missier tiegħi",
-              "en": "my father",
-              "answer": "missieri"
-            },
-            {
-              "long": "missier tiegħek",
-              "en": "your father",
-              "answer": "missierek"
-            },
-            {
-              "long": "missier tiegħu",
-              "en": "his father",
-              "answer": "missieru"
-            },
-            {
-              "long": "missier tagħha",
-              "en": "her father",
-              "answer": "missierha"
-            },
-            {
-              "long": "missier tagħna",
-              "en": "our father",
-              "answer": "missierna"
-            },
-            {
-              "long": "missier tagħkom",
-              "en": "your (pl) father",
-              "answer": "missierkom"
-            },
-            {
-              "long": "missier tagħhom",
-              "en": "their father",
-              "answer": "missierhom"
-            }
+            {"long": "dar tiegħi", "en": "my house", "answer": "dari"},
+            {"long": "dar tiegħek", "en": "your house", "answer": "darek"},
+            {"long": "dar tiegħu", "en": "his house", "answer": "daru"},
+            {"long": "dar tagħha", "en": "her house", "answer": "darha"},
+            {"long": "dar tagħna", "en": "our house", "answer": "darna"},
+            {"long": "dar tagħkom", "en": "your (pl) house", "answer": "darkom"},
+            {"long": "dar tagħhom", "en": "their house", "answer": "darhom"}
           ]
         },
         {
           "id": "ex7",
-          "title": "Exercise 7 — mixed words",
-          "instructions": "Put the attached pronoun on each word.",
-          "choices": [
-            "daru",
-            "qalbi",
-            "ommha",
-            "għajnek",
-            "wiċċna",
-            "snienkom",
-            "arthom"
-          ],
+          "title": "Form the attached pronoun (set 2)",
+          "instructions": "Pick the contracted form of each.",
+          "choices": ["qalbi", "ommha", "fjusek", "wiċċna", "snienkom", "arthom", "idu"],
           "items": [
-            {
-              "long": "dar tiegħu",
-              "en": "his house",
-              "answer": "daru"
-            },
-            {
-              "long": "qalb tiegħi",
-              "en": "my heart",
-              "answer": "qalbi"
-            },
-            {
-              "long": "omm tagħha",
-              "en": "her mother",
-              "answer": "ommha"
-            },
-            {
-              "long": "għajn tiegħek",
-              "en": "your eye",
-              "answer": "għajnek"
-            },
-            {
-              "long": "wiċċ tagħna",
-              "en": "our face",
-              "answer": "wiċċna"
-            },
-            {
-              "long": "snien tagħkom",
-              "en": "your (pl) teeth",
-              "answer": "snienkom"
-            },
-            {
-              "long": "art tagħhom",
-              "en": "their land",
-              "answer": "arthom"
-            }
+            {"long": "qalb tiegħi", "en": "my heart", "answer": "qalbi"},
+            {"long": "omm tagħha", "en": "her mother", "answer": "ommha"},
+            {"long": "flus tiegħek", "en": "your money", "answer": "fjusek"},
+            {"long": "wiċċ tagħna", "en": "our face", "answer": "wiċċna"},
+            {"long": "snien tagħkom", "en": "your (pl) teeth", "answer": "snienkom"},
+            {"long": "art tagħhom", "en": "their land", "answer": "arthom"},
+            {"long": "id tiegħu", "en": "his hand", "answer": "idu"}
           ]
         }
       ]

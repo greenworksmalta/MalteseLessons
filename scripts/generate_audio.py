@@ -65,7 +65,7 @@ SKIP_FIELDS = {
     "en", "qen", "aen", "example_en",
     "model", "prefix", "scrambled", "syllables",
     "instructions", "intro", "title", "subtitle", "explanation",
-    "choices", "letters", "facts", "id", "icon",
+    "choices", "facts", "id", "icon",
     "n",  # number
 }
 

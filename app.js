@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260502z";
+const VERSION = "20260503a";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -25,6 +25,7 @@ const I18N = {
     skip: "Skip →",
     next: "Next",
     nextArrow: "Next →",
+    previous: "← Previous",
     correct: "Sewwa!",
     notQuite: "Not quite.",
     correctIs: "Correct: ",
@@ -53,6 +54,7 @@ const I18N = {
     skip: "Saltar →",
     next: "Siguiente",
     nextArrow: "Siguiente →",
+    previous: "← Anterior",
     correct: "¡Sewwa!",
     notQuite: "No del todo.",
     correctIs: "Correcto: ",
@@ -838,6 +840,20 @@ function renderSection(lid, sid, step, idx){
     return;
   }
   renderer(root, sec, idx, ()=>nextStep(lid, sid, step, idx, sec, flow));
+
+  // Universal "← Previous" affordance at the bottom of every interactive
+  // exercise / phrase / letter screen, so learners can step back without
+  // restarting the section. Hidden on the very first step+idx of a section
+  // (the section list is one tap away via the topbar arrow).
+  const prevHash = prevStepHash(lid, sid, step, idx, sec, flow);
+  if(prevHash){
+    const t = I18N[State.lang] || I18N.en;
+    const wrap = el("div","prev-wrap");
+    const back = el("button","btn-prev", t.previous);
+    back.addEventListener("click", ()=>go(prevHash));
+    wrap.appendChild(back);
+    root.appendChild(wrap);
+  }
 }
 
 function nextStep(lid, sid, step, idx, sec, flow){
@@ -859,6 +875,23 @@ function nextStep(lid, sid, step, idx, sec, flow){
     addXp(20);
     showSectionDone(lid);
   }
+}
+
+// Walk backwards through the flow: prior index in the same step, or the last
+// index of the previous step. If we're at the very first step+idx, return null
+// so callers can hide the button (or fall back to "back to lesson").
+function prevStepHash(lid, sid, step, idx, sec, flow){
+  if(idx > 0){
+    return "/lesson/"+lid+"/section/"+sid+"/"+step+"/"+(idx-1);
+  }
+  const i = flow.indexOf(step);
+  if(i > 0){
+    const prevStepName = flow[i-1];
+    const prevSec = sec; // same section
+    const prevCount = (STEP_COUNTS[sid+":"+prevStepName] ? STEP_COUNTS[sid+":"+prevStepName](prevSec) : 1);
+    return "/lesson/"+lid+"/section/"+sid+"/"+prevStepName+"/"+Math.max(0, prevCount-1);
+  }
+  return null;
 }
 
 function showSectionDone(lid){
@@ -1176,7 +1209,6 @@ function makeMcStep(exId, opts){
       chips.appendChild(b);
     });
     card.appendChild(chips);
-  root.appendChild(skipBtn(onNext));
     root.appendChild(skipBtn(onNext));
   };
 }
@@ -1282,7 +1314,7 @@ STEP_RENDERERS["grammar:rules"] = (root, sec, idx, onNext) => {
     const row = el("div","ex");
     const audioStr = e.full || e.mt || e.phrase || e.word;
     row.appendChild(audioBtn(audioStr));
-    const fx = el("div",""); fx.appendChild(el("span","full", e.full || e.phrase || e.mt || e.word));
+    const fx = el("div","grow"); fx.appendChild(el("span","full", e.full || e.phrase || e.mt || e.word));
     row.appendChild(fx);
     row.appendChild(el("div","en", e.en));
     row.addEventListener("click", evt=>{ if(evt.target.tagName!=="BUTTON") play(audioStr); });

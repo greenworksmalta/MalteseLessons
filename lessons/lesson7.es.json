@@ -1,0 +1,145 @@
+{
+  "id": "lesson7",
+  "lang": "es",
+  "title": "Lección 7 — Moverse por la Isla",
+  "subtitle": "Transporte, planes de fin de semana, estaciones, partículas",
+  "sections": [
+    {
+      "id": "transport",
+      "icon": "🚌",
+      "title": "Transporte",
+      "subtitle": "Mezzi ta' trasport — medios de transporte",
+      "items": [
+        {"singular": "Karozza", "plural": "Karozzi", "en": "Coche/s"},
+        {"singular": "Xarabank", "plural": "Xarabanks", "en": "Autobús / Autobuses"},
+        {"singular": "Taksi", "plural": "Taksis", "en": "Taxi/s"},
+        {"singular": "Rota", "plural": "Roti", "en": "Bicicleta/s"},
+        {"singular": "Mutur", "plural": "Muturi", "en": "Motocicleta/s"},
+        {"singular": "Skuter", "plural": "Skuters", "en": "Scooter/s"},
+        {"singular": "Vapur", "plural": "Vapuri", "en": "Barco/s grande/s (ferry)"},
+        {"singular": "Dgħajsa", "plural": "Dgħajjes", "en": "Lancha/s"},
+        {"singular": "Yacht", "plural": "Yachts", "en": "Yate/s"},
+        {"singular": "Ajruplan", "plural": "Ajruplani", "en": "Avión / Aviones"},
+        {"singular": "Ħelikopter", "plural": "Ħelikopters", "en": "Helicóptero/s"},
+        {"singular": "Vann", "plural": "Vannijiet", "en": "Camioneta/s"},
+        {"singular": "Trakk", "plural": "Trakkijiet", "en": "Camión / Camiones"},
+        {"singular": "Karozzin", "plural": "Karozzini", "en": "Calesa/s (carro tirado por caballo)"},
+        {"singular": "Sigarista", "plural": "Sigaristi", "en": "Segway/s"},
+        {"singular": "Sajkill", "plural": "Sajkills", "en": "Bici/s eléctrica/s"}
+      ]
+    },
+    {
+      "id": "weekend",
+      "icon": "🗓️",
+      "title": "Planes de fin de semana",
+      "subtitle": "Pjanijiet għall-weekend",
+      "vocab": [
+        {"mt": "Se mmur l-Imdina", "en": "Voy a Mdina"},
+        {"mt": "Se mmur Comino", "en": "Voy a Comino"},
+        {"mt": "Se mmur niekol pizza", "en": "Voy a comer pizza"},
+        {"mt": "Se mmur jiġri mat-tfal", "en": "Voy a correr con los niños"},
+        {"mt": "Se mmur ngħum", "en": "Voy a nadar"},
+        {"mt": "Se mmur niltaqa' ma' ħabib", "en": "Voy a verme con un amigo"},
+        {"mt": "Se mmur kunċert", "en": "Voy a un concierto"},
+        {"mt": "Se mmur tieġ", "en": "Voy a una boda"},
+        {"mt": "Se mmur f'festa", "en": "Voy a una festa de pueblo"},
+        {"mt": "Se nibqa' nirrilassa d-dar", "en": "Voy a relajarme en casa"}
+      ],
+      "dialogue": [
+        {"mt": "X'għandek programm dan il-weekend?", "en": "¿Qué planes tienes para el fin de semana?"},
+        {"mt": "Nhar is-Sibt sejra Comino bil-vapur.", "en": "El sábado voy a Comino en ferry."},
+        {"mt": "U nhar il-Ħadd?", "en": "¿Y el domingo?"},
+        {"mt": "Nibqa' d-dar — naqra ftit u norqod kmieni.", "en": "Me quedo en casa — leo un poco y me duermo temprano."}
+      ]
+    },
+    {
+      "id": "seasons",
+      "icon": "🌷",
+      "title": "Estaciones",
+      "subtitle": "L-Istaġuni — las cuatro estaciones",
+      "items": [
+        {"mt": "Ir-Rebbiegħa", "en": "Primavera", "icon": "🌷",
+         "vocab": [
+           {"mt": "Pjanti", "en": "Plantas"},
+           {"mt": "Sħab", "en": "Nubes"},
+           {"mt": "Friefet", "en": "Mariposas"},
+           {"mt": "Festa", "en": "Festa (fiesta del pueblo)"},
+           {"mt": "Frawli", "en": "Fresas"},
+           {"mt": "Pjuvi", "en": "Lloviznas"}
+         ]},
+        {"mt": "Is-Sajf", "en": "Verano", "icon": "☀️",
+         "vocab": [
+           {"mt": "Bajja", "en": "Bahía / playa"},
+           {"mt": "Granċ", "en": "Cangrejo"},
+           {"mt": "Speċċju", "en": "Lentes de sol"},
+           {"mt": "Granita", "en": "Granita"},
+           {"mt": "Lampuki", "en": "Pez dorado (mahi-mahi)"},
+           {"mt": "Sħana", "en": "Calor"}
+         ]},
+        {"mt": "Il-Ħarifa", "en": "Otoño", "icon": "🍂",
+         "vocab": [
+           {"mt": "Għasel", "en": "Miel"},
+           {"mt": "Ġewż", "en": "Nueces"},
+           {"mt": "Riħ", "en": "Viento"},
+           {"mt": "Festa tal-għasel", "en": "Festival de la miel"},
+           {"mt": "Mantarella", "en": "Capa / abrigo"}
+         ]},
+        {"mt": "Ix-Xitwa", "en": "Invierno", "icon": "❄️",
+         "vocab": [
+           {"mt": "Bard", "en": "Frío"},
+           {"mt": "Riefnu", "en": "Tormenta"},
+           {"mt": "Imbra", "en": "Brasas / fuego"},
+           {"mt": "Brodu", "en": "Caldo"},
+           {"mt": "Nar tan-nofs", "en": "Fuego en la chimenea"},
+           {"mt": "Kappott", "en": "Abrigo"}
+         ]}
+      ]
+    },
+    {
+      "id": "particles",
+      "icon": "🔗",
+      "title": "Partículas",
+      "subtitle": "Il-Partiċelli — palabritas que enlazan",
+      "intro": "Las partículas son palabritas que muestran una relación — 'con', 'de', 'en', 'hasta'. Se usan solas (sin el artículo).",
+      "items": [
+        {"mt": "ma'", "en": "con (alguien)"},
+        {"mt": "ta'", "en": "de"},
+        {"mt": "sa", "en": "hasta"},
+        {"mt": "ġo", "en": "en (dentro de)"},
+        {"mt": "bi", "en": "con"},
+        {"mt": "fi", "en": "en"},
+        {"mt": "lil", "en": "a (alguien)"},
+        {"mt": "bħal", "en": "como"},
+        {"mt": "għal", "en": "para"},
+        {"mt": "minn", "en": "desde / de"},
+        {"mt": "u", "en": "y"}
+      ],
+      "examples": [
+        {"phrase": "Sara mxiet ma' Tom", "en": "Sara caminó con Tom"},
+        {"phrase": "Il-fjuri ta' nanna", "en": "Las flores de la abuela"},
+        {"phrase": "Stennejt sa nofsinhar", "en": "Esperé hasta el mediodía"},
+        {"phrase": "Pinġejt bi pinna ħamra", "en": "Dibujé con una pluma roja"},
+        {"phrase": "Marija toqgħod fi villaġġ żgħir", "en": "Marija vive en un pueblito"},
+        {"phrase": "Tom u Sara saru ħbieb", "en": "Tom y Sara se hicieron amigos"}
+      ],
+      "exercises": [
+        {
+          "id": "ex7",
+          "title": "Elige la partícula correcta",
+          "instructions": "Elige la partícula que encaja.",
+          "choices": ["ma'", "ta'", "sa", "ġo", "bi", "fi", "lil", "bħal", "għal", "minn", "u"],
+          "items": [
+            {"sentence": "Sara ___ Tom marru s-suq.", "en": "Sara y Tom fueron al mercado", "answer": "u"},
+            {"sentence": "Dik il-borża ___ tagħha.", "en": "Esa bolsa es como la suya", "answer": "bħal"},
+            {"sentence": "Ix-xemx ___ Awwissu sħuna.", "en": "El sol de agosto está caliente", "answer": "ta'"},
+            {"sentence": "Stennejt ___ tlieta.", "en": "Esperé hasta las tres", "answer": "sa"},
+            {"sentence": "Pinġejt il-mappa ___ ftit pinen.", "en": "Dibujé el mapa con unas plumas", "answer": "bi"},
+            {"sentence": "Toqgħod ___ villaġġ kwiet.", "en": "Vive en un pueblo tranquilo", "answer": "fi"},
+            {"sentence": "Marja marret il-Belt ___ ommha.", "en": "Marja fue a Valletta con su mamá", "answer": "ma'"},
+            {"sentence": "Hu jħobb ___ kelb tiegħu.", "en": "Él quiere a su perro", "answer": "lil"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -42,15 +42,15 @@
         {"singular": "Tewma", "collective": "Tewm", "plural": "Tewmiet", "en": "Ajo"},
         {"singular": "Karrotta", "collective": "Karrotti", "plural": "Karrotti", "en": "Zanahoria/s"},
         {"singular": "Brokkli", "collective": "Brokkli", "plural": "Brokkli", "en": "Brócoli"},
-        {"singular": "Pastarda", "collective": "Pastard", "plural": "Pastardiet", "en": "Coliflor/es"},
+        {"singular": "Pastarda", "collective": "Pastard", "plural": "Pastard", "en": "Coliflor/es"},
         {"singular": "Kaboċċa", "collective": "Kaboċċi", "plural": "Kaboċċi", "en": "Col/es"},
         {"singular": "Ħjara", "collective": "Ħjar", "plural": "Ħjariet", "en": "Pepino/s"},
-        {"singular": "Bżaru", "collective": "Bżar", "plural": "Bżariet", "en": "Pimiento/s"},
+        {"singular": "Bżaru", "collective": "Bżar", "plural": "Bżar", "en": "Pimiento/s"},
         {"singular": "Faqqiegħa", "collective": "Faqqiegħ", "plural": "Faqqigħat", "en": "Hongo/s"},
         {"singular": "Ħassa", "collective": "Ħass", "plural": "Ħassiet", "en": "Lechuga"},
         {"singular": "Spinaċi", "collective": "Spinaċi", "plural": "Spinaċi", "en": "Espinaca"},
         {"singular": "Piżella", "collective": "Piżelli", "plural": "Piżelli", "en": "Chícharo/s"},
-        {"singular": "Fażola", "collective": "Fażola", "plural": "Fażoliet", "en": "Frijol/es"},
+        {"singular": "Fażola", "collective": "Fażola", "plural": "Fażoli", "en": "Frijol/es"},
         {"singular": "Qargħa ħamra", "collective": "Qargħat ħomor", "plural": "Qargħat ħomor", "en": "Calabaza/s"}
       ]
     },
@@ -68,14 +68,14 @@
       "items": [
         {"singular": "Mur", "plural": "Morru", "en": "Ve / Vayan"},
         {"singular": "Ejja", "plural": "Ejjew", "en": "Ven / Vengan"},
-        {"singular": "Iekol", "plural": "Iekluw", "en": "Come / Coman"},
+        {"singular": "Iekol", "plural": "Ieklu", "en": "Come / Coman"},
         {"singular": "Ixrob", "plural": "Ixorbu", "en": "Bebe / Beban"},
         {"singular": "Aqra", "plural": "Aqraw", "en": "Lee / Lean"},
         {"singular": "Ikteb", "plural": "Iktbu", "en": "Escribe / Escriban"},
         {"singular": "Imxi", "plural": "Imxu", "en": "Camina / Caminen"},
         {"singular": "Iġri", "plural": "Iġru", "en": "Corre / Corran"},
         {"singular": "Oqgħod", "plural": "Oqogħdu", "en": "Siéntate / Quédate"},
-        {"singular": "Qum", "plural": "Qomu", "en": "Levántate / Levántense"},
+        {"singular": "Qum", "plural": "Qumu", "en": "Levántate / Levántense"},
         {"singular": "Iftaħ", "plural": "Iftħu", "en": "Abre / Abran"},
         {"singular": "Agħlaq", "plural": "Agħlqu", "en": "Cierra / Cierren"},
         {"singular": "Isma'", "plural": "Isimgħu", "en": "Escucha / Escuchen"}
@@ -92,7 +92,7 @@
             {"present": "naqra", "imperative": "aqra", "en": "leer", "answer": "singular"},
             {"present": "naqraw", "imperative": "aqraw", "en": "leer (pl)", "answer": "plural"},
             {"present": "niekol", "imperative": "iekol", "en": "comer", "answer": "singular"},
-            {"present": "nieklu", "imperative": "iekluw", "en": "comer (pl)", "answer": "plural"},
+            {"present": "nieklu", "imperative": "ieklu", "en": "comer (pl)", "answer": "plural"},
             {"present": "norqod", "imperative": "orqod", "en": "dormir", "answer": "singular"},
             {"present": "norqdu", "imperative": "orqdu", "en": "dormir (pl)", "answer": "plural"}
           ]

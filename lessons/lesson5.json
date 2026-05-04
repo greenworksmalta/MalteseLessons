@@ -41,15 +41,15 @@
         {"singular": "Tewma", "collective": "Tewm", "plural": "Tewmiet", "en": "Garlic"},
         {"singular": "Karrotta", "collective": "Karrotti", "plural": "Karrotti", "en": "Carrot/s"},
         {"singular": "Brokkli", "collective": "Brokkli", "plural": "Brokkli", "en": "Broccoli"},
-        {"singular": "Pastarda", "collective": "Pastard", "plural": "Pastardiet", "en": "Cauliflower/s"},
+        {"singular": "Pastarda", "collective": "Pastard", "plural": "Pastard", "en": "Cauliflower/s"},
         {"singular": "Kaboċċa", "collective": "Kaboċċi", "plural": "Kaboċċi", "en": "Cabbage/s"},
         {"singular": "Ħjara", "collective": "Ħjar", "plural": "Ħjariet", "en": "Cucumber/s"},
-        {"singular": "Bżaru", "collective": "Bżar", "plural": "Bżariet", "en": "Bell pepper/s"},
+        {"singular": "Bżaru", "collective": "Bżar", "plural": "Bżar", "en": "Bell pepper/s"},
         {"singular": "Faqqiegħa", "collective": "Faqqiegħ", "plural": "Faqqigħat", "en": "Mushroom/s"},
         {"singular": "Ħassa", "collective": "Ħass", "plural": "Ħassiet", "en": "Lettuce"},
         {"singular": "Spinaċi", "collective": "Spinaċi", "plural": "Spinaċi", "en": "Spinach"},
         {"singular": "Piżella", "collective": "Piżelli", "plural": "Piżelli", "en": "Pea/s"},
-        {"singular": "Fażola", "collective": "Fażola", "plural": "Fażoliet", "en": "Bean/s"},
+        {"singular": "Fażola", "collective": "Fażola", "plural": "Fażoli", "en": "Bean/s"},
         {"singular": "Qargħa ħamra", "collective": "Qargħat ħomor", "plural": "Qargħat ħomor", "en": "Pumpkin/s"}
       ]
     },
@@ -67,14 +67,14 @@
       "items": [
         {"singular": "Mur", "plural": "Morru", "en": "Go"},
         {"singular": "Ejja", "plural": "Ejjew", "en": "Come"},
-        {"singular": "Iekol", "plural": "Iekluw", "en": "Eat"},
+        {"singular": "Iekol", "plural": "Ieklu", "en": "Eat"},
         {"singular": "Ixrob", "plural": "Ixorbu", "en": "Drink"},
         {"singular": "Aqra", "plural": "Aqraw", "en": "Read"},
         {"singular": "Ikteb", "plural": "Iktbu", "en": "Write"},
         {"singular": "Imxi", "plural": "Imxu", "en": "Walk"},
         {"singular": "Iġri", "plural": "Iġru", "en": "Run"},
         {"singular": "Oqgħod", "plural": "Oqogħdu", "en": "Sit / stay"},
-        {"singular": "Qum", "plural": "Qomu", "en": "Get up"},
+        {"singular": "Qum", "plural": "Qumu", "en": "Get up"},
         {"singular": "Iftaħ", "plural": "Iftħu", "en": "Open"},
         {"singular": "Agħlaq", "plural": "Agħlqu", "en": "Close"},
         {"singular": "Isma'", "plural": "Isimgħu", "en": "Listen"}
@@ -91,7 +91,7 @@
             {"present": "naqra", "imperative": "aqra", "en": "to read", "answer": "singular"},
             {"present": "naqraw", "imperative": "aqraw", "en": "to read (pl)", "answer": "plural"},
             {"present": "niekol", "imperative": "iekol", "en": "to eat", "answer": "singular"},
-            {"present": "nieklu", "imperative": "iekluw", "en": "to eat (pl)", "answer": "plural"},
+            {"present": "nieklu", "imperative": "ieklu", "en": "to eat (pl)", "answer": "plural"},
             {"present": "norqod", "imperative": "orqod", "en": "to sleep", "answer": "singular"},
             {"present": "norqdu", "imperative": "orqdu", "en": "to sleep (pl)", "answer": "plural"}
           ]

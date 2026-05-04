@@ -33,7 +33,7 @@
       ],
       "dialogue": [
         {"mt": "Skużani — tista' tgħinni? Tlift il-portmoni tiegħi.", "en": "Disculpa — ¿me puedes ayudar? Perdí mi cartera."},
-        {"mt": "Mela. Fejn ilek bihu l-aħħar?", "en": "Claro. ¿Dónde la tenías la última vez?"},
+        {"mt": "Mela. Fejn rajtu l-aħħar?", "en": "Claro. ¿Dónde la viste por última vez?"},
         {"mt": "Hawn fil-pjazza, ħdejn il-kafetterija.", "en": "Aquí en la plaza, junto a la cafetería."},
         {"mt": "Rajt lil xi ħadd qribu?", "en": "¿Viste a alguien cerca?"},
         {"mt": "Iva — tifel twil, bil-flokk aħmar.", "en": "Sí — un niño alto, con una playera roja."},
@@ -63,13 +63,13 @@
         {"mt": "aħmar", "feminine": "ħamra", "plural": "ħomor", "en": "rojo",
          "examples": [
            {"mt": "qalb ħamra", "en": "corazón rojo"},
-           {"mt": "tomato aħmar", "en": "tomate rojo"},
+           {"mt": "tadama ħamra", "en": "jitomate rojo"},
            {"mt": "fjuri ħomor", "en": "flores rojas"}
          ]},
         {"mt": "isfar", "feminine": "safra", "plural": "sofor", "en": "amarillo",
          "examples": [
            {"mt": "lumi isfar", "en": "limón amarillo"},
-           {"mt": "muftieħ isfar", "en": "llave amarilla"},
+           {"mt": "ċavetta safra", "en": "llave amarilla"},
            {"mt": "stilel sofor", "en": "estrellas amarillas"}
          ]},
         {"mt": "aħdar", "feminine": "ħadra", "plural": "ħodor", "en": "verde",
@@ -82,7 +82,7 @@
          "examples": [
            {"mt": "qattus griż", "en": "gato gris"},
            {"mt": "sħaba griża", "en": "nube gris"},
-           {"mt": "ġebel griżi", "en": "piedras grises"}
+           {"mt": "ġebel griż", "en": "piedras grises"}
          ]},
         {"mt": "blu", "feminine": "blu", "plural": "blu", "en": "azul",
          "examples": [
@@ -100,7 +100,7 @@
          "examples": [
            {"mt": "kejk roża", "en": "pastel rosa"},
            {"mt": "warda roża", "en": "rosa rosa"},
-           {"mt": "balalen roża", "en": "globos rosa"}
+           {"mt": "bżieżaq roża", "en": "globos rosa"}
          ]},
         {"mt": "vjola", "feminine": "vjola", "plural": "vjola", "en": "morado",
          "examples": [
@@ -112,11 +112,11 @@
          "examples": [
            {"mt": "larinġa oranġjo", "en": "naranja (la fruta)"},
            {"mt": "qamis oranġjo", "en": "camisa naranja"},
-           {"mt": "tramuntani oranġjo", "en": "atardeceres naranjas"}
+           {"mt": "inżul ix-xemx oranġjo", "en": "atardecer naranja"}
          ]},
         {"mt": "kannella", "feminine": "kannella", "plural": "kannella", "en": "café",
          "examples": [
-           {"mt": "ċkalata kannella", "en": "chocolate café"},
+           {"mt": "ċikkulata kannella", "en": "chocolate café"},
            {"mt": "borża kannella", "en": "bolsa café"},
            {"mt": "stivali kannella", "en": "botas café"}
          ]}
@@ -148,7 +148,7 @@
         {"a": {"mt": "rħis", "feminine": "rħisa", "plural": "rħas", "en": "barato (m)"},
          "b": {"mt": "għali", "feminine": "għalja", "plural": "għaljin", "en": "caro (m)"}},
         {"a": {"mt": "veloċi", "feminine": "veloċi", "plural": "veloċi", "en": "rápido"},
-         "b": {"mt": "kajman", "feminine": "kajmana", "plural": "kajmanin", "en": "lento (m)"}},
+         "b": {"mt": "bil-mod", "feminine": "bil-mod", "plural": "bil-mod", "en": "lento"}},
         {"a": {"mt": "qawwi", "feminine": "qawwija", "plural": "qawwijin", "en": "fuerte (m)"},
          "b": {"mt": "dgħajjef", "feminine": "dgħajfa", "plural": "dgħajfin", "en": "débil (m)"}}
       ]

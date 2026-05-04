@@ -32,7 +32,7 @@
       ],
       "dialogue": [
         {"mt": "Skużani — tista' tgħinni? Tlift il-portmoni tiegħi.", "en": "Excuse me — can you help me? I lost my wallet."},
-        {"mt": "Mela. Fejn ilek bihu l-aħħar?", "en": "Of course. Where did you have it last?"},
+        {"mt": "Mela. Fejn rajtu l-aħħar?", "en": "Of course. Where did you last see it?"},
         {"mt": "Hawn fil-pjazza, ħdejn il-kafetterija.", "en": "Here in the square, by the café."},
         {"mt": "Rajt lil xi ħadd qribu?", "en": "Did you see anyone near it?"},
         {"mt": "Iva — tifel twil, bil-flokk aħmar.", "en": "Yes — a tall boy, with a red T-shirt."},
@@ -62,13 +62,13 @@
         {"mt": "aħmar", "feminine": "ħamra", "plural": "ħomor", "en": "red",
          "examples": [
            {"mt": "qalb ħamra", "en": "red heart"},
-           {"mt": "tomato aħmar", "en": "red tomato"},
+           {"mt": "tadama ħamra", "en": "red tomato"},
            {"mt": "fjuri ħomor", "en": "red flowers"}
          ]},
         {"mt": "isfar", "feminine": "safra", "plural": "sofor", "en": "yellow",
          "examples": [
            {"mt": "lumi isfar", "en": "yellow lemon"},
-           {"mt": "muftieħ isfar", "en": "yellow key"},
+           {"mt": "ċavetta safra", "en": "yellow key"},
            {"mt": "stilel sofor", "en": "yellow stars"}
          ]},
         {"mt": "aħdar", "feminine": "ħadra", "plural": "ħodor", "en": "green",
@@ -81,7 +81,7 @@
          "examples": [
            {"mt": "qattus griż", "en": "grey cat"},
            {"mt": "sħaba griża", "en": "grey cloud"},
-           {"mt": "ġebel griżi", "en": "grey stones"}
+           {"mt": "ġebel griż", "en": "grey stones"}
          ]},
         {"mt": "blu", "feminine": "blu", "plural": "blu", "en": "blue",
          "examples": [
@@ -99,7 +99,7 @@
          "examples": [
            {"mt": "kejk roża", "en": "pink cake"},
            {"mt": "warda roża", "en": "pink rose"},
-           {"mt": "balalen roża", "en": "pink balloons"}
+           {"mt": "bżieżaq roża", "en": "pink balloons"}
          ]},
         {"mt": "vjola", "feminine": "vjola", "plural": "vjola", "en": "purple",
          "examples": [
@@ -111,11 +111,11 @@
          "examples": [
            {"mt": "larinġa oranġjo", "en": "orange (the fruit)"},
            {"mt": "qamis oranġjo", "en": "orange shirt"},
-           {"mt": "tramuntani oranġjo", "en": "orange sunsets"}
+           {"mt": "inżul ix-xemx oranġjo", "en": "orange sunset"}
          ]},
         {"mt": "kannella", "feminine": "kannella", "plural": "kannella", "en": "brown",
          "examples": [
-           {"mt": "ċkalata kannella", "en": "brown chocolate"},
+           {"mt": "ċikkulata kannella", "en": "brown chocolate"},
            {"mt": "borża kannella", "en": "brown bag"},
            {"mt": "stivali kannella", "en": "brown boots"}
          ]}
@@ -147,7 +147,7 @@
         {"a": {"mt": "rħis", "feminine": "rħisa", "plural": "rħas", "en": "cheap (m)"},
          "b": {"mt": "għali", "feminine": "għalja", "plural": "għaljin", "en": "expensive (m)"}},
         {"a": {"mt": "veloċi", "feminine": "veloċi", "plural": "veloċi", "en": "fast"},
-         "b": {"mt": "kajman", "feminine": "kajmana", "plural": "kajmanin", "en": "slow (m)"}},
+         "b": {"mt": "bil-mod", "feminine": "bil-mod", "plural": "bil-mod", "en": "slow"}},
         {"a": {"mt": "qawwi", "feminine": "qawwija", "plural": "qawwijin", "en": "strong (m)"},
          "b": {"mt": "dgħajjef", "feminine": "dgħajfa", "plural": "dgħajfin", "en": "weak (m)"}}
       ]

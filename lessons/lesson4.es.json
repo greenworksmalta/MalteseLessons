@@ -82,10 +82,10 @@
       "examples": [
         {"phrase": "Il-kelb ta' Sara", "en": "El perro de Sara"},
         {"phrase": "Id-dar ta' Tom", "en": "La casa de Tom"},
-        {"phrase": "Il-karozza ta' missier", "en": "El coche de papá"},
+        {"phrase": "Il-karozza tal-missier", "en": "El coche de papá"},
         {"phrase": "Il-ġuvni ta' Marta", "en": "El novio de Marta"},
-        {"phrase": "Il-villa ta' nanna", "en": "La villa de la abuela"},
-        {"phrase": "Il-pjanti ta' zija", "en": "Las plantas de la tía"}
+        {"phrase": "Il-villa tan-nanna", "en": "La villa de la abuela"},
+        {"phrase": "Il-pjanti taz-zija", "en": "Las plantas de la tía"}
       ],
       "possessives": [
         {"mt": "tiegħi", "en": "mi / mío"},
@@ -126,7 +126,7 @@
           "id": "ex6",
           "title": "Forma el pronombre pegado (juego 1)",
           "instructions": "¿Cuál es la forma pegada de cada frase?",
-          "choices": ["dari", "darek", "daru", "darha", "darna", "darkom", "darhom"],
+          "choices": ["darha", "darkom", "dari", "darhom", "daru", "darna", "darek"],
           "items": [
             {"long": "dar tiegħi", "en": "mi casa", "answer": "dari"},
             {"long": "dar tiegħek", "en": "tu casa", "answer": "darek"},
@@ -141,11 +141,11 @@
           "id": "ex7",
           "title": "Forma el pronombre pegado (juego 2)",
           "instructions": "Elige la forma contraída de cada uno.",
-          "choices": ["qalbi", "ommha", "fjusek", "wiċċna", "snienkom", "arthom", "idu"],
+          "choices": ["wiċċna", "idu", "qalbi", "snienkom", "flusek", "arthom", "ommha"],
           "items": [
             {"long": "qalb tiegħi", "en": "mi corazón", "answer": "qalbi"},
             {"long": "omm tagħha", "en": "su mamá (de ella)", "answer": "ommha"},
-            {"long": "flus tiegħek", "en": "tu dinero", "answer": "fjusek"},
+            {"long": "flus tiegħek", "en": "tu dinero", "answer": "flusek"},
             {"long": "wiċċ tagħna", "en": "nuestra cara", "answer": "wiċċna"},
             {"long": "snien tagħkom", "en": "los dientes de ustedes", "answer": "snienkom"},
             {"long": "art tagħhom", "en": "la tierra de ellos", "answer": "arthom"},

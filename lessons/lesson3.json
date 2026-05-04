@@ -36,11 +36,11 @@
           "items": [
             {"sentence": "Sara taqra ktieb.", "en": "Sara is reading a book.", "answer": "Hi"},
             {"sentence": "Tom jaħdem fil-belt.", "en": "Tom works in the city.", "answer": "Hu"},
-            {"sentence": "It-turisti jħobbu Malta.", "en": "The tourists love Malta.", "answer": "Huma"},
+            {"sentence": "It-turisti jħobbu lill-Malta.", "en": "The tourists love Malta.", "answer": "Huma"},
             {"sentence": "Il-ġnien sabiħ ħafna.", "en": "The garden is very beautiful.", "answer": "Hu"},
-            {"sentence": "L-omm tiegħi qed issajjar.", "en": "My mother is cooking.", "answer": "Hi"},
-            {"sentence": "Il-kotba kollha mfarrkin.", "en": "The books are all torn.", "answer": "Huma"},
-            {"sentence": "It-triq imħassra mix-xita.", "en": "The street is damaged by the rain.", "answer": "Hi"},
+            {"sentence": "Ommi qed issajjar.", "en": "My mother is cooking.", "answer": "Hi"},
+            {"sentence": "Il-kotba kollha mqattajn.", "en": "The books are all torn.", "answer": "Huma"},
+            {"sentence": "It-triq tkissret bix-xita.", "en": "The street was broken up by the rain.", "answer": "Hi"},
             {"sentence": "Jien u ommi noħorġu wara nofsinhar.", "en": "My mother and I go out in the afternoon.", "answer": "Aħna"},
             {"sentence": "It-tfal qed jistudjaw.", "en": "The children are studying.", "answer": "Huma"},
             {"sentence": "Maria, kif kienet il-vaganza?", "en": "Maria, how was the holiday?", "answer": "Int"}

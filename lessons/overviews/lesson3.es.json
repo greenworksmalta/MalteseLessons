@@ -32,7 +32,7 @@
     {"en": "Estos reemplazan a los sustantivos. En lugar de 'Sara está leyendo':"},
     {"mt": "Hi taqra"},
     {"en": "**Ella** está leyendo. En lugar de 'Los turistas aman a Malta':"},
-    {"mt": "Huma jħobbu Malta"},
+    {"mt": "Huma jħobbu lill-Malta"},
     {"en": "**Ellos** aman a Malta."},
     {"en": "Sustantivo femenino → **hi**. Masculino → **hu**. Cualquier plural → **huma**.", "kind": "rule"},
 

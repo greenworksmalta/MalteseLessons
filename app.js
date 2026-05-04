@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260503a";
+const VERSION = "20260504a";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -1670,7 +1670,7 @@ STEP_RENDERERS["demonstratives:rules"] = (root, sec, idx, onNext) => {
   r.examples.forEach(e=>{
     const row = el("div","ex");
     row.appendChild(audioBtn(e.phrase));
-    const fx = el("div",""); fx.appendChild(el("span","full",e.phrase));
+    const fx = el("div","grow"); fx.appendChild(el("span","full",e.phrase));
     row.appendChild(fx);
     row.appendChild(el("div","en", e.en));
     row.addEventListener("click", evt=>{ if(evt.target.tagName!=="BUTTON") play(e.phrase); });
@@ -1680,21 +1680,23 @@ STEP_RENDERERS["demonstratives:rules"] = (root, sec, idx, onNext) => {
   root.appendChild(card);
   root.appendChild(nextBtn(idx+1===sec.rules.length ? "Try the exercises →" : "Next →", onNext));
 };
-STEP_RENDERERS["demonstratives:ex2"] = makeMcStep("ex2", { audioCombine: it=>it.answer+" "+it.word, detailFn: it=>it.word });
-STEP_RENDERERS["demonstratives:ex3"] = makeMcStep("ex3", { audioCombine: it=>it.answer+" "+it.word, detailFn: it=>it.word });
+// Audio plays just the noun (which is in the manifest) — combining article+noun
+// produces strings like "dan ktieb" that we don't have MP3s for.
+STEP_RENDERERS["demonstratives:ex2"] = makeMcStep("ex2", { audioCombine: it=>it.word, detailFn: it=>it.word });
+STEP_RENDERERS["demonstratives:ex3"] = makeMcStep("ex3", { audioCombine: it=>it.word, detailFn: it=>it.word });
 
 STEP_RENDERERS["syllables:card"] = (root, sec, idx, onNext) => {
   const item = sec.items[idx];
   const card = el("div","card syllable-card");
   card.appendChild(el("div","word", item.word));
-  const split = el("div","split","tap to reveal");
+  // Show the syllable split right away — tapping to reveal was confusing.
+  // The audio button + the card itself both replay the word.
+  const split = el("div","split", item.syllables || item.word);
   card.appendChild(split);
   card.appendChild(audioBtn(item.word, {size:"lg"}));
-  let revealed=false;
   card.addEventListener("click", e=>{
     if(e.target.tagName==="BUTTON") return;
-    if(!revealed){ revealed=true; split.textContent = item.syllables; play(item.word); }
-    else { play(item.word); }
+    play(item.word);
   });
   root.appendChild(card);
   root.appendChild(el("p","muted center", (idx+1)+" / "+Math.min(12,sec.items.length)));

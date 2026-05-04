@@ -81,10 +81,10 @@
       "examples": [
         {"phrase": "Il-kelb ta' Sara", "en": "Sara's dog"},
         {"phrase": "Id-dar ta' Tom", "en": "Tom's house"},
-        {"phrase": "Il-karozza ta' missier", "en": "Father's car"},
+        {"phrase": "Il-karozza tal-missier", "en": "Father's car"},
         {"phrase": "Il-ġuvni ta' Marta", "en": "Marta's boyfriend"},
-        {"phrase": "Il-villa ta' nanna", "en": "Grandmother's villa"},
-        {"phrase": "Il-pjanti ta' zija", "en": "Aunt's plants"}
+        {"phrase": "Il-villa tan-nanna", "en": "Grandmother's villa"},
+        {"phrase": "Il-pjanti taz-zija", "en": "Aunt's plants"}
       ],
       "possessives": [
         {"mt": "tiegħi", "en": "my / mine"},
@@ -125,7 +125,7 @@
           "id": "ex6",
           "title": "Form the attached pronoun (set 1)",
           "instructions": "What's the attached form of each phrase?",
-          "choices": ["dari", "darek", "daru", "darha", "darna", "darkom", "darhom"],
+          "choices": ["darha", "darkom", "dari", "darhom", "daru", "darna", "darek"],
           "items": [
             {"long": "dar tiegħi", "en": "my house", "answer": "dari"},
             {"long": "dar tiegħek", "en": "your house", "answer": "darek"},
@@ -140,11 +140,11 @@
           "id": "ex7",
           "title": "Form the attached pronoun (set 2)",
           "instructions": "Pick the contracted form of each.",
-          "choices": ["qalbi", "ommha", "fjusek", "wiċċna", "snienkom", "arthom", "idu"],
+          "choices": ["wiċċna", "idu", "qalbi", "snienkom", "flusek", "arthom", "ommha"],
           "items": [
             {"long": "qalb tiegħi", "en": "my heart", "answer": "qalbi"},
             {"long": "omm tagħha", "en": "her mother", "answer": "ommha"},
-            {"long": "flus tiegħek", "en": "your money", "answer": "fjusek"},
+            {"long": "flus tiegħek", "en": "your money", "answer": "flusek"},
             {"long": "wiċċ tagħna", "en": "our face", "answer": "wiċċna"},
             {"long": "snien tagħkom", "en": "your (pl) teeth", "answer": "snienkom"},
             {"long": "art tagħhom", "en": "their land", "answer": "arthom"},

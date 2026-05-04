@@ -50,11 +50,11 @@
         {"mt": "Kappuccino", "en": "Cappuccino"},
         {"mt": "Pastizz", "en": "Pastizzi (savoury pastry)"},
         {"mt": "Kemm jiswa?", "en": "How much does it cost?"},
-        {"mt": "Tnejn ewro", "en": "Two euros"},
+        {"mt": "Żewġ ewro", "en": "Two euros"},
         {"mt": "Bil-flus", "en": "With cash"},
         {"mt": "Bil-karta tal-kreditu", "en": "With (credit) card"},
         {"mt": "Trid xi ħaġa oħra?", "en": "Would you like anything else?"},
-        {"mt": "Le grazzi bizzejjed", "en": "No thanks, that's all"},
+        {"mt": "Le grazzi biżżejjed", "en": "No thanks, that's all"},
         {"mt": "Iva, jekk jogħġbok", "en": "Yes, please"}
       ],
       "dialogue": [
@@ -63,7 +63,7 @@
         {"mt": "Trid xi ħaġa oħra?", "en": "Would you like anything else?"},
         {"mt": "Iva, pastizz wieħed jekk jogħġbok.", "en": "Yes, one pastizzi please."},
         {"mt": "Kemm jiswa?", "en": "How much is it?"},
-        {"mt": "Tnejn ewro u sebgħin.", "en": "Two euros seventy."},
+        {"mt": "Żewġ ewro u sebgħin.", "en": "Two euros seventy."},
         {"mt": "Hekk hu. Saħħa!", "en": "There you go. Cheers!"}
       ]
     },
@@ -113,7 +113,7 @@
         {"mt": "Tnejn", "en": "Two"},
         {"mt": "ewro", "en": "Euro"},
         {"mt": "Ċenteżmu", "en": "Cent"},
-        {"mt": "Bagalja", "en": "Bag"},
+        {"mt": "Baskett", "en": "Bag"},
         {"mt": "Riċevuta", "en": "Receipt"},
         {"mt": "Ħanut", "en": "Shop"},
         {"mt": "Supermarket", "en": "Supermarket"},
@@ -125,7 +125,7 @@
         {"mt": "Għandkom skont?", "en": "Do you have a discount?"},
         {"mt": "Le, mhux illum.", "en": "No, not today."},
         {"mt": "OK. Nieħu wieħed jekk jogħġbok.", "en": "OK. I'll take one please."},
-        {"mt": "Tridu bagalja?", "en": "Do you want a bag?"},
+        {"mt": "Tridu baskett?", "en": "Do you want a bag?"},
         {"mt": "Le grazzi.", "en": "No thanks."}
       ]
     }

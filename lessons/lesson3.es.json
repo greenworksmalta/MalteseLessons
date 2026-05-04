@@ -37,11 +37,11 @@
           "items": [
             {"sentence": "Sara taqra ktieb.", "en": "Sara está leyendo un libro.", "answer": "Hi"},
             {"sentence": "Tom jaħdem fil-belt.", "en": "Tom trabaja en la ciudad.", "answer": "Hu"},
-            {"sentence": "It-turisti jħobbu Malta.", "en": "A los turistas les encanta Malta.", "answer": "Huma"},
+            {"sentence": "It-turisti jħobbu lill-Malta.", "en": "A los turistas les encanta Malta.", "answer": "Huma"},
             {"sentence": "Il-ġnien sabiħ ħafna.", "en": "El jardín es muy bonito.", "answer": "Hu"},
-            {"sentence": "L-omm tiegħi qed issajjar.", "en": "Mi mamá está cocinando.", "answer": "Hi"},
-            {"sentence": "Il-kotba kollha mfarrkin.", "en": "Los libros están todos rotos.", "answer": "Huma"},
-            {"sentence": "It-triq imħassra mix-xita.", "en": "La calle está dañada por la lluvia.", "answer": "Hi"},
+            {"sentence": "Ommi qed issajjar.", "en": "Mi mamá está cocinando.", "answer": "Hi"},
+            {"sentence": "Il-kotba kollha mqattajn.", "en": "Los libros están todos rotos.", "answer": "Huma"},
+            {"sentence": "It-triq tkissret bix-xita.", "en": "La calle quedó destrozada por la lluvia.", "answer": "Hi"},
             {"sentence": "Jien u ommi noħorġu wara nofsinhar.", "en": "Mi mamá y yo salimos por la tarde.", "answer": "Aħna"},
             {"sentence": "It-tfal qed jistudjaw.", "en": "Los niños están estudiando.", "answer": "Huma"},
             {"sentence": "Maria, kif kienet il-vaganza?", "en": "Maria, ¿cómo estuvieron las vacaciones?", "answer": "Int"}

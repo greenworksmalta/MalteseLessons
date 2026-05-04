@@ -110,7 +110,7 @@
          ]},
         {"mt": "oranġjo", "feminine": "oranġjo", "plural": "oranġjo", "en": "naranja",
          "examples": [
-           {"mt": "larinġa oranġjo", "en": "naranja (la fruta)"},
+           {"mt": "karozza oranġjo", "en": "coche naranja"},
            {"mt": "qamis oranġjo", "en": "camisa naranja"},
            {"mt": "inżul ix-xemx oranġjo", "en": "atardecer naranja"}
          ]},
@@ -145,7 +145,7 @@
          "b": {"mt": "qadim", "feminine": "qadima", "plural": "qodma", "en": "viejo (m)"}},
         {"a": {"mt": "sħun", "feminine": "sħuna", "plural": "sħan", "en": "caliente (m)"},
          "b": {"mt": "kiesaħ", "feminine": "kiesħa", "plural": "kesħin", "en": "frío (m)"}},
-        {"a": {"mt": "rħis", "feminine": "rħisa", "plural": "rħas", "en": "barato (m)"},
+        {"a": {"mt": "irħis", "feminine": "rħisa", "plural": "rħas", "en": "barato (m)"},
          "b": {"mt": "għali", "feminine": "għalja", "plural": "għaljin", "en": "caro (m)"}},
         {"a": {"mt": "veloċi", "feminine": "veloċi", "plural": "veloċi", "en": "rápido"},
          "b": {"mt": "bil-mod", "feminine": "bil-mod", "plural": "bil-mod", "en": "lento"}},

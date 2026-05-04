@@ -25,7 +25,7 @@
         {"mt": "Hu jaħdem fl-uffiċċju.", "en": "Él trabaja en la oficina."},
         {"mt": "Hi ssajjar għaġin.", "en": "Ella está cocinando pasta."},
         {"mt": "Aħna nimxu fil-ġnien.", "en": "Nosotros caminamos en el jardín."},
-        {"mt": "Intom intkellmu Malti?", "en": "¿Ustedes hablan maltés?"},
+        {"mt": "Intom titkellmu bil-Malti?", "en": "¿Ustedes hablan maltés?"},
         {"mt": "Huma ġejjin Malta.", "en": "Ellos vienen a Malta."}
       ],
       "exercises": [
@@ -95,7 +95,7 @@
             {"word": "siġra", "en": "árbol (f)", "answer": "din"},
             {"word": "qattusi", "en": "gatos (pl)", "answer": "dawn"},
             {"word": "ċavetta", "en": "llave (f)", "answer": "din"},
-            {"word": "muftieħ", "en": "llave/manija (m)", "answer": "dan"},
+            {"word": "platt", "en": "plato (m)", "answer": "dan"},
             {"word": "kotba", "en": "libros (pl)", "answer": "dawn"},
             {"word": "tieqa", "en": "ventana (f)", "answer": "din"},
             {"word": "saqqu", "en": "colchón (m)", "answer": "dan"},
@@ -117,7 +117,7 @@
             {"word": "vann", "en": "camioneta (m)", "answer": "dak"},
             {"word": "borża", "en": "bolsa (f)", "answer": "dik"},
             {"word": "siġar", "en": "árboles (pl)", "answer": "dawk"},
-            {"word": "barra", "en": "afuera (m)", "answer": "dak"},
+            {"word": "ħanut", "en": "tienda (m)", "answer": "dak"},
             {"word": "raħal", "en": "pueblo (m)", "answer": "dak"},
             {"word": "festa", "en": "fiesta (f)", "answer": "dik"},
             {"word": "stejjer", "en": "historias (pl)", "answer": "dawk"}

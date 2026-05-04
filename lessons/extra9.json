@@ -8,7 +8,7 @@
       "icon": "🧭",
       "title": "Directions",
       "subtitle": "Direzzjonijiet — left, right, straight ahead",
-      "intro": "To ask for directions, start with: 'Skużi. Tista' tgħidli fejn hi ___, jekk jogħġbok?' Then thank them with 'Grazzi.'",
+      "intro": "To ask for directions, start with: 'Skużani. Tista' tgħidli fejn hi ___, jekk jogħġbok?' Then thank them with 'Grazzi.'",
       "vocab": [
         {
           "mt": "Skużani",
@@ -352,7 +352,7 @@
             "Is-sebgħa u nofs",
             "L-erbgħa",
             "Il-ħdax",
-            "Is-sagħtejn u għoxrin",
+            "Is-siegħa u għoxrin",
             "L-erbgħa nieqes ħamsa"
           ],
           "items": [
@@ -379,7 +379,7 @@
             {
               "sentence": "1:20 pm",
               "en": "20 past 1 in the afternoon",
-              "answer": "Is-sagħtejn u għoxrin"
+              "answer": "Is-siegħa u għoxrin"
             },
             {
               "sentence": "3:55 pm",

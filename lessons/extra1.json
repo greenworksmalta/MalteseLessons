@@ -48,7 +48,7 @@
         {"mt": "Birra", "en": "Beer"},
         {"mt": "Ilma tal-gas", "en": "Sparkling water"},
         {"mt": "Kapuċċino", "en": "Cappuccino"},
-        {"mt": "Pastizz", "en": "Pastizzi (savoury pastry)"},
+        {"mt": "Pastizz", "en": "Maltese savoury pastry (ricotta or pea filling)"},
         {"mt": "Kemm jiswa?", "en": "How much does it cost?"},
         {"mt": "Żewġ ewro", "en": "Two euros"},
         {"mt": "Bil-flus", "en": "With cash"},
@@ -92,7 +92,7 @@
         {"mt": "Skużani — ma nitkellimx Malti tajjeb. Titkellem bl-Ingliż?", "en": "Sorry — I don't speak Maltese well. Do you speak English?"},
         {"mt": "Iva, ftit. Kif nista' ngħinek?", "en": "Yes, a little. How can I help you?"},
         {"mt": "Tista' tirrepeti, bil-mod jekk jogħġbok?", "en": "Could you repeat, slowly please?"},
-        {"mt": "Bla problema. Hekk hu...", "en": "No problem. Like this..."}
+        {"mt": "Mhux problema. Hekk hu...", "en": "No problem. Like this..."}
       ]
     },
     {
@@ -121,11 +121,11 @@
       ],
       "dialogue": [
         {"mt": "Skużani, kemm jiswa dan?", "en": "Excuse me, how much is this?"},
-        {"mt": "Erbgħa ewro u disgħin.", "en": "Four euros ninety."},
+        {"mt": "Erba' u disgħin ewro.", "en": "Ninety-four euros."},
         {"mt": "Għandkom skont?", "en": "Do you have a discount?"},
         {"mt": "Le, mhux illum.", "en": "No, not today."},
         {"mt": "OK. Nieħu wieħed jekk jogħġbok.", "en": "OK. I'll take one please."},
-        {"mt": "Tridu baskett?", "en": "Do you want a bag?"},
+        {"mt": "Trid baskett?", "en": "Do you want a bag?"},
         {"mt": "Le grazzi.", "en": "No thanks."}
       ]
     }

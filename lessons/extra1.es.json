@@ -49,7 +49,7 @@
         {"mt": "Birra", "en": "Cerveza"},
         {"mt": "Ilma tal-gas", "en": "Agua con gas"},
         {"mt": "Kapuċċino", "en": "Capuchino"},
-        {"mt": "Pastizz", "en": "Pastizz (hojaldre maltés salado)"},
+        {"mt": "Pastizz", "en": "Hojaldre maltés salado (relleno de ricota o chícharos)"},
         {"mt": "Kemm jiswa?", "en": "¿Cuánto cuesta?"},
         {"mt": "Żewġ ewro", "en": "Dos euros"},
         {"mt": "Bil-flus", "en": "En efectivo"},
@@ -93,7 +93,7 @@
         {"mt": "Skużani — ma nitkellimx Malti tajjeb. Titkellem bl-Ingliż?", "en": "Disculpa — no hablo bien el maltés. ¿Hablas inglés?"},
         {"mt": "Iva, ftit. Kif nista' ngħinek?", "en": "Sí, un poco. ¿En qué te puedo ayudar?"},
         {"mt": "Tista' tirrepeti, bil-mod jekk jogħġbok?", "en": "¿Puedes repetir, despacio por favor?"},
-        {"mt": "Bla problema. Hekk hu...", "en": "Sin problema. Así..."}
+        {"mt": "Mhux problema. Hekk hu...", "en": "Sin problema. Así..."}
       ]
     },
     {
@@ -122,11 +122,11 @@
       ],
       "dialogue": [
         {"mt": "Skużani, kemm jiswa dan?", "en": "Disculpa, ¿cuánto cuesta esto?"},
-        {"mt": "Erbgħa ewro u disgħin.", "en": "Cuatro euros con noventa."},
+        {"mt": "Erba' u disgħin ewro.", "en": "Noventa y cuatro euros."},
         {"mt": "Għandkom skont?", "en": "¿Tienen descuento?"},
         {"mt": "Le, mhux illum.", "en": "No, hoy no."},
         {"mt": "OK. Nieħu wieħed jekk jogħġbok.", "en": "Vale. Tomo uno por favor."},
-        {"mt": "Tridu baskett?", "en": "¿Quieres una bolsa?"},
+        {"mt": "Trid baskett?", "en": "¿Quieres una bolsa?"},
         {"mt": "Le grazzi.", "en": "No gracias."}
       ]
     }

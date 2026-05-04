@@ -45,12 +45,12 @@
         {"singular": "Pastarda", "collective": "Pastard", "plural": "Pastard", "en": "Coliflor/es"},
         {"singular": "Kaboċċa", "collective": "Kaboċċi", "plural": "Kaboċċi", "en": "Col/es"},
         {"singular": "Ħjara", "collective": "Ħjar", "plural": "Ħjariet", "en": "Pepino/s"},
-        {"singular": "Bżaru", "collective": "Bżar", "plural": "Bżar", "en": "Pimiento/s"},
+        {"singular": "Bżar (aħmar/aħdar)", "collective": "Bżar", "plural": "Bżar (aħmar/aħdar)", "en": "Pimiento/s"},
         {"singular": "Faqqiegħa", "collective": "Faqqiegħ", "plural": "Faqqigħat", "en": "Hongo/s"},
         {"singular": "Ħassa", "collective": "Ħass", "plural": "Ħassiet", "en": "Lechuga"},
         {"singular": "Spinaċi", "collective": "Spinaċi", "plural": "Spinaċi", "en": "Espinaca"},
         {"singular": "Piżella", "collective": "Piżelli", "plural": "Piżelli", "en": "Chícharo/s"},
-        {"singular": "Fażola", "collective": "Fażola", "plural": "Fażoli", "en": "Frijol/es"},
+        {"singular": "Fażola", "collective": "Fażol", "plural": "Fażoli", "en": "Frijol/es"},
         {"singular": "Qargħa ħamra", "collective": "Qargħat ħomor", "plural": "Qargħat ħomor", "en": "Calabaza/s"}
       ]
     },

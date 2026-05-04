@@ -109,7 +109,7 @@
          ]},
         {"mt": "oranġjo", "feminine": "oranġjo", "plural": "oranġjo", "en": "orange",
          "examples": [
-           {"mt": "larinġa oranġjo", "en": "orange (the fruit)"},
+           {"mt": "karozza oranġjo", "en": "orange car"},
            {"mt": "qamis oranġjo", "en": "orange shirt"},
            {"mt": "inżul ix-xemx oranġjo", "en": "orange sunset"}
          ]},
@@ -144,7 +144,7 @@
          "b": {"mt": "qadim", "feminine": "qadima", "plural": "qodma", "en": "old (m)"}},
         {"a": {"mt": "sħun", "feminine": "sħuna", "plural": "sħan", "en": "hot (m)"},
          "b": {"mt": "kiesaħ", "feminine": "kiesħa", "plural": "kesħin", "en": "cold (m)"}},
-        {"a": {"mt": "rħis", "feminine": "rħisa", "plural": "rħas", "en": "cheap (m)"},
+        {"a": {"mt": "irħis", "feminine": "rħisa", "plural": "rħas", "en": "cheap (m)"},
          "b": {"mt": "għali", "feminine": "għalja", "plural": "għaljin", "en": "expensive (m)"}},
         {"a": {"mt": "veloċi", "feminine": "veloċi", "plural": "veloċi", "en": "fast"},
          "b": {"mt": "bil-mod", "feminine": "bil-mod", "plural": "bil-mod", "en": "slow"}},

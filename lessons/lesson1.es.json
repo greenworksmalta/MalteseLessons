@@ -34,7 +34,7 @@
       "dialogue": [
         {"mt": "Bonġu! Jiena Sara. Int x'jismek?", "en": "¡Buenos días! Soy Sara. ¿Cómo te llamas?"},
         {"mt": "Ħelow Sara — jisimni Tom. Pjaċir.", "en": "Hola Sara — me llamo Tom. Un placer."},
-        {"mt": "Pjaċir tiegħek. Minn fejn int, Tom?", "en": "El placer es mío. ¿De dónde eres, Tom?"},
+        {"mt": "Pjaċir tiegħi. Minn fejn int, Tom?", "en": "El placer es mío. ¿De dónde eres, Tom?"},
         {"mt": "Jien minn Brighton, fl-Ingilterra. U int?", "en": "Soy de Brighton, en Inglaterra. ¿Y tú?"},
         {"mt": "Jien Maltija. Noqgħod il-Mosta. X'taħdem?", "en": "Soy maltesa. Vivo en Mosta. ¿En qué trabajas?"},
         {"mt": "Naħdem mal-kompjuters. U int?", "en": "Trabajo con computadoras. ¿Y tú?"},
@@ -66,7 +66,7 @@
         {"upper": "H", "lower": "h", "words": [{"mt": "huma", "en": "ellos"}, {"mt": "hena", "en": "alegría"}, {"mt": "hawn", "en": "aquí"}]},
         {"upper": "Ħ", "lower": "ħ", "words": [{"mt": "ħabib", "en": "amigo"}, {"mt": "ħajja", "en": "vida"}, {"mt": "ħalq", "en": "boca"}]},
         {"upper": "I", "lower": "i", "words": [{"mt": "ilsien", "en": "lengua / idioma"}, {"mt": "ikel", "en": "comida"}, {"mt": "Italja", "en": "Italia"}]},
-        {"upper": "Ie", "lower": "ie", "words": [{"mt": "ieħor", "en": "otro"}, {"mt": "iebes", "en": "duro"}]},
+        {"upper": "Ie", "lower": "ie", "words": [{"mt": "ieħor", "en": "otro"}, {"mt": "iebes", "en": "duro"}, {"mt": "ieqaf", "en": "para / detente"}]},
         {"upper": "J", "lower": "j", "words": [{"mt": "jum", "en": "día"}, {"mt": "jien", "en": "yo"}, {"mt": "Jannar", "en": "enero"}]},
         {"upper": "K", "lower": "k", "words": [{"mt": "ktieb", "en": "libro"}, {"mt": "kelb", "en": "perro"}, {"mt": "kelma", "en": "palabra"}]},
         {"upper": "L", "lower": "l", "words": [{"mt": "lingwa", "en": "idioma"}, {"mt": "lemin", "en": "derecha"}, {"mt": "lokali", "en": "local"}]},
@@ -91,10 +91,10 @@
           {"mt": "Bdiet ġurnata sabiħa fil-Mosta.", "en": "Empezó un día bonito en Mosta."},
           {"mt": "Marija qamet kmieni u fetħet it-tieqa.", "en": "Marija se levantó temprano y abrió la ventana."},
           {"mt": "Hi rat ix-xemx u semgħet l-għasafar ikantaw.", "en": "Vio el sol y oyó a los pájaros cantar."},
-          {"mt": "Daħlet ġo l-kċina u għamlet il-kafè.", "en": "Entró a la cocina y preparó el café."},
+          {"mt": "Daħlet ġol-kċina u għamlet il-kafè.", "en": "Entró a la cocina y preparó el café."},
           {"mt": "Wara ħarġet biex tixtri l-ħobż mill-furnar.", "en": "Después salió a comprar pan en la panadería."},
           {"mt": "Fit-triq iltaqgħet ma' Tom u qaltlu Bonġu.", "en": "En la calle se encontró con Tom y le dijo Bonġu."},
-          {"mt": "Kien ġurnata sabiħa biex titgħallem il-Malti.", "en": "Era un día perfecto para aprender maltés."}
+          {"mt": "Kienet ġurnata sabiħa biex titgħallem il-Malti.", "en": "Era un día perfecto para aprender maltés."}
         ]
       }
     },
@@ -254,9 +254,9 @@
         {"mt": "Il-Ħadd", "en": "domingo", "scrambled": "ddĦa"},
         {"mt": "It-Tnejn", "en": "lunes", "scrambled": "Tnnje"},
         {"mt": "It-Tlieta", "en": "martes", "scrambled": "tlaiTe"},
-        {"mt": "L-Erbgħa", "en": "miércoles", "scrambled": "aebĦgr"},
+        {"mt": "L-Erbgħa", "en": "miércoles", "scrambled": "aebgħr"},
         {"mt": "Il-Ħamis", "en": "jueves", "scrambled": "miĦsa"},
-        {"mt": "Il-Ġimgħa", "en": "viernes", "scrambled": "ġmaiĦ"},
+        {"mt": "Il-Ġimgħa", "en": "viernes", "scrambled": "ġmaigħ"},
         {"mt": "Is-Sibt", "en": "sábado", "scrambled": "tbiS"}
       ]
     }

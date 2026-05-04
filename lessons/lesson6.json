@@ -36,7 +36,7 @@
       "title": "Maltese food",
       "subtitle": "Ikel Malti — local classics",
       "vocab": [
-        {"mt": "Pastizz", "en": "Cheese / pea pastry"},
+        {"mt": "Pastizz", "en": "Maltese savoury pastry (ricotta or pea filling)"},
         {"mt": "Ftira", "en": "Maltese flatbread"},
         {"mt": "Ħobż biż-żejt", "en": "Bread with oil & tomato"},
         {"mt": "Ġbejna", "en": "Maltese cheeselet"},
@@ -45,7 +45,7 @@
         {"mt": "Aljotta", "en": "Fish soup"},
         {"mt": "Soppa tal-armla", "en": "Maltese widow's soup"},
         {"mt": "Bragoli", "en": "Beef olives"},
-        {"mt": "Fenek bl-aljoli", "en": "Rabbit with garlic sauce"},
+        {"mt": "Stuffat tal-fenek", "en": "Rabbit stew"},
         {"mt": "Bebbux", "en": "Snails"},
         {"mt": "Lampuki", "en": "Dorado fish"},
         {"mt": "Imqaret", "en": "Date pastries"},
@@ -61,7 +61,7 @@
       "items": [
         {"mt": "Min?", "en": "Who?", "example": "Min hu l-għalliem tiegħek?", "example_en": "Who is your teacher?"},
         {"mt": "Fejn?", "en": "Where?", "example": "Fejn toqgħod?", "example_en": "Where do you live?"},
-        {"mt": "Xi?", "alt": "Xiex?", "en": "What?", "example": "Xi tieħu għal kafè?", "example_en": "What will you have for coffee?"},
+        {"mt": "Xi?", "alt": "Xiex?", "en": "What?", "example": "X'tieħu?", "example_en": "What will you have?"},
         {"mt": "Għaliex?", "alt": "Għala?", "en": "Why?", "example": "Għaliex int hawn?", "example_en": "Why are you here?"},
         {"mt": "Meta?", "en": "When?", "example": "Meta ġej il-vapur?", "example_en": "When does the ship arrive?"},
         {"mt": "Liema?", "en": "Which?", "example": "Liema tip ta' kafè trid?", "example_en": "Which kind of coffee do you want?"},
@@ -71,14 +71,14 @@
       "passage": {
         "title": "Read and answer",
         "lines": [
-          {"mt": "Nhar il-Ħamis, Sara u Tom marru jieklu f'ristorant l-Imdina.", "en": "On Thursday, Sara and Tom went to eat at a restaurant in Mdina."},
+          {"mt": "Nhar il-Ħamis, Sara u Tom marru jieklu f'ristorant fl-Imdina.", "en": "On Thursday, Sara and Tom went to eat at a restaurant in Mdina."},
           {"mt": "Bdew bi pjatt timpana u soppa tal-armla.", "en": "They started with a plate of timpana and widow's soup."},
           {"mt": "Tom ipprova l-fenek għall-ewwel darba u tant ħa pjaċir bih.", "en": "Tom tried rabbit for the first time and enjoyed it a lot."},
           {"mt": "Wara, qassmu kannol u talbu kafè.", "en": "Afterwards, they shared a cannolo and asked for coffee."},
-          {"mt": "Il-werej qalilhom: 'Saħħa! Erġgħu lura għada.'", "en": "The waiter told them: 'Cheers! Come back tomorrow.'"}
+          {"mt": "Il-wejter qalilhom: 'Saħħa! Erġgħu lura għada.'", "en": "The waiter told them: 'Cheers! Come back tomorrow.'"}
         ],
         "questions": [
-          {"q": "Fejn marru Sara u Tom?", "qen": "Where did Sara and Tom go?", "a": "Marru f'ristorant l-Imdina.", "aen": "They went to a restaurant in Mdina."},
+          {"q": "Fejn marru Sara u Tom?", "qen": "Where did Sara and Tom go?", "a": "Marru f'ristorant fl-Imdina.", "aen": "They went to a restaurant in Mdina."},
           {"q": "Min ipprova l-fenek?", "qen": "Who tried the rabbit?", "a": "Tom ipprova l-fenek.", "aen": "Tom tried the rabbit."},
           {"q": "Meta marru jieklu?", "qen": "When did they go to eat?", "a": "Marru nhar il-Ħamis.", "aen": "They went on Thursday."},
           {"q": "Xi qassmu wara?", "qen": "What did they share afterwards?", "a": "Qassmu kannol.", "aen": "They shared a cannolo."}
@@ -101,14 +101,14 @@
           {"pronoun": "Intom", "model": "tiRfsu", "form": "tgħajjtu", "en": "you (pl) shout"},
           {"pronoun": "Huma", "model": "jiRfsu", "form": "jgħajjtu", "en": "they shout"}
         ]},
-        {"id": "ghmid", "title": "Għ in the middle — model seRaq (e.g. nagħġa → naħlef / to swear)", "rows": [
-          {"pronoun": "Jiena", "model": "nisRaq", "form": "naħlef", "en": "I swear / pledge"},
-          {"pronoun": "Inti", "model": "tisRaq", "form": "taħlef", "en": "you swear"},
-          {"pronoun": "Huwa", "model": "jisRaq", "form": "jaħlef", "en": "he swears"},
-          {"pronoun": "Hija", "model": "tisRaq", "form": "taħlef", "en": "she swears"},
-          {"pronoun": "Aħna", "model": "nisiRqu", "form": "naħilfu", "en": "we swear"},
-          {"pronoun": "Intom", "model": "tisiRqu", "form": "taħilfu", "en": "you (pl) swear"},
-          {"pronoun": "Huma", "model": "jisiRqu", "form": "jaħilfu", "en": "they swear"}
+        {"id": "ghmid", "title": "Għ in the middle — model seRaq (e.g. lagħab / to play)", "rows": [
+          {"pronoun": "Jiena", "model": "nisRaq", "form": "nilgħab", "en": "I play"},
+          {"pronoun": "Inti", "model": "tisRaq", "form": "tilgħab", "en": "you play"},
+          {"pronoun": "Huwa", "model": "jisRaq", "form": "jilgħab", "en": "he plays"},
+          {"pronoun": "Hija", "model": "tisRaq", "form": "tilgħab", "en": "she plays"},
+          {"pronoun": "Aħna", "model": "nisiRqu", "form": "nilagħbu", "en": "we play"},
+          {"pronoun": "Intom", "model": "tisiRqu", "form": "tilagħbu", "en": "you (pl) play"},
+          {"pronoun": "Huma", "model": "jisiRqu", "form": "jilagħbu", "en": "they play"}
         ]}
       ],
       "exercises": [
@@ -138,7 +138,7 @@
             {"sentence": "Aħna ___ id-dar wara x-xogħol.", "en": "We stay home after work. (oqgħod)", "answer": "noqogħdu"},
             {"sentence": "Jien ___ il-mużika.", "en": "I play music. (lagħab)", "answer": "nilgħab"},
             {"sentence": "Int ___ ir-radju kuljum?", "en": "Do you listen to the radio every day? (sema')", "answer": "tisma'"},
-            {"sentence": "Huma ___ il-pizza għall-wikkien.", "en": "They make pizza for dinner. (għamel)", "answer": "jagħmlu"}
+            {"sentence": "Huma ___ il-pizza għall-ikla ta' filgħaxija.", "en": "They make pizza for dinner. (għamel)", "answer": "jagħmlu"}
           ]
         }
       ]

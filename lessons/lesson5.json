@@ -44,12 +44,12 @@
         {"singular": "Pastarda", "collective": "Pastard", "plural": "Pastard", "en": "Cauliflower/s"},
         {"singular": "Kaboċċa", "collective": "Kaboċċi", "plural": "Kaboċċi", "en": "Cabbage/s"},
         {"singular": "Ħjara", "collective": "Ħjar", "plural": "Ħjariet", "en": "Cucumber/s"},
-        {"singular": "Bżaru", "collective": "Bżar", "plural": "Bżar", "en": "Bell pepper/s"},
+        {"singular": "Bżar (aħmar/aħdar)", "collective": "Bżar", "plural": "Bżar (aħmar/aħdar)", "en": "Bell pepper/s"},
         {"singular": "Faqqiegħa", "collective": "Faqqiegħ", "plural": "Faqqigħat", "en": "Mushroom/s"},
         {"singular": "Ħassa", "collective": "Ħass", "plural": "Ħassiet", "en": "Lettuce"},
         {"singular": "Spinaċi", "collective": "Spinaċi", "plural": "Spinaċi", "en": "Spinach"},
         {"singular": "Piżella", "collective": "Piżelli", "plural": "Piżelli", "en": "Pea/s"},
-        {"singular": "Fażola", "collective": "Fażola", "plural": "Fażoli", "en": "Bean/s"},
+        {"singular": "Fażola", "collective": "Fażol", "plural": "Fażoli", "en": "Bean/s"},
         {"singular": "Qargħa ħamra", "collective": "Qargħat ħomor", "plural": "Qargħat ħomor", "en": "Pumpkin/s"}
       ]
     },

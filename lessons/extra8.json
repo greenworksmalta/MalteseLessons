@@ -31,7 +31,7 @@
           "en": "The day after tomorrow"
         },
         {
-          "mt": "Il-bieraħtlula",
+          "mt": "Ilbieraħtlula",
           "en": "The day before yesterday"
         },
         {
@@ -250,7 +250,7 @@
           "places": [
             "Buġibba",
             "Il-Mellieħa",
-            "San Pawl il-baħar",
+            "San Pawl il-Baħar",
             "Il-Qawra",
             "L-Għargħur",
             "Mġarr"
@@ -274,7 +274,7 @@
           "places": [
             "Birżebbuġa",
             "Marsaxlokk",
-            "Marsascala",
+            "Marsaskala",
             "Iż-Żurrieq",
             "Iż-Żejtun",
             "Il-Qrendi",
@@ -352,19 +352,19 @@
           "note": "The highest cliffs in Malta — stunning sunset views."
         },
         {
-          "mt": "Blue Grotto",
+          "mt": "Il-Grotta Blu",
           "en": "Blue Grotto",
           "kind": "🌊 Natural",
           "note": "Sea caves famous for the brilliant blue water inside."
         },
         {
-          "mt": "Golden Bay",
+          "mt": "Għajn Tuffieħa",
           "en": "Golden Bay",
           "kind": "🏖️ Beach",
           "note": "Sandy beach in the north."
         },
         {
-          "mt": "Mellieħa Bay",
+          "mt": "Bajja tal-Mellieħa",
           "en": "Mellieħa Bay (Għadira)",
           "kind": "🏖️ Beach",
           "note": "The longest sandy beach on the island."

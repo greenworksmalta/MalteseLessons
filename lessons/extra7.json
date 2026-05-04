@@ -25,9 +25,9 @@
           "en": "Boat/s"
         },
         {
-          "singular": "Dingi",
-          "plural": "Dingis",
-          "en": "Dinghy/Dinghies"
+          "singular": "Dgħajsa żgħira",
+          "plural": "Dgħajjes żgħar",
+          "en": "Small boat / dinghy"
         },
         {
           "singular": "Ferrovija",
@@ -36,7 +36,7 @@
         },
         {
           "singular": "Ħelikopter",
-          "plural": "Ħelikopters",
+          "plural": "Ħelikopterijiet",
           "en": "Helicopter/s"
         },
         {
@@ -50,8 +50,8 @@
           "en": "Horse-driven cab/s"
         },
         {
-          "singular": "Lambretta",
-          "plural": "Lambretti",
+          "singular": "Skuter",
+          "plural": "Skuterijiet",
           "en": "Scooter/s"
         },
         {
@@ -66,7 +66,7 @@
         },
         {
           "singular": "Taksi",
-          "plural": "Taksis",
+          "plural": "Taksijiet",
           "en": "Taxi/s"
         },
         {
@@ -86,7 +86,7 @@
         },
         {
           "singular": "Xarabank",
-          "plural": "Xarabanks",
+          "plural": "Xarabankijiet",
           "en": "Bus/es"
         }
       ]
@@ -274,8 +274,8 @@
               "en": "Soup"
             },
             {
-              "mt": "Buz",
-              "en": "Boots"
+              "mt": "Xalla",
+              "en": "Scarf"
             },
             {
               "mt": "Umbrella",

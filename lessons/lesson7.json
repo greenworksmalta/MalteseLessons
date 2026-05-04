@@ -10,16 +10,16 @@
       "subtitle": "Mezzi ta' trasport — modes of transport",
       "items": [
         {"singular": "Karozza", "plural": "Karozzi", "en": "Car/s"},
-        {"singular": "Xarabank", "plural": "Xarabanks", "en": "Bus/es"},
-        {"singular": "Taksi", "plural": "Taksis", "en": "Taxi/s"},
+        {"singular": "Xarabank", "plural": "Xarabankijiet", "en": "Bus/es"},
+        {"singular": "Taksi", "plural": "Taksijiet", "en": "Taxi/s"},
         {"singular": "Rota", "plural": "Roti", "en": "Bicycle/s"},
         {"singular": "Mutur", "plural": "Muturi", "en": "Motorcycle/s"},
-        {"singular": "Skuter", "plural": "Skuters", "en": "Scooter/s"},
+        {"singular": "Skuter", "plural": "Skuterijiet", "en": "Scooter/s"},
         {"singular": "Vapur", "plural": "Vapuri", "en": "Ship/s"},
         {"singular": "Dgħajsa", "plural": "Dgħajjes", "en": "Boat/s"},
-        {"singular": "Jott", "plural": "Jotts", "en": "Yacht/s"},
+        {"singular": "Jott", "plural": "Jottijiet", "en": "Yacht/s"},
         {"singular": "Ajruplan", "plural": "Ajruplani", "en": "Aeroplane/s"},
-        {"singular": "Ħelikopter", "plural": "Ħelikopters", "en": "Helicopter/s"},
+        {"singular": "Ħelikopter", "plural": "Ħelikopterijiet", "en": "Helicopter/s"},
         {"singular": "Vann", "plural": "Vannijiet", "en": "Van/s"},
         {"singular": "Trakk", "plural": "Trakkijiet", "en": "Truck/s"},
         {"singular": "Karozzin", "plural": "Karozzini", "en": "Horse-drawn cab/s"},
@@ -35,7 +35,7 @@
         {"mt": "Se mmur l-Imdina", "en": "I'm going to Mdina"},
         {"mt": "Se mmur Kemmuna", "en": "I'm going to Comino"},
         {"mt": "Se mmur niekol pizza", "en": "I'm going to eat pizza"},
-        {"mt": "Se mmur jiġri mat-tfal", "en": "I'm going running with the kids"},
+        {"mt": "Se mmur niġri mat-tfal", "en": "I'm going running with the kids"},
         {"mt": "Se mmur ngħum", "en": "I'm going swimming"},
         {"mt": "Se mmur niltaqa' ma' ħabib", "en": "I'm going to meet a friend"},
         {"mt": "Se mmur kunċert", "en": "I'm going to a concert"},
@@ -85,10 +85,9 @@
         {"mt": "Ix-Xitwa", "en": "Winter", "icon": "❄️",
          "vocab": [
            {"mt": "Bard", "en": "Cold"},
-           {"mt": "Riefnu", "en": "Storm"},
-           {"mt": "Nar", "en": "Embers / fire"},
+           {"mt": "Maltempata", "en": "Storm"},
+           {"mt": "Nar", "en": "Fire"},
            {"mt": "Brodu", "en": "Broth"},
-           {"mt": "Nar tan-nofs", "en": "Indoor fire"},
            {"mt": "Kowt", "en": "Coat"}
          ]}
       ]

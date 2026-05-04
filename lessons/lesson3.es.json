@@ -1,0 +1,164 @@
+{
+  "id": "lesson3",
+  "lang": "es",
+  "title": "Lección 3 — Pronombres y Señalar",
+  "subtitle": "Pronombres personales, esto vs aquello, separar en sílabas",
+  "sections": [
+    {
+      "id": "pronouns",
+      "icon": "👥",
+      "title": "Pronombres",
+      "subtitle": "Pronomi Personali — yo, tú, él, ella, nosotros…",
+      "intro": "Los pronombres reemplazan a los sustantivos. La mayoría tiene una forma larga y una corta (p. ej. Jien / Jiena ambos significan 'yo'). Usa la que te salga natural.",
+      "items": [
+        {"mt": "Jien", "alt": "Jiena", "en": "Yo"},
+        {"mt": "Int", "alt": "Inti", "en": "Tú (singular)"},
+        {"mt": "Hu", "alt": "Huwa", "en": "Él"},
+        {"mt": "Hi", "alt": "Hija", "en": "Ella"},
+        {"mt": "Aħna", "alt": "Aħna", "en": "Nosotros"},
+        {"mt": "Intom", "alt": "Intom", "en": "Ustedes (plural)"},
+        {"mt": "Huma", "alt": "Huma", "en": "Ellos"}
+      ],
+      "dialogue": [
+        {"mt": "Jien naqra ktieb kuljum.", "en": "Yo leo un libro todos los días."},
+        {"mt": "Int taqra ħafna?", "en": "¿Tú lees mucho?"},
+        {"mt": "Hu jaħdem fl-uffiċċju.", "en": "Él trabaja en la oficina."},
+        {"mt": "Hi ssajjar għaġin.", "en": "Ella está cocinando pasta."},
+        {"mt": "Aħna nimxu fil-ġnien.", "en": "Nosotros caminamos en el jardín."},
+        {"mt": "Intom intkellmu Malti?", "en": "¿Ustedes hablan maltés?"},
+        {"mt": "Huma ġejjin Malta.", "en": "Ellos vienen a Malta."}
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "title": "Reemplaza el sustantivo con el pronombre correcto",
+          "instructions": "Toca qué pronombre reemplaza al sustantivo subrayado.",
+          "choices": ["Hu", "Hi", "Huma", "Aħna", "Int"],
+          "items": [
+            {"sentence": "Sara taqra ktieb.", "en": "Sara está leyendo un libro.", "answer": "Hi"},
+            {"sentence": "Tom jaħdem fil-belt.", "en": "Tom trabaja en la ciudad.", "answer": "Hu"},
+            {"sentence": "It-turisti jħobbu lill-Malta.", "en": "A los turistas les encanta Malta.", "answer": "Huma"},
+            {"sentence": "Il-ġnien sabiħ ħafna.", "en": "El jardín es muy bonito.", "answer": "Hu"},
+            {"sentence": "Ommi qed issajjar.", "en": "Mi mamá está cocinando.", "answer": "Hi"},
+            {"sentence": "Il-kotba kollha mqattajn.", "en": "Los libros están todos rotos.", "answer": "Huma"},
+            {"sentence": "It-triq tkissret bix-xita.", "en": "La calle quedó destrozada por la lluvia.", "answer": "Hi"},
+            {"sentence": "Jien u ommi noħorġu wara nofsinhar.", "en": "Mi mamá y yo salimos por la tarde.", "answer": "Aħna"},
+            {"sentence": "It-tfal qed jistudjaw.", "en": "Los niños están estudiando.", "answer": "Huma"},
+            {"sentence": "Maria, kif kienet il-vaganza?", "en": "Maria, ¿cómo estuvieron las vacaciones?", "answer": "Int"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "demonstratives",
+      "icon": "👉",
+      "title": "Demostrativos",
+      "subtitle": "Pronomi Demonstrattivi — esto, aquello, estos, aquellos",
+      "intro": "Los demostrativos malteses cambian con el género y el número. Usa 'dan/din/dawn' para cosas cercanas, 'dak/dik/dawk' para cosas más lejanas.",
+      "rules": [
+        {"id": "this", "title": "Este / Estos (cerca)", "explanation": "Cosas cerca de ti — al alcance.",
+         "items": [
+           {"mt": "Dan", "en": "Este (masculino)"},
+           {"mt": "Din", "en": "Esta (femenino)"},
+           {"mt": "Dawn", "en": "Estos / Estas (plural)"}
+         ],
+         "examples": [
+           {"phrase": "Dan il-ktieb", "en": "Este libro (m)"},
+           {"phrase": "Din it-tazza", "en": "Esta taza (f)"},
+           {"phrase": "Dawn il-fjuri", "en": "Estas flores (pl)"}
+         ]},
+        {"id": "that", "title": "Aquel / Aquellos (más lejos)", "explanation": "Cosas allá — fuera de tu alcance.",
+         "items": [
+           {"mt": "Dak", "en": "Aquel (masculino)"},
+           {"mt": "Dik", "en": "Aquella (femenino)"},
+           {"mt": "Dawk", "en": "Aquellos / Aquellas (plural)"}
+         ],
+         "examples": [
+           {"phrase": "Dak il-ġebel", "en": "Aquella piedra (m)"},
+           {"phrase": "Dik is-siġra", "en": "Aquel árbol (f)"},
+           {"phrase": "Dawk it-tfal", "en": "Aquellos niños (pl)"}
+         ]}
+      ],
+      "exercises": [
+        {
+          "id": "ex2",
+          "title": "Ejercicio 2 — ¿dan, din, dawn?",
+          "instructions": "Elige la forma correcta para cada palabra (cerca de ti).",
+          "choices": ["dan", "din", "dawn"],
+          "items": [
+            {"word": "ktieb", "en": "libro (m)", "answer": "dan"},
+            {"word": "tazza", "en": "taza (f)", "answer": "din"},
+            {"word": "kelb", "en": "perro (m)", "answer": "dan"},
+            {"word": "fjura", "en": "flor (f)", "answer": "din"},
+            {"word": "tfal", "en": "niños (pl)", "answer": "dawn"},
+            {"word": "raġel", "en": "hombre (m)", "answer": "dan"},
+            {"word": "siġra", "en": "árbol (f)", "answer": "din"},
+            {"word": "qattusi", "en": "gatos (pl)", "answer": "dawn"},
+            {"word": "ċavetta", "en": "llave (f)", "answer": "din"},
+            {"word": "muftieħ", "en": "llave/manija (m)", "answer": "dan"},
+            {"word": "kotba", "en": "libros (pl)", "answer": "dawn"},
+            {"word": "tieqa", "en": "ventana (f)", "answer": "din"},
+            {"word": "saqqu", "en": "colchón (m)", "answer": "dan"},
+            {"word": "stilel", "en": "estrellas (pl)", "answer": "dawn"}
+          ]
+        },
+        {
+          "id": "ex3",
+          "title": "Ejercicio 3 — ¿dak, dik, dawk?",
+          "instructions": "Elige la forma correcta para cosas más lejanas.",
+          "choices": ["dak", "dik", "dawk"],
+          "items": [
+            {"word": "muntanja", "en": "montaña (f)", "answer": "dik"},
+            {"word": "vapur", "en": "barco (m)", "answer": "dak"},
+            {"word": "ġurnali", "en": "periódicos (pl)", "answer": "dawk"},
+            {"word": "kappillan", "en": "sacerdote (m)", "answer": "dak"},
+            {"word": "knisja", "en": "iglesia (f)", "answer": "dik"},
+            {"word": "trakkijiet", "en": "camiones (pl)", "answer": "dawk"},
+            {"word": "vann", "en": "camioneta (m)", "answer": "dak"},
+            {"word": "borża", "en": "bolsa (f)", "answer": "dik"},
+            {"word": "siġar", "en": "árboles (pl)", "answer": "dawk"},
+            {"word": "barra", "en": "afuera (m)", "answer": "dak"},
+            {"word": "raħal", "en": "pueblo (m)", "answer": "dak"},
+            {"word": "festa", "en": "fiesta (f)", "answer": "dik"},
+            {"word": "stejjer", "en": "historias (pl)", "answer": "dawk"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "syllables",
+      "icon": "🔡",
+      "title": "Sílabas",
+      "subtitle": "Is-Sillabi — separar palabras en sílabas",
+      "intro": "En maltés, separar una palabra en sílabas hace que escribirla sea más fácil — puedes oír (y escribir) cada sonido. Tres reglas: cada sílaba tiene solo una vocal; la segunda sílaba empieza con una consonante; si dos consonantes se juntan en medio, separa entre ellas.",
+      "facts": [
+        "Cada sílaba tiene solo una vocal.",
+        "La segunda sílaba empieza con una consonante.",
+        "Si dos consonantes se juntan en medio, separa entre ellas.",
+        "Ejemplos: omm → omm; mara → ma-ra; kelma → kel-ma."
+      ],
+      "items": [
+        {"word": "kelma", "syllables": "kel-ma"},
+        {"word": "ħabib", "syllables": "ħa-bib"},
+        {"word": "ġnien", "syllables": "ġnien"},
+        {"word": "skola", "syllables": "sko-la"},
+        {"word": "tieqa", "syllables": "tie-qa"},
+        {"word": "ktieb", "syllables": "ktieb"},
+        {"word": "tifel", "syllables": "ti-fel"},
+        {"word": "Malta", "syllables": "Mal-ta"},
+        {"word": "uffiċċju", "syllables": "uf-fiċ-ċju"},
+        {"word": "lingwa", "syllables": "ling-wa"},
+        {"word": "festa", "syllables": "fes-ta"},
+        {"word": "saħħa", "syllables": "saħ-ħa"},
+        {"word": "pjazza", "syllables": "pjaz-za"},
+        {"word": "siġra", "syllables": "siġ-ra"},
+        {"word": "qattus", "syllables": "qat-tus"},
+        {"word": "fenek", "syllables": "fe-nek"},
+        {"word": "Birkirkara", "syllables": "Bir-kir-ka-ra"},
+        {"word": "ġurnata", "syllables": "ġur-na-ta"},
+        {"word": "studju", "syllables": "stu-dju"},
+        {"word": "vjaġġ", "syllables": "vjaġġ"}
+      ]
+    }
+  ]
+}

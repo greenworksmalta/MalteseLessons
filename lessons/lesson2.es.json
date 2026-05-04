@@ -1,0 +1,227 @@
+{
+  "id": "lesson2",
+  "lang": "es",
+  "title": "Lección 2 — Describir las Cosas",
+  "subtitle": "Colores, adjetivos, números 1–30, meses",
+  "sections": [
+    {
+      "id": "serquni",
+      "icon": "🆘",
+      "title": "Objetos Perdidos",
+      "subtitle": "Telefonajt il-pulizija — describir cómo es alguien",
+      "vocab": [
+        {"mt": "Skużani", "en": "Disculpa / Perdón"},
+        {"mt": "Tlift il-portmoni tiegħi", "en": "Perdí mi cartera"},
+        {"mt": "Fejn?", "en": "¿Dónde?"},
+        {"mt": "Hawn fil-pjazza", "en": "Aquí en la plaza"},
+        {"mt": "Iddeskrivih", "en": "Descríbelo"},
+        {"mt": "Iddeskriviha", "en": "Descríbela"},
+        {"mt": "Raġel", "en": "Hombre"},
+        {"mt": "Mara", "en": "Mujer"},
+        {"mt": "Tifel", "en": "Niño"},
+        {"mt": "Tifla", "en": "Niña"},
+        {"mt": "Twil", "en": "Alto (m)"},
+        {"mt": "Twila", "en": "Alta (f)"},
+        {"mt": "Qasir", "en": "Bajo (m)"},
+        {"mt": "Qasira", "en": "Baja (f)"},
+        {"mt": "Bjond", "en": "Rubio (m)"},
+        {"mt": "Bjonda", "en": "Rubia (f)"},
+        {"mt": "Iswed", "en": "Moreno / pelo negro (m)"},
+        {"mt": "Sewda", "en": "Morena / pelo negro (f)"},
+        {"mt": "Wieħed wieħed tnejn", "en": "Uno uno dos (número de la policía)"},
+        {"mt": "Grazzi ħafna", "en": "Muchas gracias"}
+      ],
+      "dialogue": [
+        {"mt": "Skużani — tista' tgħinni? Tlift il-portmoni tiegħi.", "en": "Disculpa — ¿me puedes ayudar? Perdí mi cartera."},
+        {"mt": "Mela. Fejn rajtu l-aħħar?", "en": "Claro. ¿Dónde la viste por última vez?"},
+        {"mt": "Hawn fil-pjazza, ħdejn il-kafetterija.", "en": "Aquí en la plaza, junto a la cafetería."},
+        {"mt": "Rajt lil xi ħadd qribu?", "en": "¿Viste a alguien cerca?"},
+        {"mt": "Iva — tifel twil, bil-flokk aħmar.", "en": "Sí — un niño alto, con una playera roja."},
+        {"mt": "Mela ċempel il-pulizija: wieħed wieħed tnejn.", "en": "Entonces llama a la policía: uno-uno-dos."},
+        {"mt": "Grazzi ħafna għall-għajnuna.", "en": "Muchas gracias por la ayuda."}
+      ]
+    },
+    {
+      "id": "colours",
+      "icon": "🎨",
+      "title": "Colores",
+      "subtitle": "Il-kuluri — masculino, femenino, plural",
+      "intro": "La mayoría de los colores en maltés tienen tres formas — cambian para coincidir con el género y el número del sustantivo que describen.",
+      "items": [
+        {"mt": "abjad", "feminine": "bajda", "plural": "bojod", "en": "blanco",
+         "examples": [
+           {"mt": "ktieb abjad", "en": "libro blanco"},
+           {"mt": "tieqa bajda", "en": "ventana blanca"},
+           {"mt": "ħitan bojod", "en": "paredes blancas"}
+         ]},
+        {"mt": "iswed", "feminine": "sewda", "plural": "suwed", "en": "negro",
+         "examples": [
+           {"mt": "kelb iswed", "en": "perro negro"},
+           {"mt": "tazza sewda", "en": "taza negra"},
+           {"mt": "żraben suwed", "en": "zapatos negros"}
+         ]},
+        {"mt": "aħmar", "feminine": "ħamra", "plural": "ħomor", "en": "rojo",
+         "examples": [
+           {"mt": "qalb ħamra", "en": "corazón rojo"},
+           {"mt": "tadama ħamra", "en": "jitomate rojo"},
+           {"mt": "fjuri ħomor", "en": "flores rojas"}
+         ]},
+        {"mt": "isfar", "feminine": "safra", "plural": "sofor", "en": "amarillo",
+         "examples": [
+           {"mt": "lumi isfar", "en": "limón amarillo"},
+           {"mt": "ċavetta safra", "en": "llave amarilla"},
+           {"mt": "stilel sofor", "en": "estrellas amarillas"}
+         ]},
+        {"mt": "aħdar", "feminine": "ħadra", "plural": "ħodor", "en": "verde",
+         "examples": [
+           {"mt": "ġnien aħdar", "en": "jardín verde"},
+           {"mt": "tuffieħa ħadra", "en": "manzana verde"},
+           {"mt": "weraq ħodor", "en": "hojas verdes"}
+         ]},
+        {"mt": "griż", "feminine": "griża", "plural": "griżi", "en": "gris",
+         "examples": [
+           {"mt": "qattus griż", "en": "gato gris"},
+           {"mt": "sħaba griża", "en": "nube gris"},
+           {"mt": "ġebel griż", "en": "piedras grises"}
+         ]},
+        {"mt": "blu", "feminine": "blu", "plural": "blu", "en": "azul",
+         "examples": [
+           {"mt": "baħar blu", "en": "mar azul"},
+           {"mt": "qalziet blu", "en": "pantalones azules"},
+           {"mt": "għajnejn blu", "en": "ojos azules"}
+         ]},
+        {"mt": "ċelesti", "feminine": "ċelesti", "plural": "ċelesti", "en": "azul claro",
+         "examples": [
+           {"mt": "sema ċelesti", "en": "cielo azul claro"},
+           {"mt": "munita ċelesti", "en": "moneda azul claro"},
+           {"mt": "ħitan ċelesti", "en": "paredes azul claro"}
+         ]},
+        {"mt": "roża", "feminine": "roża", "plural": "roża", "en": "rosa",
+         "examples": [
+           {"mt": "kejk roża", "en": "pastel rosa"},
+           {"mt": "warda roża", "en": "rosa rosa"},
+           {"mt": "bżieżaq roża", "en": "globos rosa"}
+         ]},
+        {"mt": "vjola", "feminine": "vjola", "plural": "vjola", "en": "morado",
+         "examples": [
+           {"mt": "ċoff vjola", "en": "moño morado"},
+           {"mt": "fjura vjola", "en": "flor morada"},
+           {"mt": "bużżieqa vjola", "en": "globo morado"}
+         ]},
+        {"mt": "oranġjo", "feminine": "oranġjo", "plural": "oranġjo", "en": "naranja",
+         "examples": [
+           {"mt": "larinġa oranġjo", "en": "naranja (la fruta)"},
+           {"mt": "qamis oranġjo", "en": "camisa naranja"},
+           {"mt": "inżul ix-xemx oranġjo", "en": "atardecer naranja"}
+         ]},
+        {"mt": "kannella", "feminine": "kannella", "plural": "kannella", "en": "café",
+         "examples": [
+           {"mt": "ċikkulata kannella", "en": "chocolate café"},
+           {"mt": "borża kannella", "en": "bolsa café"},
+           {"mt": "stivali kannella", "en": "botas café"}
+         ]}
+      ]
+    },
+    {
+      "id": "adjectives",
+      "icon": "✨",
+      "title": "Adjetivos",
+      "subtitle": "L-aġġettivi — pares de opuestos",
+      "intro": "La mayoría de los adjetivos en maltés tienen formas masculina, femenina y plural — el mismo patrón que los colores.",
+      "pairs": [
+        {"a": {"mt": "kbir", "feminine": "kbira", "plural": "kbar", "en": "grande (m)"},
+         "b": {"mt": "żgħir", "feminine": "żgħira", "plural": "żgħar", "en": "chico (m)"}},
+        {"a": {"mt": "twil", "feminine": "twila", "plural": "twal", "en": "largo / alto (m)"},
+         "b": {"mt": "qasir", "feminine": "qasira", "plural": "qosra", "en": "corto / bajo (m)"}},
+        {"a": {"mt": "sabiħ", "feminine": "sabiħa", "plural": "sbieħ", "en": "bonito (m)"},
+         "b": {"mt": "ikrah", "feminine": "kerha", "plural": "koroh", "en": "feo (m)"}},
+        {"a": {"mt": "tajjeb", "feminine": "tajba", "plural": "tajbin", "en": "bueno (m)"},
+         "b": {"mt": "ħażin", "feminine": "ħażina", "plural": "ħżiena", "en": "malo (m)"}},
+        {"a": {"mt": "nadif", "feminine": "nadifa", "plural": "nodfa", "en": "limpio (m)"},
+         "b": {"mt": "maħmuġ", "feminine": "maħmuġa", "plural": "maħmuġin", "en": "sucio (m)"}},
+        {"a": {"mt": "ferħan", "feminine": "ferħana", "plural": "ferħanin", "en": "feliz (m)"},
+         "b": {"mt": "imdejjaq", "feminine": "imdejqa", "plural": "imdejqin", "en": "triste (m)"}},
+        {"a": {"mt": "ġdid", "feminine": "ġdida", "plural": "ġodda", "en": "nuevo (m)"},
+         "b": {"mt": "qadim", "feminine": "qadima", "plural": "qodma", "en": "viejo (m)"}},
+        {"a": {"mt": "sħun", "feminine": "sħuna", "plural": "sħan", "en": "caliente (m)"},
+         "b": {"mt": "kiesaħ", "feminine": "kiesħa", "plural": "kesħin", "en": "frío (m)"}},
+        {"a": {"mt": "rħis", "feminine": "rħisa", "plural": "rħas", "en": "barato (m)"},
+         "b": {"mt": "għali", "feminine": "għalja", "plural": "għaljin", "en": "caro (m)"}},
+        {"a": {"mt": "veloċi", "feminine": "veloċi", "plural": "veloċi", "en": "rápido"},
+         "b": {"mt": "bil-mod", "feminine": "bil-mod", "plural": "bil-mod", "en": "lento"}},
+        {"a": {"mt": "qawwi", "feminine": "qawwija", "plural": "qawwijin", "en": "fuerte (m)"},
+         "b": {"mt": "dgħajjef", "feminine": "dgħajfa", "plural": "dgħajfin", "en": "débil (m)"}}
+      ]
+    },
+    {
+      "id": "numbers",
+      "icon": "🔢",
+      "title": "Números 1–30",
+      "subtitle": "In-numri — contar en maltés",
+      "items": [
+        {"n": 1, "mt": "wieħed", "en": "uno"},
+        {"n": 2, "mt": "tnejn", "en": "dos"},
+        {"n": 3, "mt": "tlieta", "en": "tres"},
+        {"n": 4, "mt": "erbgħa", "en": "cuatro"},
+        {"n": 5, "mt": "ħamsa", "en": "cinco"},
+        {"n": 6, "mt": "sitta", "en": "seis"},
+        {"n": 7, "mt": "sebgħa", "en": "siete"},
+        {"n": 8, "mt": "tmienja", "en": "ocho"},
+        {"n": 9, "mt": "disgħa", "en": "nueve"},
+        {"n": 10, "mt": "għaxra", "en": "diez"},
+        {"n": 11, "mt": "ħdax", "en": "once"},
+        {"n": 12, "mt": "tnax", "en": "doce"},
+        {"n": 13, "mt": "tlettax", "en": "trece"},
+        {"n": 14, "mt": "erbatax", "en": "catorce"},
+        {"n": 15, "mt": "ħmistax", "en": "quince"},
+        {"n": 16, "mt": "sittax", "en": "dieciséis"},
+        {"n": 17, "mt": "sbatax", "en": "diecisiete"},
+        {"n": 18, "mt": "tmintax", "en": "dieciocho"},
+        {"n": 19, "mt": "dsatax", "en": "diecinueve"},
+        {"n": 20, "mt": "għoxrin", "en": "veinte"},
+        {"n": 21, "mt": "wieħed u għoxrin", "en": "veintiuno"},
+        {"n": 22, "mt": "tnejn u għoxrin", "en": "veintidós"},
+        {"n": 23, "mt": "tlieta u għoxrin", "en": "veintitrés"},
+        {"n": 24, "mt": "erbgħa u għoxrin", "en": "veinticuatro"},
+        {"n": 25, "mt": "ħamsa u għoxrin", "en": "veinticinco"},
+        {"n": 26, "mt": "sitta u għoxrin", "en": "veintiséis"},
+        {"n": 27, "mt": "sebgħa u għoxrin", "en": "veintisiete"},
+        {"n": 28, "mt": "tmienja u għoxrin", "en": "veintiocho"},
+        {"n": 29, "mt": "disgħa u għoxrin", "en": "veintinueve"},
+        {"n": 30, "mt": "tletin", "en": "treinta"}
+      ],
+      "ordinals": [
+        {"mt": "L-ewwel", "en": "Primero"},
+        {"mt": "It-tieni", "en": "Segundo"},
+        {"mt": "It-tielet", "en": "Tercero"},
+        {"mt": "Ir-raba'", "en": "Cuarto"},
+        {"mt": "Il-ħames", "en": "Quinto"},
+        {"mt": "Is-sitt", "en": "Sexto"},
+        {"mt": "Is-seba'", "en": "Séptimo"},
+        {"mt": "It-tmien", "en": "Octavo"},
+        {"mt": "Id-disa'", "en": "Noveno"},
+        {"mt": "L-għaxar", "en": "Décimo"}
+      ]
+    },
+    {
+      "id": "months",
+      "icon": "📆",
+      "title": "Meses",
+      "subtitle": "Ix-xhur — meses del año",
+      "items": [
+        {"mt": "Jannar", "en": "enero"},
+        {"mt": "Frar", "en": "febrero"},
+        {"mt": "Marzu", "en": "marzo"},
+        {"mt": "April", "en": "abril"},
+        {"mt": "Mejju", "en": "mayo"},
+        {"mt": "Ġunju", "en": "junio"},
+        {"mt": "Lulju", "en": "julio"},
+        {"mt": "Awwissu", "en": "agosto"},
+        {"mt": "Settembru", "en": "septiembre"},
+        {"mt": "Ottubru", "en": "octubre"},
+        {"mt": "Novembru", "en": "noviembre"},
+        {"mt": "Diċembru", "en": "diciembre"}
+      ]
+    }
+  ]
+}

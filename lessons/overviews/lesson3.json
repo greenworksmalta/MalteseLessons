@@ -31,7 +31,7 @@
     {"en": "These replace nouns. Instead of 'Sara is reading':"},
     {"mt": "Hi taqra"},
     {"en": "**She** is reading. Instead of 'The tourists love Malta':"},
-    {"mt": "Huma jħobbu Malta"},
+    {"mt": "Huma jħobbu lill-Malta"},
     {"en": "**They** love Malta."},
     {"en": "Feminine noun → **hi**. Masculine → **hu**. Any plural → **huma**.", "kind": "rule"},
 

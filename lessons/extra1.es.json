@@ -51,11 +51,11 @@
         {"mt": "Kappuccino", "en": "Capuchino"},
         {"mt": "Pastizz", "en": "Pastizz (hojaldre maltés salado)"},
         {"mt": "Kemm jiswa?", "en": "¿Cuánto cuesta?"},
-        {"mt": "Tnejn ewro", "en": "Dos euros"},
+        {"mt": "Żewġ ewro", "en": "Dos euros"},
         {"mt": "Bil-flus", "en": "En efectivo"},
         {"mt": "Bil-karta tal-kreditu", "en": "Con tarjeta de crédito"},
         {"mt": "Trid xi ħaġa oħra?", "en": "¿Quieres algo más?"},
-        {"mt": "Le grazzi bizzejjed", "en": "No gracias, eso es todo"},
+        {"mt": "Le grazzi biżżejjed", "en": "No gracias, eso es todo"},
         {"mt": "Iva, jekk jogħġbok", "en": "Sí, por favor"}
       ],
       "dialogue": [
@@ -64,7 +64,7 @@
         {"mt": "Trid xi ħaġa oħra?", "en": "¿Quieres algo más?"},
         {"mt": "Iva, pastizz wieħed jekk jogħġbok.", "en": "Sí, un pastizz por favor."},
         {"mt": "Kemm jiswa?", "en": "¿Cuánto cuesta?"},
-        {"mt": "Tnejn ewro u sebgħin.", "en": "Dos euros con setenta."},
+        {"mt": "Żewġ ewro u sebgħin.", "en": "Dos euros con setenta."},
         {"mt": "Hekk hu. Saħħa!", "en": "Aquí tienes. ¡Hasta luego!"}
       ]
     },
@@ -114,7 +114,7 @@
         {"mt": "Tnejn", "en": "Dos"},
         {"mt": "ewro", "en": "Euro"},
         {"mt": "Ċenteżmu", "en": "Céntimo"},
-        {"mt": "Bagalja", "en": "Bolsa"},
+        {"mt": "Baskett", "en": "Bolsa"},
         {"mt": "Riċevuta", "en": "Recibo"},
         {"mt": "Ħanut", "en": "Tienda"},
         {"mt": "Supermarket", "en": "Supermercado"},
@@ -126,7 +126,7 @@
         {"mt": "Għandkom skont?", "en": "¿Tienen descuento?"},
         {"mt": "Le, mhux illum.", "en": "No, hoy no."},
         {"mt": "OK. Nieħu wieħed jekk jogħġbok.", "en": "Vale. Tomo uno por favor."},
-        {"mt": "Tridu bagalja?", "en": "¿Quieres una bolsa?"},
+        {"mt": "Tridu baskett?", "en": "¿Quieres una bolsa?"},
         {"mt": "Le grazzi.", "en": "No gracias."}
       ]
     }

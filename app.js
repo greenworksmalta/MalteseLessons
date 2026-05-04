@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260503a";
+const VERSION = "20260504a";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -26,6 +26,14 @@ const I18N = {
     next: "Next",
     nextArrow: "Next →",
     previous: "← Previous",
+    heroEyebrow: "Merħba 👋  Welcome",
+    heroH1: "Settle in faster.",
+    heroP: "Real Maltese for the café, the bus, the office, and your new neighbours. Three minutes a lesson, native audio, no fluff. Start with the free Welcome Lesson below 👇",
+    freeBadge: "FREE",
+    statusDone: "Done",
+    statusStart: "Start",
+    overview: "Overview",
+    overviewSub: "Listen to the lesson explained in English",
     correct: "Sewwa!",
     notQuite: "Not quite.",
     correctIs: "Correct: ",
@@ -55,6 +63,14 @@ const I18N = {
     next: "Siguiente",
     nextArrow: "Siguiente →",
     previous: "← Anterior",
+    heroEyebrow: "Merħba 👋  Bienvenido",
+    heroH1: "Adáptate más rápido.",
+    heroP: "Maltés real para la cafetería, el autobús, la oficina y tus nuevos vecinos. Tres minutos por lección, audio nativo, sin paja. Empieza con la Lección de Bienvenida gratis abajo 👇",
+    freeBadge: "GRATIS",
+    statusDone: "Listo",
+    statusStart: "Empezar",
+    overview: "Resumen",
+    overviewSub: "Escucha la lección explicada en español",
     correct: "¡Sewwa!",
     notQuite: "No del todo.",
     correctIs: "Correcto: ",
@@ -280,6 +296,10 @@ window.addEventListener("hashchange", route);
 
 function route(){
   hideFeedback();
+  // Reset scroll to the top on every navigation. Without this, navigating from
+  // a long-scrolled page (e.g. the home list) into a shorter screen leaves the
+  // viewport stuck at the bottom of the new content.
+  try { window.scrollTo(0, 0); } catch(e) {}
   const h = location.hash.replace(/^#\/?/, "") || "home";
   const parts = h.split("/").filter(Boolean);
   if(parts[0]==="home" || !parts.length) return renderHome();
@@ -386,18 +406,22 @@ function renderHome(){
 
   // Welcome card under the splash — calm cream gradient with navy headline
   // and a red accent. Pulls from the logo's full palette without dominating.
+  const tHome = I18N[State.lang] || I18N.en;
   const hero = el("div","hero-welcome");
-  hero.appendChild(el("span","eyebrow","Merħba 👋  Welcome"));
-  hero.appendChild(el("h1","","Settle in faster."));
-  hero.appendChild(el("p","","Real Maltese for the café, the bus, the office, and your new neighbours. Three minutes a lesson, native audio, no fluff. Start with the free Welcome Lesson below 👇"));
+  hero.appendChild(el("span","eyebrow", tHome.heroEyebrow));
+  hero.appendChild(el("h1","", tHome.heroH1));
+  hero.appendChild(el("p","", tHome.heroP));
   hero.appendChild(el("span","accent-bar"));
   root.appendChild(hero);
 
   // Group by module — numeric modules ("1", "2", "3") render as "Module N",
-  // non-numeric ones ("Extras") render under their own label.
+  // non-numeric ones ("Extras") render under their own label. We bucket by the
+  // language-specific module name so Spanish users see "El Curso", etc.
+  const moduleKey = (L) => (State.lang === "es" && L.moduleEs) ? L.moduleEs : L.module;
   const byMod = {};
   for(const L of State.index.lessons){
-    (byMod[L.module] = byMod[L.module] || []).push(L);
+    const k = moduleKey(L);
+    (byMod[k] = byMod[k] || []).push(L);
   }
   // Sort: free / starter group first (so newcomers see it on top), then numeric
   // modules in order, then any other non-numeric groups alphabetically.
@@ -414,7 +438,7 @@ function renderHome(){
   });
   modKeys.forEach(mod=>{
     const isNumeric = !isNaN(parseInt(mod));
-    const label = isNumeric ? "Module "+mod : String(mod);
+    const label = isNumeric ? (State.lang === "es" ? "Módulo " : "Module ") + mod : String(mod);
     root.appendChild(el("div","module-label",label));
     const list = el("div","section-list");
     for(const L of byMod[mod]){
@@ -423,18 +447,20 @@ function renderHome(){
       const meta = el("div","meta");
       // Title row carries an optional FREE pill so the free starter is visually marked.
       const titleRow = el("div","title-row");
-      titleRow.appendChild(el("strong","", L.title));
+      const lessonTitle = (State.lang === "es" && L.titleEs) ? L.titleEs : L.title;
+      const lessonSubtitle = (State.lang === "es" && L.subtitleEs) ? L.subtitleEs : L.subtitle;
+      titleRow.appendChild(el("strong","", lessonTitle));
       if(L.free){
-        const badge = el("span","badge-free","FREE");
+        const badge = el("span","badge-free", tHome.freeBadge || "FREE");
         titleRow.appendChild(badge);
       }
       meta.appendChild(titleRow);
-      meta.appendChild(el("span","", L.subtitle));
+      meta.appendChild(el("span","", lessonSubtitle));
       // progress (cached if lesson loaded; otherwise unknown)
       const pct = lessonProgress(L.id);
       const bw = el("div","barwrap"); const bf = el("div"); bf.style.width = pct+"%"; bw.appendChild(bf);
       meta.appendChild(bw);
-      meta.appendChild(el("span","pct", pct>=100 ? "✓ Done" : (pct>0 ? pct+"%" : "Start")));
+      meta.appendChild(el("span","pct", pct>=100 ? ("✓ "+tHome.statusDone) : (pct>0 ? pct+"%" : tHome.statusStart)));
       const chev = el("div","chev","›");
       card.appendChild(ic); card.appendChild(meta); card.appendChild(chev);
       card.addEventListener("click", ()=>go("/lesson/"+L.id));
@@ -489,11 +515,12 @@ function renderLessonHome(lid){
   root.appendChild(progressBar(lessonProgress(lid)));
 
   // Overview card — always shown first
+  const tLh = I18N[State.lang] || I18N.en;
   const oc = el("button","overview-card");
   const oi = el("div","icon"); oi.textContent = "🎧";
   const om = el("div","meta");
-  om.appendChild(el("strong","","Overview"));
-  om.appendChild(el("span","","Listen to the lesson explained in English"));
+  om.appendChild(el("strong","", tLh.overview));
+  om.appendChild(el("span","", tLh.overviewSub));
   const ochev = el("div","chev","›");
   oc.appendChild(oi); oc.appendChild(om); oc.appendChild(ochev);
   oc.addEventListener("click", ()=>go("/lesson/"+lid+"/overview"));
@@ -1643,7 +1670,7 @@ STEP_RENDERERS["demonstratives:rules"] = (root, sec, idx, onNext) => {
   r.examples.forEach(e=>{
     const row = el("div","ex");
     row.appendChild(audioBtn(e.phrase));
-    const fx = el("div",""); fx.appendChild(el("span","full",e.phrase));
+    const fx = el("div","grow"); fx.appendChild(el("span","full",e.phrase));
     row.appendChild(fx);
     row.appendChild(el("div","en", e.en));
     row.addEventListener("click", evt=>{ if(evt.target.tagName!=="BUTTON") play(e.phrase); });
@@ -1653,21 +1680,23 @@ STEP_RENDERERS["demonstratives:rules"] = (root, sec, idx, onNext) => {
   root.appendChild(card);
   root.appendChild(nextBtn(idx+1===sec.rules.length ? "Try the exercises →" : "Next →", onNext));
 };
-STEP_RENDERERS["demonstratives:ex2"] = makeMcStep("ex2", { audioCombine: it=>it.answer+" "+it.word, detailFn: it=>it.word });
-STEP_RENDERERS["demonstratives:ex3"] = makeMcStep("ex3", { audioCombine: it=>it.answer+" "+it.word, detailFn: it=>it.word });
+// Audio plays just the noun (which is in the manifest) — combining article+noun
+// produces strings like "dan ktieb" that we don't have MP3s for.
+STEP_RENDERERS["demonstratives:ex2"] = makeMcStep("ex2", { audioCombine: it=>it.word, detailFn: it=>it.word });
+STEP_RENDERERS["demonstratives:ex3"] = makeMcStep("ex3", { audioCombine: it=>it.word, detailFn: it=>it.word });
 
 STEP_RENDERERS["syllables:card"] = (root, sec, idx, onNext) => {
   const item = sec.items[idx];
   const card = el("div","card syllable-card");
   card.appendChild(el("div","word", item.word));
-  const split = el("div","split","tap to reveal");
+  // Show the syllable split right away — tapping to reveal was confusing.
+  // The audio button + the card itself both replay the word.
+  const split = el("div","split", item.syllables || item.word);
   card.appendChild(split);
   card.appendChild(audioBtn(item.word, {size:"lg"}));
-  let revealed=false;
   card.addEventListener("click", e=>{
     if(e.target.tagName==="BUTTON") return;
-    if(!revealed){ revealed=true; split.textContent = item.syllables; play(item.word); }
-    else { play(item.word); }
+    play(item.word);
   });
   root.appendChild(card);
   root.appendChild(el("p","muted center", (idx+1)+" / "+Math.min(12,sec.items.length)));

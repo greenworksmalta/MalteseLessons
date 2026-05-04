@@ -1,0 +1,148 @@
+{
+  "id": "lesson6",
+  "lang": "es",
+  "title": "Lección 6 — Comer y Preguntar",
+  "subtitle": "En la mesa, comida maltesa, preguntas con qué/quién/dónde, verbos con għ",
+  "sections": [
+    {
+      "id": "table",
+      "icon": "🍽️",
+      "title": "En la mesa",
+      "subtitle": "Mal-mejda tal-ikel — utensilios y recipientes",
+      "items": [
+        {"singular": "Platt", "plural": "Platti", "en": "Plato/s"},
+        {"singular": "Tazza", "plural": "Tazzi", "en": "Vaso/s"},
+        {"singular": "Kikkra", "plural": "Kikkri", "en": "Taza/s"},
+        {"singular": "Furketta", "plural": "Frieket", "en": "Tenedor/es"},
+        {"singular": "Imgħarfa", "plural": "Imgħaref", "en": "Cuchara/s"},
+        {"singular": "Kuċċarina", "plural": "Kuċċarini", "en": "Cucharita/s"},
+        {"singular": "Sikkina", "plural": "Skieken", "en": "Cuchillo / Cuchillos"},
+        {"singular": "Plattina", "plural": "Plattini", "en": "Plato/s pequeño/s"},
+        {"singular": "Sarvetta", "plural": "Srievet", "en": "Servilleta/s"},
+        {"singular": "Borma", "plural": "Borom", "en": "Olla/s"},
+        {"singular": "Taġen", "plural": "Twaġen", "en": "Sartén / Sartenes"},
+        {"singular": "Flixkun", "plural": "Fliexken", "en": "Botella/s"},
+        {"singular": "Karaffa", "plural": "Karaffi", "en": "Jarra/s"},
+        {"singular": "Melħ", "plural": "Melħ", "en": "Sal"},
+        {"singular": "Bżar", "plural": "Bżar", "en": "Pimienta negra"},
+        {"singular": "Zokkor", "plural": "Zokkor", "en": "Azúcar"},
+        {"singular": "Żejt", "plural": "Żjut", "en": "Aceite/s"},
+        {"singular": "Ħall", "plural": "Ħall", "en": "Vinagre"},
+        {"singular": "Inbid", "plural": "Inbejjed", "en": "Vino/s"}
+      ]
+    },
+    {
+      "id": "food",
+      "icon": "🇲🇹",
+      "title": "Comida maltesa",
+      "subtitle": "Ikel Malti — clásicos locales",
+      "vocab": [
+        {"mt": "Pastizz", "en": "Hojaldre relleno de queso o chícharos"},
+        {"mt": "Ftira", "en": "Pan plano maltés"},
+        {"mt": "Ħobż biż-żejt", "en": "Pan con aceite y jitomate"},
+        {"mt": "Ġbejna", "en": "Quesito maltés"},
+        {"mt": "Imqarrun fil-forn", "en": "Macarrones al horno"},
+        {"mt": "Timpana", "en": "Pastel de macarrones"},
+        {"mt": "Aljotta", "en": "Sopa de pescado"},
+        {"mt": "Soppa tal-armla", "en": "Sopa de la viuda (sopa maltesa)"},
+        {"mt": "Bragoli", "en": "Rollos de res rellenos"},
+        {"mt": "Fenek bl-aljoli", "en": "Conejo en salsa de ajo"},
+        {"mt": "Bebbux", "en": "Caracoles"},
+        {"mt": "Lampuki", "en": "Pez dorado (mahi-mahi)"},
+        {"mt": "Imqaret", "en": "Pastelitos de dátil"},
+        {"mt": "Kannoli", "en": "Cannoli maltés (con ricota)"},
+        {"mt": "Qagħaq tal-għasel", "en": "Roscas de miel"}
+      ]
+    },
+    {
+      "id": "questions",
+      "icon": "❓",
+      "title": "Palabras de pregunta",
+      "subtitle": "Mistoqsijiet — preguntar quién, qué, cuándo, dónde, por qué",
+      "items": [
+        {"mt": "Min?", "en": "¿Quién?", "example": "Min hu l-għalliem tiegħek?", "example_en": "¿Quién es tu maestro?"},
+        {"mt": "Fejn?", "en": "¿Dónde?", "example": "Fejn toqgħod?", "example_en": "¿Dónde vives?"},
+        {"mt": "Xi?", "alt": "Xiex?", "en": "¿Qué?", "example": "Xi tieħu għal kafè?", "example_en": "¿Qué vas a tomar de café?"},
+        {"mt": "Għaliex?", "alt": "Għala?", "en": "¿Por qué?", "example": "Għaliex int hawn?", "example_en": "¿Por qué estás aquí?"},
+        {"mt": "Meta?", "en": "¿Cuándo?", "example": "Meta ġej il-vapur?", "example_en": "¿Cuándo llega el barco?"},
+        {"mt": "Liema?", "en": "¿Cuál?", "example": "Liema tip ta' kafè trid?", "example_en": "¿Qué tipo de café quieres?"},
+        {"mt": "Ta' min?", "en": "¿De quién?", "example": "Ta' min hi din il-borża?", "example_en": "¿De quién es esta bolsa?"},
+        {"mt": "Kif?", "en": "¿Cómo?", "example": "Kif tasal hemm?", "example_en": "¿Cómo llegas allá?"}
+      ],
+      "passage": {
+        "title": "Lee y responde",
+        "lines": [
+          {"mt": "Nhar il-Ħamis, Sara u Tom marru jieklu f'restorant l-Imdina.", "en": "El jueves, Sara y Tom fueron a comer a un restaurante en Mdina."},
+          {"mt": "Bdew bi pjatt timpana u soppa tal-armla.", "en": "Empezaron con un plato de timpana y sopa de la viuda."},
+          {"mt": "Tom ipprova l-fenek għall-ewwel darba u tant ħa pjaċir bih.", "en": "Tom probó el conejo por primera vez y le encantó."},
+          {"mt": "Wara, qassmu kannolu u talbu kafè.", "en": "Después, compartieron un cannolo y pidieron café."},
+          {"mt": "Il-werej qalilhom: 'Saħħa! Erġgħu lura għada.'", "en": "El mesero les dijo: '¡Salud! Vuelvan mañana.'"}
+        ],
+        "questions": [
+          {"q": "Fejn marru Sara u Tom?", "qen": "¿A dónde fueron Sara y Tom?", "a": "Marru f'restorant l-Imdina.", "aen": "Fueron a un restaurante en Mdina."},
+          {"q": "Min ipprova l-fenek?", "qen": "¿Quién probó el conejo?", "a": "Tom ipprova l-fenek.", "aen": "Tom probó el conejo."},
+          {"q": "Meta marru jieklu?", "qen": "¿Cuándo fueron a comer?", "a": "Marru nhar il-Ħamis.", "aen": "Fueron el jueves."},
+          {"q": "Xi qassmu wara?", "qen": "¿Qué compartieron después?", "a": "Qassmu kannolu.", "aen": "Compartieron un cannolo."}
+        ]
+      }
+    },
+    {
+      "id": "ghpresent",
+      "icon": "🅖",
+      "title": "Presente con għ",
+      "subtitle": "Verbi bl-għ fil-preżent — verbos modelo especiales",
+      "intro": "Los verbos que contienen la letra muda għ siguen patrones especiales. Si għ va al inicio, sigue el modelo 'Rifes'. Si għ va en medio, sigue el modelo 'seRaq'.",
+      "rules": [
+        {"id": "ghbeg", "title": "Għ al inicio — modelo Rifes (p. ej. għajjat / gritar)", "rows": [
+          {"pronoun": "Jiena", "model": "niRfes", "form": "ngħajjat", "en": "yo grito"},
+          {"pronoun": "Inti", "model": "tiRfes", "form": "tgħajjat", "en": "tú gritas"},
+          {"pronoun": "Huwa", "model": "jiRfes", "form": "jgħajjat", "en": "él grita"},
+          {"pronoun": "Hija", "model": "tiRfes", "form": "tgħajjat", "en": "ella grita"},
+          {"pronoun": "Aħna", "model": "niRfsu", "form": "ngħajjtu", "en": "nosotros gritamos"},
+          {"pronoun": "Intom", "model": "tiRfsu", "form": "tgħajjtu", "en": "ustedes gritan"},
+          {"pronoun": "Huma", "model": "jiRfsu", "form": "jgħajjtu", "en": "ellos gritan"}
+        ]},
+        {"id": "ghmid", "title": "Għ en medio — modelo seRaq (p. ej. nagħġa → naħlef / jurar)", "rows": [
+          {"pronoun": "Jiena", "model": "nisRaq", "form": "naħlef", "en": "yo juro"},
+          {"pronoun": "Inti", "model": "tisRaq", "form": "taħlef", "en": "tú juras"},
+          {"pronoun": "Huwa", "model": "jisRaq", "form": "jaħlef", "en": "él jura"},
+          {"pronoun": "Hija", "model": "tisRaq", "form": "taħlef", "en": "ella jura"},
+          {"pronoun": "Aħna", "model": "nisiRqu", "form": "naħilfu", "en": "nosotros juramos"},
+          {"pronoun": "Intom", "model": "tisiRqu", "form": "taħilfu", "en": "ustedes juran"},
+          {"pronoun": "Huma", "model": "jisiRqu", "form": "jaħilfu", "en": "ellos juran"}
+        ]}
+      ],
+      "exercises": [
+        {
+          "id": "ex5",
+          "title": "Ejercicio — Conjuga għajjat (gritar)",
+          "instructions": "Elige la forma del presente correcta para cada pronombre.",
+          "choices": ["ngħajjat", "tgħajjat", "jgħajjat", "tgħajjat", "ngħajjtu", "tgħajjtu", "jgħajjtu"],
+          "items": [
+            {"pronoun": "Jiena", "en": "Yo grito", "answer": "ngħajjat"},
+            {"pronoun": "Inti", "en": "Tú gritas", "answer": "tgħajjat"},
+            {"pronoun": "Huwa", "en": "Él grita", "answer": "jgħajjat"},
+            {"pronoun": "Hija", "en": "Ella grita", "answer": "tgħajjat"},
+            {"pronoun": "Aħna", "en": "Nosotros gritamos", "answer": "ngħajjtu"},
+            {"pronoun": "Intom", "en": "Ustedes gritan", "answer": "tgħajjtu"},
+            {"pronoun": "Huma", "en": "Ellos gritan", "answer": "jgħajjtu"}
+          ]
+        },
+        {
+          "id": "ex6",
+          "title": "Ejercicio — Completa el presente",
+          "instructions": "Elige la forma correcta para completar cada oración.",
+          "choices": ["jiftaħ", "tagħġen", "noqogħdu", "nilgħab", "tisma'", "jagħmlu"],
+          "items": [
+            {"sentence": "Hu ___ il-bieb fil-għodu.", "en": "Él abre la puerta en la mañana. (iftaħ)", "answer": "jiftaħ"},
+            {"sentence": "Hi ___ l-għaġina għall-ftira.", "en": "Ella amasa la masa para el pan. (għaġen)", "answer": "tagħġen"},
+            {"sentence": "Aħna ___ id-dar wara x-xogħol.", "en": "Nosotros nos quedamos en casa después del trabajo. (oqgħod)", "answer": "noqogħdu"},
+            {"sentence": "Jien ___ il-mużika.", "en": "Yo toco música. (lagħab)", "answer": "nilgħab"},
+            {"sentence": "Int ___ ir-radju kuljum?", "en": "¿Tú escuchas la radio todos los días? (sema')", "answer": "tisma'"},
+            {"sentence": "Huma ___ il-pizza għall-wikkien.", "en": "Ellos hacen pizza para la cena. (għamel)", "answer": "jagħmlu"}
+          ]
+        }
+      ]
+    }
+  ]
+}

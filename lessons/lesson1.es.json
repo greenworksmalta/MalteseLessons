@@ -1,0 +1,264 @@
+{
+  "id": "lesson1",
+  "lang": "es",
+  "title": "Lección 1 — Hola y el Alfabeto",
+  "subtitle": "Saludos, las 30 letras maltesas, el artículo, los días de la semana",
+  "sections": [
+    {
+      "id": "phrases",
+      "icon": "💬",
+      "title": "Frases",
+      "subtitle": "Bonġu — saludar y presentarte",
+      "vocab": [
+        {"mt": "Bonġu", "en": "Buenos días"},
+        {"mt": "Ħelow", "en": "Hola"},
+        {"mt": "Saħħa", "en": "Salud / Adiós"},
+        {"mt": "Pjaċir", "en": "Un placer (encantado de conocerte)"},
+        {"mt": "Jiena", "en": "Yo soy"},
+        {"mt": "Jisimni", "en": "Me llamo"},
+        {"mt": "X'jismek?", "en": "¿Cómo te llamas?"},
+        {"mt": "Minn fejn int?", "en": "¿De dónde eres?"},
+        {"mt": "Jien minn", "en": "Soy de"},
+        {"mt": "Fejn toqgħod?", "en": "¿Dónde vives?"},
+        {"mt": "Jien noqgħod", "en": "Yo vivo"},
+        {"mt": "X'taħdem?", "en": "¿En qué trabajas?"},
+        {"mt": "Jien naħdem", "en": "Yo trabajo"},
+        {"mt": "Kemm ilek hawn?", "en": "¿Cuánto llevas aquí?"},
+        {"mt": "Kif int?", "en": "¿Cómo estás?"},
+        {"mt": "Tajjeb, grazzi", "en": "Bien, gracias"},
+        {"mt": "U int?", "en": "¿Y tú?"},
+        {"mt": "Jien Malti", "en": "Soy maltés (hombre)"},
+        {"mt": "Jien Maltija", "en": "Soy maltesa (mujer)"},
+        {"mt": "Jien barrani", "en": "Soy extranjero (hombre)"}
+      ],
+      "dialogue": [
+        {"mt": "Bonġu! Jiena Sara. Int x'jismek?", "en": "¡Buenos días! Soy Sara. ¿Cómo te llamas?"},
+        {"mt": "Ħelow Sara — jisimni Tom. Pjaċir.", "en": "Hola Sara — me llamo Tom. Un placer."},
+        {"mt": "Pjaċir tiegħek. Minn fejn int, Tom?", "en": "El placer es mío. ¿De dónde eres, Tom?"},
+        {"mt": "Jien minn Brighton, fl-Ingilterra. U int?", "en": "Soy de Brighton, en Inglaterra. ¿Y tú?"},
+        {"mt": "Jien Maltija. Noqgħod il-Mosta. X'taħdem?", "en": "Soy maltesa. Vivo en Mosta. ¿En qué trabajas?"},
+        {"mt": "Naħdem mal-kompjuters. U int?", "en": "Trabajo con computadoras. ¿Y tú?"},
+        {"mt": "Jien għalliema. Saħħa, Tom!", "en": "Soy maestra. ¡Adiós, Tom!"}
+      ]
+    },
+    {
+      "id": "alphabet",
+      "icon": "🔤",
+      "title": "Alfabeto",
+      "subtitle": "L-alfabett Malti — 30 letras",
+      "facts": [
+        "El alfabeto maltés tiene 30 letras: 24 consonantes y 6 vocales (a, e, i, o, u, ie).",
+        "Aunque ie son dos símbolos, cuenta como una sola vocal.",
+        "Cinco letras son únicas del maltés: ċ, ġ, ħ, ż y għ (għ cuenta como una sola consonante).",
+        "Cada letra tiene un sonido específico — el maltés es bastante fonético, así que casi todas las palabras se pronuncian como se escriben.",
+        "El maltés tiene una base semítica del árabe, con fuerte influencia del italiano y del inglés."
+      ],
+      "letters": [
+        {"upper": "A", "lower": "a", "words": [{"mt": "art", "en": "tierra"}, {"mt": "abjad", "en": "blanco"}, {"mt": "Awwissu", "en": "agosto"}]},
+        {"upper": "B", "lower": "b", "words": [{"mt": "baħar", "en": "mar"}, {"mt": "banana", "en": "plátano"}, {"mt": "blu", "en": "azul"}]},
+        {"upper": "Ċ", "lower": "ċ", "words": [{"mt": "ċpar", "en": "niebla"}, {"mt": "ċans", "en": "oportunidad"}, {"mt": "ċajt", "en": "broma"}]},
+        {"upper": "D", "lower": "d", "words": [{"mt": "dar", "en": "casa"}, {"mt": "dawl", "en": "luz"}, {"mt": "deheb", "en": "oro"}]},
+        {"upper": "E", "lower": "e", "words": [{"mt": "ewwel", "en": "primero"}, {"mt": "Ewropa", "en": "Europa"}, {"mt": "eżempju", "en": "ejemplo"}]},
+        {"upper": "F", "lower": "f", "words": [{"mt": "festa", "en": "fiesta"}, {"mt": "familja", "en": "familia"}, {"mt": "frott", "en": "fruta"}]},
+        {"upper": "Ġ", "lower": "ġ", "words": [{"mt": "ġimgħa", "en": "viernes / semana"}, {"mt": "ġid", "en": "riqueza / bien"}, {"mt": "ġnien", "en": "jardín"}]},
+        {"upper": "G", "lower": "g", "words": [{"mt": "gallarija", "en": "balcón"}, {"mt": "gass", "en": "gas"}, {"mt": "gwerra", "en": "guerra"}]},
+        {"upper": "Għ", "lower": "għ", "words": [{"mt": "għada", "en": "mañana"}, {"mt": "għajn", "en": "ojo / manantial"}, {"mt": "għaqal", "en": "sabiduría"}]},
+        {"upper": "H", "lower": "h", "words": [{"mt": "huma", "en": "ellos"}, {"mt": "hena", "en": "alegría"}, {"mt": "hawn", "en": "aquí"}]},
+        {"upper": "Ħ", "lower": "ħ", "words": [{"mt": "ħabib", "en": "amigo"}, {"mt": "ħajja", "en": "vida"}, {"mt": "ħalq", "en": "boca"}]},
+        {"upper": "I", "lower": "i", "words": [{"mt": "ilsien", "en": "lengua / idioma"}, {"mt": "ikel", "en": "comida"}, {"mt": "Italja", "en": "Italia"}]},
+        {"upper": "Ie", "lower": "ie", "words": [{"mt": "ieħor", "en": "otro"}, {"mt": "iebes", "en": "duro"}]},
+        {"upper": "J", "lower": "j", "words": [{"mt": "jum", "en": "día"}, {"mt": "jien", "en": "yo"}, {"mt": "Jannar", "en": "enero"}]},
+        {"upper": "K", "lower": "k", "words": [{"mt": "ktieb", "en": "libro"}, {"mt": "kelb", "en": "perro"}, {"mt": "kelma", "en": "palabra"}]},
+        {"upper": "L", "lower": "l", "words": [{"mt": "lingwa", "en": "idioma"}, {"mt": "lemin", "en": "derecha"}, {"mt": "lokali", "en": "local"}]},
+        {"upper": "M", "lower": "m", "words": [{"mt": "mara", "en": "mujer"}, {"mt": "Malta", "en": "Malta"}, {"mt": "mejda", "en": "mesa"}]},
+        {"upper": "N", "lower": "n", "words": [{"mt": "nies", "en": "gente"}, {"mt": "nar", "en": "fuego"}, {"mt": "nofs", "en": "mitad"}]},
+        {"upper": "O", "lower": "o", "words": [{"mt": "omm", "en": "madre"}, {"mt": "oħt", "en": "hermana"}, {"mt": "ors", "en": "oso"}]},
+        {"upper": "P", "lower": "p", "words": [{"mt": "pajjiż", "en": "país"}, {"mt": "paċi", "en": "paz"}, {"mt": "poplu", "en": "pueblo / nación"}]},
+        {"upper": "Q", "lower": "q", "words": [{"mt": "qattus", "en": "gato"}, {"mt": "qalb", "en": "corazón"}, {"mt": "qari", "en": "lectura"}]},
+        {"upper": "R", "lower": "r", "words": [{"mt": "raġel", "en": "hombre"}, {"mt": "riħ", "en": "viento"}, {"mt": "Rabat", "en": "Rabat"}]},
+        {"upper": "S", "lower": "s", "words": [{"mt": "skola", "en": "escuela"}, {"mt": "sema", "en": "cielo"}, {"mt": "saħħa", "en": "salud"}]},
+        {"upper": "T", "lower": "t", "words": [{"mt": "triq", "en": "calle"}, {"mt": "tifel", "en": "niño"}, {"mt": "tieqa", "en": "ventana"}]},
+        {"upper": "U", "lower": "u", "words": [{"mt": "uffiċċju", "en": "oficina"}, {"mt": "uniformi", "en": "uniforme"}, {"mt": "użu", "en": "uso"}]},
+        {"upper": "V", "lower": "v", "words": [{"mt": "Valletta", "en": "La Valeta"}, {"mt": "villaġġ", "en": "pueblo"}, {"mt": "vjaġġ", "en": "viaje"}]},
+        {"upper": "W", "lower": "w", "words": [{"mt": "waqt", "en": "mientras / momento"}, {"mt": "warda", "en": "rosa"}, {"mt": "werqa", "en": "hoja"}]},
+        {"upper": "X", "lower": "x", "words": [{"mt": "xahar", "en": "mes"}, {"mt": "xitwa", "en": "invierno"}, {"mt": "Xlukk", "en": "viento del sureste"}]},
+        {"upper": "Ż", "lower": "ż", "words": [{"mt": "żmien", "en": "tiempo"}, {"mt": "żball", "en": "error"}, {"mt": "żraben", "en": "zapatos"}]},
+        {"upper": "Z", "lower": "z", "words": [{"mt": "zalza", "en": "salsa"}, {"mt": "zija", "en": "tía"}, {"mt": "zokk", "en": "tronco"}]}
+      ],
+      "passage": {
+        "title": "Práctica de lectura — Una mañana en Mosta",
+        "lines": [
+          {"mt": "Bdiet ġurnata sabiħa fil-Mosta.", "en": "Empezó un día bonito en Mosta."},
+          {"mt": "Marija qamet kmieni u fetħet it-tieqa.", "en": "Marija se levantó temprano y abrió la ventana."},
+          {"mt": "Hi rat ix-xemx u semgħet l-għasafar ikantaw.", "en": "Vio el sol y oyó a los pájaros cantar."},
+          {"mt": "Daħlet ġo l-kċina u għamlet il-kafè.", "en": "Entró a la cocina y preparó el café."},
+          {"mt": "Wara ħarġet biex tixtri l-ħobż mill-furnar.", "en": "Después salió a comprar pan en la panadería."},
+          {"mt": "Fit-triq iltaqgħet ma' Tom u qaltlu Bonġu.", "en": "En la calle se encontró con Tom y le dijo Bonġu."},
+          {"mt": "Kien ġurnata sabiħa biex titgħallem il-Malti.", "en": "Era un día perfecto para aprender maltés."}
+        ]
+      }
+    },
+    {
+      "id": "grammar",
+      "icon": "📖",
+      "title": "Gramática",
+      "subtitle": "L-artiklu — El artículo (el / la)",
+      "intro": "En maltés, la palabra para 'el / la' cambia según la primera letra de la palabra siguiente. Hay tres reglas.",
+      "rules": [
+        {
+          "id": "moon",
+          "title": "Consonantes lunares → il-",
+          "explanation": "Cuando la palabra empieza con una de estas consonantes, usa il-.",
+          "letters": ["b", "f", "ġ", "g", "ħ", "j", "k", "l", "m", "p", "q", "v", "w"],
+          "examples": [
+            {"word": "ktieb", "article": "il-", "full": "il-ktieb", "en": "el libro"},
+            {"word": "baħar", "article": "il-", "full": "il-baħar", "en": "el mar"},
+            {"word": "ġnien", "article": "il-", "full": "il-ġnien", "en": "el jardín"},
+            {"word": "qalb", "article": "il-", "full": "il-qalb", "en": "el corazón"},
+            {"word": "warda", "article": "il-", "full": "il-warda", "en": "la rosa"}
+          ]
+        },
+        {
+          "id": "vowels",
+          "title": "Vocales, h, għ → l-",
+          "explanation": "Antes de una vocal, h o għ, simplemente usa l-.",
+          "letters": ["a", "e", "i", "o", "u", "ie", "h", "għ"],
+          "examples": [
+            {"word": "art", "article": "l-", "full": "l-art", "en": "la tierra"},
+            {"word": "ikel", "article": "l-", "full": "l-ikel", "en": "la comida"},
+            {"word": "omm", "article": "l-", "full": "l-omm", "en": "la madre"},
+            {"word": "uffiċċju", "article": "l-", "full": "l-uffiċċju", "en": "la oficina"},
+            {"word": "għajn", "article": "l-", "full": "l-għajn", "en": "el ojo / el manantial"},
+            {"word": "hena", "article": "l-", "full": "l-hena", "en": "la alegría"}
+          ]
+        },
+        {
+          "id": "sun",
+          "title": "Consonantes solares → coincide con la primera letra",
+          "explanation": "Cuando la palabra empieza con una consonante solar, la L del artículo cambia para coincidir con esa letra.",
+          "letters": ["ċ", "d", "n", "r", "s", "t", "x", "ż", "z"],
+          "examples": [
+            {"word": "ċans", "article": "iċ-", "full": "iċ-ċans", "en": "la oportunidad"},
+            {"word": "dar", "article": "id-", "full": "id-dar", "en": "la casa"},
+            {"word": "nies", "article": "in-", "full": "in-nies", "en": "la gente"},
+            {"word": "raġel", "article": "ir-", "full": "ir-raġel", "en": "el hombre"},
+            {"word": "skola", "article": "is-", "full": "is-skola", "en": "la escuela"},
+            {"word": "triq", "article": "it-", "full": "it-triq", "en": "la calle"},
+            {"word": "xahar", "article": "ix-", "full": "ix-xahar", "en": "el mes"},
+            {"word": "żmien", "article": "iż-", "full": "iż-żmien", "en": "el tiempo"},
+            {"word": "zija", "article": "iz-", "full": "iz-zija", "en": "la tía"}
+          ]
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex3",
+          "title": "Elige il- o l-",
+          "instructions": "Toca la forma correcta. il- antes de consonantes, l- antes de vocales / h / għ.",
+          "choices": ["il-", "l-"],
+          "items": [
+            {"word": "ktieb", "answer": "il-"},
+            {"word": "art", "answer": "l-"},
+            {"word": "baħar", "answer": "il-"},
+            {"word": "omm", "answer": "l-"},
+            {"word": "qalb", "answer": "il-"},
+            {"word": "ikel", "answer": "l-"},
+            {"word": "ġnien", "answer": "il-"},
+            {"word": "warda", "answer": "il-"},
+            {"word": "uffiċċju", "answer": "l-"},
+            {"word": "kelb", "answer": "il-"},
+            {"word": "hena", "answer": "l-"},
+            {"word": "festa", "answer": "il-"},
+            {"word": "għajn", "answer": "l-"},
+            {"word": "mara", "answer": "il-"},
+            {"word": "Ewropa", "answer": "l-"},
+            {"word": "pajjiż", "answer": "il-"},
+            {"word": "ħajja", "answer": "il-"},
+            {"word": "Italja", "answer": "l-"},
+            {"word": "blu", "answer": "il-"},
+            {"word": "abjad", "answer": "l-"}
+          ]
+        },
+        {
+          "id": "ex4",
+          "title": "Consonantes solares",
+          "instructions": "Elige el artículo correcto — la L coincide con la primera letra de la palabra.",
+          "choices": ["iċ-", "id-", "in-", "ir-", "is-", "it-", "ix-", "iż-", "iz-"],
+          "items": [
+            {"word": "dar", "answer": "id-"},
+            {"word": "raġel", "answer": "ir-"},
+            {"word": "skola", "answer": "is-"},
+            {"word": "triq", "answer": "it-"},
+            {"word": "xahar", "answer": "ix-"},
+            {"word": "ċans", "answer": "iċ-"},
+            {"word": "żmien", "answer": "iż-"},
+            {"word": "nies", "answer": "in-"},
+            {"word": "zija", "answer": "iz-"},
+            {"word": "tifel", "answer": "it-"},
+            {"word": "raħal", "answer": "ir-"},
+            {"word": "sema", "answer": "is-"},
+            {"word": "deheb", "answer": "id-"},
+            {"word": "ċpar", "answer": "iċ-"},
+            {"word": "nar", "answer": "in-"},
+            {"word": "tieqa", "answer": "it-"},
+            {"word": "xitwa", "answer": "ix-"},
+            {"word": "żraben", "answer": "iż-"},
+            {"word": "zalza", "answer": "iz-"},
+            {"word": "saħħa", "answer": "is-"}
+          ]
+        },
+        {
+          "id": "ex5",
+          "title": "Mezclados",
+          "instructions": "Las tres reglas juntas. Elige el artículo correcto.",
+          "choices": ["il-", "l-", "iċ-", "id-", "in-", "ir-", "is-", "it-", "ix-", "iż-", "iz-"],
+          "items": [
+            {"word": "dawl", "answer": "id-"},
+            {"word": "art", "answer": "l-"},
+            {"word": "ktieb", "answer": "il-"},
+            {"word": "Mosta", "answer": "il-"},
+            {"word": "ċajt", "answer": "iċ-"},
+            {"word": "ħajja", "answer": "il-"},
+            {"word": "Ewropa", "answer": "l-"},
+            {"word": "qalb", "answer": "il-"},
+            {"word": "raġel", "answer": "ir-"},
+            {"word": "tieqa", "answer": "it-"},
+            {"word": "skola", "answer": "is-"},
+            {"word": "ikel", "answer": "l-"},
+            {"word": "warda", "answer": "il-"},
+            {"word": "nar", "answer": "in-"},
+            {"word": "xemx", "answer": "ix-"},
+            {"word": "omm", "answer": "l-"},
+            {"word": "kelb", "answer": "il-"},
+            {"word": "żball", "answer": "iż-"},
+            {"word": "uffiċċju", "answer": "l-"},
+            {"word": "ġnien", "answer": "il-"},
+            {"word": "hena", "answer": "l-"},
+            {"word": "zija", "answer": "iz-"},
+            {"word": "festa", "answer": "il-"},
+            {"word": "deheb", "answer": "id-"},
+            {"word": "lingwa", "answer": "il-"},
+            {"word": "saħħa", "answer": "is-"},
+            {"word": "għajn", "answer": "l-"},
+            {"word": "mejda", "answer": "il-"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "days",
+      "icon": "📅",
+      "title": "Días",
+      "subtitle": "Il-ġranet tal-ġimgħa — Los días de la semana",
+      "items": [
+        {"mt": "Il-Ħadd", "en": "domingo", "scrambled": "ddĦa"},
+        {"mt": "It-Tnejn", "en": "lunes", "scrambled": "Tnnje"},
+        {"mt": "It-Tlieta", "en": "martes", "scrambled": "tlaiTe"},
+        {"mt": "L-Erbgħa", "en": "miércoles", "scrambled": "abĦgr"},
+        {"mt": "Il-Ħamis", "en": "jueves", "scrambled": "miĦsa"},
+        {"mt": "Il-Ġimgħa", "en": "viernes", "scrambled": "ġmaiĦ"},
+        {"mt": "Is-Sibt", "en": "sábado", "scrambled": "tbiS"}
+      ]
+    }
+  ]
+}

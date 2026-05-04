@@ -1,0 +1,147 @@
+{
+  "id": "lesson5",
+  "lang": "es",
+  "title": "Lección 5 — Comida y Verbos",
+  "subtitle": "Frutas, verduras, el imperativo, el presente",
+  "sections": [
+    {
+      "id": "fruit",
+      "icon": "🍓",
+      "title": "Frutas",
+      "subtitle": "Frott — singular, colectivo, plural",
+      "intro": "La mayoría de los nombres de frutas en maltés vienen en tres formas: singular (una pieza), colectivo (la fruta en general) y plural (varias específicas).",
+      "items": [
+        {"singular": "Tuffieħa", "collective": "Tuffieħ", "plural": "Tuffiħat", "en": "Manzana/s"},
+        {"singular": "Lanġasa", "collective": "Lanġas", "plural": "Lanġasiet", "en": "Pera/s"},
+        {"singular": "Larinġa", "collective": "Larinġ", "plural": "Larinġiet", "en": "Naranja/s"},
+        {"singular": "Lumija", "collective": "Lumi", "plural": "Lumijiet", "en": "Limón/es"},
+        {"singular": "Mandolina", "collective": "Mandolin", "plural": "Mandolini", "en": "Mandarina/s"},
+        {"singular": "Frawla", "collective": "Frawli", "plural": "Frawliet", "en": "Fresa/s"},
+        {"singular": "Għenba", "collective": "Għeneb", "plural": "Għenbiet", "en": "Uva/s"},
+        {"singular": "Bettieħa", "collective": "Bettieħ", "plural": "Bettiħat", "en": "Melón/es"},
+        {"singular": "Dulliegħa", "collective": "Dulliegħ", "plural": "Dulligħat", "en": "Sandía/s"},
+        {"singular": "Ħawħa", "collective": "Ħawħ", "plural": "Ħawħiet", "en": "Durazno/s"},
+        {"singular": "Berquqa", "collective": "Berquq", "plural": "Berquqiet", "en": "Chabacano/s"},
+        {"singular": "Tina", "collective": "Tin", "plural": "Tiniet", "en": "Higo/s"},
+        {"singular": "Banana", "collective": "Banana", "plural": "Bananiet", "en": "Plátano/s"},
+        {"singular": "Ananas", "collective": "Ananas", "plural": "Ananas", "en": "Piña/s"},
+        {"singular": "Ċirasa", "collective": "Ċiras", "plural": "Ċirasiet", "en": "Cereza/s"},
+        {"singular": "Bajtra tax-xewk", "collective": "Bajtar tax-xewk", "plural": "Bajtriet tax-xewk", "en": "Tuna/s (de nopal)"}
+      ]
+    },
+    {
+      "id": "vegetables",
+      "icon": "🥬",
+      "title": "Verduras",
+      "subtitle": "Ħaxix — singular, colectivo, plural",
+      "intro": "Las verduras siguen el mismo patrón de tres formas que las frutas — una pieza, la verdura en general y un plural específico.",
+      "items": [
+        {"singular": "Patata", "collective": "Patata", "plural": "Patatiet", "en": "Papa/s"},
+        {"singular": "Tadama", "collective": "Tadam", "plural": "Tadamiet", "en": "Jitomate/s"},
+        {"singular": "Basla", "collective": "Basal", "plural": "Basliet", "en": "Cebolla/s"},
+        {"singular": "Tewma", "collective": "Tewm", "plural": "Tewmiet", "en": "Ajo"},
+        {"singular": "Karrotta", "collective": "Karrotti", "plural": "Karrotti", "en": "Zanahoria/s"},
+        {"singular": "Brokkli", "collective": "Brokkli", "plural": "Brokkli", "en": "Brócoli"},
+        {"singular": "Pastarda", "collective": "Pastard", "plural": "Pastardiet", "en": "Coliflor/es"},
+        {"singular": "Kaboċċa", "collective": "Kaboċċi", "plural": "Kaboċċi", "en": "Col/es"},
+        {"singular": "Ħjara", "collective": "Ħjar", "plural": "Ħjariet", "en": "Pepino/s"},
+        {"singular": "Bżaru", "collective": "Bżar", "plural": "Bżariet", "en": "Pimiento/s"},
+        {"singular": "Faqqiegħa", "collective": "Faqqiegħ", "plural": "Faqqigħat", "en": "Hongo/s"},
+        {"singular": "Ħassa", "collective": "Ħass", "plural": "Ħassiet", "en": "Lechuga"},
+        {"singular": "Spinaċi", "collective": "Spinaċi", "plural": "Spinaċi", "en": "Espinaca"},
+        {"singular": "Piżella", "collective": "Piżelli", "plural": "Piżelli", "en": "Chícharo/s"},
+        {"singular": "Fażola", "collective": "Fażola", "plural": "Fażoliet", "en": "Frijol/es"},
+        {"singular": "Qargħa ħamra", "collective": "Qargħat ħomor", "plural": "Qargħat ħomor", "en": "Calabaza/s"}
+      ]
+    },
+    {
+      "id": "imperative",
+      "icon": "📣",
+      "title": "Imperativo",
+      "subtitle": "L-Imperattiv — dar órdenes",
+      "intro": "El imperativo es lo que usas cuando le dices a alguien que haga algo. Dos formas: singular (a una sola persona) y plural (a varias).",
+      "facts": [
+        "La forma singular es para una persona.",
+        "La forma plural agrega -u al final (o un sufijo parecido).",
+        "Truco: quita la primera letra del verbo en presente para obtener el imperativo. nifhem (yo entiendo) → ifhem (¡entiende!)."
+      ],
+      "items": [
+        {"singular": "Mur", "plural": "Morru", "en": "Ve / Vayan"},
+        {"singular": "Ejja", "plural": "Ejjew", "en": "Ven / Vengan"},
+        {"singular": "Iekol", "plural": "Iekluw", "en": "Come / Coman"},
+        {"singular": "Ixrob", "plural": "Ixorbu", "en": "Bebe / Beban"},
+        {"singular": "Aqra", "plural": "Aqraw", "en": "Lee / Lean"},
+        {"singular": "Ikteb", "plural": "Iktbu", "en": "Escribe / Escriban"},
+        {"singular": "Imxi", "plural": "Imxu", "en": "Camina / Caminen"},
+        {"singular": "Iġri", "plural": "Iġru", "en": "Corre / Corran"},
+        {"singular": "Oqgħod", "plural": "Oqogħdu", "en": "Siéntate / Quédate"},
+        {"singular": "Qum", "plural": "Qomu", "en": "Levántate / Levántense"},
+        {"singular": "Iftaħ", "plural": "Iftħu", "en": "Abre / Abran"},
+        {"singular": "Agħlaq", "plural": "Agħlqu", "en": "Cierra / Cierren"},
+        {"singular": "Isma'", "plural": "Isimgħu", "en": "Escucha / Escuchen"}
+      ],
+      "exercises": [
+        {
+          "id": "ex8",
+          "title": "Ejercicio — ¿singular o plural?",
+          "instructions": "Toca la forma que escuchas — ¿para una persona o para varias?",
+          "choices": ["singular", "plural"],
+          "items": [
+            {"present": "nikteb", "imperative": "ikteb", "en": "escribir", "answer": "singular"},
+            {"present": "niktbu", "imperative": "iktbu", "en": "escribir (pl)", "answer": "plural"},
+            {"present": "naqra", "imperative": "aqra", "en": "leer", "answer": "singular"},
+            {"present": "naqraw", "imperative": "aqraw", "en": "leer (pl)", "answer": "plural"},
+            {"present": "niekol", "imperative": "iekol", "en": "comer", "answer": "singular"},
+            {"present": "nieklu", "imperative": "iekluw", "en": "comer (pl)", "answer": "plural"},
+            {"present": "norqod", "imperative": "orqod", "en": "dormir", "answer": "singular"},
+            {"present": "norqdu", "imperative": "orqdu", "en": "dormir (pl)", "answer": "plural"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present",
+      "icon": "🔁",
+      "title": "Presente",
+      "subtitle": "Il-Preżent — agregar un prefijo al imperativo",
+      "intro": "Agrega un prefijo al imperativo para formar el presente. Si el imperativo empieza con vocal: n / t / j / t. Si empieza con consonante: in / t / i / t.",
+      "rules": [
+        {"id": "vowel", "title": "El imperativo empieza con vocal — p. ej. iftaħ (¡abre!)", "rows": [
+          {"person": "Jien (yo)", "prefix": "n", "form": "niftaħ", "en": "yo abro"},
+          {"person": "Int (tú)", "prefix": "t", "form": "tiftaħ", "en": "tú abres"},
+          {"person": "Hu (él)", "prefix": "j", "form": "jiftaħ", "en": "él abre"},
+          {"person": "Hi (ella)", "prefix": "t", "form": "tiftaħ", "en": "ella abre"},
+          {"person": "Aħna (nosotros)", "prefix": "n", "form": "niftħu", "en": "nosotros abrimos"},
+          {"person": "Intom (ustedes)", "prefix": "t", "form": "tiftħu", "en": "ustedes abren"},
+          {"person": "Huma (ellos)", "prefix": "j", "form": "jiftħu", "en": "ellos abren"}
+        ]},
+        {"id": "consonant", "title": "El imperativo empieza con consonante — p. ej. ġib (¡trae!)", "rows": [
+          {"person": "Jien (yo)", "prefix": "in", "form": "inġib", "en": "yo traigo"},
+          {"person": "Int (tú)", "prefix": "t", "form": "iġġib", "en": "tú traes"},
+          {"person": "Hu (él)", "prefix": "i", "form": "iġib", "en": "él trae"},
+          {"person": "Hi (ella)", "prefix": "t", "form": "iġġib", "en": "ella trae"},
+          {"person": "Aħna (nosotros)", "prefix": "in", "form": "inġibu", "en": "nosotros traemos"},
+          {"person": "Intom (ustedes)", "prefix": "t", "form": "iġġibu", "en": "ustedes traen"},
+          {"person": "Huma (ellos)", "prefix": "i", "form": "iġibu", "en": "ellos traen"}
+        ]}
+      ],
+      "exercises": [
+        {
+          "id": "ex9",
+          "title": "Ejercicio — conjuga iekol (comer)",
+          "instructions": "Elige la forma del presente correcta para cada pronombre.",
+          "choices": ["niekol", "tiekol", "jiekol", "tiekol", "nieklu", "tieklu", "jieklu"],
+          "items": [
+            {"pronoun": "Jien", "en": "Yo como", "answer": "niekol"},
+            {"pronoun": "Int", "en": "Tú comes", "answer": "tiekol"},
+            {"pronoun": "Hu", "en": "Él come", "answer": "jiekol"},
+            {"pronoun": "Hi", "en": "Ella come", "answer": "tiekol"},
+            {"pronoun": "Aħna", "en": "Nosotros comemos", "answer": "nieklu"},
+            {"pronoun": "Intom", "en": "Ustedes comen", "answer": "tieklu"},
+            {"pronoun": "Huma", "en": "Ellos comen", "answer": "jieklu"}
+          ]
+        }
+      ]
+    }
+  ]
+}

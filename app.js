@@ -9,7 +9,7 @@
 
 // Bumped whenever lesson JSONs / audio / overviews are updated, so the browser
 // invalidates its cache for those assets. Add ?v=<VERSION> to fetch URLs.
-const VERSION = "20260504b";
+const VERSION = "20260504c";
 function v(url){ return url + (url.includes("?")?"&":"?") + "v=" + VERSION; }
 
 // Lightweight UI strings table for the parts of the app that aren't data-driven.
@@ -100,6 +100,11 @@ const State = {
   progress: load("progress") || {},   // {lessonId: {sectionId: pct}}
   xp: load("xp") || 0,
   lang: load("preferred_lang") || "en",  // global language preference
+  // Snapshot of State.xp at the moment a section was first entered, so the
+  // section-done screen can display the actual XP earned during that section
+  // (correct answers + bonus) rather than just the +20 completion bonus.
+  // Keyed by "lid:sid". Reset whenever the user re-enters a section.
+  sectionStartXp: {},
 };
 function save(k,v){ try{localStorage.setItem("malti."+k, JSON.stringify(v));}catch(e){} }
 function load(k){ try{const v=localStorage.getItem("malti."+k);return v?JSON.parse(v):null;}catch(e){return null;} }
@@ -854,6 +859,13 @@ function renderSection(lid, sid, step, idx){
     step = flow[0]; idx = 0;
   }
   const stepIdx = flow.indexOf(step);
+  // Snapshot the XP baseline the moment the user enters a section's first
+  // step. The done screen later subtracts this from State.xp to show the
+  // real per-section gain. Re-entry (e.g. revisiting a finished section)
+  // overwrites the baseline so the next done screen reflects the new run.
+  if(stepIdx === 0 && idx === 0){
+    State.sectionStartXp[lid+":"+sid] = State.xp;
+  }
   if(flow.length){
     root.appendChild(progressBar(Math.round((stepIdx/flow.length)*100)));
   }
@@ -900,7 +912,9 @@ function nextStep(lid, sid, step, idx, sec, flow){
   } else {
     setSectionProgress(lid, sid, 100);
     addXp(20);
-    showSectionDone(lid);
+    const baseline = State.sectionStartXp[lid+":"+sid];
+    const earned = (typeof baseline === "number") ? (State.xp - baseline) : 20;
+    showSectionDone(lid, earned);
   }
 }
 
@@ -921,7 +935,7 @@ function prevStepHash(lid, sid, step, idx, sec, flow){
   return null;
 }
 
-function showSectionDone(lid){
+function showSectionDone(lid, earnedXp){
   const t = I18N[State.lang] || I18N.en;
   const root = $app();
   root.innerHTML = "";
@@ -931,7 +945,10 @@ function showSectionDone(lid){
   ds.appendChild(el("h1","",t.sectionComplete));
   ds.appendChild(el("p","",t.brilliantWork));
   const stats = el("div","stats");
-  const s1 = el("div","stat"); s1.appendChild(el("strong","","+20")); s1.appendChild(el("span","",t.xpEarned));
+  // Fall back to +20 (the section bonus) if the caller didn't pass a baseline,
+  // so legacy callers / external nav still produce a sensible display.
+  const earnedLabel = "+" + (typeof earnedXp === "number" ? earnedXp : 20);
+  const s1 = el("div","stat"); s1.appendChild(el("strong","",earnedLabel)); s1.appendChild(el("span","",t.xpEarned));
   const s2 = el("div","stat"); s2.appendChild(el("strong","",String(State.xp))); s2.appendChild(el("span","",t.totalXp));
   stats.appendChild(s1); stats.appendChild(s2);
   ds.appendChild(stats);

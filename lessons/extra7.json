@@ -66,7 +66,7 @@
         },
         {
           "singular": "Taksi",
-          "plural": "Taksis",
+          "plural": "Taksijiet",
           "en": "Taxi/s"
         },
         {
@@ -86,7 +86,7 @@
         },
         {
           "singular": "Xarabank",
-          "plural": "Xarabanks",
+          "plural": "Xarabankijiet",
           "en": "Bus/es"
         }
       ]
@@ -126,7 +126,7 @@
           "en": "I am going for an ice-cream"
         },
         {
-          "mt": "Se mmur ġo ħotel",
+          "mt": "Se mmur f'lukanda",
           "en": "I am going to a hotel"
         },
         {

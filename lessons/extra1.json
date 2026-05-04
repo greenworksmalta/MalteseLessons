@@ -19,7 +19,7 @@
         {"mt": "Jekk jogħġbok", "en": "Please"},
         {"mt": "Skużani", "en": "Excuse me / Sorry"},
         {"mt": "Mhux problema", "en": "No problem"},
-        {"mt": "Il-ġurnata it-tajba", "en": "Have a good day"},
+        {"mt": "Il-ġurnata t-tajba", "en": "Have a good day"},
         {"mt": "Prosit", "en": "Cheers / Well done"},
         {"mt": "Iva", "en": "Yes"},
         {"mt": "Le", "en": "No"},
@@ -30,7 +30,7 @@
         {"mt": "Bonġu! Kif int?", "en": "Good morning! How are you?"},
         {"mt": "Tajba ħafna, grazzi. U int?", "en": "Very well, thank you. And you?"},
         {"mt": "Ferm tajba, grazzi.", "en": "Very well, thanks."},
-        {"mt": "Il-ġurnata it-tajba!", "en": "Have a good day!"}
+        {"mt": "Il-ġurnata t-tajba!", "en": "Have a good day!"}
       ]
     },
     {
@@ -47,7 +47,7 @@
         {"mt": "Ilma", "en": "Water"},
         {"mt": "Birra", "en": "Beer"},
         {"mt": "Ilma tal-gas", "en": "Sparkling water"},
-        {"mt": "Cappuċċino", "en": "Cappuccino"},
+        {"mt": "Kapuċċino", "en": "Cappuccino"},
         {"mt": "Pastizz", "en": "Pastizzi (savoury pastry)"},
         {"mt": "Kemm jiswa?", "en": "How much does it cost?"},
         {"mt": "Żewġ ewro", "en": "Two euros"},

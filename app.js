@@ -1100,8 +1100,29 @@ function renderFlash(mt, en, hint, secondary){
   return card;
 }
 
+// Localized labels for the navigation buttons rendered by nextBtn().
+// Source-of-truth labels are still authored in English at every call site;
+// nextBtn translates to State.lang at render time.
+const NAV_I18N = {
+  es: {
+    "Next →": "Siguiente →",
+    "Next season →": "Siguiente estación →",
+    "Next colour →": "Siguiente color →",
+    "Next pair →": "Siguiente par →",
+    "Next rule →": "Siguiente regla →",
+    "Next letter →": "Siguiente letra →",
+    "Next region →": "Siguiente región →",
+    "Done →": "Listo →",
+    "Continue →": "Continuar →",
+    "Try the exercises →": "Prueba los ejercicios →",
+    "Try the exercise →": "Prueba el ejercicio →",
+    "Next": "Siguiente",
+  },
+};
 function nextBtn(label, onNext){
-  const b = el("button","btn",label||"Next");
+  const lang = (typeof State !== "undefined" && State.lang) || "en";
+  const translated = (NAV_I18N[lang] && NAV_I18N[lang][label]) || label || "Next";
+  const b = el("button","btn",translated);
   b.addEventListener("click", onNext);
   return b;
 }

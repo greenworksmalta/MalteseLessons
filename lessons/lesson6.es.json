@@ -72,17 +72,17 @@
       "passage": {
         "title": "Lee y responde",
         "lines": [
-          {"mt": "Nhar il-Ħamis, Sara u Tom marru jieklu f'restorant l-Imdina.", "en": "El jueves, Sara y Tom fueron a comer a un restaurante en Mdina."},
+          {"mt": "Nhar il-Ħamis, Sara u Tom marru jieklu f'ristorant l-Imdina.", "en": "El jueves, Sara y Tom fueron a comer a un restaurante en Mdina."},
           {"mt": "Bdew bi pjatt timpana u soppa tal-armla.", "en": "Empezaron con un plato de timpana y sopa de la viuda."},
           {"mt": "Tom ipprova l-fenek għall-ewwel darba u tant ħa pjaċir bih.", "en": "Tom probó el conejo por primera vez y le encantó."},
-          {"mt": "Wara, qassmu kannolu u talbu kafè.", "en": "Después, compartieron un cannolo y pidieron café."},
+          {"mt": "Wara, qassmu kannol u talbu kafè.", "en": "Después, compartieron un cannolo y pidieron café."},
           {"mt": "Il-werej qalilhom: 'Saħħa! Erġgħu lura għada.'", "en": "El mesero les dijo: '¡Salud! Vuelvan mañana.'"}
         ],
         "questions": [
-          {"q": "Fejn marru Sara u Tom?", "qen": "¿A dónde fueron Sara y Tom?", "a": "Marru f'restorant l-Imdina.", "aen": "Fueron a un restaurante en Mdina."},
+          {"q": "Fejn marru Sara u Tom?", "qen": "¿A dónde fueron Sara y Tom?", "a": "Marru f'ristorant l-Imdina.", "aen": "Fueron a un restaurante en Mdina."},
           {"q": "Min ipprova l-fenek?", "qen": "¿Quién probó el conejo?", "a": "Tom ipprova l-fenek.", "aen": "Tom probó el conejo."},
           {"q": "Meta marru jieklu?", "qen": "¿Cuándo fueron a comer?", "a": "Marru nhar il-Ħamis.", "aen": "Fueron el jueves."},
-          {"q": "Xi qassmu wara?", "qen": "¿Qué compartieron después?", "a": "Qassmu kannolu.", "aen": "Compartieron un cannolo."}
+          {"q": "Xi qassmu wara?", "qen": "¿Qué compartieron después?", "a": "Qassmu kannol.", "aen": "Compartieron un cannolo."}
         ]
       }
     },

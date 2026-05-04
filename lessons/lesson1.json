@@ -80,8 +80,8 @@
         {"upper": "U", "lower": "u", "words": [{"mt": "uffiċċju", "en": "office"}, {"mt": "uniformi", "en": "uniform"}, {"mt": "użu", "en": "use"}]},
         {"upper": "V", "lower": "v", "words": [{"mt": "Valletta", "en": "Valletta"}, {"mt": "villaġġ", "en": "village"}, {"mt": "vjaġġ", "en": "journey"}]},
         {"upper": "W", "lower": "w", "words": [{"mt": "waqt", "en": "while / moment"}, {"mt": "warda", "en": "rose"}, {"mt": "werqa", "en": "leaf"}]},
-        {"upper": "X", "lower": "x", "words": [{"mt": "xahar", "en": "month"}, {"mt": "xitwa", "en": "winter"}, {"mt": "Xlukk", "en": "South-East wind"}]},
-        {"upper": "Ż", "lower": "ż", "words": [{"mt": "żmien", "en": "time"}, {"mt": "żball", "en": "mistake"}, {"mt": "żraben", "en": "shoes"}]},
+        {"upper": "X", "lower": "x", "words": [{"mt": "xahar", "en": "month"}, {"mt": "xitwa", "en": "winter"}, {"mt": "Xlokk", "en": "South-East wind"}]},
+        {"upper": "Ż", "lower": "ż", "words": [{"mt": "żmien", "en": "time"}, {"mt": "żball", "en": "mistake"}, {"mt": "żebra", "en": "zebra"}]},
         {"upper": "Z", "lower": "z", "words": [{"mt": "zalza", "en": "sauce"}, {"mt": "zija", "en": "aunt"}, {"mt": "zokk", "en": "trunk"}]}
       ],
       "passage": {

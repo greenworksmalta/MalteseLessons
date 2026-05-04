@@ -81,8 +81,8 @@
         {"upper": "U", "lower": "u", "words": [{"mt": "uffiċċju", "en": "oficina"}, {"mt": "uniformi", "en": "uniforme"}, {"mt": "użu", "en": "uso"}]},
         {"upper": "V", "lower": "v", "words": [{"mt": "Valletta", "en": "La Valeta"}, {"mt": "villaġġ", "en": "pueblo"}, {"mt": "vjaġġ", "en": "viaje"}]},
         {"upper": "W", "lower": "w", "words": [{"mt": "waqt", "en": "mientras / momento"}, {"mt": "warda", "en": "rosa"}, {"mt": "werqa", "en": "hoja"}]},
-        {"upper": "X", "lower": "x", "words": [{"mt": "xahar", "en": "mes"}, {"mt": "xitwa", "en": "invierno"}, {"mt": "Xlukk", "en": "viento del sureste"}]},
-        {"upper": "Ż", "lower": "ż", "words": [{"mt": "żmien", "en": "tiempo"}, {"mt": "żball", "en": "error"}, {"mt": "żraben", "en": "zapatos"}]},
+        {"upper": "X", "lower": "x", "words": [{"mt": "xahar", "en": "mes"}, {"mt": "xitwa", "en": "invierno"}, {"mt": "Xlokk", "en": "viento del sureste"}]},
+        {"upper": "Ż", "lower": "ż", "words": [{"mt": "żmien", "en": "tiempo"}, {"mt": "żball", "en": "error"}, {"mt": "żebra", "en": "cebra"}]},
         {"upper": "Z", "lower": "z", "words": [{"mt": "zalza", "en": "salsa"}, {"mt": "zija", "en": "tía"}, {"mt": "zokk", "en": "tronco"}]}
       ],
       "passage": {

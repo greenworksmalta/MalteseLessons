@@ -20,7 +20,7 @@
         {"mt": "Jekk jogħġbok", "en": "Por favor"},
         {"mt": "Skużani", "en": "Disculpa / Perdón"},
         {"mt": "Mhux problema", "en": "No hay problema"},
-        {"mt": "Il-ġurnata it-tajba", "en": "Que tengas un buen día"},
+        {"mt": "Il-ġurnata t-tajba", "en": "Que tengas un buen día"},
         {"mt": "Prosit", "en": "¡Salud! / ¡Bien hecho!"},
         {"mt": "Iva", "en": "Sí"},
         {"mt": "Le", "en": "No"},
@@ -31,7 +31,7 @@
         {"mt": "Bonġu! Kif int?", "en": "¡Buenos días! ¿Cómo estás?"},
         {"mt": "Tajba ħafna, grazzi. U int?", "en": "Muy bien, gracias. ¿Y tú?"},
         {"mt": "Ferm tajba, grazzi.", "en": "Muy bien, gracias."},
-        {"mt": "Il-ġurnata it-tajba!", "en": "¡Que tengas buen día!"}
+        {"mt": "Il-ġurnata t-tajba!", "en": "¡Que tengas buen día!"}
       ]
     },
     {
@@ -48,7 +48,7 @@
         {"mt": "Ilma", "en": "Agua"},
         {"mt": "Birra", "en": "Cerveza"},
         {"mt": "Ilma tal-gas", "en": "Agua con gas"},
-        {"mt": "Cappuċċino", "en": "Capuchino"},
+        {"mt": "Kapuċċino", "en": "Capuchino"},
         {"mt": "Pastizz", "en": "Pastizz (hojaldre maltés salado)"},
         {"mt": "Kemm jiswa?", "en": "¿Cuánto cuesta?"},
         {"mt": "Żewġ ewro", "en": "Dos euros"},

@@ -1,0 +1,137 @@
+{
+  "id": "lesson9",
+  "lang": "es",
+  "title": "Lección 9 — La Hora y las Direcciones",
+  "subtitle": "Pedir direcciones, expresiones de tiempo, decir la hora",
+  "sections": [
+    {
+      "id": "directions",
+      "icon": "🧭",
+      "title": "Direcciones",
+      "subtitle": "Direzzjonijiet — derecha, izquierda, todo recto",
+      "intro": "Para pedir direcciones, empieza con: 'Skużi. Tista' tgħidli fejn hi ___, jekk jogħġbok?' Después agradeces con 'Grazzi.'",
+      "vocab": [
+        {"mt": "Skużani", "en": "Disculpa / Perdón"},
+        {"mt": "Lemin", "en": "Derecha"},
+        {"mt": "Xellug", "en": "Izquierda"},
+        {"mt": "Dur fuq il-lemin", "en": "Da vuelta a la derecha"},
+        {"mt": "Dur fuq ix-xellug", "en": "Da vuelta a la izquierda"},
+        {"mt": "Kompli bi dritt", "en": "Sigue derecho"},
+        {"mt": "Suq", "en": "Maneja (singular)"},
+        {"mt": "Imxi", "en": "Camina (singular)"},
+        {"mt": "Dur", "en": "Da vuelta (singular)"},
+        {"mt": "Hawn", "en": "Aquí"},
+        {"mt": "Hemm", "en": "Allá"},
+        {"mt": "Wara dak", "en": "Después de eso"},
+        {"mt": "Aqsam it-triq", "en": "Cruza la calle"},
+        {"mt": "Faċċata ta'", "en": "Enfrente de"},
+        {"mt": "Ħdejn", "en": "Junto a / al lado de"},
+        {"mt": "Bejn", "en": "Entre"},
+        {"mt": "L-ewwel triq", "en": "La primera calle"},
+        {"mt": "L-ewwel kantuniera", "en": "La primera esquina"},
+        {"mt": "It-tieni dawra", "en": "La segunda vuelta"}
+      ],
+      "dialogue": [
+        {"mt": "Skużani — fejn hi l-ispiżerija l-aktar viċin?", "en": "Disculpa — ¿dónde está la farmacia más cercana?"},
+        {"mt": "Bonġu. Imxi sal-pjazza, dur fuq ix-xellug.", "en": "Buenos días. Camina hasta la plaza, da vuelta a la izquierda."},
+        {"mt": "U mbagħad?", "en": "¿Y luego?"},
+        {"mt": "Hemmhekk taraha faċċata ta' bank.", "en": "Allá la vas a ver enfrente de un banco."},
+        {"mt": "Grazzi ħafna!", "en": "¡Muchas gracias!"}
+      ],
+      "winds": [
+        {"mt": "Tramuntana", "en": "Norte"},
+        {"mt": "Grigal", "en": "Noreste"},
+        {"mt": "Lvant", "en": "Este"},
+        {"mt": "Xlokk", "en": "Sureste"},
+        {"mt": "Nofsinhar", "en": "Sur"},
+        {"mt": "Lbiċ", "en": "Suroeste"},
+        {"mt": "Punent", "en": "Oeste"},
+        {"mt": "Majjistral", "en": "Noroeste"}
+      ]
+    },
+    {
+      "id": "timeexp",
+      "icon": "⏳",
+      "title": "Expresiones de tiempo",
+      "subtitle": "Espressjonijiet tal-ħin",
+      "vocab": [
+        {"mt": "Ilbieraħ", "en": "Ayer"},
+        {"mt": "Illum", "en": "Hoy"},
+        {"mt": "Għada", "en": "Mañana"},
+        {"mt": "F'nofsinhar", "en": "Al mediodía"},
+        {"mt": "Wara nofsinhar", "en": "En la tarde / después de las 12 pm"},
+        {"mt": "Filgħaxija", "en": "En la noche"},
+        {"mt": "Filgħodu", "en": "En la mañana"},
+        {"mt": "Darba fil-ġimgħa", "en": "Una vez a la semana"},
+        {"mt": "Kuljum", "en": "Todos los días"},
+        {"mt": "Kull tieni jum", "en": "Cada dos días"},
+        {"mt": "Il-ġurnata kollha", "en": "Todo el día"},
+        {"mt": "Issa", "en": "Ahora"},
+        {"mt": "Ftit ieħor", "en": "En un ratito"},
+        {"mt": "Dalwaqt", "en": "Pronto"},
+        {"mt": "Aktar tard", "en": "Más tarde"},
+        {"mt": "Sakemm", "en": "Hasta que"},
+        {"mt": "Dakinhar", "en": "Ese día"},
+        {"mt": "Kemm-il darba", "en": "Cuántas veces"},
+        {"mt": "Ta' spiss", "en": "A menudo"},
+        {"mt": "Xi kultant", "en": "A veces"},
+        {"mt": "Rarament", "en": "Rara vez"},
+        {"mt": "Dejjem", "en": "Siempre"},
+        {"mt": "Qatt", "en": "Nunca"}
+      ]
+    },
+    {
+      "id": "time",
+      "icon": "🕐",
+      "title": "Decir la hora",
+      "subtitle": "Il-Ħin — ¿qué hora es?",
+      "intro": "El maltés no tiene una palabra para 'en punto' — solo dices el número. Nota: 1 y 2 usan formas especiales (is-siegħa, is-sagħtejn). Para todo lo demás, el número cardinal con el artículo.",
+      "facts": [
+        "Filgħodu = AM (mañana, hasta el mediodía).",
+        "Wara nofsinhar = PM (tarde, después de las 12 del día).",
+        "Filgħaxija = noche (más o menos de 6 pm a 10 pm).",
+        "Ta' billejl = noche cerrada (después de las 10 pm).",
+        "No hay palabra maltesa para 'en punto' — solo el número con su artículo."
+      ],
+      "hours": [
+        {"n": 1, "mt": "is-siegħa", "en": "la una"},
+        {"n": 2, "mt": "is-sagħtejn", "en": "las dos"},
+        {"n": 3, "mt": "it-tlieta", "en": "las tres"},
+        {"n": 4, "mt": "l-erbgħa", "en": "las cuatro"},
+        {"n": 5, "mt": "il-ħamsa", "en": "las cinco"},
+        {"n": 6, "mt": "is-sitta", "en": "las seis"},
+        {"n": 7, "mt": "is-sebgħa", "en": "las siete"},
+        {"n": 8, "mt": "it-tmienja", "en": "las ocho"},
+        {"n": 9, "mt": "id-disgħa", "en": "las nueve"},
+        {"n": 10, "mt": "l-għaxra", "en": "las diez"},
+        {"n": 11, "mt": "il-ħdax", "en": "las once"},
+        {"n": 12, "mt": "nofsinhar", "en": "mediodía"},
+        {"n": 0, "mt": "nofsillejl", "en": "medianoche"}
+      ],
+      "patterns": [
+        {"mt": "is-sebgħa u kwart", "en": "7:15 — siete y cuarto"},
+        {"mt": "is-sebgħa u nofs", "en": "7:30 — siete y media"},
+        {"mt": "is-sebgħa u għoxrin", "en": "7:20 — siete y veinte"},
+        {"mt": "it-tmienja nieqes kwart", "en": "7:45 — cuarto para las ocho"},
+        {"mt": "it-tmienja nieqes għaxra", "en": "7:50 — diez para las ocho"},
+        {"mt": "it-tmienja", "en": "8:00 — las ocho"}
+      ],
+      "exercises": [
+        {
+          "id": "ex8",
+          "title": "Convierte la hora digital → maltés",
+          "instructions": "Elige la frase maltesa correcta para cada reloj.",
+          "choices": ["L-għaxra u kwart", "Is-sebgħa u nofs", "Il-ħamsa", "It-tmienja nieqes ħamsa", "L-erbgħa u għaxra", "Is-sitta nieqes kwart"],
+          "items": [
+            {"sentence": "10:15", "en": "Diez y cuarto", "answer": "L-għaxra u kwart"},
+            {"sentence": "7:30", "en": "Siete y media", "answer": "Is-sebgħa u nofs"},
+            {"sentence": "5:00", "en": "Las cinco", "answer": "Il-ħamsa"},
+            {"sentence": "7:55", "en": "Cinco para las ocho", "answer": "It-tmienja nieqes ħamsa"},
+            {"sentence": "4:10", "en": "Cuatro y diez", "answer": "L-erbgħa u għaxra"},
+            {"sentence": "5:45", "en": "Cuarto para las seis", "answer": "Is-sitta nieqes kwart"}
+          ]
+        }
+      ]
+    }
+  ]
+}

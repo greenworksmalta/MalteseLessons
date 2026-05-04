@@ -1,0 +1,148 @@
+{
+  "id": "lesson8",
+  "lang": "es",
+  "title": "Lección 8 — Partículas y el Mapa",
+  "subtitle": "Palabras de fecha, fusión partícula + artículo, el mapa de Malta, los lugares",
+  "sections": [
+    {
+      "id": "datetime",
+      "icon": "📅",
+      "title": "Palabras de fecha",
+      "subtitle": "Ġranet u xhur — hablar de fechas",
+      "intro": "Cómo se escribe una fecha en maltés: It-Tnejn 24 ta' Frar, 2024 (lunes 24 de febrero de 2024).",
+      "vocab": [
+        {"mt": "Illum", "en": "Hoy"},
+        {"mt": "Għada", "en": "Mañana"},
+        {"mt": "Ilbieraħ", "en": "Ayer"},
+        {"mt": "Pitgħada", "en": "Pasado mañana"},
+        {"mt": "Ilbieraħtlula", "en": "Anteayer"},
+        {"mt": "Filgħodu", "en": "En la mañana"},
+        {"mt": "Wara nofsinhar", "en": "En la tarde"},
+        {"mt": "Filgħaxija", "en": "En la noche"},
+        {"mt": "Billejl", "en": "De noche / por la noche"},
+        {"mt": "Dakinhar", "en": "Ese día"},
+        {"mt": "Il-ġimgħa d-dieħla", "en": "La próxima semana"},
+        {"mt": "Il-ġimgħa li għaddiet", "en": "La semana pasada"},
+        {"mt": "Ix-xahar id-dieħel", "en": "El próximo mes"},
+        {"mt": "Ix-xahar li għadda", "en": "El mes pasado"},
+        {"mt": "Is-sena d-dieħla", "en": "El próximo año"},
+        {"mt": "Is-sena li għaddiet", "en": "El año pasado"},
+        {"mt": "Xahar", "en": "Mes"},
+        {"mt": "Sena", "en": "Año"}
+      ]
+    },
+    {
+      "id": "partarticle",
+      "icon": "🔗",
+      "title": "Partículas + el / la",
+      "subtitle": "Partiċelli mal-artiklu — contracciones de partículas",
+      "intro": "Cuando una partícula se topa con el artículo 'l-', se fusionan en una sola palabra. Ejemplo: bi + l → bil-, ġo + l → ġol-.",
+      "items": [
+        {"long": "ma' + l-", "short": "mal-", "en": "con el / con la"},
+        {"long": "ta' + l-", "short": "tal-", "en": "del / de la"},
+        {"long": "sa + l-", "short": "sal-", "en": "hasta el / hasta la"},
+        {"long": "ġo + l-", "short": "ġol-", "en": "en el / en la (dentro de)"},
+        {"long": "bi + l-", "short": "bil-", "en": "con el / con la"},
+        {"long": "fi + l-", "short": "fil-", "en": "en el / en la"},
+        {"long": "lil + l-", "short": "lill-", "en": "al / a la"},
+        {"long": "bħal + l-", "short": "bħall-", "en": "como el / como la"},
+        {"long": "għal + l-", "short": "għall-", "en": "para el / para la"},
+        {"long": "minn + l-", "short": "mill-", "en": "del / de la (procedencia)"}
+      ],
+      "facts": [
+        "Estas contracciones siguen igual la regla de la consonante solar de la Lección 1.",
+        "Antes de consonantes solares (ċ, d, n, r, s, t, x, ż, z), la L se asimila: fil-xemx → fix-xemx; ġol-sodda → ġos-sodda.",
+        "Antes de vocales, h o għ — las partículas bi, fi se acortan a b' / f': fi dar → f'dar; bi ajruplan → b'ajruplan.",
+        "Las partículas sa, ma', ta' también pueden acortarse antes de vocales: sa Għawdex → s'Għawdex; ma' ommi → m'ommi."
+      ],
+      "exercises": [
+        {
+          "id": "ex3",
+          "title": "Combina partícula + artículo",
+          "instructions": "Elige la forma contraída correcta para el espacio.",
+          "choices": ["sal-", "bil-", "ġol-", "lill-", "mill-", "fil-", "mal-", "tal-", "bħall-", "għall-"],
+          "items": [
+            {"sentence": "Tom mar ___ pjazza", "en": "Tom fue a la plaza", "answer": "sal-"},
+            {"sentence": "Sara qaltli ___ Maltese ġenwin", "en": "Sara me habló con un maltés muy puro", "answer": "bil-"},
+            {"sentence": "Ix-xita waqgħet ___ ġnien", "en": "La lluvia cayó dentro del jardín", "answer": "ġol-"},
+            {"sentence": "Tajt ir-rigal ___ kuġina", "en": "Le di el regalo a la prima", "answer": "lill-"},
+            {"sentence": "Tom ġej ___ ajruport", "en": "Tom viene del aeropuerto", "answer": "mill-"},
+            {"sentence": "Iltqajna ___ kafetterija", "en": "Nos vimos en la cafetería", "answer": "fil-"},
+            {"sentence": "Marija marret ___ familja tagħha", "en": "Marija fue con su familia", "answer": "mal-"},
+            {"sentence": "Dak l-arloġġ ___ nannu", "en": "Ese reloj es del abuelo", "answer": "tal-"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "icon": "🗺️",
+      "title": "El mapa de Malta",
+      "subtitle": "Mappa ta' Malta — tres islas y localidades",
+      "facts": [
+        "Malta es un país pequeño en el Mar Mediterráneo, al sur de Sicilia.",
+        "Está formado por tres islas habitadas: Malta, Gozo (Għawdex) y Comino (Kemmuna).",
+        "Malta es la isla más grande, donde vive la mayoría de la gente. La capital es Valletta — Patrimonio de la Humanidad de la UNESCO.",
+        "Gozo es más pequeña y más rural. La capital es Victoria, también llamada Rabat.",
+        "Comino es muy chiquita, con una población permanente de pocos habitantes — famosa por la Laguna Azul."
+      ],
+      "vocab": [
+        {"mt": "Malta", "en": "Malta"},
+        {"mt": "Għawdex", "en": "Gozo"},
+        {"mt": "Kemmuna", "en": "Comino"},
+        {"mt": "Il-Belt Valletta", "en": "Valletta (capital de Malta)"},
+        {"mt": "Ir-Rabat", "en": "Victoria / Rabat (capital de Gozo)"},
+        {"mt": "Il-pajjiż", "en": "El país"},
+        {"mt": "Tramuntana", "en": "Norte"},
+        {"mt": "Nofsinhar", "en": "Sur"},
+        {"mt": "Ċentrali", "en": "Central"}
+      ],
+      "regions": [
+        {"name": "Norte (Tramuntana)", "places": ["Il-Mellieħa", "Buġibba", "San Pawl il-Baħar", "Il-Qawra", "Mġarr", "L-Imġarr", "St Paul's Bay"]},
+        {"name": "Centro", "places": ["L-Imdina", "Ir-Rabat (Malta)", "Birkirkara", "Ħal Lija", "Ħ'Attard", "In-Naxxar", "Ħaż-Żebbuġ"]},
+        {"name": "Sur (Nofsinhar)", "places": ["Marsaxlokk", "Birżebbuġa", "Iż-Żurrieq", "Iż-Żejtun", "Il-Qrendi", "Il-Mellieħa", "Marsaskala"]},
+        {"name": "Puerto Norte", "places": ["Tas-Sliema", "St Julian's", "Pembroke", "Il-Gżira", "Paceville", "San Ġwann"]},
+        {"name": "Puerto Sur", "places": ["Il-Belt Valletta", "Il-Furjana", "Il-Birgu", "L-Isla", "Il-Bormla", "Ħaż-Żabbar", "Il-Marsa"]},
+        {"name": "Gozo (Għawdex)", "places": ["Ir-Rabat", "Marsalforn", "Ix-Xagħra", "Ix-Xewkija", "Għajnsielem", "L-Għarb", "Ta' Sannat"]}
+      ]
+    },
+    {
+      "id": "places",
+      "icon": "🏛️",
+      "title": "Lugares interesantes",
+      "subtitle": "Postijiet importanti — sitios históricos y naturales",
+      "items": [
+        {"mt": "Il-Belt Valletta", "en": "Valletta",
+         "kind": "🏛️ Histórico",
+         "note": "Capital amurallada — Patrimonio de la Humanidad de la UNESCO, llena de museos, arquitectura barroca y la famosa Saluting Battery."},
+        {"mt": "L-Imdina", "en": "Mdina",
+         "kind": "🏛️ Histórico",
+         "note": "La 'Ciudad Silenciosa'. Fue la capital de Malta antes que Valletta. Caminar dentro de sus muros se siente como viajar en el tiempo."},
+        {"mt": "It-Tliet Ibliet", "en": "Las Tres Ciudades",
+         "kind": "🏛️ Histórico",
+         "note": "Senglea (L-Isla), Vittoriosa (Birgu) y Cospicua (Bormla) — las fortificaciones originales del puerto de Malta."},
+        {"mt": "Il-Lagun Blu", "en": "Laguna Azul (Comino)",
+         "kind": "🌊 Natural",
+         "note": "Aguas cristalinas y poco profundas entre Comino y Cominotto — el lugar para nadar más fotografiado de Malta."},
+        {"mt": "Is-Sur ta' Ħad-Dingli", "en": "Acantilados de Dingli",
+         "kind": "🌊 Natural",
+         "note": "El punto más alto de Malta — acantilados a pico con vista al mar. Especialmente bonito al atardecer."},
+        {"mt": "Il-Grotta Blu", "en": "Gruta Azul",
+         "kind": "🌊 Natural",
+         "note": "Cuevas marinas en el sur donde la luz refleja un azul vivo desde el agua de adentro."},
+        {"mt": "Bajja Sabiħa", "en": "Golden Bay",
+         "kind": "🏖️ Playa",
+         "note": "Playa de arena amplia en el norte — popular para nadar y ver el atardecer sobre el agua."},
+        {"mt": "Bajja tal-Mellieħa", "en": "Bahía de Mellieħa (Għadira)",
+         "kind": "🏖️ Playa",
+         "note": "La playa de arena más larga de la isla — agua tranquila y poco profunda, ideal para familias."},
+        {"mt": "Ta' Pinu", "en": "Ta' Pinu (Gozo)",
+         "kind": "⛪ Sagrado",
+         "note": "Iglesia de peregrinaje en Gozo — los visitantes dejan ofrendas de agradecimiento por sanaciones y oraciones contestadas."},
+        {"mt": "Dwejra", "en": "Dwejra (Gozo)",
+         "kind": "🌊 Natural",
+         "note": "Paisaje costero impresionante en Gozo — mar interior, acantilados marinos, la Roca del Hongo."}
+      ]
+    }
+  ]
+}

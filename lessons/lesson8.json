@@ -62,7 +62,7 @@
           "choices": ["sal-", "bil-", "ġol-", "lill-", "mill-", "fil-", "mal-", "tal-", "bħall-", "għall-"],
           "items": [
             {"sentence": "Tom mar ___ pjazza", "en": "Tom went to the square", "answer": "sal-"},
-            {"sentence": "Sara qaltli ___ Malti ġenwin", "en": "Sara spoke to me with proper Maltese", "answer": "bil-"},
+            {"sentence": "Sara kelmitni ___ Malti ġenwin", "en": "Sara spoke to me with proper Maltese", "answer": "bil-"},
             {"sentence": "Ix-xita waqgħet ___ ġnien", "en": "The rain fell into the garden", "answer": "ġol-"},
             {"sentence": "Tajt ir-rigal ___ kuġina", "en": "I gave the gift to the cousin", "answer": "lill-"},
             {"sentence": "Tom ġej ___ ajruport", "en": "Tom is coming from the airport", "answer": "mill-"},

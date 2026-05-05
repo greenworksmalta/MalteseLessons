@@ -63,7 +63,7 @@
           "choices": ["sal-", "bil-", "ġol-", "lill-", "mill-", "fil-", "mal-", "tal-", "bħall-", "għall-"],
           "items": [
             {"sentence": "Tom mar ___ pjazza", "en": "Tom fue a la plaza", "answer": "sal-"},
-            {"sentence": "Sara qaltli ___ Malti ġenwin", "en": "Sara me habló con un maltés muy puro", "answer": "bil-"},
+            {"sentence": "Sara kelmitni ___ Malti ġenwin", "en": "Sara me habló con un maltés muy puro", "answer": "bil-"},
             {"sentence": "Ix-xita waqgħet ___ ġnien", "en": "La lluvia cayó dentro del jardín", "answer": "ġol-"},
             {"sentence": "Tajt ir-rigal ___ kuġina", "en": "Le di el regalo a la prima", "answer": "lill-"},
             {"sentence": "Tom ġej ___ ajruport", "en": "Tom viene del aeropuerto", "answer": "mill-"},

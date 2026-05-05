@@ -40,11 +40,11 @@
         {"mt": "Se mmur niltaqa' ma' ħabib", "en": "I'm going to meet a friend"},
         {"mt": "Se mmur kunċert", "en": "I'm going to a concert"},
         {"mt": "Se mmur tieġ", "en": "I'm going to a wedding"},
-        {"mt": "Se mmur f'festa", "en": "I'm going to a village festa"},
+        {"mt": "Se mmur il-festa", "en": "I'm going to a village festa"},
         {"mt": "Se nibqa' nirrilassa d-dar", "en": "I'm going to chill at home"}
       ],
       "dialogue": [
-        {"mt": "X'għandek programm dan il-weekend?", "en": "What are your plans for the weekend?"},
+        {"mt": "X'għandek pjanijiet dan il-weekend?", "en": "What are your plans for the weekend?"},
         {"mt": "Nhar is-Sibt sejra Kemmuna bil-vapur.", "en": "On Saturday I'm going to Comino by ferry."},
         {"mt": "U nhar il-Ħadd?", "en": "And on Sunday?"},
         {"mt": "Nibqa' d-dar — naqra ftit u norqod kmieni.", "en": "I'll stay home — read a bit and sleep early."}

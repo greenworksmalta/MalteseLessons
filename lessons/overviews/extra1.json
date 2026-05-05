@@ -57,7 +57,7 @@
       "mt": "Jekk jogħġbok"
     },
     {
-      "en": "It's a long phrase but **slot it onto the end of any request** and you sound polite. Nixtieq kafè... jekk jogħġbok. 🎯",
+      "en": "It's a long phrase but **slot it onto the end of any request** and you sound polite. Nixtieq kapuċċino... jekk jogħġbok. 🎯",
       "kind": "rule"
     },
     {
@@ -114,13 +114,13 @@
       "en": "I would like a coffee:"
     },
     {
-      "mt": "Nixtieq kafè"
+      "mt": "Nixtieq kapuċċino"
     },
     {
       "en": "Coffee with milk:"
     },
     {
-      "mt": "kafè bil-ħalib"
+      "mt": "kapuċċino bil-ħalib"
     },
     {
       "en": "Tea:"

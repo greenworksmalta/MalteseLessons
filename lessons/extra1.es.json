@@ -41,8 +41,8 @@
       "subtitle": "Pedir café, pagar, despedirse",
       "vocab": [
         {"mt": "Nixtieq", "en": "Quisiera"},
-        {"mt": "Kafè", "en": "Café"},
-        {"mt": "Kafè bil-ħalib", "en": "Café con leche"},
+        {"mt": "Kapuċċino", "en": "Café"},
+        {"mt": "Kapuċċino bil-ħalib", "en": "Café con leche"},
         {"mt": "Tè", "en": "Té"},
         {"mt": "Tè bil-lumi", "en": "Té con limón"},
         {"mt": "Ilma", "en": "Agua"},
@@ -60,7 +60,7 @@
       ],
       "dialogue": [
         {"mt": "Bonġu! X'tieħu?", "en": "¡Buenos días! ¿Qué vas a tomar?"},
-        {"mt": "Nixtieq kafè bil-ħalib, jekk jogħġbok.", "en": "Quisiera un café con leche, por favor."},
+        {"mt": "Nixtieq kapuċċino bil-ħalib, jekk jogħġbok.", "en": "Quisiera un café con leche, por favor."},
         {"mt": "Trid xi ħaġa oħra?", "en": "¿Quieres algo más?"},
         {"mt": "Iva, pastizz wieħed jekk jogħġbok.", "en": "Sí, un pastizz por favor."},
         {"mt": "Kemm jiswa?", "en": "¿Cuánto cuesta?"},

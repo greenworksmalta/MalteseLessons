@@ -41,11 +41,11 @@
         {"mt": "Se mmur niltaqa' ma' ħabib", "en": "Voy a verme con un amigo"},
         {"mt": "Se mmur kunċert", "en": "Voy a un concierto"},
         {"mt": "Se mmur tieġ", "en": "Voy a una boda"},
-        {"mt": "Se mmur f'festa", "en": "Voy a una festa de pueblo"},
+        {"mt": "Se mmur il-festa", "en": "Voy a una festa de pueblo"},
         {"mt": "Se nibqa' nirrilassa d-dar", "en": "Voy a relajarme en casa"}
       ],
       "dialogue": [
-        {"mt": "X'għandek programm dan il-weekend?", "en": "¿Qué planes tienes para el fin de semana?"},
+        {"mt": "X'għandek pjanijiet dan il-weekend?", "en": "¿Qué planes tienes para el fin de semana?"},
         {"mt": "Nhar is-Sibt sejra Kemmuna bil-vapur.", "en": "El sábado voy a Comino en ferry."},
         {"mt": "U nhar il-Ħadd?", "en": "¿Y el domingo?"},
         {"mt": "Nibqa' d-dar — naqra ftit u norqod kmieni.", "en": "Me quedo en casa — leo un poco y me duermo temprano."}

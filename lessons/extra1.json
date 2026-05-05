@@ -40,8 +40,8 @@
       "subtitle": "Ordering coffee, paying, leaving",
       "vocab": [
         {"mt": "Nixtieq", "en": "I would like"},
-        {"mt": "Kafè", "en": "Coffee"},
-        {"mt": "Kafè bil-ħalib", "en": "Coffee with milk"},
+        {"mt": "Kapuċċino", "en": "Coffee"},
+        {"mt": "Kapuċċino bil-ħalib", "en": "Coffee with milk"},
         {"mt": "Tè", "en": "Tea"},
         {"mt": "Tè bil-lumi", "en": "Tea with lemon"},
         {"mt": "Ilma", "en": "Water"},
@@ -59,7 +59,7 @@
       ],
       "dialogue": [
         {"mt": "Bonġu! X'tieħu?", "en": "Good morning! What will you have?"},
-        {"mt": "Nixtieq kafè bil-ħalib, jekk jogħġbok.", "en": "I would like a coffee with milk, please."},
+        {"mt": "Nixtieq kapuċċino bil-ħalib, jekk jogħġbok.", "en": "I would like a coffee with milk, please."},
         {"mt": "Trid xi ħaġa oħra?", "en": "Would you like anything else?"},
         {"mt": "Iva, pastizz wieħed jekk jogħġbok.", "en": "Yes, one pastizzi please."},
         {"mt": "Kemm jiswa?", "en": "How much is it?"},
